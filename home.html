@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>BIG Holiday Club</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container max-w-screen-md mx-auto overflow-hidden pb-[60px]">
+    <div class="home-header bg-blue-900 p-4 rounded-b-3xl space-y-6">
+      <div class="app-topbar flex items-center justify-between">
+        <a href="#" class="user-info flex items-center gap-2">
+          <img src="https://i.pravatar.cc/100" class="h-8 w-8 rounded-full">
+          <h4 class="text-white text-sm">Hello, Username.</h4>
+        </a>
+      </div>
+
+      <h3 class="font-bold leading-6 text-xl mt-6 text-white">Explore the best destinations <br> for your dream vacations</h3>
+
+      <div class="app-searchbar relative">
+        <input type="search" name="" id="" class="form-control pl-10 rounded-full">
+        <div class="absolute flex items-center p-3 inset-y-0 text-slate-500"><i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+    </div>
+
+    <div class="home-categories">
+      <div class="grid grid-cols-4 gap-2 p-4 text-center text-[10px] uppercase">
+        <a href="#" class="p-3 border rounded-lg">Hotel</a>
+        <a href="#" class="p-3 border rounded-lg">Resort</a>
+        <a href="#" class="p-3 border rounded-lg">Golf</a>
+        <a href="#" class="p-3 border rounded-lg">Tour</a>
+      </div>
+    </div>
+
+    <div class="home-banner px-4">
+      <div class="swiper-container banner-tes">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card h-36">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzb3J0fGVufDB8fDB8fHww" class="w-full h-full object-cover rounded-lg">
+          </div>
+          <div class="swiper-slide card h-36">
+            <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzb3J0fGVufDB8fDB8fHww" class="w-full h-full object-cover rounded-lg">
+          </div>
+          <div class="swiper-slide card h-36">
+            <img src="https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmVzb3J0fGVufDB8fDB8fHww" class="w-full h-full object-cover rounded-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-recommend">
+      <div class="title-header flex items-center justify-between p-4">
+        <h5 class="text-sm font-bold">Recommended for you</h5>
+        <a href="#" class="text-xs text-blue-700">explorer more</a>
+      </div>
+
+      <div class="card-list px-4 pb-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="places.html" class="flex gap-3 p-2 border rounded-xl">
+              <div class="w-1/3">
+                <img src="https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmVzb3J0fGVufDB8fDB8fHww" class="w-full h-full object-cover rounded-md">
+              </div>
+              <div class="flex flex-col item-content gap-1 w-full">
+                <h5 class="text-sm font-bold">Antapura Resort</h5>
+                <div class="text-xs text-slate-300"><i class="fa-solid fa-location-dot"></i> Batam, Indonesia</div>
+                <p class="text-xs line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam ipsa at excepturi velit molestiae animi molestias inventore in expedita, autem cum tempora laudantium praesentium!</p>
+                <div class="mt-auto"><strong>800</strong> <small>points</small></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="places.html" class="flex gap-3 p-2 border rounded-xl">
+              <div class="w-1/3">
+                <img src="https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmVzb3J0fGVufDB8fDB8fHww" class="w-full h-full object-cover rounded-md">
+              </div>
+              <div class="flex flex-col item-content gap-1 w-full">
+                <h5 class="text-sm font-bold">Antapura Resort</h5>
+                <div class="text-xs text-slate-300"><i class="fa-solid fa-location-dot"></i> Batam, Indonesia</div>
+                <p class="text-xs line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam ipsa at excepturi velit molestiae animi molestias inventore in expedita, autem cum tempora laudantium praesentium!</p>
+                <div class="mt-auto"><strong>800</strong> <small>points</small></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav-bar fixed bottom-0 inset-x-0 h-[60px]">
+    <div class="max-w-screen-md mx-auto bg-white p-3">
+      <div class="app-nav-bar grid grid-cols-5 gap-2 text-center">
+        <a href="#" class="flex flex-col gap-2 text-xs"><i class="fas fa-home"></i> Home</a>
+        <a href="#" class="flex flex-col gap-2 text-xs"><i class="fas fa-location-dot"></i> Destination</a>
+        <a href="#" class="flex flex-col gap-2 text-xs"><i class="fas fa-ticket"></i> Deal</a>
+        <a href="#" class="flex flex-col gap-2 text-xs"><i class="fas fa-suitcase"></i> Trips</a>
+        <a href="#" class="flex flex-col gap-2 text-xs"><i class="fas fa-user"></i> Account</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+    if ($("div").hasClass("swiper-container")) {
+        var swiper = new Swiper(".banner-tes", {
+          speed: 1000,
+          parallax: true,
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+          loop: true,
+          navigation: {
+            clickable: true,
+            nextEl: ".button-lo-next",
+            prevEl: ".button-lo-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+
+          breakpoints: {
+            1024: {
+              slidesPerView: 3.2,
+            },
+            768: {
+              slidesPerView: 2.3,
+            },
+            500: {
+              slidesPerView: 1.5,
+            },
+          },
+        });
+      }
+  </script>
+</body>
+</html>
