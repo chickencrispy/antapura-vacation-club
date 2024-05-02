@@ -15,6 +15,11 @@ h4 {
   font-weight: 700 !important;
 }
 
+h5 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
 h6 {
   font-size: 20px !important;
   font-weight: 700 !important;
@@ -314,14 +319,78 @@ h6 {
 }
 
 .place-content {
-  background-color: #F7F7F9;
+  background-color: #FFFFFF;
   border-radius: 24px 24px 0 0;
   transform: translate(0, -24px);
 }
 
 .place-content .content-header {
+  padding: 20px 16px 8px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #7D848D;
+}
+
+.place-content .content-header h5 {
+  color: #1B1E28;
+}
+
+.place-content .content-body {
   padding: 16px;
-  padding-top: 20px;
+}
+
+.place-content .content-body > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 16px;
+}
+
+.place-content .content-body .card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  font-size: 14px;
+  background-color: rgb(241, 245, 259);
+  border-radius: 8px;
+}
+
+.place-content .card-info .price {
+  text-align: end;
+  line-height: 20px;
+}
+
+.place-content section strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.place-content section p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.place-content .overview-swiper {
+  overflow: hidden;
+}
+
+.place-content img.swiper-slide {
+  height: 65px;
+  border-radius: 8px;
+}
+
+.place-content ul.list-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.place-content ul.list-card li {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
 }
 
 /* ===== BOTTOM NAVBAR ===== */
