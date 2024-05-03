@@ -325,6 +325,8 @@ h6 {
 }
 
 .place-content .content-header {
+  display: flex;
+  justify-content: space-between;
   padding: 20px 16px 8px;
   font-size: 14px;
   line-height: 26px;
