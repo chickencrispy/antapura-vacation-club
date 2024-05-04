@@ -50,6 +50,7 @@ h6 {
   border-radius: 50%;
   background-color: #F7F7F9;
   backdrop-filter: blur(4px);
+  line-height: normal;
 }
 
 /* ===== LOGIN ===== */
