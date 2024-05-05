@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIG Vacation Club</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="app-page-header pb-0">
+      <div class="top-bar">
+        <a href="index.html" class="btn-icon-pill border"><i class="fi fi-rr-angle-small-left"></i> Back</a>
+
+        <div class="d-flex gap-1">
+          <a href="#" class="btn-icon border"><i class="fi fi-rr-heart"></i></a>
+          <a href="#" class="btn-icon border"><i class="fi fi-rr-share"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page-wrapper">
+      <img src="https://specials.priceless.com/mastercard/images/92c0871c-a792-47bf-8ebf-fc0fce6aa1ae.jpg" class="page-img-banner">
+      <div class="page-content">
+        <div class="card-info">
+          <h4 class="fw-bolder">Planet Holiday Hotel & Residence</h4>
+          <div class="d-flex align-items-center gap-1 text-xs text-muted"><i class="fi fi-rr-marker"></i> Batam - Indonesia</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper text-sm bg-white">
+      <h5 class="fw-bold">About</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit libero magni quod natus aut recusandae tempora magnam nam illum qui. <a href="#" class="text-primary">Read more</a></p>
+
+      <h5 class="fw-bold">Facilities</h5>
+      <ul class="list-pill">
+        <li><i class="fi fi-rr-swimming-pool"></i> Swimming pool</li>
+        <li><i class="fi fi-rr-martini-glass-citrus"></i> Lounge bar & cafe</li>
+        <li><i class="fi fi-rr-wifi"></i> Free wifi</li>
+        <li><i class="fi fi-rr-air-conditioner"></i> Air conditioner</li>
+        <li><a href="#" class="text-primary">+10</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bottom-navbar">
+    <div class="container d-flex">
+      <a href="#" class="flex-fill text-center text-xs"><h3 class="mb-0"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="#" class="flex-fill text-center text-xs"><h3 class="mb-0"><i class="fi fi-rr-badge-percent"></i></h3>Promo</a>
+      <a href="#" class="flex-fill text-center text-xs"><h3 class="mb-0"><i class="fi fi-rr-heart"></i></h3>Save</a>
+      <a href="#" class="flex-fill text-center text-xs"><h3 class="mb-0"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+    if ($("div").hasClass("swiper-container")) {
+      var swiper = new Swiper(".banner-featured", {
+        speed: 1000,
+        parallax: true,
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+          clickable: true,
+          nextEl: ".button-lo-next",
+          prevEl: ".button-lo-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 2.2,
+          }
+        },
+      });
+    }
+  </script>
+</body>
+</html>
