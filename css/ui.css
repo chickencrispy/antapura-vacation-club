@@ -130,8 +130,22 @@ h2 {
 
 .app-page-header {
   position: relative;
+}
+.app-page-header .top-bar {
   padding: 16px;
-  background-color: #fff;
+  color: #fff;
+}
+.app-page-header .top-bar .btn-icon {
+  --border-color: transparent;
+  --bg-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+}
+
+.page-img-banner {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .top-bar {
@@ -140,12 +154,27 @@ h2 {
   justify-content: space-between;
 }
 
+.absolute-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .btn-icon {
+  --bg-color: rgba(0,0,0,0);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --text-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
 }
 
@@ -197,17 +226,16 @@ h2 {
   margin-bottom: 8px;
   font-size: var(--fs-sm);
 }
+.content-wrapper .overview-swiper img {
+  height: 52px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
 
 .app-page-wrapper {
   padding: 16px;
   background-color: #fff;
-}
-.app-page-wrapper .page-img-banner {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 16px;
 }
 
 .card {
@@ -306,6 +334,7 @@ h2 {
   width: 100%;
   height: 70px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  z-index: 999;
 }
 .bottom-navbar .container {
   max-width: 680px;
