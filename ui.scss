@@ -90,6 +90,16 @@ h2 { font-size: var(--fs-2xl); }
   }
 }
 
+.otp-form-grouping {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  .form-control {
+    max-width: 75px;
+  }
+}
+
 .input-group-icon {
   position: absolute;
   inset-block: 0;

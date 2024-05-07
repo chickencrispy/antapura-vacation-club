@@ -115,6 +115,15 @@ h2 {
   border: none;
 }
 
+.otp-form-grouping {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.otp-form-grouping .form-control {
+  max-width: 75px;
+}
+
 .input-group-icon {
   position: absolute;
   inset-block: 0;
