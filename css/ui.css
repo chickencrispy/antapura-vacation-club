@@ -48,6 +48,10 @@ h2 {
   font-size: var(--fs-2xl);
 }
 
+h1 {
+  font-size: 38px;
+}
+
 .fi {
   line-height: normal;
   transform: translateY(1px);
@@ -121,7 +125,9 @@ h2 {
   gap: 8px;
 }
 .otp-form-grouping .form-control {
-  max-width: 75px;
+  flex: 1 0 1fr;
+  text-align: center;
+  padding: 12px 8px;
 }
 
 .input-group-icon {
@@ -186,7 +192,6 @@ h2 {
 }
 .app-page-header .top-bar {
   padding: 16px;
-  color: #fff;
 }
 .app-page-header .top-bar .btn-icon {
   --border-color: transparent;

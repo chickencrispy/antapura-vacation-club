@@ -40,6 +40,7 @@ h5 { font-size: var(--fs-md); }
 h4 { font-size: var(--fs-lg); }
 h3 { font-size: var(--fs-xl); }
 h2 { font-size: var(--fs-2xl); }
+h1 { font-size: 38px; }
 
 .fi {
   line-height: normal;
@@ -96,7 +97,9 @@ h2 { font-size: var(--fs-2xl); }
   gap: 8px;
 
   .form-control {
-    max-width: 75px;
+    flex: 1 0 1fr;
+    text-align: center;
+    padding: 12px 8px;
   }
 }
 
@@ -169,7 +172,6 @@ h2 { font-size: var(--fs-2xl); }
 
   .top-bar {
     padding: 16px;
-    color: #fff;
 
     .btn-icon {
       --border-color: transparent;
