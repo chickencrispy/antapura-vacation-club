@@ -81,6 +81,40 @@ h2 {
   position: relative;
 }
 
+.form-control {
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+.form-control::placeholder {
+  color: #c5c5c5;
+}
+
+.form-grouping {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.form-grouping label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: #8c8c8c;
+}
+.form-grouping .form-control {
+  padding: 4px 0;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
+
 .input-group-icon {
   position: absolute;
   inset-block: 0;
