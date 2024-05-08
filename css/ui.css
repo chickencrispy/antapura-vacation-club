@@ -174,16 +174,17 @@ h1 {
   height: 36px;
   border-radius: 50%;
 }
-.app-home-header .search-bar {
+
+.search-bar {
   position: relative;
 }
-.app-home-header .search-bar .form-control {
+.search-bar .form-control {
   padding: 10px 14px 10px 42px;
   border-radius: 10px;
   border: none;
   background-color: #f3f6f7;
 }
-.app-home-header .search-bar .form-control:focus {
+.search-bar .form-control:focus {
   box-shadow: none;
 }
 
@@ -197,6 +198,14 @@ h1 {
   --border-color: transparent;
   --bg-color: rgba(0, 0, 0, 0.1);
   --text-color: #fff;
+}
+.app-page-header .top-bar-search {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 12px;
+}
+.app-page-header .top-bar-search .btn {
+  border-radius: 10px;
 }
 
 .header-banner {

@@ -150,20 +150,20 @@ h1 { font-size: 38px; }
       border-radius: 50%;
     }
   }
+}
 
-  .search-bar {
-    position: relative;
+.search-bar {
+  position: relative;
 
-    .form-control {
-      padding: 10px 14px 10px 42px;
-      border-radius: 10px;
-      border: none;
-      background-color: #f3f6f7;
-    }
+  .form-control {
+    padding: 10px 14px 10px 42px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f3f6f7;
+  }
 
-    .form-control:focus {
-      box-shadow: none;
-    }
+  .form-control:focus {
+    box-shadow: none;
   }
 }
 
@@ -177,6 +177,16 @@ h1 { font-size: 38px; }
       --border-color: transparent;
       --bg-color: rgba(0, 0, 0, 0.1);
       --text-color: #fff;
+    }
+  }
+
+  .top-bar-search {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 12px;
+
+    .btn {
+      border-radius: 10px;
     }
   }
 }
