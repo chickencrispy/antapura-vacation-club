@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+@import 'variable';
+
 :root {
   --fs-xs: 12px;
   --fs-sm: 14px;
@@ -12,7 +14,7 @@
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   line-height: normal;
-  background-color: #f8f9fa;
+  background-color: $lighter;
 }
 
 a {
@@ -35,11 +37,11 @@ a:focus {
   transition: all 0.3s ease-in-out;
 }
 
-h6 { font-size: var(--fs-sm); }
-h5 { font-size: var(--fs-md); }
-h4 { font-size: var(--fs-lg); }
-h3 { font-size: var(--fs-xl); }
-h2 { font-size: var(--fs-2xl); }
+h6 { font-size: $fs-sm; }
+h5 { font-size: $fs-md; }
+h4 { font-size: $fs-lg; }
+h3 { font-size: $fs-xl; }
+h2 { font-size: $fs-2xl; }
 h1 { font-size: 38px; }
 
 .fi {
@@ -159,7 +161,7 @@ h1 { font-size: 38px; }
     padding: 10px 14px 10px 42px;
     border-radius: 10px;
     border: none;
-    background-color: #f3f6f7;
+    background-color: $light;
   }
 
   .form-control:focus {
