@@ -413,6 +413,17 @@ h1 { font-size: 38px; }
     max-width: 680px;
     height: 100%;
     margin-inline: auto;
-    padding: 12px 14px;
+    padding: 0 14px 12px;
+  }
+
+  .navbar-menu {
+    padding-top: 12px;
+    border-width: 2px 0 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+
+  .navbar-menu.active {
+    border-color: #1c3967;
   }
 }
