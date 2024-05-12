@@ -80,9 +80,12 @@ h1 {
 
 .customer-detail-item {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
+}
+.customer-detail-item strong {
+  text-align: right;
 }
 
 .offcanvas-full {
