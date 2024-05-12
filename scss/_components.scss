@@ -17,8 +17,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding-left: 0;
-  padding-right: 0;
 
   .cust-img {
     display: grid;
@@ -36,8 +34,15 @@
   }
 }
 
+.customer-detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .offcanvas-full {
-  --bs-offcanvas-height: 100vh;
+  --bs-offcanvas-height: 100dvh;
   --bs-offcanvas-border-width: 0px;
 }
 
@@ -66,5 +71,6 @@
     --bs-btn-padding-x: 1rem;
     --bs-btn-padding-y: 0.75rem;
     --bs-border-radius: 10px;
+    font-size: $fs-sm;
   }
 }

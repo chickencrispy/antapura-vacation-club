@@ -13,38 +13,42 @@
   <div class="app-container">
     <div class="app-page-header">
       <div class="top-bar gap-2">
-        <a href="dashboard.html" class="btn-icon text-md"><i class="fi fi-rr-angle-left"></i></a>
-        <h5 class="mx-auto text-uppercase">Customers</h5>
+        <a href="customers.html" class="btn-icon text-md"><i class="fi fi-rr-angle-left"></i></a>
+        <h5 class="mx-auto text-uppercase">John Doe</h5>
         <button class="notify btn-icon">
           <i class="fi fi-rr-bell"></i>
           <div class="dot"></div>
         </button>
       </div>
-
-      <div class="top-bar-search">
-        <div class="search-bar flex-fill">
-          <input type="text" class="form-control" placeholder="Search here...">
-          <div class="input-group-icon">
-            <i class="fi fi-rr-search"></i>
-          </div>
-        </div>
-        <button class="btn border" data-bs-toggle="offcanvas" data-bs-target="#off_customer" aria-controls="off_customer"><i class="fi fi-rr-user-add"></i></button>
-      </div>
     </div>
 
-    <div class="app-page-content bg-white p-3 text-sm">
+    <div class="app-page-content">
+      <div class="profile-avatar mb-2">
+        <label>
+          <img src="../images/memoji/Memoji-03.png" alt="User avatar">
+          <input type="file" name="" id="" class="d-none">
+        </label>
+      </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item px-0">
-          <a href="customer_details.html" class="customer-list-item">
-            <div class="cust-img">
-              <img src="../images/memoji/Memoji-03.png" alt="User Image">
-            </div>
-            <div class="cust-info flex-fill">
-              <h6 class="mb-0">John Doe</h6>
-              <div class="text-xs text-muted">john.doe@gmail.com</div>
-            </div>
-            <div class="btn-icon"><i class="fi fi-rr-angle-small-right"></i></div>
-          </a>
+        <li class="list-group-item customer-detail-item">
+          <span>Name</span>
+          <strong>John Doe</strong>
+        </li>
+        <li class="list-group-item customer-detail-item">
+          <span>Email</span>
+          <strong>john.doe@gmail.com</strong>
+        </li>
+        <li class="list-group-item customer-detail-item">
+          <span>Phone number</span>
+          <strong>+6281234567890</strong>
+        </li>
+        <li class="list-group-item customer-detail-item">
+          <span>Nationality</span>
+          <strong>Indonesia</strong>
+        </li>
+        <li class="list-group-item customer-detail-item">
+          <span>Address</span>
+          <strong>Sei Jodoh, Batam</strong>
         </li>
       </ul>
     </div>

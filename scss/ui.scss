@@ -290,6 +290,12 @@ a:focus {
   }
 }
 
+.app-page-content {
+  padding: 12px;
+  background-color: $white;
+  font-size: $fs-sm;
+}
+
 .content-wrapper {
   position: relative;
   padding: 16px;
@@ -420,6 +426,20 @@ a:focus {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  margin-inline: auto;
+  border-radius: 80px;
+  background-color: $accent-lighter;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .bottom-navbar {
