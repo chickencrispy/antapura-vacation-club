@@ -39,9 +39,11 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
+  color: $dark;
 
   strong {
     text-align: right;
+    color: $darker;
   }
 }
 
