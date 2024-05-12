@@ -28,7 +28,7 @@
             <i class="fi fi-rr-search"></i>
           </div>
         </div>
-        <button class="btn border" data-bs-toggle="modal" data-bs-target="#new-customers"><i class="fi fi-rr-user-add"></i></button>
+        <button class="btn border" data-bs-toggle="offcanvas" data-bs-target="#off_customer" aria-controls="off_customer"><i class="fi fi-rr-user-add"></i></button>
       </div>
     </div>
 
@@ -57,22 +57,35 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="new-customers" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title fw-bold" id="staticBackdropLabel">New Customers</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_customer" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold text-uppercase" id="offcanvasBottomLabel">New Customer</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+      <form action="" class="form-underline flex-high">
+        <div class="form-floating mb-2">
+          <input type="text" class="form-control" placeholder="Customer Name">
+          <label for="floatingInputValue">Customer name</label>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="form-floating mb-2">
+          <input type="email" class="form-control" placeholder="Email">
+          <label for="floatingInputValue">Email</label>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn text-sm" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary text-sm">Submit</button>
+        <div class="form-floating mb-2">
+          <input type="tel" class="form-control" placeholder="Phone number">
+          <label for="floatingInputValue">Phone number</label>
         </div>
-      </div>
+        <div class="form-floating mb-2">
+          <input type="text" class="form-control" placeholder="Nationality">
+          <label for="floatingInputValue">Nationality</label>
+        </div>
+        <div class="grid-2 gap-2 mt-auto">
+          <button type="button" class="btn btn-light" data-bs-dismiss="offcanvas">Cancel</button> 
+          <button type="submit" class="btn btn-primary">Submit</button> 
+        </div>
+      </form>
     </div>
   </div>
 

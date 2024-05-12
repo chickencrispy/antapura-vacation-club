@@ -48,6 +48,11 @@ h1 {
   border-color: #ff8036;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -73,6 +78,33 @@ h1 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.offcanvas-full {
+  --bs-offcanvas-height: 100vh;
+  --bs-offcanvas-border-width: 0px;
+}
+
+.form-underline label:after {
+  --bs-body-bg: transparent;
+  color: #9ca2ac !important;
+}
+.form-underline .form-control {
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #d7d8d9;
+}
+.form-underline .form-floating > label {
+  color: #9ca2ac;
+}
+.form-underline .form-floating > .form-control:focus {
+  padding-top: 1.35rem;
+}
+.form-underline .btn {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-border-radius: 10px;
 }
 
 :root {
@@ -461,6 +493,12 @@ a:focus {
   color: #666;
   border-radius: 50rem;
   font-size: var(--fs-xs);
+}
+
+.flex-high {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .bottom-navbar {

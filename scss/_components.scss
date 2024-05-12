@@ -3,6 +3,11 @@
   border-color: $accent;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -28,5 +33,38 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+
+.offcanvas-full {
+  --bs-offcanvas-height: 100vh;
+  --bs-offcanvas-border-width: 0px;
+}
+
+.form-underline {
+  label:after {
+    --bs-body-bg: transparent;
+    color: $dark !important;
+  }
+
+  .form-control {
+    font-size: $fs-sm;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $silver;
+  }
+
+  .form-floating>label {
+    color: $dark;
+  }
+
+  .form-floating > .form-control:focus {
+    padding-top: 1.35rem;
+  }
+
+  .btn {
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 0.75rem;
+    --bs-border-radius: 10px;
   }
 }

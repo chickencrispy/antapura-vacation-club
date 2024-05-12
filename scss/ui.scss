@@ -416,6 +416,12 @@ a:focus {
   }
 }
 
+.flex-high {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .bottom-navbar {
   position: fixed;
   bottom: 0;
