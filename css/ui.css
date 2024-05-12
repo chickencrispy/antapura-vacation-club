@@ -88,6 +88,7 @@ h1 {
 .customer-detail-item strong {
   text-align: right;
   color: #50535b;
+  max-width: 68%;
 }
 
 .offcanvas-full {
