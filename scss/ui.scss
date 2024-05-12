@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import 'variable';
+@import 'components';
 
 :root {
   --fs-xs: 12px;
@@ -171,9 +172,18 @@ h1 { font-size: 38px; }
 
 .app-page-header {
   position: relative;
+  background-color: $white;
 
   .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 16px;
+
+    h5 {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
 
     .btn-icon {
       --border-color: transparent;
@@ -419,13 +429,16 @@ h1 { font-size: 38px; }
   }
 
   .navbar-menu {
+    flex: 1 1 auto;
     padding-top: 12px;
-    border-width: 2px 0 0;
+    border-width: 3px 0 0;
     border-style: solid;
     border-color: transparent;
+    text-align: center;
+    font-size: $fs-xs;
   }
 
   .navbar-menu.active {
-    border-color: #1c3967;
+    border-color: $accent;
   }
 }

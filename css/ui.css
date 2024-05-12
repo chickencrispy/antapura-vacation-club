@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+.btn-primary {
+  background-color: #ff8036;
+  border-color: #ff8036;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.customer-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.customer-list-item .cust-img {
+  display: grid;
+  place-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50rem;
+  background-color: #ffede4;
+}
+.customer-list-item .cust-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 :root {
   --fs-xs: 12px;
   --fs-sm: 14px;
@@ -190,9 +222,17 @@ h1 {
 
 .app-page-header {
   position: relative;
+  background-color: #ffffff;
 }
 .app-page-header .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px;
+}
+.app-page-header .top-bar h5 {
+  margin-bottom: 0;
+  font-weight: bold;
 }
 .app-page-header .top-bar .btn-icon {
   --border-color: transparent;
@@ -423,11 +463,14 @@ h1 {
   padding: 0 14px 12px;
 }
 .bottom-navbar .navbar-menu {
+  flex: 1 1 auto;
   padding-top: 12px;
-  border-width: 2px 0 0;
+  border-width: 3px 0 0;
   border-style: solid;
   border-color: transparent;
+  text-align: center;
+  font-size: 12px;
 }
 .bottom-navbar .navbar-menu.active {
-  border-color: #1c3967;
+  border-color: #ff8036;
 }/*# sourceMappingURL=ui.css.map */

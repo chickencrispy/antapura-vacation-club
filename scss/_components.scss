@@ -1,0 +1,32 @@
+.btn-primary {
+  background-color: $accent;
+  border-color: $accent;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.customer-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 0;
+  padding-right: 0;
+
+  .cust-img {
+    display: grid;
+    place-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50rem;
+    background-color: $accent-lighter;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
