@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIG Vacation Club</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/uicons-rounded.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+  <div class="app-container pb-0">
+    <div class="app-home-header">
+      <div class="top-bar">
+        <div class="user-info d-flex gap-2">
+          <div class="avatar">
+            <img src="./images/memoji/Memoji-04.png" alt="User Avatar">
+          </div>
+          <div class="content">
+            <div class="text-xs">Hello</div>
+            <div class="text-sm fw-bold">Debi Rahmadi</div>
+          </div>
+        </div>
+
+        <div class="d-flex gap-1">
+          <a href="index.html" class="btn-icon"><i class="fi fi-rr-cross"></i></a>
+        </div>
+      </div>
+
+      <div class="app-home-balance">
+        <div id="founder-point">
+          <div class="text-xs mb-1">Founder Point Balance</div>
+          <h2 class="mb-2">328.800</h2>
+          <small class="text-xs">Exp: Dec 2025</small>
+        </div>
+        <div id="club-point" class="text-end">
+          <div class="text-xs mb-1">Club Point Balance</div>
+          <h2 class="mb-2">298.600</h2>
+          <small class="text-xs">No Expired</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-home-content">
+      <div class="content-header">
+        <h5 class="heading">Point Details</h5>
+      </div>
+
+      <div class="card-point-details">
+        <div class="p-3 border rounded-4 bg-white">
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="text-sm fw-bold">Founder Point</div>
+              <small class="text-xs text-muted">Exp: Dec 2025</small>
+            </div>
+            <div class="text-sm fw-bold">328.800</div>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="text-sm fw-bold">Club Member Point</div>
+              <small class="text-xs text-muted">Exp: No Expiry</small>
+            </div>
+            <div class="text-sm fw-bold">298.600</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-home-content">
+      <div class="content-header">
+        <h5 class="heading">Recent Transactions</h5>
+        <a href="#" class="text-sm text-primary">View All <i class="fi fi-rr-angle-small-right"></i></a>
+      </div>
+
+      <div class="card-point-details">
+        <ul class="list-group rounded-4 text-sm">
+          <li class="list-group-item d-flex justify-content-between py-3">
+            <div class="d-flex flex-column">
+              <div class="fw-bold mb-1">Transfer to Velline</div>
+              <small class="text-xs text-muted">23 May 2024 &bull; 10:36</small>
+              <div class="text-xs text-success">Success</div>
+            </div>
+            <div class="d-flex flex-column text-end">
+              <div class="fw-bold">-28.000</div>
+              <small class="mt-auto text-xs text-muted">Founder Point</small>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between py-3">
+            <div class="d-flex flex-column">
+              <div class="fw-bold mb-1">Buy from +6281275438855</div>
+              <small class="text-xs text-muted">16 May 2024 &bull; 15:12</small>
+              <div class="text-xs text-success">Success</div>
+            </div>
+            <div class="d-flex flex-column text-end">
+              <div class="fw-bold text-success">+28.000</div>
+              <small class="mt-auto text-xs text-muted">Club Point</small>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between py-3">
+            <div class="d-flex flex-column">
+              <div class="fw-bold mb-1">Antapura Resort #12786367</div>
+              <small class="text-xs text-muted">15 May 2024 &bull; 08:09</small>
+              <div class="text-xs text-success">Success</div>
+            </div>
+            <div class="d-flex flex-column text-end">
+              <div class="fw-bold">-21.000</div>
+              <small class="mt-auto text-xs text-muted">Founder Point</small>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between py-3">
+            <div class="d-flex flex-column">
+              <div class="fw-bold mb-1">Planet Holiday Hotel #237635</div>
+              <small class="text-xs text-muted">11 Apr 2024 &bull; 12:23</small>
+              <div class="text-xs text-success">Success</div>
+            </div>
+            <div class="d-flex flex-column text-end">
+              <div class="fw-bold">-16.000</div>
+              <small class="mt-auto text-xs text-muted">Founder Point</small>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between py-3">
+            <div class="d-flex flex-column">
+              <div class="fw-bold mb-1">Garuda Airlines #21389167</div>
+              <small class="text-xs text-muted">01 Apr 2024 &bull; 16:20</small>
+              <div class="text-xs text-success">Success</div>
+            </div>
+            <div class="d-flex flex-column text-end">
+              <div class="fw-bold">-18.000</div>
+              <small class="mt-auto text-xs text-muted">Club Point</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+    if ($("div").hasClass("swiper-container")) {
+      var swiper = new Swiper(".banner-featured", {
+        speed: 1000,
+        parallax: true,
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+          clickable: true,
+          nextEl: ".button-lo-next",
+          prevEl: ".button-lo-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 2.2,
+          }
+        },
+      });
+
+      var swiper = new Swiper(".banner-promo", {
+        autoplay: { delay: 5000 },
+        speed: 1000,
+        parallax: true,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+          clickable: true,
+          nextEl: ".button-lo-next",
+          prevEl: ".button-lo-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+      });
+    }
+  </script>
+</body>
+</html>

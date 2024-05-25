@@ -28,28 +28,126 @@
         </div>
       </div>
 
-      <h3 class="fw-bold my-3 py-3">Explore the best destinations <br> for your dream vacations</h3>
+      <div class="app-home-balance">
+        <div id="founder-point">
+          <div class="text-xs mb-1">Founder Point Balance</div>
+          <h2 class="mb-2">328.800</h2>
+          <small class="text-xs">Exp: Dec 2025</small>
+        </div>
+        <div id="club-point" class="text-end">
+          <div class="text-xs mb-1">Club Point Balance</div>
+          <h2 class="mb-2">298.600</h2>
+          <small class="text-xs">No Expired</small>
+        </div>
+      </div>
 
-      <div class="search-bar">
-        <input type="text" class="form-control" placeholder="Search here...">
-        <div class="input-group-icon">
-          <i class="fi fi-rr-search"></i>
+      <div class="app-home-balance-action">
+        <button class="btn bg-primary">Top Up</button>
+        <button class="btn bg-success">Send</button>
+        <button class="btn bg-danger">Buy</button>
+        <button class="btn bg-warning">Sell</button>
+      </div>
+    </div>
+
+    <div class="app-home-marketplace">
+      <div class="bg-white border p-3 rounded-4">
+        <nav class="mb-3">
+          <div class="nav nav-underline nav-justified rounded-pill" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-sell-tab" data-bs-toggle="tab" data-bs-target="#sell-tab" type="button" role="tab" aria-controls="sell-tab" aria-selected="true">Sell Point</button>
+            <button class="nav-link" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="false">Buy Point</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <!-- Market Sell -->
+          <div class="tab-pane fade show active" id="sell-tab" role="tabpanel" aria-labelledby="nav-sell-tab" tabindex="0">
+            <table class="table table-borderless">
+              <thead>
+                <tr class="text-xs text-uppercase">
+                  <th>Point (Pts)</th>
+                  <th class="text-center">Exp Date</th>
+                  <th class="text-end">Price (IDR)</th>
+                  <th class="text-end">Act</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <tr class="border-top">
+                  <td>3.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2024</td>
+                  <td class="text-end">2.500.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>3.800</td>
+                  <td class="text-center text-xs text-muted">Aug 2025</td>
+                  <td class="text-end">3.850.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>6.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2027</td>
+                  <td class="text-end">6.800.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Market Buy-->
+          <div class="tab-pane fade" id="buy-tab" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
+            <table class="table table-borderless">
+              <thead>
+                <tr class="text-xs text-uppercase">
+                  <th>Point (Pts)</th>
+                  <th class="text-center">Exp Date</th>
+                  <th class="text-end">Price (IDR)</th>
+                  <th class="text-end">Act</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <tr class="border-top">
+                  <td>5.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2026</td>
+                  <td class="text-end">5.800.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>6.000</td>
+                  <td class="text-center text-xs text-muted">No Exp</td>
+                  <td class="text-end">7.000.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>6.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2025</td>
+                  <td class="text-end">6.200.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="d-grid">
+          <button class="btn btn-flex bg-dark text-light"><i class="fi fi-rr-shop text-lg"></i> Visit marketplace</button>
         </div>
       </div>
     </div>
 
-    <div class="app-home-categories">
-      <ul class="scroll-hidden">
-        <li><i class="fi fi-rr-hotel"></i> Hotel</li>
-        <li><i class="fi fi-rr-house-chimney-window"></i> Villa</li>
-        <li><i class="fi fi-rr-golf"></i> Golf Course</li>
-        <li><i class="fi fi-rr-briefcase"></i> Tour Package</li>
-      </ul>
+    <div class="app-home-banner">
+      <div class="swiper-container banner-promo">
+        <div class="swiper-wrapper">
+          <a href="#" class="swiper-slide">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/07/11/1689048667894-f6bffef091041e83cddf0abb4c38665e.png" alt="" class="img-fluid rounded-4">
+          </a>
+          <a href="#" class="swiper-slide">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2021/07/14/1626253243213-6d58e37c6657e0f6412da66a1c4d87f8.png" alt="" class="img-fluid rounded-4">
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="app-home-content overflow-hidden">
       <div class="content-header">
-        <h6 class="heading">Popular Destination</h5>
+        <h5 class="heading">Popular Destination</h5>
       </div>
 
       <div class="swiper-container banner-featured">
@@ -76,7 +174,7 @@
 
     <div class="app-home-content">
       <div class="content-header">
-        <h6 class="heading">Featured Listings</h6>
+        <h5 class="heading">Featured Listings</h5>
         <a href="#" class="text-primary">View All</a>
       </div>
 
@@ -90,7 +188,7 @@
               <div class="d-flex align-items-center gap-1 text-xs text-muted"><i class="fi fi-rr-marker"></i> Batam - Indonesia</div>
             </div>
             <div class="w-25 text-end ps-4">
-              <h3 class="fw-bolder mb-0">88</h3>
+              <h3 class="mb-0">8.000</h3>
               <div class="text-xs text-muted">Points</div>
             </div>
           </div>
@@ -105,7 +203,7 @@
               <div class="d-flex align-items-center gap-1 text-xs text-muted"><i class="fi fi-rr-marker"></i> Batam - Indonesia</div>
             </div>
             <div class="w-25 text-end ps-4">
-              <h3 class="fw-bolder mb-0">76</h3>
+              <h3 class="mb-0">7.600</h3>
               <div class="text-xs text-muted">Points</div>
             </div>
           </div>
@@ -117,7 +215,7 @@
   <div class="bottom-navbar">
     <div class="container grid-4">
       <a href="index.html" class="navbar-menu active"><h3 class="mb-0"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
-      <a href="promo.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-badge-percent"></i></h3>Promo</a>
+      <a href="history.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-time-past"></i></h3>History</a>
       <a href="saved.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-heart"></i></h3>Save</a>
       <a href="account.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
     </div>
@@ -148,6 +246,24 @@
             slidesPerView: 2.2,
           }
         },
+      });
+
+      var swiper = new Swiper(".banner-promo", {
+        autoplay: { delay: 5000 },
+        speed: 1000,
+        parallax: true,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+          clickable: true,
+          nextEl: ".button-lo-next",
+          prevEl: ".button-lo-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
       });
     }
   </script>
