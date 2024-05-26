@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 h6 {
   font-size: 14px;
@@ -64,6 +65,7 @@ h1 {
 }
 
 .btn-dropdown {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,6 +75,19 @@ h1 {
   font-size: 14px !important;
   border: 1px solid var(--bs-border-color);
   border-radius: 10px;
+  background-color: #ffffff;
+}
+.btn-dropdown:after {
+  content: "ﵩ";
+  position: absolute;
+  display: grid;
+  place-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
+  font-size: 16px;
+  font-family: uicons-regular-rounded !important;
 }
 
 .btn-dropdown:hover {
@@ -273,6 +288,21 @@ h1 {
 }
 .input-date-icon .input-group-icon {
   color: #949699;
+}
+
+.dropdown-menu {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  border-color: var(--bs-border-color);
+}
+.dropdown-menu label {
+  width: 100%;
+  padding: 8px;
+}
+.dropdown-menu label .form-check-input {
+  margin-right: 8px;
 }
 
 .app-home-header {
