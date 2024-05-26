@@ -11,6 +11,7 @@
   --fs-lg: 18px;
   --fs-xl: 20px;
   --fs-2xl: 28px;
+  --fs-3xl: 36px;
 }
 
 body {
@@ -102,6 +103,10 @@ a:focus {
   display: grid;
   place-content: center;
   padding: 0 14px;
+
+  .fi {
+    top: 0px;
+  }
 }
 
 .scroll-hidden::-webkit-scrollbar {
@@ -125,6 +130,7 @@ a:focus {
     border-radius: 10px;
     border: none;
     background-color: $light;
+    font-size: $fs-sm;
   }
 
   .form-control:focus {
@@ -213,12 +219,6 @@ a:focus {
       text-wrap: nowrap;
     }
   }
-}
-
-.app-page-content {
-  padding: 12px;
-  background-color: $white;
-  font-size: $fs-sm;
 }
 
 .app-page-wrapper {

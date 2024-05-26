@@ -12,7 +12,7 @@ $accent-lighter: #ffede4;
 $black: #111214;
 $darkest: #24262b;
 $darker: #50535b;
-$dark: #9ca2ac;
+$dark: #949699;
 $silver: #d7d8d9;
 $light: #f5f7f9;
 $lighter: #fafafb;
@@ -31,3 +31,5 @@ h1 { font-size: $fs-3xl; }
 .text-md { font-size: var(--fs-md) !important; }
 .text-lg { font-size: var(--fs-lg) !important; }
 .text-xl { font-size: var(--fs-xl) !important; }
+.text-2xl { font-size: var(--fs-2xl) !important; }
+.text-3xl { font-size: var(--fs-3xl) !important; }

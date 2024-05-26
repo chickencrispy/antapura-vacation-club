@@ -39,6 +39,7 @@
   border-radius: 16px;
   background-color: $darkest;
   color: $light;
+  cursor: pointer;
 }
 
 .app-home-balance-action {
@@ -100,13 +101,14 @@
 .app-home-content {
   position: relative;
   padding: 16px;
+  overflow: hidden;
 
   .content-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
-    font-size: $fs-xs;
+    font-size: $fs-sm;
 
     .heading {
       margin-bottom: 0;
@@ -125,7 +127,7 @@
     justify-content: space-between;
     padding: 16px;
 
-    h5 {
+    h4 {
       margin-bottom: 0;
       font-weight: bold;
     }
@@ -162,6 +164,15 @@
       border-radius: 10px;
     }
   }
+}
+
+.app-page-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  padding: 16px;
+  overflow: hidden;
 }
 
 .app-page-fullbanner {

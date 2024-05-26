@@ -65,6 +65,19 @@
   --bs-offcanvas-border-width: 0px;
 }
 
+.offcanvas-auto {
+  --bs-offcanvas-height: auto;
+}
+
+.offcanvas-footer {
+  .btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    font-size: $fs-sm;
+  }
+}
+
 .form-underline {
   label:after {
     --bs-body-bg: transparent;
@@ -91,5 +104,111 @@
     --bs-btn-padding-y: 0.75rem;
     --bs-border-radius: 10px;
     font-size: $fs-sm;
+  }
+}
+
+.list-group-between {
+  font-size: $fs-sm;
+  border-radius: 16px;
+
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: $fs-xs;
+
+      h5 {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      strong {
+        font-size: $fs-sm;
+      }
+
+      small {
+        font-size: $fs-xs;
+        color: var(--bs-secondary-color);
+      }
+    }
+
+    .item-content:last-child {
+      text-align: end;
+    }
+  }
+}
+
+.list-group-between-link {
+  font-size: $fs-sm;
+  border-radius: 16px;
+
+  .list-group-item a {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: $fs-xs;
+
+      h5 {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      strong {
+        font-size: $fs-sm;
+      }
+
+      small {
+        font-size: $fs-xs;
+        color: var(--bs-secondary-color);
+      }
+    }
+
+    .item-content:last-child {
+      text-align: end;
+    }
+  }
+}
+
+.card-heading {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: $white;
+  text-align: center;
+  border: 1px solid var(--bs-border-color);
+}
+
+.card-details {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: $white;
+  font-size: $fs-sm;
+  border: 1px solid var(--bs-border-color);
+}
+
+.dl-between {
+  dd {
+    color: var(--bs-secondary-color);
+  }
+
+  dd:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  dt {
+    text-align: end;
   }
 }

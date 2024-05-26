@@ -42,94 +42,112 @@
       </div>
     </div>
 
-    <div class="app-home-content">
+    <div id="point-details" class="app-home-content">
       <div class="content-header">
         <h5 class="heading">Point Details</h5>
       </div>
 
       <div class="card-point-details">
-        <div class="p-3 border rounded-4 bg-white">
-          <div class="d-flex justify-content-between">
-            <div>
-              <div class="text-sm fw-bold">Founder Point</div>
-              <small class="text-xs text-muted">Exp: Dec 2025</small>
+        <ul class="list-group list-group-between">
+          <li class="list-group-item">
+            <div class="item-content">
+              <strong>Founder Point</strong>
+              <small>Exp: Dec 2025</small>
             </div>
-            <div class="text-sm fw-bold">328.800</div>
-          </div>
-          <hr>
-          <div class="d-flex justify-content-between">
-            <div>
-              <div class="text-sm fw-bold">Club Member Point</div>
-              <small class="text-xs text-muted">Exp: No Expiry</small>
+            <div class="item-content">
+              <h5>328.800</h5>
             </div>
-            <div class="text-sm fw-bold">298.600</div>
-          </div>
-        </div>
+          </li>
+          <li class="list-group-item">
+            <div class="item-content">
+              <strong>Club Point</strong>
+              <small>Exp: No Expiry</small>
+            </div>
+            <div class="item-content">
+              <h5>298.600</h5>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="app-home-content">
+    <div id="recent-transactions" class="app-home-content">
       <div class="content-header">
         <h5 class="heading">Recent Transactions</h5>
-        <a href="#" class="text-sm text-primary">View All <i class="fi fi-rr-angle-small-right"></i></a>
+        <a href="transaction_history.html" class="text-primary">View All <i class="fi fi-rr-angle-small-right"></i></a>
       </div>
 
       <div class="card-point-details">
-        <ul class="list-group rounded-4 text-sm">
-          <li class="list-group-item d-flex justify-content-between py-3">
-            <div class="d-flex flex-column">
-              <div class="fw-bold mb-1">Transfer to Velline</div>
-              <small class="text-xs text-muted">23 May 2024 &bull; 10:36</small>
-              <div class="text-xs text-success">Success</div>
-            </div>
-            <div class="d-flex flex-column text-end">
-              <div class="fw-bold">-28.000</div>
-              <small class="mt-auto text-xs text-muted">Founder Point</small>
-            </div>
+        <ul class="list-group list-group-between-link">
+          <li class="list-group-item">
+            <a href="transaction_details.html">
+              <div class="item-content">
+                <strong>Transfer to Velline</strong>
+                <small>Point Transfer</small>
+                <small>23 May 2024 &bull; 10:36</small>
+              </div>
+              <div class="item-content">
+                <strong>-28.000</strong>
+                <small>Founder Point</small>
+                <small class="text-success">Success</small>
+              </div>
+            </a>
           </li>
-          <li class="list-group-item d-flex justify-content-between py-3">
-            <div class="d-flex flex-column">
-              <div class="fw-bold mb-1">Buy from +6281275438855</div>
-              <small class="text-xs text-muted">16 May 2024 &bull; 15:12</small>
-              <div class="text-xs text-success">Success</div>
-            </div>
-            <div class="d-flex flex-column text-end">
-              <div class="fw-bold text-success">+28.000</div>
-              <small class="mt-auto text-xs text-muted">Club Point</small>
-            </div>
+          <li class="list-group-item">
+            <a href="transaction_details.html">
+              <div class="item-content">
+                <strong>Buy from +6281275438855</strong>
+                <small>Point Transfer</small>
+                <small>16 May 2024 &bull; 15:12</small>
+              </div>
+              <div class="item-content">
+                <strong class="fw-bold text-success">+28.000</strong>
+                <small>Club Point</small>
+                <small class="text-success">Success</small>
+              </div>
+            </a>
           </li>
-          <li class="list-group-item d-flex justify-content-between py-3">
-            <div class="d-flex flex-column">
-              <div class="fw-bold mb-1">Antapura Resort #12786367</div>
-              <small class="text-xs text-muted">15 May 2024 &bull; 08:09</small>
-              <div class="text-xs text-success">Success</div>
-            </div>
-            <div class="d-flex flex-column text-end">
-              <div class="fw-bold">-21.000</div>
-              <small class="mt-auto text-xs text-muted">Founder Point</small>
-            </div>
+          <li class="list-group-item">
+            <a href="transaction_details.html">
+              <div class="item-content">
+                <strong>Cashback Antapura #78634675</strong>
+                <small>Point Earning</small>
+                <small>15 May 2024 &bull; 08:09</small>
+              </div>
+              <div class="item-content">
+                <strong class="text-success">+80.000</strong>
+                <small>Founder Point</small>
+                <small class="text-success">Success</small>
+              </div>
+            </a>
           </li>
-          <li class="list-group-item d-flex justify-content-between py-3">
-            <div class="d-flex flex-column">
-              <div class="fw-bold mb-1">Planet Holiday Hotel #237635</div>
-              <small class="text-xs text-muted">11 Apr 2024 &bull; 12:23</small>
-              <div class="text-xs text-success">Success</div>
-            </div>
-            <div class="d-flex flex-column text-end">
-              <div class="fw-bold">-16.000</div>
-              <small class="mt-auto text-xs text-muted">Founder Point</small>
-            </div>
+          <li class="list-group-item">
+            <a href="transaction_details.html">
+              <div class="item-content">
+                <strong>Planet Holiday Hotel #237635</strong>
+                <small>Hotel Booking</small>
+                <small>11 Apr 2024 &bull; 12:23</small>
+              </div>
+              <div class="item-content">
+                <strong>-16.000</strong>
+                <small>Founder Point</small>
+                <small class="text-success">Success</small>
+              </div>
+            </a>
           </li>
-          <li class="list-group-item d-flex justify-content-between py-3">
-            <div class="d-flex flex-column">
-              <div class="fw-bold mb-1">Garuda Airlines #21389167</div>
-              <small class="text-xs text-muted">01 Apr 2024 &bull; 16:20</small>
-              <div class="text-xs text-success">Success</div>
-            </div>
-            <div class="d-flex flex-column text-end">
-              <div class="fw-bold">-18.000</div>
-              <small class="mt-auto text-xs text-muted">Club Point</small>
-            </div>
+          <li class="list-group-item">
+            <a href="transaction_details.html">
+              <div class="item-content">
+                <strong>Garuda Airlines #21389167</strong>
+                <small>Tickets</small>
+                <small>01 Apr 2024 &bull; 16:20</small>
+              </div>
+              <div class="item-content">
+                <strong>-18.000</strong>
+                <small>Club Point</small>
+                <small class="text-success">Success</small>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
@@ -139,48 +157,5 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script>
-    if ($("div").hasClass("swiper-container")) {
-      var swiper = new Swiper(".banner-featured", {
-        speed: 1000,
-        parallax: true,
-        slidesPerView: 1.5,
-        spaceBetween: 16,
-        loop: true,
-        navigation: {
-          clickable: true,
-          nextEl: ".button-lo-next",
-          prevEl: ".button-lo-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 2.2,
-          }
-        },
-      });
-
-      var swiper = new Swiper(".banner-promo", {
-        autoplay: { delay: 5000 },
-        speed: 1000,
-        parallax: true,
-        slidesPerView: 1,
-        spaceBetween: 16,
-        loop: true,
-        navigation: {
-          clickable: true,
-          nextEl: ".button-lo-next",
-          prevEl: ".button-lo-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        }
-      });
-    }
-  </script>
 </body>
 </html>
