@@ -104,46 +104,92 @@
   </div>
 
   <!-- Offcanvas -->
-  <div class="offcanvas offcanvas-bottom offcanvas-auto rounded-top-4" tabindex="-1" id="off_customer" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_customer" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Transaction History Filter</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
-        <ul class="list-group list-group-flush mb-3">
-          <li class="list-group-item">
-            <label>
-              <input type="checkbox" name="" id="">
-              <span>Transfer Point</span>
-            </label>
-          </li>
-          <li class="list-group-item">
-            <label>
-              <input type="checkbox" name="" id="">
-              <span>Earning Point</span>
-            </label>
-          </li>
-          <li class="list-group-item">
-            <label>
-              <input type="checkbox" name="" id="">
-              <span>Hotel Booking</span>
-            </label>
-          </li>
-          <li class="list-group-item">
-            <label>
-              <input type="checkbox" name="" id="">
-              <span>Ticket</span>
-            </label>
-          </li>
-        </ul>
+        <div id="filter-type" class="mb-3">
+          <label for="select-type" class="text-xs fw-bold mb-2">Transaction Type</label>
+          <div class="dropdown mt-2 d-grid">
+            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Transaction Type
+            </button>
+            <ul class="dropdown-menu  w-100 text-sm rounded-3">
+              <li><label class="w-100 p-2"><input type="checkbox" name="" id="" class="form-check-input me-2"> Point Transfer</label></li>
+              <li><label class="w-100 p-2"><input type="checkbox" name="" id="" class="form-check-input me-2"> Point Earning</label></li>
+              <li><label class="w-100 p-2"><input type="checkbox" name="" id="" class="form-check-input me-2"> Hotel Booking</label></li>
+              <li><label class="w-100 p-2"><input type="checkbox" name="" id="" class="form-check-input me-2"> Ticket</label></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="filter-source" class="mb-3">
+          <label for="select-source" class="text-xs fw-bold mb-2">Source of Point</label>
+          <select name="" id="select-source" class="form-select text-sm">
+            <option value="">Founder Point</option>
+            <option value="">Club Point</option>
+          </select>
+        </div>
+
+        <div id="filter-period" class="mb-3">
+          <label for="fth-period" class="text-xs fw-bold mb-2">Period</label>
+          <div class="mb-2">
+            <select name="" id="fth-period" class="form-select text-sm">
+              <option value="1">Today</option>
+              <option value="2">This Week</option>
+              <option value="3">This Month</option>
+              <option value="4">Custom</option>
+            </select>
+
+            <div class="grid-2 gap-2 d-none mt-2">
+              <div>
+                <label class="text-xs fw-bold mb-1">From</label>
+                <div class="input-date-icon">
+                  <input type="date" name="" id="" class="form-control max-today text-sm">
+                  <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                </div>
+              </div>
+              <div>
+                <label class="text-xs fw-bold mb-1">Until</label>
+                <div class="input-date-icon">
+                  <input type="date" name="" id="" class="form-control max-today text-sm">
+                  <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="offcanvas-footer grid-2 gap-2 mt-auto">
           <button type="reset" class="btn btn-light border" data-bs-dismiss="offcanvas">Reset</button>
-          <button type="button" class="btn btn-dark">Apply</button>
+          <button type="button" class="btn btn-dark">Show</button>
         </div>
       </form>
     </div>
   </div>
 
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script>
+    if ($("input").hasClass("max-today")) {
+      const dateToday = new Date().toISOString().split("T")[0];
+      $(".max-today").each(function() {
+        $(this).attr("max", dateToday);
+        $(this).on('focus', function() {
+          if (this.showPicker) { this.showPicker(); } else { $(this).trigger('click'); }
+        });
+      });
+    }
+
+    if($("div").is("#filter-period")) {
+      $('#fth-period').on('change', function() {
+        $(this).next().toggleClass('d-none', $(this).val() !== "4");
+      });
+    }
+  </script>
 </body>
 </html>

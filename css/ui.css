@@ -63,6 +63,22 @@ h1 {
   gap: 8px;
 }
 
+.btn-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 14px !important;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 10px;
+}
+
+.btn-dropdown:hover {
+  border-color: var(--bs-border-color);
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -118,6 +134,11 @@ h1 {
 
 .offcanvas-auto {
   --bs-offcanvas-height: auto;
+}
+
+.offcanvas-body .form-control, .offcanvas-body .form-select {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .offcanvas-footer .btn {
@@ -238,6 +259,20 @@ h1 {
 }
 .dl-between dt {
   text-align: end;
+}
+
+.input-date-icon {
+  position: relative;
+}
+.input-date-icon .form-control {
+  padding-left: 42px;
+  text-align: left;
+}
+.input-date-icon .form-control::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.input-date-icon .input-group-icon {
+  color: #949699;
 }
 
 .app-home-header {
@@ -516,16 +551,23 @@ a:focus {
   border-radius: 10px;
 }
 
+.form-select:focus,
 .form-control:focus {
   box-shadow: none;
+  border-color: #50535b;
 }
 
 .form-control::-moz-placeholder {
-  color: #c5c5c5;
+  color: #949699;
 }
 
 .form-control::placeholder {
-  color: #c5c5c5;
+  color: #949699;
+}
+
+.form-select {
+  padding: 10px 14px;
+  border-radius: 10px;
 }
 
 .form-grouping {

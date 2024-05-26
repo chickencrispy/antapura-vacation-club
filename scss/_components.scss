@@ -10,6 +10,22 @@
   gap: 8px;
 }
 
+.btn-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: $fs-sm !important;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 10px;
+}
+
+.btn-dropdown:hover {
+  border-color: var(--bs-border-color);
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -67,6 +83,13 @@
 
 .offcanvas-auto {
   --bs-offcanvas-height: auto;
+}
+
+.offcanvas-body {
+  .form-control, .form-select {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 .offcanvas-footer {
@@ -210,5 +233,22 @@
 
   dt {
     text-align: end;
+  }
+}
+
+.input-date-icon {
+  position: relative;
+
+  .form-control {
+    padding-left: 42px;
+    text-align: left;
+  }
+
+  .form-control::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  .input-group-icon {
+    color: $dark;
   }
 }

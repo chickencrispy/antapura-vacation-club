@@ -57,13 +57,19 @@ a:focus {
   padding: 10px 14px;
   border-radius: 10px;
 }
-
+.form-select:focus,
 .form-control:focus {
   box-shadow: none;
+  border-color: $darker;
 }
 
 .form-control::placeholder {
-  color: #c5c5c5;
+  color: $dark;
+}
+
+.form-select {
+  padding: 10px 14px;
+  border-radius: 10px;
 }
 
 .form-grouping {
