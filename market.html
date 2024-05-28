@@ -11,40 +11,12 @@
 </head>
 <body>
   <div class="app-container">
-    <div class="app-home-header">
-      <div class="top-bar">
-        <div class="user-info d-flex gap-2">
-          <div class="avatar">
-            <img src="./images/memoji/Memoji-04.png" alt="User Avatar">
-          </div>
-          <div class="content">
-            <div class="text-xs">Hello</div>
-            <div class="text-sm fw-bold">Debi Rahmadi</div>
-          </div>
-        </div>
-
-        <div class="d-flex gap-1">
-          <a href="search.html" class="btn-icon"><i class="fi fi-rr-search"></i></a>
-          <a href="#" class="btn-icon"><i class="fi fi-rr-bell"></i></a>
-        </div>
+    <div class="app-page-header">
+      <div class="top-bar gap-2">
+        <h4>Market</h4>
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
       </div>
-
-      <div class="app-home-balance" onclick="javascript:location.href='point_details.html'">
-        <div id="founder-point">
-          <div class="text-xs mb-1">Founder Point Balance</div>
-          <h2 class="mb-2">328.800</h2>
-          <small class="text-xs">Exp: Dec 2025</small>
-        </div>
-        <div id="club-point" class="text-end">
-          <div class="text-xs mb-1">Club Point Balance</div>
-          <h2 class="mb-2">298.600</h2>
-          <a href="point_details.html" class="text-xs">See details <i class="fi fi-rr-angle-circle-right"></i></a>
-        </div>
-      </div>
-
-      <div class="app-home-balance-action">
-        <button class="btn bg-primary" data-bs-toggle="offcanvas" data-bs-target="#off_topup" aria-controls="off_topup">Top Up</button>
-        <button class="btn bg-success" data-bs-toggle="offcanvas" data-bs-target="#off_transfer" aria-controls="off_transfer">Transfer</button>
+      <div class="top-bar-market">
         <button class="btn bg-danger" data-bs-toggle="offcanvas" data-bs-target="#off_buy" aria-controls="off_buy">Buy</button>
         <button class="btn bg-warning" data-bs-toggle="offcanvas" data-bs-target="#off_sell" aria-controls="off_sell">Sell</button>
       </div>
@@ -61,7 +33,7 @@
         <div class="tab-content" id="nav-tabContent">
           <!-- Market Buy -->
           <div class="tab-pane fade show active" id="buy-tab" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
-            <table class="table table-borderless">
+            <table class="table table-borderless mb-0">
               <thead>
                 <tr class="text-xs text-uppercase">
                   <th>Point (Pts)</th>
@@ -94,7 +66,7 @@
           </div>
           <!-- Market Sell-->
           <div class="tab-pane fade" id="sell-tab" role="tabpanel" aria-labelledby="nav-sell-tab" tabindex="0">
-            <table class="table table-borderless">
+            <table class="table table-borderless mb-0">
               <thead>
                 <tr class="text-xs text-uppercase">
                   <th>Point (Pts)</th>
@@ -126,164 +98,17 @@
             </table>
           </div>
         </div>
-        
-        <div class="d-grid">
-          <button class="btn btn-flex bg-dark text-light" onclick="javascript:location.href='market.html'">
-            <i class="fi fi-rr-shop text-lg"></i> Visit market place
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-home-banner">
-      <div class="swiper-container banner-promo">
-        <div class="swiper-wrapper">
-          <a href="#" class="swiper-slide">
-            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/07/11/1689048667894-f6bffef091041e83cddf0abb4c38665e.png" alt="" class="img-fluid rounded-4">
-          </a>
-          <a href="#" class="swiper-slide">
-            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2021/07/14/1626253243213-6d58e37c6657e0f6412da66a1c4d87f8.png" alt="" class="img-fluid rounded-4">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-home-content">
-      <div class="content-header">
-        <h5 class="heading">Popular Destination</h5>
-      </div>
-
-      <div class="swiper-container banner-featured">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://atourin.obs.ap-southeast-3.myhuaweicloud.com/images/destination/batam/jembatan-barelang-profile1694589910.jpeg?x-image-process=image/resize,p_100,limit_1/imageslim">
-            <div class="content">Batam - Indonesia</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://images.unsplash.com/photo-1574227492706-f65b24c3688a?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <div class="content">Singapore</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://images.unsplash.com/photo-1577931683033-1059552104e0?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <div class="content">Malaysia</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <div class="content">Thailand</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-home-content">
-      <div class="content-header">
-        <h5 class="heading">Featured Listings</h5>
-        <a href="#" class="text-primary">View All</a>
-      </div>
-
-      <div class="card-col-lists">
-        <a href="page.html" class="list-items">
-          <button class="btn btn-save"><i class="fi fi-rr-heart"></i></button>
-          <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-          <div class="content d-flex align-items-center">
-            <div class="flex-fill pe-4">
-              <h5 class="fw-bold">Antapura Resort</h5>
-              <div class="d-flex align-items-center gap-1 text-xs text-muted"><i class="fi fi-rr-marker"></i> Batam - Indonesia</div>
-            </div>
-            <div class="w-25 text-end ps-4">
-              <h4 class="mb-0">8.000</h4>
-              <div class="text-xs text-muted">Points</div>
-            </div>
-          </div>
-        </a>
-
-        <a href="page.html" class="list-items">
-          <button class="btn btn-save"><i class="fi fi-rr-heart"></i></button>
-          <img src="https://specials.priceless.com/mastercard/images/92c0871c-a792-47bf-8ebf-fc0fce6aa1ae.jpg">
-          <div class="content d-flex align-items-center">
-            <div class="flex-fill pe-4">
-              <h5 class="fw-bold">Planet Holiday Hotel & Residence</h5>
-              <div class="d-flex align-items-center gap-1 text-xs text-muted"><i class="fi fi-rr-marker"></i> Batam - Indonesia</div>
-            </div>
-            <div class="w-25 text-end ps-4">
-              <h4 class="mb-0">7.600</h4>
-              <div class="text-xs text-muted">Points</div>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </div>
 
   <div class="bottom-navbar">
     <div class="container grid-5">
-      <a href="index.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="index.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
       <a href="transaction_history.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-time-past"></i></h3>History</a>
-      <a href="market.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
+      <a href="market.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
       <a href="contact.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-book-user"></i></h3>Contact</a>
       <a href="account.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
-    </div>
-  </div>
-
-  <!-- Offcanvas Topup -->
-  <div class="offcanvas offcanvas-bottom offcanvas-auto" tabindex="-1" id="off_topup" aria-labelledby="offcanvasTopup">
-    <div class="offcanvas-header">
-      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Top Up</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body small">
-      <form action="" class="flex-high">
-        <div id="topup-amount" class="mb-3">
-          <label for="select-type" class="text-xs fw-bold mb-2">Top Up Amount</label>
-          <input type="number" class="form-control text-center">
-        </div>
-
-        <div class="offcanvas-footer d-grid mt-auto">
-          <button type="button" class="btn btn-dark">Submit</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Offcanvas Transfer -->
-  <div class="offcanvas offcanvas-bottom offcanvas-auto" tabindex="-1" id="off_transfer" aria-labelledby="offcanvasTransfer">
-    <div class="offcanvas-header">
-      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Transfer Point</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body small">
-      <form action="" class="flex-high">
-        <div id="transfer-target" class="mb-1">
-          <label for="select-type" class="text-xs fw-bold mb-2">Phone Number</label>
-          <input type="text" name="" id="" class="form-control">
-        </div>
-
-        <div id="transfer-amount" class="mb-1">
-          <label for="select-source" class="text-xs fw-bold mb-2">Transfer Amount</label>
-          <input type="number" name="" id="" class="form-control">
-        </div>
-
-        <div id="transfer-source" class="mb-5">
-          <label for="fth-period" class="text-xs fw-bold mb-2">Select Source</label>
-          <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Source of Point</button>
-            <ul class="dropdown-menu">
-              <li>
-                <label><input type="radio" name="transfer-source" id="" value="founder" class="form-check-input d-none"> Founder Point</label>
-                <span>328.800</span>
-              </li>
-              <li>
-                <label><input type="radio" name="transfer-source" id="" value="club" class="form-check-input d-none"> Club Point</label>
-                <span>298.600</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="offcanvas-footer d-grid mt-auto">
-          <button type="button" class="btn btn-dark">Transfer</button>
-        </div>
-      </form>
     </div>
   </div>
 

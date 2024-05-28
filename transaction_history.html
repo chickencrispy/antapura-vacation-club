@@ -21,7 +21,7 @@
           <input type="text" class="form-control" placeholder="Search here...">
           <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
         </div>
-        <button class="btn border" data-bs-toggle="offcanvas" data-bs-target="#off_customer" aria-controls="off_customer">
+        <button class="btn border" data-bs-toggle="offcanvas" data-bs-target="#off_filter" aria-controls="off_filter">
           <i class="fi fi-rr-settings-sliders"></i>
         </button>
       </div>
@@ -103,8 +103,18 @@
     </div>
   </div>
 
-  <!-- Offcanvas -->
-  <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_customer" aria-labelledby="offcanvasBottomLabel">
+  <div class="bottom-navbar">
+    <div class="container grid-5">
+      <a href="index.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="transaction_history.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-time-past"></i></h3>History</a>
+      <a href="market.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
+      <a href="contact.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-book-user"></i></h3>Contact</a>
+      <a href="account.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
+    </div>
+  </div>
+
+  <!-- Offcanvas Filter -->
+  <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_filter" aria-labelledby="offcanvasBottomLabel">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Transaction History Filter</h4>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -180,41 +190,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script>
-    if ($("input").hasClass("max-today")) {
-      const dateToday = new Date().toISOString().split("T")[0];
-      $(".max-today").each(function() {
-        $(this).attr("max", dateToday);
-        $(this).on('focus', function() {
-          if (this.showPicker) { this.showPicker(); } else { $(this).trigger('click'); }
-        });
-      });
-    }
-
-    const dropdownMenu = document.querySelectorAll(".dropdown-menu");
-    dropdownMenu.forEach(dropdown => {
-      dropdown.querySelectorAll(".form-check-input").forEach(checkbox => {
-        checkbox.addEventListener("change", () => {
-          const checkeds = dropdown.querySelectorAll(".form-check-input:checked");
-          const dropdBtn = dropdown.previousElementSibling;
-          var checkLen = checkeds.length;
-          if(checkLen == 1) {
-            dropdBtn.textContent = checkeds[0].parentNode.textContent;
-          }else if(checkLen == 2) {
-            dropdBtn.textContent = checkeds[0].parentNode.textContent + ", " + checkeds[1].parentNode.textContent;
-          }else if(checkLen > 2) {
-            dropdBtn.textContent = checkeds[0].parentNode.textContent + ", " + checkeds[1].parentNode.textContent  + ", & " + (checkLen-2) + " more";
-          }
-        });
-      });
-    });
-
-    const filterPeriod = document.querySelectorAll('input[name="filter-period"]');
-    filterPeriod.forEach(periods => {
-      periods.addEventListener("change", function() {
-        document.getElementById("fth-period").classList.toggle("d-none", this.value != "custom");
-      });
-    });
-  </script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

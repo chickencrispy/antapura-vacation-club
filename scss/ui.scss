@@ -41,10 +41,8 @@ a:focus {
 }
 
 .fi {
-  line-height: normal;
-  transform: translateY(1px);
   position: relative;
-  top: 2px;
+  top: 1.5px;
 }
 
 .text-semidark { color:#8c8c8c; }
@@ -111,7 +109,7 @@ a:focus {
   padding: 0 14px;
 
   .fi {
-    top: 0px;
+    color: $silver;
   }
 }
 
@@ -186,6 +184,7 @@ a:focus {
   backdrop-filter: blur(4px);
   border: 1px solid var(--border-color);
   border-radius: 10px;
+  font-size: $fs-lg;
 }
 
 .btn-icon-pill {
@@ -377,7 +376,7 @@ a:focus {
     border-style: solid;
     border-color: transparent;
     text-align: center;
-    font-size: $fs-xs;
+    font-size: 11px;
   }
 
   .navbar-menu.active {

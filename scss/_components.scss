@@ -56,6 +56,11 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .customer-list-item {
   display: flex;
   align-items: center;
@@ -221,6 +226,38 @@
   }
 }
 
+.list-group-contact {
+  font-size: $fs-sm;
+  border-radius: 16px;
+
+  .list-group-item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .user-avatar {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 50rem;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
 .card-heading {
   padding: 16px;
   border-radius: 16px;
@@ -268,12 +305,40 @@
   }
 }
 
+.input-currency {
+  position: relative;
+
+  .currency-name {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 4px 14px;
+    display: grid;
+    place-content: center;
+  }
+
+  .form-control {
+    padding-left: 40px;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .dropdown-menu {
   width: 100%;
   padding: 8px;
   font-size: $fs-sm;
   border-radius: 10px;
   border-color: var(--bs-border-color);
+
+  li {
+    display: flex;
+    align-items: center;
+  }
 
   label {
     width: 100%;
