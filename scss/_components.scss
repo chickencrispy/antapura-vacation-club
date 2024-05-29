@@ -3,6 +3,13 @@
   border-color: $accent;
 }
 
+.btn-normal {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 12px;
+  font-size: $fs-sm;
+}
+
 .btn-flex {
   display: flex;
   align-items: center;
@@ -258,6 +265,25 @@
   }
 }
 
+.list-group-summary {
+  font-size: $fs-sm;
+
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: $fs-xs;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:nth-last-of-type() {
+      text-align: end;
+    }
+  }
+}
+
 .card-heading {
   padding: 16px;
   border-radius: 16px;
@@ -322,6 +348,13 @@
   }
 }
 
+.input-amount {
+  .form-control {
+    font-size: $fs-2xl;
+    font-weight: bold;
+  }
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -341,6 +374,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   label {
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 8px;
 

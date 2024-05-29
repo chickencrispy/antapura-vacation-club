@@ -19,11 +19,11 @@ dropdownMenu.forEach(dropdown => {
       const dropdBtn = dropdown.previousElementSibling;
       var checkLen = checkeds.length;
       if(checkLen == 1) {
-        dropdBtn.textContent = checkeds[0].parentNode.textContent;
+        dropdBtn.textContent = checkeds[0].nextElementSibling.textContent;
       }else if(checkLen == 2) {
-        dropdBtn.textContent = checkeds[0].parentNode.textContent + ", " + checkeds[1].parentNode.textContent;
+        dropdBtn.textContent = checkeds[0].nextElementSibling.textContent + ", " + checkeds[1].nextElementSibling.textContent;
       }else if(checkLen > 2) {
-        dropdBtn.textContent = checkeds[0].parentNode.textContent + ", " + checkeds[1].parentNode.textContent  + ", & " + (checkLen-2) + " more";
+        dropdBtn.textContent = checkeds[0].nextElementSibling.textContent + ", " + checkeds[1].nextElementSibling.textContent  + ", & " + (checkLen-2) + " more";
       }
     });
   });
@@ -37,3 +37,14 @@ filterPeriod.forEach(periods => {
     document.getElementById("fth-period").classList.toggle("d-none", this.value != "custom");
   });
 });
+
+// FORMAT INPUT CURRENCY
+document.querySelectorAll('[inputmode=numeric]').forEach(input => {
+  input.addEventListener('input', formatCurrency);
+});
+
+function formatCurrency(event) {
+  let value = this.value.replace(/[^\d]/g, "");
+  value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  this.value = value;
+}
