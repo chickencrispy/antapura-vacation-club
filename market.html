@@ -113,22 +113,22 @@
   </div>
 
   <!-- Offcanvas Buy -->
-  <div class="offcanvas offcanvas-bottom offcanvas-auto" tabindex="-1" id="off_buy" aria-labelledby="offcanvasBuy">
+  <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_buy" aria-labelledby="offcanvasBuy">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Buy Point</h4>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
-        <div id="buy-amount" class="mb-1">
-          <label for="select-type" class="text-xs fw-bold mb-2">Buy Amount</label>
-          <input type="text" name="" id="" class="form-control">
+        <div id="buy-amount" class="mb-2">
+          <label for="select-type" class="text-xs fw-bold mb-2">Buy Point Amount</label>
+          <input type="text" name="" id="" class="form-control" inputmode="numeric">
         </div>
 
-        <div id="buy-price" class="mb-1">
+        <div id="buy-price" class="mb-2">
           <label for="select-source" class="text-xs fw-bold mb-2">Price</label>
           <div class="input-currency">
-            <input type="number" name="" id="" class="form-control">
+            <input type="text" name="" id="" class="form-control" inputmode="numeric">
             <span class="currency-name">IDR</span>
           </div>
         </div>
@@ -136,86 +136,110 @@
         <div id="buy-duration" class="mb-5">
           <label for="fth-period" class="text-xs fw-bold mb-2">Market Duration</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Source of Point</button>
+            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select period</button>
             <ul class="dropdown-menu">
               <li>
-                <label><input type="radio" name="buy-duration" id="" value="3" class="form-check-input d-none"> 3 Days</label>
+                <label>
+                  <input type="radio" name="buy-duration" id="" value="3" class="form-check-input d-none">
+                  <span>3 Days</span>
+                </label>
               </li>
               <li>
-                <label><input type="radio" name="buy-duration" id="" value="7" class="form-check-input d-none"> 1 Week</label>
+                <label>
+                  <input type="radio" name="buy-duration" id="" value="7" class="form-check-input d-none">
+                  <span>1 Week</span>
+                </label>
               </li>
               <li>
-                <label><input type="radio" name="buy-duration" id="" value="30" class="form-check-input d-none"> 1 Month</label>
+                <label>
+                  <input type="radio" name="buy-duration" id="" value="30" class="form-check-input d-none">
+                  <span>1 Month</span>
+                </label>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="offcanvas-footer d-grid mt-auto">
-          <button type="button" class="btn btn-dark">Submit</button>
+          <button type="button" class="btn btn-dark">Buy Point</button>
         </div>
       </form>
     </div>
   </div>
 
   <!-- Offcanvas Sell -->
-  <div class="offcanvas offcanvas-bottom offcanvas-auto" tabindex="-1" id="off_sell" aria-labelledby="offcanvasSell">
+  <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_sell" aria-labelledby="offcanvasSell">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Sell Point</h4>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
-        <div id="sell-amount" class="mb-1">
-          <label for="select-type" class="text-xs fw-bold mb-2">Sell Amount</label>
-          <input type="text" name="" id="" class="form-control">
+        <div id="sell-amount" class="mb-3">
+          <label for="select-type" class="text-xs fw-bold mb-2">Sell Point Amount</label>
+          <input type="text" name="" id="" class="form-control" inputmode="numeric">
         </div>
 
-        <div id="sell-price" class="mb-1">
-          <label for="select-source" class="text-xs fw-bold mb-2">Price</label>
+        <div id="sell-price" class="mb-3">
+          <label for="select-source" class="text-xs fw-bold mb-2">Selling Price</label>
           <div class="input-currency">
-            <input type="number" name="" id="" class="form-control">
+            <input type="text" name="" id="" class="form-control" inputmode="numeric">
             <span class="currency-name">IDR</span>
           </div>
         </div>
 
-        <div id="sell-duration" class="mb-1">
-          <label for="fth-period" class="text-xs fw-bold mb-2">Market Duration</label>
+        <div id="sell-duration" class="mb-3">
+          <label for="fth-period" class="text-xs fw-bold mb-2">Market Period</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">&nbsp;</button>
+            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select period</button>
             <ul class="dropdown-menu">
               <li>
-                <label><input type="radio" name="buy-duration" id="" value="3" class="form-check-input d-none"> 3 Days</label>
+                <label>
+                  <input type="radio" name="buy-duration" id="" value="3" class="form-check-input d-none"> 
+                  <span>3 Days</span>
+                </label>
               </li>
               <li>
-                <label><input type="radio" name="buy-duration" id="" value="7" class="form-check-input d-none"> 1 Week</label>
+                <label>
+                  <input type="radio" name="buy-duration" id="" value="7" class="form-check-input d-none">
+                  <span>1 Week</span>
+                </label>
               </li>
               <li>
-                <label><input type="radio" name="buy-duration" id="" value="30" class="form-check-input d-none"> 1 Month</label>
+                <label>
+                  <input type="radio" name="buy-duration" id="" value="30" class="form-check-input d-none">
+                  <span>1 Month</span>
+                </label>
               </li>
             </ul>
           </div>
         </div>
 
-        <div id="sell-source" class="mb-5">
-          <label class="text-xs fw-bold mb-2">Transfer Amount</label>
+        <div id="sell-source" class="mb-3">
+          <label class="text-xs fw-bold mb-2">Source of Point</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Source of Point</button>
+            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select source</button>
             <ul class="dropdown-menu">
               <li>
-                <label><input type="radio" name="transfer-source" id="" value="today" class="form-check-input d-none"> Founder Point</label>
-                <span>328.800</span>
+                <label>
+                  <input type="radio" name="transfer-source" id="" value="today" class="form-check-input d-none">
+                  <div>Founder Point</div>
+                  <span class="ms-auto">328.800</span>
+                </label>
               </li>
               <li>
-                <label><input type="radio" name="transfer-source" id="" value="week" class="form-check-input d-none"> Club Point</label>
-                <span>298.600</span>
+                <label>
+                  <input type="radio" name="transfer-source" id="" value="week" class="form-check-input d-none">
+                  <div>Club Point</div>
+                  <span class="ms-auto">298.600</span>
+                </label>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="offcanvas-footer d-grid mt-auto">
-          <button type="button" class="btn btn-dark">Submit</button>
+          <button type="button" class="btn btn-dark">Sell Point</button>
         </div>
       </form>
     </div>

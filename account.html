@@ -11,47 +11,28 @@
 </head>
 <body>
   <div class="app-container">
-    <div class="app-home-header bg-primary-subtle">
-      <div class="top-bar">
-        <div class="user-info">
-          <div class="avatar">
-            <img src="./images/memoji/Memoji-04.png" alt="User Avatar">
-          </div>
-          <div class="content">
-            <div class="text-sm fw-bold">Debi Rahmadi</div>
-          </div>
-        </div>
-
-        <div class="d-flex gap-1">
-          <a href="#" class="btn-icon"><i class="fi fi-rr-bell"></i></a>
-        </div>
-      </div>
-
-      <div class="card p-3 mt-4 text-sm">
-        <div class="">
-          <small class="text-muted">Balance</small>
-          <h2 class="fw-bolder">3.000</h2>
-        </div>
-      </div>
-      <div class="grid-3 gap-2 mt-2">
-        <button class="btn btn-primary text-sm rounded-pill"><i class="fi fi-rr-add"></i> Deposit</button>
-        <button class="btn btn-primary text-sm rounded-pill"><i class="fi fi-rr-send-money"></i> Transfer</button>
-        <button class="btn btn-primary text-sm rounded-pill"><i class="fi fi-rr-qr-scan"></i> Scan</button>
+    <div class="app-page-header">
+      <div class="top-bar gap-2">
+        <h4>My Account</h4>
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
       </div>
     </div>
   </div>
 
   <div class="bottom-navbar">
-    <div class="container grid-4">
-      <a href="index.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
-      <a href="promo.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-badge-percent"></i></h3>Promo</a>
-      <a href="saved.html" class="navbar-menu"><h3 class="mb-0"><i class="fi fi-rr-heart"></i></h3>Save</a>
-      <a href="account.html" class="navbar-menu active"><h3 class="mb-0"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
+    <div class="container grid-5">
+      <a href="index.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="transaction_history.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-time-past"></i></h3>History</a>
+      <a href="market.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
+      <a href="contact.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-book-user"></i></h3>Contact</a>
+      <a href="account.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
     </div>
   </div>
 
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

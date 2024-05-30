@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIG Vacation Club</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/uicons-rounded.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="app-page-header">
+      <div class="top-bar gap-2">
+        <h4>Contact</h4>
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <div class="card-profile-header">
+        <div class="user-avatar">
+          <img src="images/memoji/Memoji-08.png" alt="">
+        </div>
+        <div class="user-info">
+          <h5>Anne Hathaway</h5>
+          <div class="text-xs text-muted">+6281234456789</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page-content">
+      <div class="content-header">
+        <h5 class="heading">Market Listing</h5>
+      </div>
+
+      <div class="app-home-marketplace bg-white rounded-4 border">
+        <nav class="mb-3">
+          <div class="nav nav-underline nav-justified rounded-pill" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="true">Buy Point</button>
+            <button class="nav-link" id="nav-sell-tab" data-bs-toggle="tab" data-bs-target="#sell-tab" type="button" role="tab" aria-controls="sell-tab" aria-selected="false">Sell Point</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <!-- Market Buy -->
+          <div class="tab-pane fade show active" id="buy-tab" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
+            <table class="table table-borderless">
+              <thead>
+                <tr class="text-xs text-uppercase">
+                  <th>Point (Pts)</th>
+                  <th class="text-center">Exp Date</th>
+                  <th class="text-end">Price (IDR)</th>
+                  <th class="text-end">Act</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <tr class="border-top">
+                  <td>3.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2024</td>
+                  <td class="text-end">2.500.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>3.800</td>
+                  <td class="text-center text-xs text-muted">Aug 2025</td>
+                  <td class="text-end">3.850.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>6.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2027</td>
+                  <td class="text-end">6.800.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Market Sell-->
+          <div class="tab-pane fade" id="sell-tab" role="tabpanel" aria-labelledby="nav-sell-tab" tabindex="0">
+            <table class="table table-borderless">
+              <thead>
+                <tr class="text-xs text-uppercase">
+                  <th>Point (Pts)</th>
+                  <th class="text-center">Exp Date</th>
+                  <th class="text-end">Price (IDR)</th>
+                  <th class="text-end">Act</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <tr class="border-top">
+                  <td>5.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2026</td>
+                  <td class="text-end">5.800.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>6.000</td>
+                  <td class="text-center text-xs text-muted">No Exp</td>
+                  <td class="text-end">7.000.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                </tr>
+                <tr class="border-top">
+                  <td>6.000</td>
+                  <td class="text-center text-xs text-muted">Dec 2025</td>
+                  <td class="text-end">6.200.000</td>
+                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-navbar">
+    <div class="container grid-5">
+      <a href="index.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="transaction_history.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-time-past"></i></h3>History</a>
+      <a href="market.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
+      <a href="contact.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-book-user"></i></h3>Contact</a>
+      <a href="account.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
