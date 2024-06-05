@@ -349,6 +349,14 @@
   }
 }
 
+.input-icon {
+  position: relative;
+
+  .form-control {
+    padding-left: 42px;
+  }
+}
+
 .input-date-icon {
   position: relative;
 
@@ -363,6 +371,7 @@
 
   .input-group-icon {
     color: $dark;
+    pointer-events: none;
   }
 }
 

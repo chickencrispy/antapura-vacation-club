@@ -1,10 +1,10 @@
-$fs-xs: 12px;
-$fs-sm: 14px;
-$fs-md: 16px;
-$fs-lg: 18px;
-$fs-xl: 20px;
-$fs-2xl: 24px;
-$fs-3xl: 38px;
+$fs-xs: 0.75rem;
+$fs-sm: 0.875rem;
+$fs-md: 1rem;
+$fs-lg: 1.125rem;
+$fs-xl: 1.25rem;
+$fs-2xl: 1.5rem;
+$fs-3xl: 2.375rem;
 
 $accent: #ff8036;
 $accent-light: #ff9f6b;
@@ -18,6 +18,11 @@ $light: #f5f7f9;
 $lighter: #fafafb;
 $white: #ffffff;
 $warning: rgb(255,193,7);
+
+$admin-header-height : 3rem;
+$admin-sidebar-width: 4.25rem;
+
+$z-fixed: 100;
 
 h6 { font-size: $fs-sm; }
 h5 { font-size: $fs-md; }

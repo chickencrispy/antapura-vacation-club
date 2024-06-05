@@ -48,3 +48,38 @@ function formatCurrency(event) {
   value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   this.value = value;
 }
+
+// CUSTOM PERIOD
+const customPeriod = document.getElementById("custom-period");
+if(customPeriod){
+  const customPeriodSelect = customPeriod.querySelector("select");
+
+  function toggleCustomPeriod() {
+    customPeriodSelect.parentNode.classList.toggle("d-none");
+    customPeriodSelect.parentNode.nextElementSibling.classList.toggle("d-none");
+  }
+  
+  customPeriodSelect.addEventListener("change", () => {
+    const child = customPeriodSelect.children.length;
+    if(customPeriodSelect.children[child-1].selected) {
+      toggleCustomPeriod();
+    }
+  });
+}
+
+// ADMIN PAGE MENU
+const showNavbar = (toggleId, navId, mainId, headerId) => {
+  const toggle = document.getElementById(toggleId);
+  const sidebar = document.getElementById(navId);
+  const main = document.getElementById(mainId);
+  const topHeader = document.getElementById(headerId);
+  
+  if(toggle && sidebar && main && topHeader){
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('show');
+      main.classList.toggle('expand');
+      topHeader.classList.toggle('expand');
+    });
+  }
+}
+showNavbar('header-toggle','sidebar','main-content','header');

@@ -1,0 +1,19 @@
+.dataTable > tbody > tr.child ul.dtr-details {
+  width: 100%;
+}
+
+.dataTable > tbody > tr.child ul.dtr-details > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
+  border: none;
+  font-family: uicons-regular-rounded !important;
+  content: "\fd67";
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:before {
+  border: none;
+  content: "\fd69";
+}
