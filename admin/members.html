@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/date-picker.min.css">
+  <link rel="stylesheet" href="/css/datatables.min.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/ui.css">
+</head>
+<body id="body-pd">
+  <header id="header" class="header">
+    <div class="header-toggle">
+      <button class="btn" id="header-toggle">
+        <i class="fi fi-rr-menu-burger"></i>
+      </button>
+    </div>
+
+    <div class="header-profile"> 
+      <img src="../images/memoji/Memoji-04.png" alt="">
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav-logo"> 
+          <i class="fi fi-rr-layers nav-logo-icon"></i>
+          <span class="nav-logo-name">Antapura Club</span> 
+        </a>
+
+        <div class="nav-list"> 
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-apps nav-icon"></i>
+            <span class="nav_name">Dashboard</span> 
+          </a> 
+          
+          <a href="members.html" class="nav-link active"> 
+            <i class="fi fi-rr-user nav-icon"></i>
+            <span class="nav_name">Members</span> 
+          </a> 
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Transaction</span> 
+          </a> 
+          
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-comment nav-icon"></i>
+            <span class="nav_name">Messages</span> 
+          </a> 
+          
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-folder nav-icon"></i>
+            <span class="nav_name">Settings</span> 
+          </a> 
+          
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-bookmark nav-icon"></i>
+            <span class="nav_name">Listing</span> 
+          </a> 
+        </div>
+      </div> 
+      
+      <a href="#" class="nav-link"> 
+        <i class="fi fi-rr-sign-out-alt nav-icon"></i>
+        <span class="nav_name">SignOut</span> 
+      </a>
+    </nav>
+  </aside>
+
+  <main id="main-content" class="content-wrapper">
+    <div class="mb-3">
+      <h2 class="fw-bold">Member Management</h2>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered nowrap text-sm data-table" style="width: 100%;">
+        <thead class="text-xs table-dark">
+          <tr>
+            <th rowspan="2" class="text-end">No.</th>
+            <th rowspan="2">User ID</th>
+            <th rowspan="2">Name</th>
+            <th colspan="5" class="text-center">Details</th>
+            <th colspan="3" class="text-center">Emergency Contact</th>
+            <th colspan="3" class="text-center">Type of Point</th>
+            <th rowspan="2">Total</th>
+          </tr>
+          <tr>
+            <th>Contact No.</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Place & Date of Birth</th>
+            <th>Gender</th>
+            <th>Name</th>
+            <th>Contact No.</th>
+            <th>Relation</th>
+            <th>Founders</th>
+            <th>Club</th>
+            <th>Hold</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-end">1</td>
+            <td>jdoe</td>
+            <td>John Doe</td>
+            <td>+6281234567890</td>
+            <td>johndoe@mail.com</td>
+            <td>Pasir Putih, Batam</td>
+            <td>Batam, 5 June 1980</td>
+            <td>Male</td>
+            <td>Jane Doe</td>
+            <td>+6281298745632</td>
+            <td>Wife</td>
+            <td class="text-end">2.000</td>
+            <td class="text-end">1.250</td>
+            <td class="text-end">0</td>
+            <td class="text-end">3.250</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    new DataTable('.data-table', {
+      responsive: true,
+      searching: false,
+      paging: false,
+      ordering: false,
+      info: false
+    });
+  </script>
+</body>
+</html>
