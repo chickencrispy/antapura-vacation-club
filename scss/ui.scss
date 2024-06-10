@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import 'variable';
 @import 'components';
@@ -17,9 +17,11 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   line-height: normal;
   background-color: $lighter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -49,6 +51,16 @@ a:focus {
 
 .text-semidark { color:#8c8c8c; }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator::after {
+  content: 'a';
+  position: absolute;
+  right: 0;
+}
+
 .input-group {
   position: relative;
 }
@@ -68,8 +80,9 @@ a:focus {
 }
 
 .form-select {
-  padding: 10px 14px;
+  padding: 10px 38px 10px 14px;
   border-radius: 10px;
+  box-shadow: none;
 }
 
 .form-grouping {

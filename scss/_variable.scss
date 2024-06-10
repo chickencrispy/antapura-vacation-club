@@ -19,7 +19,7 @@ $lighter: #fafafb;
 $white: #ffffff;
 $warning: rgb(255,193,7);
 
-$admin-header-height : 3rem;
+$admin-header-height : 3.5rem;
 $admin-sidebar-width: 4.25rem;
 
 $z-fixed: 100;
@@ -38,3 +38,6 @@ h1 { font-size: $fs-3xl; }
 .text-xl { font-size: var(--fs-xl) !important; }
 .text-2xl { font-size: var(--fs-2xl) !important; }
 .text-3xl { font-size: var(--fs-3xl) !important; }
+
+.text-dark { color: $dark !important; }
+.text-darker { color: $darker; }

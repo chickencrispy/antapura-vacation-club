@@ -7,6 +7,15 @@
   justify-content: space-between;
 }
 
+table.dataTable > tbody > tr.child span.dtr-title {
+  font-weight: normal;
+  color: $dark;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control {
+  text-wrap: nowrap;
+}
+
 table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
   border: none;
   font-family: uicons-regular-rounded !important;
@@ -16,4 +25,9 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
 table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:before {
   border: none;
   content: "\fd69";
+}
+
+.dt-container > div:nth-child(1),
+.dt-container > div:nth-child(3) {
+  display: none;
 }

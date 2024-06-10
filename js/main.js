@@ -9,6 +9,13 @@ document.querySelectorAll(".max-today").forEach(input => {
   });
 });
 
+// AUTO SHOW PICKER ON INPUT DATE
+document.querySelectorAll("input[type='date']").forEach(input => {
+  input.addEventListener("focus", () => {
+    input.showPicker();
+  })
+});
+
 // DROPDOWN MENU FUNCTION
 // Display selection item name on input/button dropdown
 const dropdownMenu = document.querySelectorAll(".dropdown-menu");
@@ -83,3 +90,38 @@ const showNavbar = (toggleId, navId, mainId, headerId) => {
   }
 }
 showNavbar('header-toggle','sidebar','main-content','header');
+
+// FORM STEPS
+const step = document.querySelector(".step");
+if(step) {
+  const stepItems = step.querySelectorAll(".step-items");
+  const btnStep = document.querySelectorAll(".btn-step");
+  const prevBtn = btnStep[0];
+  const nextBtn = btnStep[btnStep.length - 1];
+  const stepLen = stepItems.length;
+  let curStep = 0;
+
+  function updateButton() {
+    nextBtn.textContent = curStep === stepLen - 1 ? "Submit" : "Next";
+    prevBtn.classList.toggle("d-none", curStep === 0);
+  }
+
+  function updateStep(newStep) {
+    stepItems[curStep].classList.remove("active");
+    curStep = newStep;
+    stepItems[curStep].classList.add("active");
+    updateButton();
+  }
+
+  updateButton();
+  stepItems[curStep].classList.add("active");
+
+  nextBtn.addEventListener("click", () => {
+    if (curStep !== stepLen - 1) updateStep(curStep + 1);
+    else nextBtn.setAttribute("type", "submit");
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (curStep !== 0) updateStep(curStep - 1);
+  });
+}

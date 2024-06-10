@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report</title>
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Transaction Report</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/date-picker.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
   <link rel="stylesheet" href="/css/swiper-bundle.min.css">
@@ -53,12 +53,12 @@
             <span class="nav_name">Messages</span> 
           </a> 
           
-          <a href="#" class="nav-link"> 
+          <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-folder nav-icon"></i>
             <span class="nav_name">Settings</span> 
           </a> 
           
-          <a href="#" class="nav-link"> 
+          <a href="listing.html" class="nav-link"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
           </a> 
@@ -77,63 +77,73 @@
       <h2 class="fw-bold">Transaction Report</h2>
     </div>
 
-    <div class="d-flex  flex-sm-row flex-column gap-2 gap-sm-3 p-3 border bg-white mb-3">
-      <select class="form-select text-sm">
-        <option value="" hidden>Transaction Type</option>
-        <option value="">All</option>
-        <option value="">Top Up</option>
-        <option value="">Transfer</option>
-        <option value="">Buy</option>
-        <option value="">Sell</option>
-        <option value="">Purchase</option>
-      </select>
-
-      <div id="custom-period" class="w-100">
-        <div class="">
-          <select class="form-select text-sm">
-            <option value="" hidden>Period</option>
-            <option value="">All</option>
-            <option value="">Today</option>
-            <option value="">This Week</option>
-            <option value="">This Month</option>
-            <option value="">Custom</option>
-          </select>
-        </div>
-
-        <div class="grid-2 d-none gap-2 gap-sm-3 h-100 align-items-stretch">
-          <div class="input-date-icon">
-            <input type="date" name="" id="" class="form-control max-today text-sm h-100">
-            <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+    <div class="row g-2 mb-3">
+      <div class="col-sm-8">
+        <div class="row g-2">
+          <div class="col-md-3">
+            <select class="form-select text-sm">
+              <option value="">All Transaction</option>
+              <option value="">Top Up</option>
+              <option value="">Transfer</option>
+              <option value="">Buy</option>
+              <option value="">Sell</option>
+              <option value="">Purchase</option>
+            </select>
           </div>
-          <div class="input-date-icon">
-            <input type="date" name="" id="" class="form-control max-today text-sm h-100">
-            <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+
+          <div class="col-md-2">
+            <select class="form-select text-sm">
+              <option value="">All Member</option>
+              <option value="">Founders Member</option>
+              <option value="">Club Member</option>
+              <option value="">Inactive Member</option>
+              <option value="">Suspended Member</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <div id="custom-period" class="w-100">
+              <div class="">
+                <select class="form-select text-sm">
+                  <option value="">All Period</option>
+                  <option value="">Today</option>
+                  <option value="">This Week</option>
+                  <option value="">This Month</option>
+                  <option value="">Custom</option>
+                </select>
+              </div>
+      
+              <div class="grid-2 d-none gap-2 gap-sm-3 h-100 align-items-stretch">
+                <div class="input-date-icon">
+                  <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                  <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                </div>
+                <div class="input-date-icon">
+                  <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                  <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <select class="form-select text-sm">
-        <option value="" hidden>Member Type</option>
-        <option value="">All</option>
-        <option value="">Founders Member</option>
-        <option value="">Club Member</option>
-        <option value="">Inactive Member</option>
-        <option value="">Suspended Member</option>
-      </select>
-
-      <div class="input-icon w-100">
-        <input type="text" class="form-control">
-        <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+      <div class="col-sm-4">
+        <div class="d-flex gap-2">
+          <div class="input-icon flex-fill">
+            <input type="text" class="form-control text-sm" placeholder="Search...">
+            <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+          </div>
+          <button class="btn btn-normal btn-primary text-xs">Search</button>
+        </div>
       </div>
-
-      <button class="btn btn-dark text-sm">Search</button>
     </div>
 
-    <div class="table-responsive">
-      <table class="table table-bordered nowrap text-sm data-table" style="width: 100%;">
-        <thead class="text-xs table-dark">
+    <div class="table-responsive p-3 bg-white rounded-3 border">
+      <table class="table table-sm data-table bg-white" style="width: 100%;">
+        <thead>
           <tr>
-            <th rowspan="2">No.</th>
+            <th rowspan="2" class="text-end">No.</th>
             <th rowspan="2">Date/Time</th>
             <th rowspan="2">Transaction ID</th>
             <th rowspan="2">Transaction Type</th>
@@ -152,32 +162,60 @@
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
+            <td class="text-end">1</td>
             <td>06/02/2024 10:42:36</td>
             <td>ATP2406001023</td>
             <td>Transfer Point</td>
             <td>John Doe</td>
             <td>Jane Doe</td>
-            <td>-</td>
+            <td>Point</td>
             <td>-</td>
             <td>12.000</td>
             <td>Club Point</td>
             <td>-</td>
-            <td>Joni</td>
+            <td>Debi</td>
           </tr>
           <tr>
-            <td>2</td>
+            <td class="text-end">2</td>
             <td>06/05/2024 11:22:18</td>
-            <td>ATP2406001025</td>
+            <td>ATP2405001025</td>
             <td>Top Up Point</td>
             <td>Antapura</td>
             <td>Jane Doe</td>
-            <td>-</td>
+            <td>Point</td>
             <td>-</td>
             <td>50.000</td>
             <td>Club Point</td>
             <td>-</td>
-            <td>Joni</td>
+            <td>Debi</td>
+          </tr>
+          <tr>
+            <td class="text-end">3</td>
+            <td>30/04/2024 15:48:00</td>
+            <td>ATP2404003032</td>
+            <td>Purchase</td>
+            <td>Jane Doe</td>
+            <td>Antapura</td>
+            <td>Hotel Booking</td>
+            <td>Antapura Resort #12354689</td>
+            <td>18.000</td>
+            <td>Club Point</td>
+            <td>Stay at Antapura Villa (06 Jun 2024 - 09 Jun 2024)</td>
+            <td>Debi</td>
+          </tr>
+          <tr>
+            <td class="text-end">4</td>
+            <td>23/04/2024 08:12:42</td>
+            <td>ATP2404003068</td>
+            <td>Purchase</td>
+            <td>John Doe</td>
+            <td>Antapura</td>
+            <td>Ticket</td>
+            <td>Garuda Airlines #12345678</td>
+            <td>8.600</td>
+            <td>Club Point</td>
+            <td>GA BTH - CGK (05 Jun 2024)</td>
+            <td>Debi</td>
           </tr>
         </tbody>
       </table>
@@ -185,7 +223,7 @@
   </main>
 
   <script src="/js/jquery.min.js"></script>
-  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
   <script src="/js/datatables.min.js"></script>
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js"></script>

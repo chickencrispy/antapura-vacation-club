@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listing</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
+  <link rel="stylesheet" href="/css/date-picker.min.css">
+  <link rel="stylesheet" href="/css/datatables.min.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/ui.css">
+</head>
+<body id="body-pd">
+  <header id="header" class="header">
+    <div class="header-toggle">
+      <button class="btn" id="header-toggle">
+        <i class="fi fi-rr-menu-burger"></i>
+      </button>
+    </div>
+
+    <div class="header-profile"> 
+      <img src="../images/memoji/Memoji-04.png" alt="">
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav-logo"> 
+          <i class="fi fi-rr-layers nav-logo-icon"></i>
+          <span class="nav-logo-name">Antapura Club</span> 
+        </a>
+
+        <div class="nav-list"> 
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-apps nav-icon"></i>
+            <span class="nav_name">Dashboard</span> 
+          </a> 
+          
+          <a href="members.html" class="nav-link"> 
+            <i class="fi fi-rr-user nav-icon"></i>
+            <span class="nav_name">Members</span> 
+          </a> 
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Transaction</span> 
+          </a> 
+          
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-comment nav-icon"></i>
+            <span class="nav_name">Messages</span> 
+          </a> 
+          
+          <a href="settings.html" class="nav-link"> 
+            <i class="fi fi-rr-folder nav-icon"></i>
+            <span class="nav_name">Settings</span> 
+          </a> 
+          
+          <a href="listing.html" class="nav-link active"> 
+            <i class="fi fi-rr-bookmark nav-icon"></i>
+            <span class="nav_name">Listing</span> 
+          </a> 
+        </div>
+      </div> 
+      
+      <a href="#" class="nav-link"> 
+        <i class="fi fi-rr-sign-out-alt nav-icon"></i>
+        <span class="nav_name">SignOut</span> 
+      </a>
+    </nav>
+  </aside>
+
+  <main id="main-content" class="content-wrapper">
+    <div class="mb-3">
+      <h2 class="fw-bold">Listing</h2>
+    </div>
+
+    <ul class="nav nav-tabs" id="listingTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a data-mdb-tab-init class="nav-link active" id="news-tab" href="#news-tab-pane" role="tab" aria-controls="news-tab-pane" aria-selected="true"><i class="fi fi-rr-newspaper me-2"></i> News</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a data-mdb-tab-init class="nav-link" id="recommend-tab" href="#recommend-tab-pane" role="tab" aria-controls="recommend-tab-pane" aria-selected="false"><i class="fi fi-rr-sparkles me-2"></i> Recommendation</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a data-mdb-tab-init class="nav-link" id="banner-tab" href="#banner-tab-pane" role="tab" aria-controls="banner-tab-pane" aria-selected="false"><i class="fi fi-rr-graphic-style me-2"></i> Banner</a>
+      </li>
+    </ul>
+    <div class="tab-content bg-white p-3 border border-top-0 rounded-bottom-3" id="listingTabContent">
+      <!-- NEWS -->
+      <div class="tab-pane fade show active" id="news-tab-pane" role="tabpanel" aria-labelledby="news-tab" tabindex="0">
+        <div class="row g-2 mb-3">
+          <div class="col-sm-7">
+            <div class="row g-2">
+              <div class="col-sm-3">
+                <select name="" id="" class="form-select text-sm">
+                  <option value="">All Status</option>
+                  <option value="">Publish</option>
+                  <option value="">Unpublish</option>
+                  <option value="">Draft</option>
+                </select>
+              </div>
+
+              <div class="col-sm-3">
+                <select name="" id="" class="form-select text-sm">
+                  <option value="">All Category</option>
+                  <option value="">News</option>
+                  <option value="">Hotel</option>
+                  <option value="">Tour Package</option>
+                </select>
+              </div>
+              
+              <div class="col-sm-6 d-flex gap-2">
+                <div class="input-icon flex-fill">
+                  <input type="text" class="form-control text-sm" placeholder="Search...">
+                  <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+                </div>
+                <button class="btn btn-normal btn-primary text-xs">Search</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-5">
+            <div class="text-end h-100">
+              <button class="btn btn-dark btn-normal text-xs">
+                <i class="fi fi-rr-add me-2"></i> Add New
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <table class="table table-sm table-listing data-table" style="width:100%;">
+          <thead>
+            <tr>
+              <th class="text-center">No.</th>
+              <th class="text-nowrap">News Title</th>
+              <th>Category</th>
+              <th>Date Created</th>
+              <th>Last Edited</th>
+              <th>Status</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center text-nowrap">1</td>
+              <td>
+                <div class="d-flex gap-3">
+                  <div class="news-img">
+                    <img src="https://www.launch-marketing.com/wp-content/uploads/2018/07/GettyImages-1134023751.jpg">
+                  </div>
+                  <div class="news-content flex-fill">
+                    <h6 class="fw-bold w-100" style="min-width: 190px;">Launching Aplikasi Program Antapura Hotel & Resoert</h6>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis obcaecati, nobis provident culpa ea cum accusamus 
+                    fugit quae temporibus labore in quidem neque at! Nesciunt dolor, vel animi praesentium totam, beatae assumenda voluptatem 
+                    magnam amet excepturi, corporis perferendis minima culpa tempora in ipsum repellendus officia velit possimus cupiditate. Voluptate, commodi.</p>
+                  </div>
+                </div>
+              </td>
+              <td>News</td>
+              <td>28/05/2024</td>
+              <td>28/05/2024</td>
+              <td>Published</td>
+              <td class="text-end">
+                <div class="dropdown">
+                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                    <i class="fi fi-rr-menu-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu text-sm">
+                    <li><a href="#" class="dropdown-item" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#viewNewsModal"><i class="fi fi-rr-overview me-1"></i> Preview</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Unpublish</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Delete</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RECOMMEND -->
+      <div class="tab-pane fade" id="recommend-tab-pane" role="tabpanel" aria-labelledby="recommend-tab" tabindex="0">
+        <div class="row g-2 mb-3">
+          <div class="col-sm-7">
+            <div class="row g-2">
+              <div class="col-sm-3">
+                <select name="" id="" class="form-select text-sm">
+                  <option value="">All Status</option>
+                  <option value="">Publish</option>
+                  <option value="">Unpublish</option>
+                  <option value="">Draft</option>
+                </select>
+              </div>
+
+              <div class="col-sm-3">
+                <select name="" id="" class="form-select text-sm">
+                  <option value="">All Category</option>
+                  <option value="">Hotel</option>
+                  <option value="">Resort</option>
+                  <option value="">Apartment</option>
+                  <option value="">Tour Package</option>
+                </select>
+              </div>
+              
+              <div class="col-sm-6 d-flex gap-2">
+                <div class="input-icon flex-fill">
+                  <input type="text" class="form-control text-sm" placeholder="Search...">
+                  <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+                </div>
+                <button class="btn btn-normal btn-primary text-xs">Search</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-5">
+            <div class="text-end h-100">
+              <button class="btn btn-dark btn-normal text-xs">
+                <i class="fi fi-rr-add me-2"></i> Add New
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <table class="table table-sm table-listing data-table" style="width:100%;">
+          <thead>
+            <tr>
+              <th class="text-end">No.</th>
+              <th class="text-nowrap">Recommendation Title</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Date Created</th>
+              <th>Date Edited</th>
+              <th>Status</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-end text-nowrap">1</td>
+              <td>
+                <div class="d-flex gap-3">
+                  <div class="news-img">
+                    <img src="https://velindotravel.com/wp-content/uploads/2023/03/treasure-bay-bintan.jpg">
+                  </div>
+                  <div class="news-content flex-fill">
+                    <h6 class="fw-bold w-100" style="min-width: 190px;">Paket Tour ke Bintan</h6>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis obcaecati, nobis provident culpa ea cum accusamus 
+                    fugit quae temporibus labore in quidem neque at! Nesciunt dolor, vel animi praesentium totam, beatae assumenda voluptatem 
+                    magnam amet excepturi, corporis perferendis minima culpa tempora in ipsum repellendus officia velit possimus cupiditate. Voluptate, commodi.</p>
+                  </div>
+                </div>
+              </td>
+              <td>Tour Package</td>
+              <td>2.800</td>
+              <td>28/05/2024</td>
+              <td>28/05/2024</td>
+              <td>Published</td>
+              <td class="text-end">
+                <div class="dropdown">
+                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                    <i class="fi fi-rr-menu-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu text-sm">
+                    <li><a href="#" class="dropdown-item" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#viewRecommModal"><i class="fi fi-rr-overview me-1"></i> Preview</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Unpublish</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Delete</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- BANNER -->
+      <div class="tab-pane fade" id="banner-tab-pane" role="tabpanel" aria-labelledby="banner-tab" tabindex="0">
+        <div class="row g-2 mb-3">
+          <div class="col-sm-7">
+            <div class="row g-2">
+              <div class="col-sm-3">
+                <select name="" id="" class="form-select text-sm">
+                  <option value="">All Status</option>
+                  <option value="">Publish</option>
+                  <option value="">Unpublish</option>
+                  <option value="">Draft</option>
+                </select>
+              </div>
+
+              <div class="col-sm-3">
+                <select name="" id="" class="form-select text-sm">
+                  <option value="">All Category</option>
+                  <option value="">Hotel</option>
+                  <option value="">Resort</option>
+                  <option value="">Apartment</option>
+                  <option value="">Tour Package</option>
+                </select>
+              </div>
+              
+              <div class="col-sm-6 d-flex gap-2">
+                <div class="input-icon flex-fill">
+                  <input type="text" class="form-control text-sm" placeholder="Search...">
+                  <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+                </div>
+                <button class="btn btn-normal btn-primary text-xs">Search</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-5">
+            <div class="text-end h-100">
+              <button class="btn btn-dark btn-normal text-xs">
+                <i class="fi fi-rr-add me-2"></i> Add New
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-list-grid">
+          <div class="banner-items">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/07/11/1689048667894-f6bffef091041e83cddf0abb4c38665e.png">
+            <div class="banner-items-content">
+              <h5 class="mb-0">Title</h5>
+              <div class="dropdown">
+                <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                  <i class="fi fi-rr-menu-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu text-sm">
+                  <li><a href="#" class="dropdown-item" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#viewBannerModal"><i class="fi fi-rr-overview me-1"></i> Preview</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Unpublish</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Delete</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL OVERVIEW NEWS -->
+  <div class="modal fade" id="viewNewsModal" tabindex="-1" aria-labelledby="viewNewsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fw-bold" id="exampleModalLabel">News</h4>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-sm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <img src="https://www.launch-marketing.com/wp-content/uploads/2018/07/GettyImages-1134023751.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+              <h3 class="fw-bold">Lorem ipsum dolor sit amet.</h3>
+              <div class="d-flex gap-5 text-muted text-xs my-2">
+                <div class="d-flex flex-column">
+                  <span>Category: News</span>
+                  <span>Status: Published</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span>Created: 28/05/2024</span>
+                  <span>Last Update: 28/05/2024</span>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis obcaecati, nobis provident culpa ea cum accusamus 
+                  fugit quae temporibus labore in quidem neque at! Nesciunt dolor, vel animi praesentium totam, beatae assumenda voluptatem 
+                  magnam amet excepturi, corporis perferendis minima culpa tempora in ipsum repellendus officia velit possimus cupiditate. Voluptate, commodi.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque suscipit deserunt ab quidem officia optio expedita. 
+                  Asperiores quam nesciunt numquam nemo dolore. Delectus eveniet iste aliquam magnam vitae libero dolorem ratione, laudantium eum, 
+                  doloremque tenetur modi animi eligendi a iure id, vel hic reiciendis voluptatum saepe! Magnam, iure. Totam?
+                </p>
+              </div>
+              <div class="swiper-container news-gallery overflow-hidden">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img01-768x414.jpg" alt="" class="img-fluid"></div>
+                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img04-768x414.jpg" alt="" class="img-fluid"></div>
+                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img06-768x414.jpg" alt="" class="img-fluid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL OVERVIEW RECOMMEND -->
+  <div class="modal fade" id="viewRecommModal" tabindex="-1" aria-labelledby="viewRecommModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fw-bold" id="exampleModalLabel">Recommendation</h4>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-sm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <img src="https://velindotravel.com/wp-content/uploads/2023/03/treasure-bay-bintan.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+              <div class="d-flex justify-content-between gap-3">
+                <h3 class="fw-bold">Paket Tour ke Bintan</h3>
+                <h3 class="text-danger">2.800</h3>
+              </div>
+              <div class="d-flex gap-5 text-muted text-xs my-2">
+                <div class="d-flex flex-column">
+                  <span>Category: Tour Package</span>
+                  <span>Status: Published</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span>Created: 28/05/2024</span>
+                  <span>Last Update: 28/05/2024</span>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis obcaecati, nobis provident culpa ea cum accusamus 
+                  fugit quae temporibus labore in quidem neque at! Nesciunt dolor, vel animi praesentium totam, beatae assumenda voluptatem 
+                  magnam amet excepturi, corporis perferendis minima culpa tempora in ipsum repellendus officia velit possimus cupiditate. Voluptate, commodi.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque suscipit deserunt ab quidem officia optio expedita. 
+                  Asperiores quam nesciunt numquam nemo dolore. Delectus eveniet iste aliquam magnam vitae libero dolorem ratione, laudantium eum, 
+                  doloremque tenetur modi animi eligendi a iure id, vel hic reiciendis voluptatum saepe! Magnam, iure. Totam?
+                </p>
+              </div>
+              <div class="swiper-container news-gallery overflow-hidden">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img01-768x414.jpg" alt="" class="img-fluid"></div>
+                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img04-768x414.jpg" alt="" class="img-fluid"></div>
+                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img06-768x414.jpg" alt="" class="img-fluid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL OVERVIEW BANNER -->
+  <div class="modal fade" id="viewBannerModal" tabindex="-1" aria-labelledby="viewBannerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fw-bold" id="exampleModalLabel">Banner</h4>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-sm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/07/11/1689048667894-f6bffef091041e83cddf0abb4c38665e.png" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex justify-content-between gap-3">
+                <h3 class="fw-bold">Title</h3>
+              </div>
+              <div class="d-flex gap-5 text-muted text-xs my-2">
+                <div class="d-flex flex-column flex-fill">
+                  <span>Category: Tour Package</span>
+                  <span>Status: Published</span>
+                </div>
+                <div class="d-flex flex-column flex-fill">
+                  <span>Created: 28/05/2024</span>
+                  <span>Last Update: 28/05/2024</span>
+                </div>
+              </div>
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla, eligendi labore recusandae fugit perferendis?</p>
+                <div>
+                  URL Link: <a href="#" class="text-primary text-underline">https://www.google.com/</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    document.querySelectorAll('[data-mdb-tab-init]').forEach((el) => {
+      el.addEventListener('shown.bs.tab', () => {
+        DataTable.tables({ visible: true, api: true }).columns.adjust();
+      });
+    });
+
+    new DataTable('.data-table', {
+      responsive: true,
+      searching: false,
+      paging: false,
+      ordering: false,
+      info: false,
+      columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+      ]
+    });
+
+    var swiper = new Swiper(".news-gallery",{
+      slidesPerView: 2,
+      loop: true,
+      spaceBetween: 8,
+      speed: 1000,
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+        }
+      },
+    });
+  </script>
+</body>
+</html>
