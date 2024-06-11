@@ -124,7 +124,7 @@
     
           <div class="col-sm-5">
             <div class="text-end h-100">
-              <button class="btn btn-dark btn-normal text-xs">
+              <button class="btn btn-dark btn-normal text-xs" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#addNewsModal">
                 <i class="fi fi-rr-add me-2"></i> Add New
               </button>
             </div>
@@ -342,6 +342,62 @@
     </div>
   </main>
 
+  <!-- MODAL ADD NEWS -->
+  <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fw-bold" id="exampleModalLabel">Post a News</h4>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-sm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="input-file-preview border">
+                <div class="d-flex gap-2 align-items-center text-muted">
+                  <i class="fi fi-rr-add-image text-xl"></i>
+                  Add Image
+                </div>
+                <img src="">
+                <input type="file" name="" id="" class="d-none">
+              </label>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row g-2 mb-2">
+                <div class="col-md-12">
+                  <input type="text" class="form-control text-sm" placeholder="News Title">
+                </div>
+                <div class="col-md-6">
+                  <select class="form-select text-sm">
+                    <option value="" hidden>Select Category</option>
+                    <option value="">News</option>
+                    <option value="">Hotel</option>
+                    <option value="">Tour Package</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <textarea rows="5" class="form-control text-sm"></textarea>
+                </div>
+              </div>
+
+              <div class="multiple-images-upload">
+                <label class="add-image">
+                  <input type="file" name="" id="" class="d-none">
+                  <i class="fi fi-rr-add-image"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-normal btn-secondary me-auto" data-mdb-dismiss="modal">Save as Draft</button>
+          <button type="button" class="btn btn-normal btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- MODAL OVERVIEW NEWS -->
   <div class="modal fade" id="viewNewsModal" tabindex="-1" aria-labelledby="viewNewsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -412,7 +468,10 @@
             <div class="col-md-8">
               <div class="d-flex justify-content-between gap-3">
                 <h3 class="fw-bold">Paket Tour ke Bintan</h3>
-                <h3 class="text-danger">2.800</h3>
+                <div class="d-flex align-items-baseline gap-1">
+                  <h3 class="text-danger">2.800</h3>
+                  <span>Point</span>
+                </div>
               </div>
               <div class="d-flex gap-5 text-muted text-xs my-2">
                 <div class="d-flex flex-column">

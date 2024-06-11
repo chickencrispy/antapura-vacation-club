@@ -123,14 +123,14 @@
       <table class="table table-sm data-table bg-white" style="width: 100%;">
         <thead>
           <tr>
-            <th class="text-end">No.</th>
+            <th class="text-end" width="3%">No.</th>
             <th>Name</th>
             <th>Email</th>
             <th>Position</th>
             <th>Date Created</th>
             <th>Status</th>
             <th>Last Login</th>
-            <th>&nbsp;</th>
+            <th width="3%">&nbsp;</th>
           </tr>
         </thead>
         <tbody>
@@ -148,7 +148,7 @@
                   <i class="fi fi-rr-menu-dots-vertical"></i>
                 </button>
                 <ul class="dropdown-menu text-sm">
-                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#editAdminModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
                   <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Suspend</a></li>
                   <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Delete</a></li>
                 </ul>
@@ -193,6 +193,45 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-normal btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL EDIT ADMIN -->
+  <div class="modal fade" id="editAdminModal" tabindex="-1" aria-labelledby="editAdminModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Edit Administrator</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="mb-2">
+                <label class="text-xs fw-bold mb-1">Full Name</label>
+                <input type="text" class="form-control text-sm" value="Velline Chen">
+              </div>
+              <div class="mb-2">
+                <label class="text-xs fw-bold mb-1">Email</label>
+                <input type="email" class="form-control text-sm" inputmode="email" value="velline@mail.com">
+              </div>
+              <div class="mb-2">
+                <label class="text-xs fw-bold mb-1">Position</label>
+                <select class="form-select text-sm" value="1">
+                  <option value="0" hidden>Select Position</option>
+                  <option value="1">Super Admin</option>
+                  <option value="2">Admin</option>
+                  <option value="3">Customer Service</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-normal btn-dark">Save Changes</button>
           </div>
         </form>
       </div>

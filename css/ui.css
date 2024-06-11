@@ -395,6 +395,10 @@ h1 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.input-group .form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
 
 .input-icon {
   position: relative;
@@ -928,6 +932,46 @@ body {
   border-radius: 0 0 10px 10px;
 }
 
+.input-file-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.input-file-preview img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.multiple-images-upload {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.multiple-images-upload img {
+  width: 100%;
+  height: 76px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.multiple-images-upload .add-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
+  border: 1px dashed var(--mdb-border-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .content-wrapper {
     margin-top: 4.5rem;
@@ -980,6 +1024,12 @@ body {
   }
   .banner-list-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .input-file-preview {
+    height: 240px;
+  }
+  .multiple-images-upload {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 .dataTable > tbody > tr.child ul.dtr-details {
