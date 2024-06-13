@@ -4,35 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/date-picker.min.css">
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/uicons-rounded.css">
-  <link rel="stylesheet" href="../css/ui.css">
+  <link rel="stylesheet" href="/css/mdb.min.css">
+  <link rel="stylesheet" href="/css/date-picker.min.css">
+  <link rel="stylesheet" href="/css/datatables.min.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/ui.css">
 </head>
 <body>
   <div class="admin-login-wrapper">
     <div class="card-login">
-      <h2 class="fw-bold mb-3">Login</h3>
-      <div class="mb-2">
-        <label for="" class="text-xs mb-1">Email</label>
-        <input type="email" class="form-control">
+      <h3 class="fw-bold text-center mb-3">Sign in to your account</h3>
+
+      <div class="input-group column mb-2">
+        <input type="email" class="form-control text-sm" placeholder="Email address">
+        <input type="password" class="form-control text-sm" placeholder="Password">
       </div>
-      <div class="mb-2">
-        <label for="" class="text-xs mb-1">Password</label>
-        <input type="password" class="form-control">
+
+      <div class="d-flex align-items-center justify-content-between text-xs mb-3">
+        <label class="d-flex align-items-center">
+          <input class="form-check-input form-check-sm" type="checkbox" value="" id="flexCheckDefault">
+          <span>Remember me</span>
+        </label>
+        <a href="#">Forgot password?</a>
       </div>
+      
       <div class="d-grid">
-        <button class="btn btn-dark" onclick="javascript:location.href='report.html'">Login</button>
+        <button class="btn btn-dark" onclick="javascript:location.href='report.html'">Sign In</button>
       </div>
     </div>
-    <a href="#">Forgot password?</a>
   </div>
 
-  <script src="../js/jquery.min.js"></script>
-  <!--script src="../js/bootstrap.bundle.min.js"></!--script-->
-  <script src="../js/swiper-bundle.min.js"></script>
-  <script src="../js/swiper.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

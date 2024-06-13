@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import 'variable';
 @import 'components';
@@ -7,17 +7,17 @@
 @import 'vendor';
 
 :root {
-  --fs-xs: 12px;
-  --fs-sm: 14px;
-  --fs-md: 16px;
-  --fs-lg: 18px;
-  --fs-xl: 20px;
-  --fs-2xl: 28px;
-  --fs-3xl: 36px;
+  --fs-xs: 11px;
+  --fs-sm: 13px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 18px;
+  --fs-2xl: 26px;
+  --fs-3xl: 30px;
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: normal;
   background-color: $lighter;
   -webkit-font-smoothing: antialiased;

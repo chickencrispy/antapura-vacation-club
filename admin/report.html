@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/uicons-rounded.css">
   <link rel="stylesheet" href="/css/ui.css">
 </head>
-<body id="body-pd">
+<body>
   <header id="header" class="header">
     <div class="header-toggle">
       <button class="btn" id="header-toggle">
@@ -33,7 +33,7 @@
         </a>
 
         <div class="nav-list"> 
-          <a href="#" class="nav-link"> 
+          <a href="dashboard.html" class="nav-link"> 
             <i class="fi fi-rr-apps nav-icon"></i>
             <span class="nav_name">Dashboard</span> 
           </a> 
@@ -54,7 +54,7 @@
           </a> 
           
           <a href="settings.html" class="nav-link"> 
-            <i class="fi fi-rr-folder nav-icon"></i>
+            <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Settings</span> 
           </a> 
           
@@ -73,152 +73,154 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="mb-3">
-      <h2 class="fw-bold">Transaction Report</h2>
-    </div>
-
-    <div class="row g-2 mb-3">
-      <div class="col-sm-8">
-        <div class="row g-2">
-          <div class="col-md-3">
-            <select class="form-select text-sm">
-              <option value="">All Transaction</option>
-              <option value="">Top Up</option>
-              <option value="">Transfer</option>
-              <option value="">Buy</option>
-              <option value="">Sell</option>
-              <option value="">Purchase</option>
-            </select>
-          </div>
-
-          <div class="col-md-2">
-            <select class="form-select text-sm">
-              <option value="">All Member</option>
-              <option value="">Founders Member</option>
-              <option value="">Club Member</option>
-              <option value="">Inactive Member</option>
-              <option value="">Suspended Member</option>
-            </select>
-          </div>
-
-          <div class="col-md-3">
-            <div id="custom-period" class="w-100">
-              <div class="">
-                <select class="form-select text-sm">
-                  <option value="">All Period</option>
-                  <option value="">Today</option>
-                  <option value="">This Week</option>
-                  <option value="">This Month</option>
-                  <option value="">Custom</option>
-                </select>
-              </div>
+    <div class="p-3">
+      <div class="mb-3">
+        <h2 class="fw-bold">Transaction Report</h2>
+      </div>
       
-              <div class="grid-2 d-none gap-2 gap-sm-3 h-100 align-items-stretch">
-                <div class="input-date-icon">
-                  <input type="date" name="" id="" class="form-control max-today text-sm h-100">
-                  <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+      <div class="row g-2 mb-3">
+        <div class="col-sm-8">
+          <div class="row g-2">
+            <div class="col-md-3">
+              <select class="form-select text-sm">
+                <option value="">All Transaction</option>
+                <option value="">Top Up</option>
+                <option value="">Transfer</option>
+                <option value="">Buy</option>
+                <option value="">Sell</option>
+                <option value="">Purchase</option>
+              </select>
+            </div>
+      
+            <div class="col-md-2">
+              <select class="form-select text-sm">
+                <option value="">All Member</option>
+                <option value="">Founders Member</option>
+                <option value="">Club Member</option>
+                <option value="">Inactive Member</option>
+                <option value="">Suspended Member</option>
+              </select>
+            </div>
+      
+            <div class="col-md-3">
+              <div id="custom-period" class="w-100">
+                <div class="">
+                  <select class="form-select text-sm">
+                    <option value="">All Period</option>
+                    <option value="">Today</option>
+                    <option value="">This Week</option>
+                    <option value="">This Month</option>
+                    <option value="">Custom</option>
+                  </select>
                 </div>
-                <div class="input-date-icon">
-                  <input type="date" name="" id="" class="form-control max-today text-sm h-100">
-                  <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+        
+                <div class="grid-2 d-none gap-2 gap-sm-3 h-100 align-items-stretch">
+                  <div class="input-date-icon">
+                    <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                    <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                  </div>
+                  <div class="input-date-icon">
+                    <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                    <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="d-flex gap-2">
-          <div class="input-icon flex-fill">
-            <input type="text" class="form-control text-sm" placeholder="Search...">
-            <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+      
+        <div class="col-sm-4">
+          <div class="d-flex gap-2">
+            <div class="input-icon flex-fill">
+              <input type="text" class="form-control text-sm" placeholder="Search...">
+              <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+            </div>
+            <button class="btn btn-normal btn-primary text-xs">Search</button>
           </div>
-          <button class="btn btn-normal btn-primary text-xs">Search</button>
         </div>
       </div>
-    </div>
-
-    <div class="table-responsive p-3 bg-white rounded-3 border">
-      <table class="table table-sm data-table bg-white" style="width: 100%;">
-        <thead>
-          <tr>
-            <th rowspan="2" class="text-end">No.</th>
-            <th rowspan="2">Date/Time</th>
-            <th rowspan="2">Transaction ID</th>
-            <th rowspan="2">Transaction Type</th>
-            <th colspan="2" class="text-center">User ID</th>
-            <th rowspan="2">Item</th>
-            <th rowspan="2">Reference</th>
-            <th rowspan="2">Amount</th>
-            <th rowspan="2">Type of Point</th>
-            <th rowspan="2">Remarks</th>
-            <th rowspan="2">Admin</th>
-          </tr>
-          <tr>
-            <th>From</th>
-            <th>To</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-end">1</td>
-            <td>06/02/2024 10:42:36</td>
-            <td>ATP2406001023</td>
-            <td>Transfer Point</td>
-            <td>John Doe</td>
-            <td>Jane Doe</td>
-            <td>Point</td>
-            <td>-</td>
-            <td>12.000</td>
-            <td>Club Point</td>
-            <td>-</td>
-            <td>Debi</td>
-          </tr>
-          <tr>
-            <td class="text-end">2</td>
-            <td>06/05/2024 11:22:18</td>
-            <td>ATP2405001025</td>
-            <td>Top Up Point</td>
-            <td>Antapura</td>
-            <td>Jane Doe</td>
-            <td>Point</td>
-            <td>-</td>
-            <td>50.000</td>
-            <td>Club Point</td>
-            <td>-</td>
-            <td>Debi</td>
-          </tr>
-          <tr>
-            <td class="text-end">3</td>
-            <td>30/04/2024 15:48:00</td>
-            <td>ATP2404003032</td>
-            <td>Purchase</td>
-            <td>Jane Doe</td>
-            <td>Antapura</td>
-            <td>Hotel Booking</td>
-            <td>Antapura Resort #12354689</td>
-            <td>18.000</td>
-            <td>Club Point</td>
-            <td>Stay at Antapura Villa (06 Jun 2024 - 09 Jun 2024)</td>
-            <td>Debi</td>
-          </tr>
-          <tr>
-            <td class="text-end">4</td>
-            <td>23/04/2024 08:12:42</td>
-            <td>ATP2404003068</td>
-            <td>Purchase</td>
-            <td>John Doe</td>
-            <td>Antapura</td>
-            <td>Ticket</td>
-            <td>Garuda Airlines #12345678</td>
-            <td>8.600</td>
-            <td>Club Point</td>
-            <td>GA BTH - CGK (05 Jun 2024)</td>
-            <td>Debi</td>
-          </tr>
-        </tbody>
-      </table>
+      
+      <div class="table-responsive p-3 bg-white rounded-3 border">
+        <table class="table table-sm data-table bg-white" style="width: 100%;">
+          <thead>
+            <tr>
+              <th rowspan="2" class="text-end">No.</th>
+              <th rowspan="2">Date/Time</th>
+              <th rowspan="2">Transaction ID</th>
+              <th rowspan="2">Transaction Type</th>
+              <th colspan="2" class="text-center">User ID</th>
+              <th rowspan="2">Item</th>
+              <th rowspan="2">Reference</th>
+              <th rowspan="2">Amount</th>
+              <th rowspan="2">Type of Point</th>
+              <th rowspan="2">Remarks</th>
+              <th rowspan="2">Admin</th>
+            </tr>
+            <tr>
+              <th>From</th>
+              <th>To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-end">1</td>
+              <td>06/02/2024 10:42:36</td>
+              <td>ATP2406001023</td>
+              <td>Transfer Point</td>
+              <td>John Doe</td>
+              <td>Jane Doe</td>
+              <td>Point</td>
+              <td>-</td>
+              <td>12.000</td>
+              <td>Club Point</td>
+              <td>-</td>
+              <td>Debi</td>
+            </tr>
+            <tr>
+              <td class="text-end">2</td>
+              <td>06/05/2024 11:22:18</td>
+              <td>ATP2405001025</td>
+              <td>Top Up Point</td>
+              <td>Antapura</td>
+              <td>Jane Doe</td>
+              <td>Point</td>
+              <td>-</td>
+              <td>50.000</td>
+              <td>Club Point</td>
+              <td>-</td>
+              <td>Debi</td>
+            </tr>
+            <tr>
+              <td class="text-end">3</td>
+              <td>30/04/2024 15:48:00</td>
+              <td>ATP2404003032</td>
+              <td>Purchase</td>
+              <td>Jane Doe</td>
+              <td>Antapura</td>
+              <td>Hotel Booking</td>
+              <td>Antapura Resort #12354689</td>
+              <td>18.000</td>
+              <td>Club Point</td>
+              <td>Stay at Antapura Villa (06 Jun 2024 - 09 Jun 2024)</td>
+              <td>Debi</td>
+            </tr>
+            <tr>
+              <td class="text-end">4</td>
+              <td>23/04/2024 08:12:42</td>
+              <td>ATP2404003068</td>
+              <td>Purchase</td>
+              <td>John Doe</td>
+              <td>Antapura</td>
+              <td>Ticket</td>
+              <td>Garuda Airlines #12345678</td>
+              <td>8.600</td>
+              <td>Club Point</td>
+              <td>GA BTH - CGK (05 Jun 2024)</td>
+              <td>Debi</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 

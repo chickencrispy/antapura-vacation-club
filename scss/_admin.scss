@@ -46,7 +46,7 @@ body{
     .btn {
       --mdb-btn-padding-x: 0.75rem;
       box-shadow: none;
-      font-size: $fs-md;
+      font-size: $fs-lg;
     }
   }
 }
@@ -127,7 +127,7 @@ body{
     .nav-link{
       position: relative;
       color: $white;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       transition: .3s;
       font-size: $fs-sm;
     }
@@ -137,14 +137,13 @@ body{
     }
     
     .nav-icon{
-      font-size: 1.15rem;
+      font-size: 1rem;
     }
   }
 }
 
 .content-wrapper {
   margin-top: $admin-header-height;
-  padding: 1rem;
   font-size: $fs-sm;
   transition: .5s;
 
@@ -176,8 +175,42 @@ body{
   }
 }
 
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+
+  .action-area {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+
+  .pagination {
+    margin-bottom: 0;
+
+    .page-link {
+      font-size: $fs-sm;
+    }
+  }
+}
+
+.table-pagination {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .banner-list-grid {
   display: grid;
+  gap: 12px;
 
   .banner-items {
 
@@ -305,14 +338,22 @@ body{
   }
 
   .banner-list-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .input-file-preview {
     height: 240px;
   }
 
+  .input-file-preview.banner {
+    height: 247px;
+  }
+
   .multiple-images-upload {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .table-pagination {
+    margin-right: 0;
   }
 }
