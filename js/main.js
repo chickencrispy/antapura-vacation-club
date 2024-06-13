@@ -159,14 +159,48 @@ if(multipleImagesUpload) {
         const reader = new FileReader();
         reader.onload = (e) => {
           const newImgWrapper = document.createElement("div");
-          const newImg = new Image();
           const newInput = addFile.cloneNode(true);
-          
-          newImg.setAttribute("src", e.target.result);
-          newInput.setAttribute("name", "images[]");
-          newImgWrapper.appendChild(newImg);
+          const delBtn = document.createElement("button");
+          const inputType = addFile.files[0].type.split('/');
+
+          console.log(addFile.files[0].type.split('/')[1]);
+
+          const createElement = (tag, className = '') => {
+            const element = document.createElement(tag);
+            if (className) {
+              element.className = className;
+            }
+            return element;
+          };
+
+          const createIcon = (type) => {
+            const newIcon = createElement('i', 'fi text-xl');
+            const iconName = type === 'pdf' ? 'fi-rr-file-pdf' : 'fi-rr-file';
+            newIcon.classList.add(iconName);
+            return newIcon;
+          };
+
+          if (inputType[0] === 'image') {
+            const newImg = createElement('img');
+            newImg.src = e.target.result;
+            newImgWrapper.appendChild(newImg);
+          } else {
+            newImgWrapper.appendChild(createIcon(inputType[1]));
+          }
+
+          newImgWrapper.className = 'images-item';
+          delBtn.type = 'button';
+          delBtn.className = 'btn btn-del';
+          delBtn.innerHTML = "<i class='fi fi-rr-cross-small'></i>";
+
+          newInput.setAttribute('name', 'files[]');
           newImgWrapper.appendChild(newInput);
+          newImgWrapper.appendChild(delBtn);
           multiUpload.insertBefore(newImgWrapper, addImg);
+
+          delBtn.addEventListener('click', () => {
+            newImgWrapper.remove();
+          });
         }
         reader.readAsDataURL(addFile.files[0]);
       }

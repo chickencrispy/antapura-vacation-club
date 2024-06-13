@@ -63,6 +63,10 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
 
 .input-group {
   position: relative;
+
+  .btn {
+    border-radius: 10px;
+  }
 }
 
 .form-control {

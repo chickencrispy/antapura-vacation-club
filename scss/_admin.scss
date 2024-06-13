@@ -255,9 +255,19 @@ body{
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 
+  .images-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 76px;
+    border: 1px solid var(--mdb-border-color);
+    border-radius: 8px;
+  }
+
   img {
     width: 100%;
-    height: 76px;
+    height: 100%;
     border-radius: 8px;
     object-fit: cover;
   }
@@ -270,6 +280,25 @@ body{
     border: 1px dashed var(--mdb-border-color);
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  .btn-del {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 1px solid #d1485f;
+    border-radius: 50%;
+    background-color: #dc4c64;
+    color: $white;
+  }
+}
+
+.task-list {
+  input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
   }
 }
 

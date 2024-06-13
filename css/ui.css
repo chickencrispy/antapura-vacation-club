@@ -60,6 +60,10 @@ h1 {
   color: #50535b;
 }
 
+.rounded-normal {
+  border-radius: 10px !important;
+}
+
 .btn-accent {
   background-color: #ff8036;
   border-color: #ff8036;
@@ -1028,9 +1032,18 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
+.multiple-images-upload .images-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
+  border: 1px solid var(--mdb-border-color);
+  border-radius: 8px;
+}
 .multiple-images-upload img {
   width: 100%;
-  height: 76px;
+  height: 100%;
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1043,6 +1056,22 @@ body {
   border: 1px dashed var(--mdb-border-color);
   border-radius: 8px;
   cursor: pointer;
+}
+.multiple-images-upload .btn-del {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #d1485f;
+  border-radius: 50%;
+  background-color: #dc4c64;
+  color: #ffffff;
+}
+
+.task-list input[type=checkbox]:checked + span {
+  text-decoration: line-through;
 }
 
 @media screen and (min-width: 768px) {
@@ -1198,6 +1227,9 @@ input[type=date]::-webkit-calendar-picker-indicator::after {
 
 .input-group {
   position: relative;
+}
+.input-group .btn {
+  border-radius: 10px;
 }
 
 .form-control {

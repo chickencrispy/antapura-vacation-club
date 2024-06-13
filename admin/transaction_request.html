@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transaction Report</title>
+  <title>Transaction Request</title>
   <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/date-picker.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
@@ -75,7 +75,7 @@
   <main id="main-content" class="content-wrapper">
     <div class="p-3">
       <div class="mb-3">
-        <h2 class="fw-bold">Transaction Report</h2>
+        <h2 class="fw-bold">Transaction Request</h2>
       </div>
       
       <div class="row g-2 mb-3">
@@ -89,17 +89,6 @@
                 <option value="">Buy</option>
                 <option value="">Sell</option>
                 <option value="">Purchase</option>
-              </select>
-            </div>
-
-            <div class="col-md-2">
-              <select class="form-select text-sm">
-                <option value="">All Status</option>
-                <option value="">Open</option>
-                <option value="">Waiting Payment</option>
-                <option value="">On proccess</option>
-                <option value="">Success</option>
-                <option value="">Cancel</option>
               </select>
             </div>
       
@@ -162,11 +151,11 @@
               <th colspan="2" class="text-center">User ID</th>
               <th rowspan="2">Type</th>
               <th rowspan="2">Details</th>
-              <th rowspan="2">Amount</th>
               <th rowspan="2">Type of Point</th>
+              <th rowspan="2">Amount</th>
+              <th rowspan="2">Payment</th>
               <th rowspan="2">Remarks</th>
               <th rowspan="2">Status</th>
-              <th rowspan="2">Admin</th>
               <th rowspan="2">&nbsp;</th>
             </tr>
             <tr>
@@ -177,116 +166,27 @@
           <tbody>
             <tr>
               <td class="text-end">1</td>
-              <td>ATP2406001023</td>
-              <td>06/02/2024 10:42:36</td>
-              <td>Transfer</td>
-              <td>John Doe</td>
-              <td>Jane Doe</td>
-              <td>Point</td>
-              <td>-</td>
-              <td>12.000</td>
-              <td>Club Point</td>
-              <td>-</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-paper-plane me-1"></i> Transfer</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end">2</td>
-              <td>ATP2405001025</td>
-              <td>06/05/2024 11:22:18</td>
-              <td>Top Up</td>
-              <td>Antapura</td>
-              <td>Jane Doe</td>
-              <td>Point</td>
-              <td>-</td>
-              <td>50.000</td>
-              <td>Club Point</td>
-              <td>-</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-paper-plane me-1"></i> Transfer</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end">3</td>
-              <td>ATP2404003032</td>
-              <td>30/04/2024 15:48:00</td>
-              <td>Purchase</td>
-              <td>Jane Doe</td>
-              <td>Antapura</td>
-              <td>Purchase</td>
-              <td>Hotel Booking - Antapura Resort</td>
-              <td>18.000</td>
-              <td>Club Point</td>
-              <td>TRV12345678 - Antapura Villa (06 Jun 2024 - 09 Jun 2024)</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-paper-plane me-1"></i> Transfer</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end">4</td>
-              <td>ATP2404003068</td>
-              <td>23/04/2024 08:12:42</td>
-              <td>Purchase</td>
+              <td>ATP2406130001</td>
+              <td>06/13/2024 09:37:36</td>
+              <td>Top-Up</td>
               <td>John Doe</td>
               <td>Antapura</td>
-              <td>Purchase</td>
-              <td>Ticket - Garuda Airlines</td>
-              <td>8.600</td>
+              <td>Point</td>
+              <td>-</td>
               <td>Club Point</td>
-              <td>GA12345678 - (BTH-CGK, 05 Jun 2024)</td>
-              <td>Success</td>
-              <td>Debi</td>
+              <td>10.000</td>
+              <td>IDR 10.500.000</td>
+              <td></td>
+              <td>Open</td>
               <td class="text-end">
                 <div class="dropdown">
                   <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
                     <i class="fi fi-rr-menu-dots-vertical"></i>
                   </button>
                   <ul class="dropdown-menu text-sm">
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-paper-plane me-1"></i> Transfer</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
+                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
+                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Hold</a></li>
                   </ul>
                 </div>
               </td>
@@ -321,7 +221,11 @@
       searching: false,
       paging: false,
       ordering: false,
-      info: false
+      info: false,
+      columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+      ]
     });
   </script>
 </body>
