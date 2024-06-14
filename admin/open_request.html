@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Request</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
+  <link rel="stylesheet" href="/css/date-picker.min.css">
+  <link rel="stylesheet" href="/css/datatables.min.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/ui.css">
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="header-toggle">
+      <button class="btn" id="header-toggle">
+        <i class="fi fi-rr-menu-burger"></i>
+      </button>
+    </div>
+
+    <div class="header-profile"> 
+      <img src="../images/memoji/Memoji-04.png" alt="">
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav-logo"> 
+          <i class="fi fi-rr-layers nav-logo-icon"></i>
+          <span class="nav-logo-name">Antapura Club</span> 
+        </a>
+
+        <div class="nav-list"> 
+          <a href="dashboard.html" class="nav-link"> 
+            <i class="fi fi-rr-apps nav-icon"></i>
+            <span class="nav_name">Dashboard</span> 
+          </a> 
+          
+          <a href="members.html" class="nav-link"> 
+            <i class="fi fi-rr-user nav-icon"></i>
+            <span class="nav_name">Members</span> 
+          </a> 
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Transaction</span> 
+          </a>
+
+          <a href="transaction_request.html" class="nav-link active"> 
+            <i class="fi fi-rr-concierge-bell nav-icon"></i>
+            <span class="nav_name">Request</span> 
+          </a>
+          
+          <a href="#" class="nav-link"> 
+            <i class="fi fi-rr-comment nav-icon"></i>
+            <span class="nav_name">Messages</span> 
+          </a> 
+          
+          <a href="settings.html" class="nav-link"> 
+            <i class="fi fi-rr-user-gear nav-icon"></i>
+            <span class="nav_name">Settings</span> 
+          </a> 
+          
+          <a href="listing.html" class="nav-link"> 
+            <i class="fi fi-rr-bookmark nav-icon"></i>
+            <span class="nav_name">Listing</span> 
+          </a> 
+        </div>
+      </div> 
+      
+      <a href="#" class="nav-link"> 
+        <i class="fi fi-rr-sign-out-alt nav-icon"></i>
+        <span class="nav_name">SignOut</span> 
+      </a>
+    </nav>
+  </aside>
+
+  <main id="main-content" class="content-wrapper">
+    <div class="p-3">
+      <div class="mb-3 py-3">
+        <h2 class="mb-0 fw-bold">Open Request</h2>
+      </div>
+      
+      <div class="row g-3">
+        <div class="col-sm-4">
+          <form action="" id="open-request" class="p-4 bg-white rounded-normal border h-100">
+            <div class="">
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Request Type</div>
+                <div class="col-sm-9">
+                  <select id="request-type" class="form-select text-sm">
+                    <option value="" hidden>Select request type</option>
+                    <option value="topup">Top-Up Point</option>
+                    <option value="transfer">Transfer Point</option>
+                    <option value="sell">Sell Point</option>
+                    <option value="buy">Buy Point</option>
+                    <option value="redeem">Redeem Point</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Point Type</div>
+                <div class="col-sm-9">
+                  <select class="form-select text-sm">
+                    <option value="" hidden>Select point type</option>
+                    <option value="1">Founder Point</option>
+                    <option value="2">Club Point</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="redeem-item" class="d-none row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Redeem Item</div>
+                <div class="col-sm-9">
+                  <select name="" id="request-redeem" class="form-select text-sm">
+                    <option value="" hidden>What to redeem?</option>
+                    <option value="point">Point</option>
+                    <option value="hotel">Hotel & Resort</option>
+                    <option value="ticket">Ticket</option>
+                    <option value="tour">Tour Package</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="request-from" class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Customer</div>
+                <div class="col-sm-9">
+                  <input type="text" list="user-from" class="form-control text-sm" autocomplete="off">
+                  <datalist id="user-from">
+                    <option value="John Doe">+628123456789</option>
+                    <option value="Jane Doe">+628198752423</option>
+                  </datalist>
+                </div>
+              </div>
+
+              <div id="request-to" class="d-none row g-2 align-items-center mb-2">
+                <div class="col-sm-3">To</div>
+                <div class="col-sm-9">
+                  <input type="text" list="user-to" class="form-control text-sm" autocomplete="off">
+                  <datalist id="user-to">
+                    <option value="John Doe">+628123456789</option>
+                    <option value="Jane Doe">+628198752423</option>
+                  </datalist>
+                </div>
+              </div>
+
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Details</div>
+                <div class="col-sm-9"><input type="text" class="form-control text-sm"></div>
+              </div>
+
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Amount</div>
+                <div class="col-sm-9"><input type="text" class="form-control text-sm" inputmode="numeric"></div>
+              </div>
+
+              <div id="request-payment" class="d-none row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Payment</div>
+                <div class="col-sm-9">
+                  <div class="input-currency">
+                    <input type="text" name="" id="input-payment" class="form-control text-sm" inputmode="numeric">
+                    <span class="currency-name">IDR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-normal btn-primary mt-3">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

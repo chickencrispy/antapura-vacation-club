@@ -163,8 +163,6 @@ if(multipleImagesUpload) {
           const delBtn = document.createElement("button");
           const inputType = addFile.files[0].type.split('/');
 
-          console.log(addFile.files[0].type.split('/')[1]);
-
           const createElement = (tag, className = '') => {
             const element = document.createElement(tag);
             if (className) {
@@ -205,5 +203,39 @@ if(multipleImagesUpload) {
         reader.readAsDataURL(addFile.files[0]);
       }
     });
+  });
+}
+
+// OPEN REQUEST
+const openRequest = document.getElementById('open-request');
+if(openRequest) {
+  const requestType = document.getElementById('request-type');
+  const redeemItem = document.getElementById('redeem-item');
+  const requestRedeem = document.getElementById('request-redeem');
+  const requestFrom = document.getElementById('request-from');
+  const requestTo = document.getElementById('request-to');
+  const requestPayment = document.getElementById('request-payment');
+  const inputPayment = document.getElementById('input-payment');
+
+  function redeemConf(e) {
+    redeemItem.classList.toggle('d-none', !e);
+    requestRedeem.children[0].selected = e;
+    requestRedeem.children[1].hidden = e;
+  }
+
+  function paymentConf(e) {
+    requestPayment.classList.toggle('d-none', !e);
+  }
+
+  function customerConf(e) {
+    requestTo.classList.toggle('d-none', !e);
+    requestFrom.querySelectorAll('div')[0].textContent = e ? 'From' : 'Customer';
+  }
+  
+  requestType.addEventListener('change', () => {
+    redeemConf(requestType.value === 'redeem');
+    paymentConf(!(requestType.value === 'transfer' || requestType.value === 'redeem'));
+    inputPayment.value = (requestType.value === 'transfer' || requestType.value === 'redeem') ? "" : inputPayment.value;
+    customerConf(requestType.value !== 'topup' && requestType.value !== 'redeem');
   });
 }
