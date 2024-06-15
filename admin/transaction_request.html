@@ -190,7 +190,7 @@
                   </button>
                   <ul class="dropdown-menu text-sm">
                     <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
+                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
                     <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Hold</a></li>
                   </ul>
                 </div>
@@ -213,6 +213,40 @@
       </div>
     </div>
   </main>
+
+  <!-- MODAL ASSIGN TO -->
+  <div class="modal fade" id="assignToModal" tabindex="-1" aria-labelledby="assignToModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Assign To</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="mb-2">
+                <label class="text-xs fw-bold mb-1">Admin Name</label>
+                <input type="text" list="assign-admin" class="form-control text-sm" autocomplete="off">
+                <datalist id="assign-admin">
+                  <option>Administrator</option>
+                  <option>Customer Service</option>
+                </datalist>
+              </div>
+              <div class="mb-2">
+                <label class="text-xs fw-bold mb-1">Notes</label>
+                <textarea class="form-control text-sm" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-normal btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/jquery.min.js"></script>
   <script src="/js/mdb.umd.min.js"></script>
