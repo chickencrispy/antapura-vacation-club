@@ -64,6 +64,10 @@ h1 {
   border-radius: 10px !important;
 }
 
+.shadow-xs {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
 .btn-accent {
   background-color: #ff8036;
   border-color: #ff8036;
@@ -166,6 +170,27 @@ h1 {
   margin-left: 3.5px;
   margin-top: 0.5px;
   border-radius: 0 0 2px 0;
+}
+
+.form-check-sm[type=radio] {
+  margin-top: 0 !important;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--mdb-form-control-border-color);
+}
+.form-check-sm[type=radio]::after, .form-check-sm[type=radio]::before {
+  width: 12px;
+  height: 12px;
+}
+.form-check-sm[type=radio]:checked:focus:before, .form-check-sm[type=radio]:indeterminate:focus:before {
+  box-shadow: 0px 0px 0px 10px #3b71ca;
+}
+.form-check-sm[type=radio]:checked {
+  border-color: #3b71ca;
+}
+.form-check-sm[type=radio]:checked:after {
+  width: 8px;
+  height: 8px;
 }
 
 .grid-2 {

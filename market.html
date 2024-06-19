@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BIG Vacation Club</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/uicons-rounded.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/ui.css">
 </head>
 <body>
   <div class="app-container">
-    <div class="app-page-header">
+    <div class="app-page-header shadow-xs">
       <div class="top-bar gap-2">
         <h4>Market</h4>
         <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
       </div>
       <div class="top-bar-market">
-        <button class="btn bg-danger" data-bs-toggle="offcanvas" data-bs-target="#off_buy" aria-controls="off_buy">Buy</button>
-        <button class="btn bg-warning" data-bs-toggle="offcanvas" data-bs-target="#off_sell" aria-controls="off_sell">Sell</button>
+        <button class="btn text-white bg-danger" data-mdb-offcanvas-init data-mdb-target="#off_buy" aria-controls="off_buy">Buy</button>
+        <button class="btn text-white bg-warning" data-mdb-offcanvas-init data-mdb-target="#off_sell" aria-controls="off_sell">Sell</button>
       </div>
     </div>
 
@@ -26,14 +26,14 @@
       <div class="bg-white border p-3 rounded-4">
         <nav class="mb-3">
           <div class="nav nav-underline nav-justified rounded-pill" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="true">Buy Point</button>
-            <button class="nav-link" id="nav-sell-tab" data-bs-toggle="tab" data-bs-target="#sell-tab" type="button" role="tab" aria-controls="sell-tab" aria-selected="false">Sell Point</button>
+            <button class="nav-link active" id="nav-buy-tab" data-mdb-tab-init data-mdb-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="true">Buy Point</button>
+            <button class="nav-link" id="nav-sell-tab" data-mdb-tab-init data-mdb-target="#sell-tab" type="button" role="tab" aria-controls="sell-tab" aria-selected="false">Sell Point</button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
           <!-- Market Buy -->
           <div class="tab-pane fade show active" id="buy-tab" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
-            <table class="table table-borderless">
+            <table class="table table-sm table-borderless">
               <thead>
                 <tr class="text-xs text-uppercase">
                   <th>Point (Pts)</th>
@@ -47,26 +47,26 @@
                   <td>3.000</td>
                   <td class="text-center text-muted text-uppercase text-xs">Dec 2024</td>
                   <td class="text-end">2.500.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#">Buy</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#buyPointModal">Buy</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>3.800</td>
                   <td class="text-center text-muted text-uppercase text-xs">Aug 2025</td>
                   <td class="text-end">3.850.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#">Buy</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#buyPointModal">Buy</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>6.000</td>
                   <td class="text-center text-muted text-uppercase text-xs">Dec 2027</td>
                   <td class="text-end">6.800.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#">Buy</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#buyPointModal">Buy</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <!-- Market Sell-->
           <div class="tab-pane fade" id="sell-tab" role="tabpanel" aria-labelledby="nav-sell-tab" tabindex="0">
-            <table class="table table-borderless">
+            <table class="table table-sm table-borderless">
               <thead>
                 <tr class="text-xs text-uppercase">
                   <th>Point (Pts)</th>
@@ -80,19 +80,19 @@
                   <td>5.000</td>
                   <td class="text-center text-muted text-uppercase text-xs">Dec 2026</td>
                   <td class="text-end">5.800.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#">Sell</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#sellPointModal">Sell</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>6.000</td>
                   <td class="text-center text-muted text-uppercase text-xs">No Exp</td>
                   <td class="text-end">7.000.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#">Sell</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#sellPointModal">Sell</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>6.000</td>
                   <td class="text-center text-muted text-uppercase text-xs">Dec 2025</td>
                   <td class="text-end">6.200.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#">Sell</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#sellPointModal">Sell</a></td>
                 </tr>
               </tbody>
             </table>
@@ -116,7 +116,7 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_buy" aria-labelledby="offcanvasBuy">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Buy Point</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
@@ -144,7 +144,7 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_sell" aria-labelledby="offcanvasSell">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Sell Point</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
@@ -191,8 +191,50 @@
     </div>
   </div>
 
+  <!-- MODAL BUY POINT -->
+  <div class="modal fade" id="buyPointModal" tabindex="-1" aria-labelledby="buyPointModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Buy Point</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm">
+            Are you sure want to buy point from this user?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
+            <button type="button" class="btn btn-step btn-normal btn-danger" data-mdb-dismiss="modal">No</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SELL POINT -->
+  <div class="modal fade" id="sellPointModal" tabindex="-1" aria-labelledby="sellPointModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Sell Point</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm">
+            Are you sure want to sell point to this user?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
+            <button type="button" class="btn btn-step btn-normal btn-danger" data-mdb-dismiss="modal">No</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/mdb.umd.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
