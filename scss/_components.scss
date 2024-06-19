@@ -78,7 +78,7 @@
 }
 
 .btn-dropdown:hover {
-  border-color: var(--bs-border-color);
+  border-color: var(--mdb-border-color);
 }
 
 .form-check-sm[type=checkbox] {
@@ -198,7 +198,7 @@
 }
 
 .offcanvas-auto {
-  --bs-offcanvas-height: auto;
+  --mdb-offcanvas-height: auto;
 }
 
 .offcanvas-body {
@@ -219,7 +219,7 @@
 
 .form-underline {
   label:after {
-    --bs-body-bg: transparent;
+    --mdb-body-bg: transparent;
     color: $dark !important;
   }
 
@@ -239,9 +239,9 @@
   }
 
   .btn {
-    --bs-btn-padding-x: 1rem;
-    --bs-btn-padding-y: 0.75rem;
-    --bs-border-radius: 10px;
+    --mdb-btn-padding-x: 1rem;
+    --mdb-btn-padding-y: 0.75rem;
+    --mdb-border-radius: 10px;
     font-size: $fs-sm;
   }
 }
@@ -274,7 +274,7 @@
 
       small {
         font-size: $fs-xs;
-        color: var(--bs-secondary-color);
+        color: var(--mdb-secondary-color);
       }
     }
 
@@ -312,7 +312,7 @@
 
       small {
         font-size: $fs-xs;
-        color: var(--bs-secondary-color);
+        color: var(--mdb-secondary-color);
       }
     }
 
@@ -337,7 +337,7 @@
   .user-avatar {
     width: 48px;
     height: 48px;
-    border: 1px solid var(--bs-border-color);
+    border: 1px solid var(--mdb-border-color);
     border-radius: 50rem;
     
     img {
@@ -378,7 +378,7 @@
   border-radius: 16px;
   background-color: $white;
   text-align: center;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
 }
 
 .card-details {
@@ -386,7 +386,7 @@
   border-radius: 16px;
   background-color: $white;
   font-size: $fs-sm;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
 }
 
 .card-profile-header {
@@ -394,14 +394,14 @@
   border-radius: 16px;
   background-color: $white;
   font-size: $fs-sm;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
   text-align: center;
 
   .user-avatar {
     width: 86px;
     height: 86px;
     margin: 0 auto 16px;
-    border: 1px solid var(--bs-border-color);
+    border: 1px solid var(--mdb-border-color);
     border-radius: 50rem;
     background-color: $white;
     
@@ -426,7 +426,7 @@
 
 .dl-between {
   dd {
-    color: var(--bs-secondary-color);
+    color: var(--mdb-secondary-color);
   }
 
   dd:not(:last-of-type) {
@@ -531,7 +531,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 8px;
   font-size: $fs-sm;
   border-radius: 10px;
-  border-color: var(--bs-border-color);
+  border-color: var(--mdb-border-color);
 
   li {
     display: flex;

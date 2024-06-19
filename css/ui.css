@@ -144,7 +144,7 @@ h1 {
 }
 
 .btn-dropdown:hover {
-  border-color: var(--bs-border-color);
+  border-color: var(--mdb-border-color);
 }
 
 .form-check-sm[type=checkbox] {
@@ -252,7 +252,7 @@ h1 {
 }
 
 .offcanvas-auto {
-  --bs-offcanvas-height: auto;
+  --mdb-offcanvas-height: auto;
 }
 
 .offcanvas-body .form-control, .offcanvas-body .form-select {
@@ -268,7 +268,7 @@ h1 {
 }
 
 .form-underline label:after {
-  --bs-body-bg: transparent;
+  --mdb-body-bg: transparent;
   color: #949699 !important;
 }
 .form-underline .form-control {
@@ -284,9 +284,9 @@ h1 {
   padding-top: 1.35rem;
 }
 .form-underline .btn {
-  --bs-btn-padding-x: 1rem;
-  --bs-btn-padding-y: 0.75rem;
-  --bs-border-radius: 10px;
+  --mdb-btn-padding-x: 1rem;
+  --mdb-btn-padding-y: 0.75rem;
+  --mdb-border-radius: 10px;
   font-size: 13px;
 }
 
@@ -316,7 +316,7 @@ h1 {
 }
 .list-group-between .list-group-item .item-content small {
   font-size: 11px;
-  color: var(--bs-secondary-color);
+  color: var(--mdb-secondary-color);
 }
 .list-group-between .list-group-item .item-content:last-child {
   text-align: end;
@@ -348,7 +348,7 @@ h1 {
 }
 .list-group-between-link .list-group-item a .item-content small {
   font-size: 11px;
-  color: var(--bs-secondary-color);
+  color: var(--mdb-secondary-color);
 }
 .list-group-between-link .list-group-item a .item-content:last-child {
   text-align: end;
@@ -368,7 +368,7 @@ h1 {
 .list-group-contact .user-avatar {
   width: 48px;
   height: 48px;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
   border-radius: 50rem;
 }
 .list-group-contact .user-avatar img {
@@ -405,7 +405,7 @@ h1 {
   border-radius: 16px;
   background-color: #ffffff;
   text-align: center;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
 }
 
 .card-details {
@@ -413,7 +413,7 @@ h1 {
   border-radius: 16px;
   background-color: #ffffff;
   font-size: 13px;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
 }
 
 .card-profile-header {
@@ -421,14 +421,14 @@ h1 {
   border-radius: 16px;
   background-color: #ffffff;
   font-size: 13px;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
   text-align: center;
 }
 .card-profile-header .user-avatar {
   width: 86px;
   height: 86px;
   margin: 0 auto 16px;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--mdb-border-color);
   border-radius: 50rem;
   background-color: #ffffff;
 }
@@ -449,7 +449,7 @@ h1 {
 }
 
 .dl-between dd {
-  color: var(--bs-secondary-color);
+  color: var(--mdb-secondary-color);
 }
 .dl-between dd:not(:last-of-type) {
   margin-bottom: 16px;
@@ -537,7 +537,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 8px;
   font-size: 13px;
   border-radius: 10px;
-  border-color: var(--bs-border-color);
+  border-color: var(--mdb-border-color);
 }
 .dropdown-menu li {
   display: flex;
