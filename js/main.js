@@ -239,3 +239,22 @@ if(openRequest) {
     customerConf(requestType.value !== 'topup' && requestType.value !== 'redeem');
   });
 }
+
+// TOPUP INPUT PRESET
+const topUpAmount = document.getElementById('topup-amount');
+if (topUpAmount) {
+  topUpAmount.addEventListener('click', (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.matches('.preset-amount button')) {
+      const value = clickedElement.innerText.trim();
+      const presetInput = topUpAmount.querySelector('input');
+      
+      if (value === 'CUSTOM') {
+        presetInput.focus();
+        presetInput.setSelectionRange(presetInput.value.length, presetInput.value.length);
+      } else {
+        presetInput.value = value;
+      }
+    }
+  });
+}

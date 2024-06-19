@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer | Antapura Vacation Club</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/uicons-rounded.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+  <div class="app-container pb-0">
+    <div class="app-page-header shadow-sm">
+      <div class="top-bar gap-2">
+        <h4>Transfer Point</h4>
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <div class="p-3 bg-white text-sm rounded-4 shadow-sm mb-3">
+        <div class="text-xs mb-2">Transfer point to another user</div>
+        <div class="input-icon">
+          <input type="text" list="datalist-name" class="form-control text-sm py-3" placeholder="Enter name or WhatsApp number">
+          <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+
+          <datalist id="datalist-name">
+            <option value="John Doe">+628123456789</option>
+            <option value="Jane Doe">+628123456789</option>
+          </datalist>
+        </div>
+      </div>
+
+      <div class="p-3 bg-white text-sm rounded-4 shadow-sm">
+        <div class="text-xs mb-2">Amount to Transfer</div>
+        <input type="text" class="form-control fw-bold py-3" inputmode="numeric">
+      </div>
+    </div>
+
+    <div class="d-grid mt-auto p-3">
+      <button class="btn btn-normal btn-dark" onclick="javascript:location.href='confirm_action_message.html'">Confirm</button>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

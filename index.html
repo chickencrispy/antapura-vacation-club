@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIG Vacation Club</title>
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Antapura Vacation Club</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/uicons-rounded.css">
   <link rel="stylesheet" href="/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/css/ui.css">
@@ -43,10 +43,10 @@
       </div>
 
       <div class="app-home-balance-action">
-        <button class="btn bg-primary" data-bs-toggle="offcanvas" data-bs-target="#off_topup" aria-controls="off_topup">Top Up</button>
-        <button class="btn bg-success" data-bs-toggle="offcanvas" data-bs-target="#off_transfer" aria-controls="off_transfer">Transfer</button>
-        <button class="btn bg-danger" data-bs-toggle="offcanvas" data-bs-target="#off_buy" aria-controls="off_buy">Buy</button>
-        <button class="btn bg-warning" data-bs-toggle="offcanvas" data-bs-target="#off_sell" aria-controls="off_sell">Sell</button>
+        <button class="btn text-white bg-primary" data-mdb-offcanvas-init data-mdb-target="#off_topup" aria-controls="off_topup">Top Up</button>
+        <button class="btn text-white bg-success" data-mdb-offcanvas-init data-mdb-target="#off_transfer" aria-controls="off_transfer">Transfer</button>
+        <button class="btn text-white bg-danger" data-mdb-offcanvas-init data-mdb-target="#off_buy" aria-controls="off_buy">Buy</button>
+        <button class="btn text-white bg-warning" data-mdb-offcanvas-init data-mdb-target="#off_sell" aria-controls="off_sell">Sell</button>
       </div>
     </div>
 
@@ -54,14 +54,14 @@
       <div class="bg-white border p-3 rounded-4">
         <nav class="mb-3">
           <div class="nav nav-underline nav-justified rounded-pill" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="true">Buy Point</button>
-            <button class="nav-link" id="nav-sell-tab" data-bs-toggle="tab" data-bs-target="#sell-tab" type="button" role="tab" aria-controls="sell-tab" aria-selected="false">Sell Point</button>
+            <button class="nav-link active" id="nav-buy-tab" data-mdb-tab-init data-mdb-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="true">Buy Point</button>
+            <button class="nav-link" id="nav-sell-tab" data-mdb-tab-init data-mdb-target="#sell-tab" type="button" role="tab" aria-controls="sell-tab" aria-selected="false">Sell Point</button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
           <!-- Market Buy -->
           <div class="tab-pane fade show active" id="buy-tab" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
-            <table class="table table-borderless">
+            <table class="table table-sm table-borderless">
               <thead>
                 <tr class="text-xs text-uppercase">
                   <th>Point (Pts)</th>
@@ -73,28 +73,28 @@
               <tbody class="text-sm">
                 <tr class="border-top">
                   <td>3.000</td>
-                  <td class="text-center text-xs text-muted">Dec 2024</td>
+                  <td class="text-center text-muted text-uppercase text-xs">Dec 2024</td>
                   <td class="text-end">2.500.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#buyPointModal">Buy</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>3.800</td>
-                  <td class="text-center text-xs text-muted">Aug 2025</td>
+                  <td class="text-center text-muted text-uppercase text-xs">Aug 2025</td>
                   <td class="text-end">3.850.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#buyPointModal">Buy</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>6.000</td>
-                  <td class="text-center text-xs text-muted">Dec 2027</td>
+                  <td class="text-center text-muted text-uppercase text-xs">Dec 2027</td>
                   <td class="text-end">6.800.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Buy</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#buyPointModal">Buy</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <!-- Market Sell-->
           <div class="tab-pane fade" id="sell-tab" role="tabpanel" aria-labelledby="nav-sell-tab" tabindex="0">
-            <table class="table table-borderless">
+            <table class="table table-sm table-borderless">
               <thead>
                 <tr class="text-xs text-uppercase">
                   <th>Point (Pts)</th>
@@ -106,21 +106,21 @@
               <tbody class="text-sm">
                 <tr class="border-top">
                   <td>5.000</td>
-                  <td class="text-center text-xs text-muted">Dec 2026</td>
+                  <td class="text-center text-muted text-uppercase text-xs">Dec 2026</td>
                   <td class="text-end">5.800.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#sellPointModal">Sell</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>6.000</td>
-                  <td class="text-center text-xs text-muted">No Exp</td>
+                  <td class="text-center text-muted text-uppercase text-xs">No Exp</td>
                   <td class="text-end">7.000.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#sellPointModal">Sell</a></td>
                 </tr>
                 <tr class="border-top">
                   <td>6.000</td>
-                  <td class="text-center text-xs text-muted">Dec 2025</td>
+                  <td class="text-center text-muted text-uppercase text-xs">Dec 2025</td>
                   <td class="text-end">6.200.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold text-xs"><a href="#">Sell</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#sellPointModal">Sell</a></td>
                 </tr>
               </tbody>
             </table>
@@ -229,31 +229,22 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_topup" aria-labelledby="offcanvasTopup">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Top Up</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
         <div id="topup-amount" class="input-amount mb-3">
-          <label for="select-type" class="text-xs fw-bold mb-2">Enter Top Up Amount</label>
-          <input type="text" class="form-control text-center" inputmode="numeric" placeholder="0">
-        </div>
+          <label for="select-type" class="text-xs mb-2">Enter Top Up Amount</label>
+          <input type="text" class="form-control text-center bg-light" inputmode="numeric">
 
-        <div class="topup-summary bg-secondary bg-opacity-10 p-3 rounded-4">
-          <label class="text-xs fw-bold mb-2">Payment Summary</label>
-          <ul class="list-group list-group-flush list-group-summary">
-            <li id="top-amount" class="list-group-item">
-              <span>Top-Up Amount</span>
-              <span>0</span>
-            </li>
-            <li id="top-fee" class="list-group-item">
-              <span>Admin Fee</span>
-              <span>0</span>
-            </li>
-            <li id="top-total" class="list-group-item">
-              <strong>Total</strong>
-              <strong>0</strong>
-            </li>
-          </ul>
+          <div class="preset-amount grid-3 gap-2 mt-2">
+            <button type="button" class="btn btn-normal border">5.000</button>
+            <button type="button" class="btn btn-normal border">10.000</button>
+            <button type="button" class="btn btn-normal border">25.000</button>
+            <button type="button" class="btn btn-normal border">75.000</button>
+            <button type="button" class="btn btn-normal border">100.000</button>
+            <button type="button" class="btn btn-normal border">Custom</button>
+          </div>
         </div>
 
         <div class="offcanvas-footer d-grid mt-auto">
@@ -267,25 +258,29 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_transfer" aria-labelledby="offcanvasTransfer">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Transfer Point</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
-        <div id="transfer-amount" class="mb-3">
-          <label for="select-source" class="text-xs fw-bold mb-2">Transfer Amount</label>
-          <input type="text" name="" id="" class="form-control" inputmode="numeric" placeholder="0">
+        <div id="transfer-amount" class="input-amount mb-3">
+          <label for="select-source" class="text-xs mb-2">Transfer Amount</label>
+          <input type="text" class="form-control text-center bg-light" inputmode="numeric">
         </div>
 
         <div id="transfer-target" class="mb-3">
-          <label for="select-type" class="text-xs fw-bold mb-2">Phone Number</label>
-          <input type="tel" name="" id="" class="form-control" value="+62">
+          <label for="select-type" class="text-xs mb-2">Transfer To</label>
+          <input type="text" list="user-to" name="" id="" class="form-control text-sm">
+          <datalist id="user-to">
+            <option value="John Doe">+628123456789</option>
+            <option value="Jane Doe">+628321572015</option>
+          </datalist>
         </div>
 
         <div id="transfer-source" class="mb-3">
-          <label for="fth-period" class="text-xs fw-bold mb-2">Source of Point</label>
+          <label for="fth-period" class="text-xs mb-2">Source of Point</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select source</button>
-            <ul class="dropdown-menu">
+            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
+            <ul class="dropdown-menu border shadow-none">
               <li>
                 <label>
                   <input type="radio" name="transfer-source" id="" value="founder" class="form-check-input d-none">
@@ -304,6 +299,11 @@
           </div>
         </div>
 
+        <div id="transfer-target" class="mb-3">
+          <label for="select-type" class="text-xs mb-2">Message (Optional)</label>
+          <input type="text" name="" id="" class="form-control text-sm">
+        </div>
+
         <div class="offcanvas-footer d-grid mt-auto">
           <button type="button" class="btn btn-dark">Transfer</button>
         </div>
@@ -315,47 +315,20 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_buy" aria-labelledby="offcanvasBuy">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Buy Point</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
-        <div id="buy-amount" class="mb-2">
-          <label for="select-type" class="text-xs fw-bold mb-2">Buy Point Amount</label>
-          <input type="text" name="" id="" class="form-control" inputmode="numeric">
+        <div id="buy-amount" class="input-amount mb-2">
+          <label for="select-type" class="text-xs mb-2">Amount of point to buy</label>
+          <input type="text" class="form-control text-center bg-light" inputmode="numeric">
         </div>
 
-        <div id="buy-price" class="mb-2">
-          <label for="select-source" class="text-xs fw-bold mb-2">Price</label>
+        <div id="buy-price" class="mb-3">
+          <label for="select-source" class="text-xs mb-2">Price to pay</label>
           <div class="input-currency">
-            <input type="text" name="" id="" class="form-control" inputmode="numeric">
+            <input type="text" name="" id="" class="form-control text-sm" inputmode="numeric">
             <span class="currency-name">IDR</span>
-          </div>
-        </div>
-
-        <div id="buy-duration" class="mb-5">
-          <label for="fth-period" class="text-xs fw-bold mb-2">Market Duration</label>
-          <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select period</button>
-            <ul class="dropdown-menu">
-              <li>
-                <label>
-                  <input type="radio" name="buy-duration" id="" value="3" class="form-check-input d-none">
-                  <span>3 Days</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="buy-duration" id="" value="7" class="form-check-input d-none">
-                  <span>1 Week</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="buy-duration" id="" value="30" class="form-check-input d-none">
-                  <span>1 Month</span>
-                </label>
-              </li>
-            </ul>
           </div>
         </div>
 
@@ -370,55 +343,28 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_sell" aria-labelledby="offcanvasSell">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Sell Point</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
-        <div id="sell-amount" class="mb-3">
-          <label for="select-type" class="text-xs fw-bold mb-2">Sell Point Amount</label>
-          <input type="text" name="" id="" class="form-control" inputmode="numeric">
+        <div id="sell-amount" class="input-amount mb-3">
+          <label for="select-type" class="text-xs mb-2">Amount of point to sell</label>
+          <input type="text" class="form-control text-center bg-light" inputmode="numeric">
         </div>
 
         <div id="sell-price" class="mb-3">
-          <label for="select-source" class="text-xs fw-bold mb-2">Selling Price</label>
+          <label for="select-source" class="text-xs mb-2">Selling price</label>
           <div class="input-currency">
-            <input type="text" name="" id="" class="form-control" inputmode="numeric">
+            <input type="text" name="" id="" class="form-control text-sm" inputmode="numeric">
             <span class="currency-name">IDR</span>
           </div>
         </div>
 
-        <div id="sell-duration" class="mb-3">
-          <label for="fth-period" class="text-xs fw-bold mb-2">Market Period</label>
-          <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select period</button>
-            <ul class="dropdown-menu">
-              <li>
-                <label>
-                  <input type="radio" name="buy-duration" id="" value="3" class="form-check-input d-none"> 
-                  <span>3 Days</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="buy-duration" id="" value="7" class="form-check-input d-none">
-                  <span>1 Week</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="buy-duration" id="" value="30" class="form-check-input d-none">
-                  <span>1 Month</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <div id="sell-source" class="mb-3">
-          <label class="text-xs fw-bold mb-2">Source of Point</label>
+          <label class="text-xs mb-2">Source of point</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select source</button>
-            <ul class="dropdown-menu">
+            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
+            <ul class="dropdown-menu border shadow-none">
               <li>
                 <label>
                   <input type="radio" name="transfer-source" id="" value="today" class="form-check-input d-none">
@@ -444,8 +390,51 @@
     </div>
   </div>
 
+  <!-- MODAL BUY POINT -->
+  <div class="modal fade" id="buyPointModal" tabindex="-1" aria-labelledby="buyPointModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Buy Point</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm">
+            Are you sure want to buy point from this user?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
+            <button type="button" class="btn btn-step btn-normal btn-danger" data-mdb-dismiss="modal">No</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SELL POINT -->
+  <div class="modal fade" id="sellPointModal" tabindex="-1" aria-labelledby="sellPointModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Sell Point</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm">
+            Are you sure want to sell point to this user?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
+            <button type="button" class="btn btn-step btn-normal btn-danger" data-mdb-dismiss="modal">No</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="/js/jquery.min.js"></script>
-  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js"></script>
   <script src="/js/main.js"></script>

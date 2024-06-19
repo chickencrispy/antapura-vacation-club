@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BIG Vacation Club</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/uicons-rounded.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/ui.css">
@@ -21,7 +21,7 @@
           <input type="text" class="form-control" placeholder="Search here...">
           <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
         </div>
-        <button class="btn border" data-bs-toggle="offcanvas" data-bs-target="#off_filter" aria-controls="off_filter">
+        <button class="btn border px-3 shadow-none" data-mdb-offcanvas-init data-mdb-target="#off_filter" aria-controls="off_filter">
           <i class="fi fi-rr-settings-sliders"></i>
         </button>
       </div>
@@ -117,19 +117,19 @@
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_filter" aria-labelledby="offcanvasBottomLabel">
     <div class="offcanvas-header">
       <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Transaction History Filter</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
         <div id="filter-type" class="mb-3">
           <label for="select-type" class="text-xs fw-bold mb-2">Transaction Type</label>
           <div class="dropdown mt-2 d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Select Transaction Type</button>
-            <ul class="dropdown-menu">
-              <li><label><input type="checkbox" name="" id="" class="form-check-input"> Point Transfer</label></li>
-              <li><label><input type="checkbox" name="" id="" class="form-check-input"> Point Earning</label></li>
-              <li><label><input type="checkbox" name="" id="" class="form-check-input"> Hotel Booking</label></li>
-              <li><label><input type="checkbox" name="" id="" class="form-check-input"> Ticket</label></li>
+            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false" data-mdb-auto-close="outside">Select Transaction Type</button>
+            <ul class="dropdown-menu border shadow-none">
+              <li><label><input type="checkbox" name="" id="" class="form-check-input form-check-sm"> Point Transfer</label></li>
+              <li><label><input type="checkbox" name="" id="" class="form-check-input form-check-sm"> Point Earning</label></li>
+              <li><label><input type="checkbox" name="" id="" class="form-check-input form-check-sm"> Hotel Booking</label></li>
+              <li><label><input type="checkbox" name="" id="" class="form-check-input form-check-sm"> Ticket</label></li>
             </ul>
           </div>
         </div>
@@ -137,10 +137,10 @@
         <div id="filter-source" class="mb-3">
           <label for="select-source" class="text-xs fw-bold mb-2">Source of Point</label>
           <div class="dropdown mt-2 d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Select Source of Point</button>
-            <ul class="dropdown-menu">
-              <li><label><input type="checkbox" name="" id="" class="form-check-input"> Founder Point</label></li>
-              <li><label><input type="checkbox" name="" id="" class="form-check-input"> Club Point</label></li>
+            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false" data-mdb-auto-close="outside">Select Source of Point</button>
+            <ul class="dropdown-menu border shadow-none">
+              <li><label><input type="checkbox" name="" id="" class="form-check-input form-check-sm"> Founder Point</label></li>
+              <li><label><input type="checkbox" name="" id="" class="form-check-input form-check-sm"> Club Point</label></li>
             </ul>
           </div>
         </div>
@@ -149,14 +149,14 @@
           <label for="fth-period" class="text-xs fw-bold mb-2">Period</label>
           <div class="mb-2">
             <div class="dropdown d-grid">
-              <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false">
                 Select Period
               </button>
-              <ul class="dropdown-menu">
-                <li><label><input type="radio" name="filter-period" id="" value="today" class="form-check-input"> Today</label></li>
-                <li><label><input type="radio" name="filter-period" id="" value="week" class="form-check-input"> This Week</label></li>
-                <li><label><input type="radio" name="filter-period" id="" value="month" class="form-check-input"> This Month</label></li>
-                <li><label><input type="radio" name="filter-period" id="" value="custom" class="form-check-input"> Custom</label></li>
+              <ul class="dropdown-menu border shadow-none">
+                <li><label><input type="radio" name="filter-period" id="" value="today" class="form-check-input form-check-sm"> Today</label></li>
+                <li><label><input type="radio" name="filter-period" id="" value="week" class="form-check-input form-check-sm"> This Week</label></li>
+                <li><label><input type="radio" name="filter-period" id="" value="month" class="form-check-input form-check-sm"> This Month</label></li>
+                <li><label><input type="radio" name="filter-period" id="" value="custom" class="form-check-input form-check-sm"> Custom</label></li>
               </ul>
             </div>
 
@@ -188,7 +188,7 @@
   </div>
 
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/mdb.umd.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
