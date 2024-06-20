@@ -3,54 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>BIG Holiday Club</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Antapura Vacation Club</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/ui.css">
 </head>
 <body>
-  <div class="app-container">
-    <div class="top-bar">
-      <a href="/big-app/home.html" class="btn-home">
-        <i class="fas fa-chevron-left"></i>
-      </a>
-    </div>
-
-    <div class="login-wrapper">
-      <div class="header">
-        <h4>Sign in now</h4>
-        <p>Please sign in to continue our app</p>
+  <div class="app-container pb-0 bg-white">
+    <div class="login-wrapper my-auto">
+      <div class="heading">
+        <h2>Sign in now</h2>
+        <p class="text-sm text-dark">Please sign in to continue our app</p>
       </div>
 
-      <div class="content">
-        <div class="input-group">
-          <input type="tel" name="" id="" class="form-control" placeholder="WhatsApp Number">
-        </div>
-        <div class="input-group">
-          <input type="password" name="" id="" class="form-control" placeholder="password">
-        </div>
-        <div class="forgot-pass">
-          <a href="forgot_password.html">Forgot password ?</a>
-        </div>
-        <button class="btn btn-block btn-primary">Sign In</button>
+      <form action="" class="login-form">
+        <input type="tel" class="form-control text-sm" inputmode="tel" placeholder="WhatsApp Number">
+        <input type="password" class="form-control text-sm" placeholder="Password">
 
-        <div class="signup">
+        <div class="d-flex align-items-center justify-content-between text-sm text-dark mb-3">
+          <label class="d-flex align-items-center">
+            <input class="form-check-input form-check-sm" type="checkbox" value="" id="flexCheckDefault">
+            <span>Remember me</span>
+          </label>
+          <a href="forgot_password.html">Forgot password?</a>
+        </div>
+
+        <div class="d-grid">
+          <button class="btn btn-normal btn-dark">Sign In</button>
+        </div>
+      </form>
+
+      <div>
+        <div class="text-center text-sm text-dark">
           Don't have an account? <a href="signup.html">Sign up</a>
           <br>
           Or connect
         </div>
-      </div>
-
-      <div class="social-connect">
-        <a href="#"><img src="images/icons/google.png" alt="Google"></a>
-        <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="images/icons/apple.png" alt="Apple"></a>
+        <div class="social-connect">
+          <a href="#"><img src="images/icons/google.png" alt="Google"></a>
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/apple.png" alt="Apple"></a>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

@@ -3,40 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>BIG Holiday Club</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Antapura Vacation Club</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/ui.css">
 </head>
 <body>
-  <div class="app-container">
-    <div class="top-bar">
-      <a href="/big-app/home.html" class="btn-home">
-        <i class="fas fa-chevron-left"></i>
-      </a>
+  <div class="app-container pb-0 bg-white">
+    <div class="top-bar p-3">
+      <a href="login.html" class="btn-icon"><i class="fi fi-rr-angle-left"></i></a>
     </div>
 
     <div class="login-wrapper">
-      <div class="header">
-        <h4>OTP Verification</h4>
-        <p>Please check your email to see the verification code</p>
+      <div class="heading">
+        <h3>OTP Verification</h3>
+        <p class="text-sm text-dark">Please check your email to see the verification code</p>
       </div>
 
-      <div class="content otp">
-        <h6>OTP Code</h6>
-        <div class="otp-input">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
+      <form action="" class="login-form otp">
+        <h6>Enter OTP Code</h6>
+        <input type="number" class="form-control text-sm" oninput="javascript:limitInput(this, 6);" placeholder="6 digit OTP Code">
+        <div class="d-grid">
+          <button class="btn btn-normal btn-dark">Verify</button>
         </div>
-        <button class="btn btn-block btn-primary">Verify</button>
-      </div>
+      </form>
     </div>
   </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
