@@ -1,7 +1,7 @@
-$fs-xs: 11px;
-$fs-sm: 13px;
-$fs-md: 14px;
-$fs-lg: 16px;
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 18px;
 $fs-xl: 20px;
 $fs-2xl: 26px;
 $fs-3xl: 30px;
@@ -31,13 +31,13 @@ h3 { font-size: $fs-xl; }
 h2 { font-size: $fs-2xl; }
 h1 { font-size: $fs-3xl; }
 
-.text-xs { font-size: var(--fs-xs) !important; }
-.text-sm { font-size: var(--fs-sm) !important; }
-.text-md { font-size: var(--fs-md) !important; }
-.text-lg { font-size: var(--fs-lg) !important; }
-.text-xl { font-size: var(--fs-xl) !important; }
-.text-2xl { font-size: var(--fs-2xl) !important; }
-.text-3xl { font-size: var(--fs-3xl) !important; }
+.text-xs { font-size: $fs-xs !important; }
+.text-sm { font-size: $fs-sm !important; }
+.text-md { font-size: $fs-md !important; }
+.text-lg { font-size: $fs-lg !important; }
+.text-xl { font-size: $fs-xl !important; }
+.text-2xl { font-size: $fs-2xl !important; }
+.text-3xl { font-size: $fs-3xl !important; }
 
 .text-dark { color: $dark !important; }
 .text-darker { color: $darker; }

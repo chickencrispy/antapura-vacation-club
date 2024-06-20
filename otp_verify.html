@@ -18,16 +18,23 @@
     <div class="login-wrapper">
       <div class="heading">
         <h3>OTP Verification</h3>
-        <p class="text-sm text-dark">Please check your email to see the verification code</p>
+        <p class="text-sm text-dark">We sent OTP code to your WhatsApp number,<br> please enter any one of OTP in the bottom.</p>
       </div>
 
       <form action="" class="login-form otp">
         <h6>Enter OTP Code</h6>
         <input type="number" class="form-control text-sm" oninput="javascript:limitInput(this, 6);" placeholder="6 digit OTP Code">
+
         <div class="d-grid">
           <button class="btn btn-normal btn-dark">Verify</button>
         </div>
       </form>
+
+      <div class="d-flex align-items-center text-sm text-dark mb-3">
+        <div class="mx-auto">
+          If you didn't receive a code! <a href="otp_verify.html">Resend</a>
+        </div>
+      </div>
     </div>
   </div>
 

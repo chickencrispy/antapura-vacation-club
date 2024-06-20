@@ -7,17 +7,6 @@
 @import 'admin';
 @import 'vendor';
 
-
-:root {
-  --fs-xs: 11px;
-  --fs-sm: 13px;
-  --fs-md: 14px;
-  --fs-lg: 16px;
-  --fs-xl: 18px;
-  --fs-2xl: 26px;
-  --fs-3xl: 30px;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   line-height: normal;
@@ -98,7 +87,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   background-color: #fff;
 
   label {
-    font-size: var(--fs-xs);
+    font-size: $fs-xs;
     font-weight: 600;
     color: #8c8c8c;
   }
@@ -219,7 +208,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   padding-left: 8px;
   padding-right: 12px;
   border-radius: 50rem;
-  font-size: var(--fs-sm);
+  font-size: $fs-sm;
 }
 
 .app-home-categories {
@@ -242,7 +231,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
       background-color: #fff;
       border: 1px solid #dee2e6;
       border-radius: 50rem;
-      font-size: var(--fs-sm);
+      font-size: $fs-sm;
       text-wrap: nowrap;
     }
   }
@@ -271,7 +260,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
       color: #fff;
       background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
       border-radius: 0 0 12px 12px;
-      font-size: var(--fs-sm);
+      font-size: $fs-sm;
     }
   }
 
@@ -351,7 +340,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
     background-color: #f3f6f7;
     color: #666;
     border-radius: 50rem;
-    font-size: var(--fs-xs);
+    font-size: $fs-xs;
   }
 }
 
