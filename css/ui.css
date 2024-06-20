@@ -1395,6 +1395,7 @@ input[type=date]::-webkit-calendar-picker-indicator::after {
   padding: 10px 38px 10px 14px;
   border-radius: 10px;
   box-shadow: none;
+  font-weight: 500;
 }
 
 .form-grouping {
