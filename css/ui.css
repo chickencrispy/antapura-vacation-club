@@ -316,8 +316,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border: 1px solid var(--mdb-border-color);
   border-width: 0 0 1px;
   border-color: var(--mdb-border-color);
@@ -325,11 +325,14 @@ h1 {
 .list-group-between .list-group-item .item-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
   font-size: 12px;
 }
 .list-group-between .list-group-item .item-content h5 {
-  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.list-group-between .list-group-item .item-content h6 {
+  font-weight: 600;
   margin-bottom: 0;
 }
 .list-group-between .list-group-item .item-content strong {
@@ -359,8 +362,12 @@ h1 {
   font-size: 12px;
 }
 .list-group-between-link .list-group-item a .item-content h5 {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0;
+}
+.list-group-between-link .list-group-item a .item-content h6 {
+  font-weight: 600;
+  margin-bottom: 2px;
 }
 .list-group-between-link .list-group-item a .item-content strong {
   font-size: 14px;
@@ -878,7 +885,6 @@ datalist option {
 }
 .app-home-content .content-header .heading {
   margin-bottom: 0;
-  font-weight: 700;
 }
 
 .app-page-header {
@@ -968,20 +974,20 @@ datalist option {
   position: relative;
   display: flex;
   flex-direction: column;
-  transform: translateY(-80px);
-  margin-bottom: -80px;
-}
-.app-page-fullcontent .page-header {
-  padding: 16px;
-  height: 80px;
+  transform: translateY(-88px);
+  margin-bottom: -88px;
   border-radius: 16px 16px 0 0;
   background-color: #ffffff;
 }
+.app-page-fullcontent .page-header {
+  padding: 16px;
+  height: 88px;
+}
 .app-page-fullcontent .page-header .heading {
-  font-weight: 800;
+  font-weight: 600;
 }
 .app-page-fullcontent .page-footer {
-  padding: 16px;
+  padding: 16px 16px 24px;
 }
 .app-page-fullcontent .page-footer .btn {
   --bs-btn-padding-x: 1rem;
@@ -1561,12 +1567,13 @@ input[type=date]::-webkit-calendar-picker-indicator::after {
   justify-content: center;
   width: 36px;
   height: 36px;
+  padding-top: 2px;
   color: var(--text-color);
   background-color: var(--bg-color);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 50%;
   font-size: 18px;
 }
 

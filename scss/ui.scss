@@ -192,11 +192,12 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   justify-content: center;
   width: 36px;
   height: 36px;
+  padding-top: 2px;
   color: var(--text-color);
   background-color: var(--bg-color);
   backdrop-filter: blur(4px);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 50%;
   font-size: $fs-lg;
 }
 

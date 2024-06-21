@@ -264,8 +264,8 @@
     display: flex;
     justify-content: space-between;
     gap: 8px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border: 1px solid var(--mdb-border-color);
     border-width: 0 0 1px;
     border-color: var(--mdb-border-color);
@@ -273,11 +273,15 @@
     .item-content {
       display: flex;
       flex-direction: column;
-      gap: 4px;
       font-size: $fs-xs;
 
       h5 {
-        font-weight: bold;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      h6 {
+        font-weight: 600;
         margin-bottom: 0;
       }
 
@@ -313,8 +317,13 @@
       font-size: $fs-xs;
 
       h5 {
-        font-weight: bold;
+        font-weight: 600;
         margin-bottom: 0;
+      }
+
+      h6 {
+        font-weight: 600;
+        margin-bottom: 2px;
       }
 
       strong {
