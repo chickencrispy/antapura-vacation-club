@@ -11,8 +11,8 @@
 </head>
 <body>
   <div class="app-container">
-    <div class="account-header">
-      <div class="account-image border">
+    <div class="account-header shadow-xs">
+      <div class="account-image">
         <img src="../images/memoji/Memoji-05.png">
       </div>
 
@@ -22,27 +22,68 @@
       </div>
     </div>
 
-    <div class="p-1 px-3 bg-white">
-      <ul class="list-group list-group-light list-group-between-link">
-        <li class="list-group-item">
-          <a href="#">
-            <div class="d-flex align-items-center gap-2"><i class="fi fi-sr-user text-lg"></i> Profile details</div>
-            <i class="fi fi-rr-angle-right text-sm"></i>
-          </a>
-        </li>
-        <li class="list-group-item">
-          <a href="#">
-            <div class="d-flex align-items-center gap-2"><i class="fi fi-sr-settings text-lg"></i> Settings</div>
-            <i class="fi fi-rr-angle-right text-sm"></i>
-          </a>
-        </li>
-        <li class="list-group-item">
-          <a href="#">
-            <div class="d-flex align-items-center gap-2"><i class="fi fi-sr-exit text-lg"></i> Logout</div>
-            <i class="fi fi-rr-angle-right text-sm"></i>
-          </a>
-        </li>
-      </ul>
+    <div class="p-3">
+      <div class="mb-3 p-3 bg-white rounded-normal shadow-xs">
+        <h5 class="text-dark">General</h5>
+        <ul class="list-group list-group-light list-group-between-link">
+          <li class="list-group-item">
+            <a href="#">
+              <i class="fi fi-rr-user icon-circle-36 bg-secondary-subtle"></i>
+              <div class="d-flex flex-column flex-fill lh-sm">
+                <div class="fw-medium">Profile Details</div>
+                <div class="text-xxs text-dark">Change profile picture, phone number and email</div>
+              </div>
+              <i class="fi fi-rr-angle-right text-sm"></i>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="#">
+              <i class="fi fi-rr-lock icon-circle-36 bg-secondary-subtle"></i>
+              <div class="d-flex flex-column flex-fill lh-sm">
+                <div class="fw-medium">Change Password</div>
+                <div class="text-xxs text-dark">Update and strengthen account security</div>
+              </div>
+              <i class="fi fi-rr-angle-right text-sm"></i>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="#">
+              <i class="fi fi-rr-shield icon-circle-36 bg-secondary-subtle"></i>
+              <div class="d-flex flex-column flex-fill lh-sm">
+                <div class="fw-medium">Terms of Use</div>
+                <div class="text-xxs text-dark">Protect your account</div>
+              </div>
+              <i class="fi fi-rr-angle-right text-sm"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3 p-3 bg-white rounded-normal shadow-xs">
+        <h5 class="text-dark">Preferences</h5>
+        <ul class="list-group list-group-light list-group-between-link">
+          <li class="list-group-item">
+            <a href="#">
+              <i class="fi fi-rr-interrogation icon-circle-36 bg-secondary-subtle"></i>
+              <div class="d-flex flex-column flex-fill lh-sm">
+                <div class="fw-medium">FAQ</div>
+                <div class="text-xxs text-dark">Frequently asked questions</div>
+              </div>
+              <i class="fi fi-rr-angle-right text-sm"></i>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="#">
+              <i class="fi fi-rr-exit icon-circle-36 bg-danger-subtle text-danger"></i>
+              <div class="d-flex flex-column flex-fill lh-sm text-danger">
+                <div class="fw-medium">Log Out</div>
+                <div class="text-xxs text-dark">Securely log out of account</div>
+              </div>
+              <i class="fi fi-rr-angle-right text-sm"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

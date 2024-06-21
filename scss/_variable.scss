@@ -1,3 +1,4 @@
+$fs-xxs: 10px;
 $fs-xs: 12px;
 $fs-sm: 14px;
 $fs-md: 16px;
@@ -31,6 +32,7 @@ h3 { font-size: $fs-xl; }
 h2 { font-size: $fs-2xl; }
 h1 { font-size: $fs-3xl; }
 
+.text-xxs { font-size: $fs-xxs !important; }
 .text-xs { font-size: $fs-xs !important; }
 .text-sm { font-size: $fs-sm !important; }
 .text-md { font-size: $fs-md !important; }
@@ -38,6 +40,8 @@ h1 { font-size: $fs-3xl; }
 .text-xl { font-size: $fs-xl !important; }
 .text-2xl { font-size: $fs-2xl !important; }
 .text-3xl { font-size: $fs-3xl !important; }
+
+.fw-medium { font-weight: 600 !important; }
 
 .text-dark { color: $dark !important; }
 .text-darker { color: $darker; }

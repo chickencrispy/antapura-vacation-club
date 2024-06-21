@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIG Vacation Club</title>
+  <title>Antapura Vacation Club</title>
   <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/uicons-rounded.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -13,17 +13,17 @@
   <div class="app-container">
     <div class="app-page-header shadow-xs">
       <div class="top-bar gap-2">
-        <h4>Market</h4>
+        <h4>Point Market</h4>
         <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
       </div>
       <div class="top-bar-market">
-        <button class="btn text-white bg-danger" data-mdb-offcanvas-init data-mdb-target="#off_buy" aria-controls="off_buy">Buy</button>
-        <button class="btn text-white bg-warning" data-mdb-offcanvas-init data-mdb-target="#off_sell" aria-controls="off_sell">Sell</button>
+        <button class="btn text-normal shadow-none btn-danger" data-mdb-offcanvas-init data-mdb-target="#off_buy" aria-controls="off_buy">Buy</button>
+        <button class="btn text-normal shadow-none btn-warning" data-mdb-offcanvas-init data-mdb-target="#off_sell" aria-controls="off_sell">Sell</button>
       </div>
     </div>
 
     <div class="app-home-marketplace">
-      <div class="bg-white border p-3 rounded-normal">
+      <div class="bg-white p-3 rounded-normal shadow-xs">
         <nav class="mb-3">
           <div class="nav nav-underline nav-justified rounded-pill" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-buy-tab" data-mdb-tab-init data-mdb-target="#buy-tab" type="button" role="tab" aria-controls="buy-tab" aria-selected="true">Buy Point</button>
@@ -164,8 +164,8 @@
         <div id="sell-source" class="mb-3">
           <label class="text-xs mb-2">Source of point</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select source</button>
-            <ul class="dropdown-menu">
+            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
+            <ul class="dropdown-menu w-100 border shadow-none">
               <li>
                 <label>
                   <input type="radio" name="transfer-source" id="" value="today" class="form-check-input d-none">
@@ -201,7 +201,7 @@
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4 text-sm">
-            Are you sure want to buy point from this user?
+            Are you sure want to buy <b>3.000</b> points for <b>IDR 2.500.000</b>?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
@@ -222,7 +222,7 @@
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4 text-sm">
-            Are you sure want to sell point to this user?
+            Are you sure want to sell <b>5.000</b> points for <b>IDR 5.800.000</b>?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
