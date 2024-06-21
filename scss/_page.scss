@@ -188,6 +188,18 @@
   }
 }
 
+.app-page-header.fixed-top {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  background-color: $white;
+  z-index: 9;
+}
+
+.app-page-header.fixed-top + .fixed-top-next {
+  margin-top: 68px;
+}
+
 .app-page-content {
   display: flex;
   flex-direction: column;

@@ -68,6 +68,10 @@ h1 {
   color: #50535b;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .rounded-normal {
   border-radius: 10px !important;
 }
@@ -701,6 +705,22 @@ datalist option {
   font-size: 14px;
 }
 
+.related-places .related-items {
+  font-size: 14px;
+  line-height: 1.25;
+  border: 1px solid var(--mdb-border-color);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #24262b;
+}
+.related-places .related-items img {
+  width: 100%;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
 @media (min-width: 576px) {
   .nav-tabs .nav-link {
     padding: 18px 30px;
@@ -941,6 +961,18 @@ datalist option {
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 12px;
+}
+
+.app-page-header.fixed-top {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  background-color: #ffffff;
+  z-index: 9;
+}
+
+.app-page-header.fixed-top + .fixed-top-next {
+  margin-top: 68px;
 }
 
 .app-page-content {

@@ -27,15 +27,15 @@ if ($("div").hasClass("swiper-container")) {
     parallax: true,
     slidesPerView: 1,
     spaceBetween: 16,
-    loop: true,
-    navigation: {
-      clickable: true,
-      nextEl: ".button-lo-next",
-      prevEl: ".button-lo-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    }
+    loop: true
+  });
+
+  var swiper = new Swiper(".related-places", {
+    autoplay: { delay: 5000 },
+    speed: 1000,
+    parallax: true,
+    slidesPerView: 3,
+    spaceBetween: 8,
+    loop: true
   });
 }
