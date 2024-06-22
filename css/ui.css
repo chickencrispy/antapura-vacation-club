@@ -799,6 +799,7 @@ datalist option {
   padding-bottom: 24px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
   border-radius: 0 0 24px 24px;
+  background-color: #ffffff;
 }
 .app-home-header .top-bar {
   position: fixed;
