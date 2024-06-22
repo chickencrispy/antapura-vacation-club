@@ -13,17 +13,22 @@
   <div class="app-container">
     <div class="app-page-header shadow-xs">
       <div class="top-bar gap-2">
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-angle-left"></i></button>
         <h4>Transaction History</h4>
-        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-cross"></i></button>
+        <label class="btn-icon"><i class="fi fi-rr-filter"></i><input type="checkbox" class="d-none"></label>
       </div>
-      <div class="top-bar-search">
-        <div class="search-bar flex-fill">
-          <input type="text" class="form-control" placeholder="Search here...">
-          <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+      <div class="top-bar-options">
+        <div class="overflow-hidden">
+          <div class="top-bar-form">
+            <div class="search-bar flex-fill">
+              <input type="text" class="form-control" placeholder="Search here...">
+              <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+            </div>
+            <button class="btn border px-3 shadow-none" data-mdb-offcanvas-init data-mdb-target="#off_filter" aria-controls="off_filter">
+              <i class="fi fi-rr-settings-sliders"></i>
+            </button>
+          </div>
         </div>
-        <button class="btn border px-3 shadow-none" data-mdb-offcanvas-init data-mdb-target="#off_filter" aria-controls="off_filter">
-          <i class="fi fi-rr-settings-sliders"></i>
-        </button>
       </div>
     </div>
 

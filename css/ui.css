@@ -921,11 +921,11 @@ datalist option {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 8px;
 }
 .app-page-header .top-bar h4 {
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 600;
 }
 .app-page-header .top-bar .btn-icon {
   --border-color: rgba(0, 0, 0, 0);
@@ -946,12 +946,17 @@ datalist option {
   border-radius: 5px;
   transform: translate(5px, -5px);
 }
-.app-page-header .top-bar-search {
+.app-page-header .top-bar-options {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.5s ease;
+}
+.app-page-header .top-bar-options .top-bar-form {
   display: flex;
   gap: 8px;
   padding: 0 16px 12px;
 }
-.app-page-header .top-bar-search .btn {
+.app-page-header .top-bar-options .btn {
   border-radius: 10px;
 }
 .app-page-header .top-bar-market {
@@ -967,6 +972,10 @@ datalist option {
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 12px;
+}
+
+.app-page-header:has(:checked) .top-bar-options {
+  grid-template-rows: 1fr;
 }
 
 .app-page-header.fixed-top {
