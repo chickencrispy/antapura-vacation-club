@@ -59,7 +59,7 @@
   background-color: $white;
   box-shadow: none;
 
-  &:focus {
+  &:is(:hover, :focus) {
     box-shadow: none !important;
   }
 

@@ -1,8 +1,7 @@
 .app-home-header {
-  margin-top: 60px;
+  margin-top: 68px;
   padding: 16px;
   padding-bottom: 24px;
-  background-color: $white;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
   border-radius: 0 0 24px 24px;
 
@@ -10,9 +9,17 @@
     position: fixed;
     top: 0;
     inset-inline: 0;
-    padding: 16px;
-    background-color: $white;
     z-index: 9;
+    
+    .top-bar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 680px;
+      margin: auto;
+      padding: 16px;
+      background-color: $white;
+    }
   }
 
   .user-info {

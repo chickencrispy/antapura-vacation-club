@@ -165,12 +165,6 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   object-fit: cover;
 }
 
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .absolute-top {
   position: absolute;
   top: 0;

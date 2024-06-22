@@ -139,7 +139,7 @@ h1 {
   background-color: #ffffff;
   box-shadow: none;
 }
-.btn-dropdown:focus {
+.btn-dropdown:is(:hover, :focus) {
   box-shadow: none !important;
 }
 .btn-dropdown:after {
@@ -794,10 +794,9 @@ datalist option {
 }
 
 .app-home-header {
-  margin-top: 60px;
+  margin-top: 68px;
   padding: 16px;
   padding-bottom: 24px;
-  background-color: #ffffff;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
   border-radius: 0 0 24px 24px;
 }
@@ -805,9 +804,16 @@ datalist option {
   position: fixed;
   top: 0;
   inset-inline: 0;
+  z-index: 9;
+}
+.app-home-header .top-bar .top-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 680px;
+  margin: auto;
   padding: 16px;
   background-color: #ffffff;
-  z-index: 9;
 }
 .app-home-header .user-info {
   display: flex;
@@ -1570,12 +1576,6 @@ input[type=date]::-webkit-calendar-picker-indicator::after {
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .absolute-top {
