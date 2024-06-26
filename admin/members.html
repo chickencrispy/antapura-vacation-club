@@ -38,41 +38,46 @@
             <span class="nav_name">Dashboard</span> 
           </a> 
           
-          <a href="members.html" class="nav-link active"> 
+          <a href="members.html" class="nav-link"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
-
-          <a href="report.html" class="nav-link"> 
-            <i class="fi fi-rr-chart-pie nav-icon"></i>
-            <span class="nav_name">Transaction</span> 
-          </a>
 
           <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-          
-          <a href="#" class="nav-link"> 
-            <i class="fi fi-rr-comment nav-icon"></i>
-            <span class="nav_name">Messages</span> 
-          </a> 
-          
+
+          <a href="marketplace.html" class="nav-link"> 
+            <i class="fi fi-rr-shop nav-icon"></i>
+            <span class="nav_name">Marketplace</span> 
+          </a>
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Report</span> 
+          </a>
+
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Settings</span> 
+            <span class="nav_name">Administrator</span> 
           </a> 
           
           <a href="listing.html" class="nav-link"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
+          </a>
+
+          <a href="listing.html" class="nav-link"> 
+            <i class="fi fi-rr-sparkles nav-icon"></i>
+            <span class="nav_name">Promo</span> 
           </a> 
         </div>
       </div> 
       
       <a href="#" class="nav-link"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
-        <span class="nav_name">SignOut</span> 
+        <span class="nav_name">Sign Out</span> 
       </a>
     </nav>
   </aside>
@@ -120,7 +125,7 @@
         <table class="table table-sm data-table" style="width: 100%;">
           <thead>
             <tr>
-              <th rowspan="2" class="text-end">No.</th>
+              <th rowspan="2" class="text-end" width="42px">No.</th>
               <th rowspan="2" class="text-nowrap">Member ID</th>
               <th rowspan="2" class="text-nowrap">Full Name</th>
               <th colspan="5" class="text-center">Details</th>
@@ -197,14 +202,14 @@
             </tr>
           </tbody>
         </table>
-
+    
         <div class="table-footer">
           <div class="action-area d-none d-md-inline-flex">
             <button class="btn btn-sm btn-light"><i class="fi fi-rr-print me-1"></i> Print</button>
             <button class="btn btn-sm bg-success-subtle text-success"><i class="fi fi-rr-file-download me-1"></i> Excel</button>
             <button class="btn btn-sm bg-danger-subtle text-danger"><i class="fi fi-rr-file-download me-1"></i> PDF</button>
           </div>
-
+    
           <nav class="table-pagination">
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -423,7 +428,7 @@
                       <th width="160px">Date Time</th>
                       <th width="125px">Type</th>
                       <th>Activity Info</th>
-                      <th width="100px">Detection IP</th>
+                      <th width="100px" class="text-end">Detection IP</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -431,7 +436,7 @@
                       <td>2024-06-24 06:08:59</td>
                       <td>UserLogin</td>
                       <td>User Login</td>
-                      <td>27.131.6.10</td>
+                      <td class="text-end">27.131.6.10</td>
                     </tr>
                   </tbody>
                 </table>
@@ -451,18 +456,17 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <form class="d-flex flex-column flex-fill">
-          <div class="modal-header border-bottom-0">
+          <div class="modal-header">
             <h4 class="modal-title fw-bold" id="exampleModalLabel">Deactive Member</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4 text-sm">
-            <p>Are you sure want to Deactive <strong>John Doe</strong> ?</p>
             <div>
-              <label class="mb-1 text-xs text-muted">Reason for deactive:</label>
-              <textarea class="form-control text-sm" rows="3"></textarea>
+              <label class="mb-1 text-muted">Reason for deactive:</label>
+              <textarea class="form-control text-sm" rows="5"></textarea>
             </div>
           </div>
-          <div class="modal-footer border-top-0">
+          <div class="modal-footer">
             <button type="button" class="btn btn-light" data-mdb-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Submit</button>
           </div>

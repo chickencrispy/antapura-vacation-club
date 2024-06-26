@@ -43,36 +43,41 @@
             <span class="nav_name">Members</span> 
           </a> 
 
-          <a href="report.html" class="nav-link"> 
-            <i class="fi fi-rr-chart-pie nav-icon"></i>
-            <span class="nav_name">Transaction</span> 
-          </a>
-
-          <a href="transaction_request.html" class="nav-link active"> 
+          <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-          
-          <a href="#" class="nav-link"> 
-            <i class="fi fi-rr-comment nav-icon"></i>
-            <span class="nav_name">Messages</span> 
-          </a> 
-          
+
+          <a href="marketplace.html" class="nav-link"> 
+            <i class="fi fi-rr-shop nav-icon"></i>
+            <span class="nav_name">Marketplace</span> 
+          </a>
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Report</span> 
+          </a>
+
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Settings</span> 
+            <span class="nav_name">Administrator</span> 
           </a> 
           
           <a href="listing.html" class="nav-link"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
+          </a>
+
+          <a href="listing.html" class="nav-link"> 
+            <i class="fi fi-rr-sparkles nav-icon"></i>
+            <span class="nav_name">Promo</span> 
           </a> 
         </div>
       </div> 
       
       <a href="#" class="nav-link"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
-        <span class="nav_name">SignOut</span> 
+        <span class="nav_name">Sign Out</span> 
       </a>
     </nav>
   </aside>
@@ -84,7 +89,7 @@
       </div>
       
       <div class="row g-2 mb-3">
-        <div class="col-sm-9">
+        <div class="col-sm-8">
           <div class="row g-2">
             <div class="col-md-2">
               <select class="form-select text-sm">
@@ -134,28 +139,27 @@
           </div>
         </div>
       
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <div class="d-flex gap-2">
-            <div class="input-icon flex-fill">
-              <input type="text" class="form-control text-sm" placeholder="Search...">
-              <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+            <div class="d-flex gap-2 flex-fill">
+              <div class="input-icon flex-fill">
+                <input type="text" class="form-control text-sm" placeholder="Search...">
+                <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+              </div>
+              <button class="btn btn-normal btn-primary text-xs">Search</button>
             </div>
-            <button class="btn btn-normal btn-primary text-xs">Search</button>
+            <a href="open_request.html" class="btn btn-normal btn-success text-xs">New Request</a>
           </div>
         </div>
       </div>
       
       <div class="p-3 bg-white rounded-3 border">
-        <div class="d-flex justify-content-end">
-          <a href="open_request.html" class="btn btn-sm btn-white">New Request</a>
-        </div>
-
         <table class="table table-sm data-table bg-white" style="width: 100%;">
           <thead>
             <tr>
-              <th rowspan="2" class="text-end">No.</th>
-              <th rowspan="2">Transaction ID</th>
-              <th rowspan="2">Date/Time</th>
+              <th rowspan="2" class="text-end" width="42px">No.</th>
+              <th rowspan="2" width="120px">Transaction ID</th>
+              <th rowspan="2" width="160px">Date/Time</th>
               <th rowspan="2">Transaction Type</th>
               <th colspan="2" class="text-center">User ID</th>
               <th rowspan="2">Type</th>
@@ -165,7 +169,7 @@
               <th rowspan="2">Payment</th>
               <th rowspan="2">Remarks</th>
               <th rowspan="2">Status</th>
-              <th rowspan="2">&nbsp;</th>
+              <th rowspan="2" width="42px">&nbsp;</th>
             </tr>
             <tr>
               <th>From</th>
@@ -175,8 +179,8 @@
           <tbody>
             <tr>
               <td class="text-end">1</td>
-              <td>ATP2406130001</td>
-              <td>06/13/2024 09:37:36</td>
+              <td><a href="#" class="fw-semibold text-primary">ATP2406130001</a></td>
+              <td>06-08-2024 09:37:36</td>
               <td>Top-Up</td>
               <td>John Doe</td>
               <td>Antapura</td>

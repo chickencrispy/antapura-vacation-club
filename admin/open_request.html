@@ -43,36 +43,41 @@
             <span class="nav_name">Members</span> 
           </a> 
 
-          <a href="report.html" class="nav-link"> 
-            <i class="fi fi-rr-chart-pie nav-icon"></i>
-            <span class="nav_name">Transaction</span> 
-          </a>
-
-          <a href="transaction_request.html" class="nav-link active"> 
+          <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-          
-          <a href="#" class="nav-link"> 
-            <i class="fi fi-rr-comment nav-icon"></i>
-            <span class="nav_name">Messages</span> 
-          </a> 
-          
+
+          <a href="marketplace.html" class="nav-link"> 
+            <i class="fi fi-rr-shop nav-icon"></i>
+            <span class="nav_name">Marketplace</span> 
+          </a>
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Report</span> 
+          </a>
+
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Settings</span> 
+            <span class="nav_name">Administrator</span> 
           </a> 
           
           <a href="listing.html" class="nav-link"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
+          </a>
+
+          <a href="listing.html" class="nav-link"> 
+            <i class="fi fi-rr-sparkles nav-icon"></i>
+            <span class="nav_name">Promo</span> 
           </a> 
         </div>
       </div> 
       
       <a href="#" class="nav-link"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
-        <span class="nav_name">SignOut</span> 
+        <span class="nav_name">Sign Out</span> 
       </a>
     </nav>
   </aside>
@@ -92,11 +97,11 @@
                 <div class="col-sm-9">
                   <select id="request-type" class="form-select text-sm">
                     <option value="" hidden>Select request type</option>
-                    <option value="topup">Top-Up Point</option>
-                    <option value="transfer">Transfer Point</option>
-                    <option value="sell">Sell Point</option>
-                    <option value="buy">Buy Point</option>
-                    <option value="redeem">Redeem Point</option>
+                    <option value="topup">Top-Up</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="ask">Ask</option>
+                    <option value="offer">Offer</option>
+                    <option value="redeem">Redeem</option>
                   </select>
                 </div>
               </div>
@@ -168,9 +173,85 @@
               </div>
             </div>
             <div class="d-flex justify-content-end">
-              <button class="btn btn-normal btn-primary mt-3">Submit</button>
+              <button class="btn btn-normal text-xs btn-primary mt-3">Submit</button>
             </div>
           </form>
+        </div>
+
+        <div id="user-profile" class="col-sm-3">
+          <div class="p-4 bg-white rounded-normal border h-100">
+            <h5>User Profile</h5>
+            <ul class="list-group list-group-light list-group-small list-group-33 mb-4">
+              <li class="list-group-item">
+                <span>Member Type</span>
+                <span>Founder</span>
+              </li>
+              <li class="list-group-item">
+                <span>Full Name</span>
+                <span>John Doe</span>
+              </li>
+              <li class="list-group-item">
+                <span>WhatsApp</span>
+                <span>+6281234567890</span>
+              </li>
+              <li class="list-group-item">
+                <span>Email</span>
+                <span>johndoe@mail.com</span>
+              </li>
+              <li class="list-group-item">
+                <span>Place, Date of birth</span>
+                <span>Batam, 5 Jun 1980</span>
+              </li>
+              <li class="list-group-item">
+                <span>Gender</span>
+                <span>Male</span>
+              </li>
+              <li class="list-group-item">
+                <span>Address</span>
+                <span>Pasir Putih, Batam</span>
+              </li>
+              <li class="list-group-item">
+                <span>Notes</span>
+                <span>-</span>
+              </li>
+            </ul>
+
+            <table class="table table-sm table-bordered mb-0">
+              <thead>
+                <tr class="table-dark text-xs">
+                  <th class="ps-3">Type of Point</th>
+                  <th class="text-center">Amount</th>
+                  <th class="text-center">Valid Thru</th>
+                  <th class="text-center">Hold</th>
+                  <th class="text-center">Total</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th class="ps-3"><div class="text-truncate">Founder Point</div></th>
+                  <td class="text-center">2.000</td>
+                  <td class="text-center">Dec 2025</td>
+                  <td class="text-center">0</td>
+                  <td class="text-center">2.000</td>
+                </tr>
+                <tr>
+                  <th class="ps-3"><div class="text-truncate">Club Point</div></th>
+                  <td class="text-center">1.250</td>
+                  <td class="text-center">No Expiry</td>
+                  <td class="text-center">500</td>
+                  <td class="text-center">1.750</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="user-profile" class="col-sm-5">
+          <div class="p-4 bg-white rounded-normal border h-100">
+            <h5>Recommendation</h5>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, magni?
+          </div>
         </div>
       </div>
     </div>
