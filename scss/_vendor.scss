@@ -27,7 +27,6 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:
   content: "\fd69";
 }
 
-.dt-container > div:nth-child(1),
-.dt-container > div:nth-child(3) {
+.dt-container > div:nth-child(1), .dt-container > div:nth-child(3) {
   display: none;
 }

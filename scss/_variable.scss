@@ -33,11 +33,11 @@ h2 { font-size: $fs-2xl; }
 h1 { font-size: $fs-3xl; }
 
 .text-xxs { font-size: $fs-xxs !important; }
-.text-xs { font-size: $fs-xs !important; }
-.text-sm { font-size: $fs-sm !important; }
-.text-md { font-size: $fs-md !important; }
-.text-lg { font-size: $fs-lg !important; }
-.text-xl { font-size: $fs-xl !important; }
+.text-xs  { font-size: $fs-xs !important; }
+.text-sm  { font-size: $fs-sm !important; }
+.text-md  { font-size: $fs-md !important; }
+.text-lg  { font-size: $fs-lg !important; }
+.text-xl  { font-size: $fs-xl !important; }
 .text-2xl { font-size: $fs-2xl !important; }
 .text-3xl { font-size: $fs-3xl !important; }
 
@@ -50,7 +50,7 @@ h1 { font-size: $fs-3xl; }
 .text-justify { text-align: justify; }
 
 .bg-silver { background-color: $silver !important; }
-.bg-light { background-color: $light !important; }
+.bg-light  { background-color: $light !important; }
 
 .rounded-normal { border-radius: 10px !important; }
 
