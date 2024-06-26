@@ -101,7 +101,7 @@
                   <input type="text" class="form-control text-sm" placeholder="Search...">
                   <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
                 </div>
-                <button class="btn btn-normal btn-primary text-xs">Search</button>
+                <button class="btn btn-normal btn-primary text-xs shadow-none">Search</button>
               </div>
             </div>
           </div>
@@ -117,36 +117,33 @@
       </div>
       
       <div class="bg-white p-3 border rounded-3">
-        <table class="table table-sm data-table bg-white" style="width: 100%;">
+        <table class="table table-sm data-table" style="width: 100%;">
           <thead>
             <tr>
               <th rowspan="2" class="text-end">No.</th>
+              <th rowspan="2" class="text-nowrap">Member ID</th>
               <th rowspan="2" class="text-nowrap">Full Name</th>
               <th colspan="5" class="text-center">Details</th>
               <th colspan="4" class="text-center">Emergency Contact</th>
-              <th colspan="4" class="text-center">Point</th>
               <th rowspan="2" class="text-center">Status</th>
               <th rowspan="2" width="3%">&nbsp;</th>
             </tr>
             <tr>
-              <th>Contact No.</th>
+              <th>WhatsApp</th>
               <th>Email</th>
               <th>Place, Date of Birth</th>
               <th>Gender</th>
               <th>Address</th>
               <th>Name</th>
+              <th>Relation</th>
               <th>Contact No.</th>
               <th>Address</th>
-              <th>Relation</th>
-              <th>Founders</th>
-              <th>Club</th>
-              <th>Hold</th>
-              <th>Total</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="text-end">1</td>
+              <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">F0001</a></td>
               <td class="text-nowrap">John Doe</td>
               <td>+6281234567890</td>
               <td>johndoe@mail.com</td>
@@ -154,29 +151,26 @@
               <td>Male</td>
               <td>Pasir Putih, Batam</td>
               <td class="text-nowrap">Jane Doe</td>
+              <td>Wife</td>
               <td>+6281298745632</td>
               <td>Pasir Putih, Batam</td>
-              <td>Wife</td>
-              <td class="text-end">2.000</td>
-              <td class="text-end">1.250</td>
-              <td class="text-end">500</td>
-              <td class="text-end">3.750</td>
               <td class="text-center">Active</td>
               <td class="text-end">
                 <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                  <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
                     <i class="fi fi-rr-menu-dots-vertical"></i>
                   </button>
-                  <ul class="dropdown-menu text-sm">
+                  <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
                     <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Suspend</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Banned</a></li>
+                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
                   </ul>
                 </div>
               </td>
             </tr>
             <tr>
               <td class="text-end text-nowrap">2</td>
+              <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">C0001</a></td>
               <td class="text-nowrap">Jane Doe</td>
               <td>+6281298745632</td>
               <td>janeee@mail.com</td>
@@ -184,23 +178,19 @@
               <td>Female</td>
               <td>Pasir Putih, Batam</td>
               <td class="text-nowrap">John Doe</td>
+              <td>Husband</td>
               <td>+6281234567890</td>
               <td>Pasir Putih, Batam</td>
-              <td>Husband</td>
-              <td class="text-end">8.000</td>
-              <td class="text-end">10.800</td>
-              <td class="text-end">0</td>
-              <td class="text-end">18.800</td>
               <td class="text-center">Active</td>
               <td class="text-end">
                 <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                  <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
                     <i class="fi fi-rr-menu-dots-vertical"></i>
                   </button>
-                  <ul class="dropdown-menu text-sm">
+                  <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
                     <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Suspend</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Banned</a></li>
+                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
                   </ul>
                 </div>
               </td>
@@ -209,9 +199,10 @@
         </table>
 
         <div class="table-footer">
-          <div class="action-area d-none d-md-inline-flexs">
-            <button class="btn btn-sm btn-success"><i class="fi fi-rr-file-download me-1"></i> Excel</button>
-            <button class="btn btn-sm btn-danger"><i class="fi fi-rr-file-download me-1"></i> PDF</button>
+          <div class="action-area d-none d-md-inline-flex">
+            <button class="btn btn-sm btn-light"><i class="fi fi-rr-print me-1"></i> Print</button>
+            <button class="btn btn-sm bg-success-subtle text-success"><i class="fi fi-rr-file-download me-1"></i> Excel</button>
+            <button class="btn btn-sm bg-danger-subtle text-danger"><i class="fi fi-rr-file-download me-1"></i> PDF</button>
           </div>
 
           <nav class="table-pagination">
@@ -230,78 +221,250 @@
 
   <!-- MODAL NEW MEMBER -->
   <div class="modal fade" id="newMemberModal" tabindex="-1" aria-labelledby="newMemberModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
       <div class="modal-content">
         <form class="d-flex flex-column flex-fill">
           <div class="modal-header">
             <h4 class="modal-title fw-bold" id="exampleModalLabel">New Member</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-4">
+          <div class="modal-body p-4" style="min-height: 480px;">
             <div class="step">
               <div class="step-items">
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Full Name</label>
-                  <div class="input-group">
-                    <select class="form-select text-sm flex-grow-0" style="width: 85px;">
-                      <option value="">Mr.</option>
-                      <option value="">Mrs.</option>
-                      <option value="">Ms.</option>
-                    </select>
-                    <input type="text" class="form-control text-sm">
-                  </div>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Member Type</label>
+                  <select name="" id="" class="form-select text-sm">
+                    <option value="" hidden>Select member type</option>
+                    <option value="">Founder</option>
+                    <option value="">Club</option>
+                  </select>
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Active WhatsApp Number</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Full Name</label>
+                  <input type="text" class="form-control text-sm">
+                </div>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">WhatsApp</label>
                   <input type="tel" class="form-control text-sm" inputmode="tel" placeholder="+628XXX">
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Email</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Email</label>
                   <input type="email" class="form-control text-sm" inputmode="email">
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Place, Date of Birth</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Place, Date of Birth</label>
                   <div class="d-flex gap-2">
                     <input type="text" class="form-control text-sm">
-                    <div class="input-date-icon" style="width: 140px;">
+                    <div class="input-date-icon" style="width: 160px;">
                       <input type="date" name="" id="" class="form-control text-sm">
                       <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
                     </div>
                   </div>
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Address</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Gender</label>
+                  <select name="" id="" class="form-select text-sm">
+                    <option value="" hidden>Select gender</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                  </select>
+                </div>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Address</label>
                   <textarea class="form-control text-sm"></textarea>
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Notes</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Notes</label>
                   <textarea class="form-control text-sm"></textarea>
                 </div>
               </div>
               
               <div class="step-items">
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Emergency Contact</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Emergency Contact</label>
                   <input type="text" class="form-control text-sm">
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Relationship</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Relationship</label>
                   <input type="text" class="form-control text-sm">
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Phone Number</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Phone Number</label>
                   <input type="tel" class="form-control text-sm" inputmode="tel" placeholder="+628XXX">
                 </div>
-                <div class="mb-2">
-                  <label class="text-xs fw-bold mb-1">Address</label>
+                <div class="form-sm-inline-25 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Address</label>
                   <textarea class="form-control text-sm"></textarea>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-step btn-normal btn-light d-none me-auto">Previous</button>
-            <button type="button" class="btn btn-step btn-normal btn-dark">Submit</button>
+          <div class="modal-footer bg-white">
+            <button type="button" class="btn btn-step btn-normal text-xs btn-light d-none me-auto">Previous</button>
+            <button type="button" class="btn btn-step btn-normal text-xs btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL MEMBER DETAILS -->
+  <div class="modal fade" id="detailsMemberModal" tabindex="-1" aria-labelledby="detailsMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">F0001</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm bg-white" style="min-height: 575px;">
+            <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a data-mdb-tab-init class="nav-link active" id="ex1-tab-1" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Profile</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a data-mdb-tab-init class="nav-link" id="ex1-tab-2" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Emergency Contact</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a data-mdb-tab-init class="nav-link" id="ex1-tab-3" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">User Activity</a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="ex1-content">
+              <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                <ul class="list-group list-group-light list-group-small list-group-25 mb-4">
+                  <li class="list-group-item">
+                    <span>Member Type</span>
+                    <span>Founder</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Full Name</span>
+                    <span>John Doe</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>WhatsApp</span>
+                    <span>+6281234567890</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Email</span>
+                    <span>johndoe@mail.com</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Place, Date of birth</span>
+                    <span>Batam, 5 Jun 1980</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Gender</span>
+                    <span>Male</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Address</span>
+                    <span>Pasir Putih, Batam</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Notes</span>
+                    <span>-</span>
+                  </li>
+                </ul>
+
+                <table class="table table-sm table-bordered">
+                  <thead>
+                    <tr class="table-dark text-xs">
+                      <th class="ps-3">Type of Point</th>
+                      <th class="text-center">Amount</th>
+                      <th class="text-center">Valid Thru</th>
+                      <th class="text-center">Hold</th>
+                      <th class="text-center">Total</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th class="ps-3"><div class="text-truncate">Founder Point</div></th>
+                      <td class="text-center">2.000</td>
+                      <td class="text-center">Dec 2025</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">2.000</td>
+                    </tr>
+                    <tr>
+                      <th class="ps-3"><div class="text-truncate">Club Point</div></th>
+                      <td class="text-center">1.250</td>
+                      <td class="text-center">No Expiry</td>
+                      <td class="text-center">500</td>
+                      <td class="text-center">1.750</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                <ul class="list-group list-group-light list-group-small list-group-25">
+                  <li class="list-group-item">
+                    <span>Emergency Contact</span>
+                    <span>Jane Doe</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Relationship</span>
+                    <span>Wife</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Phone Number</span>
+                    <span>+6281298745632</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Address</span>
+                    <span>Pasir Putih, Batam</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane fade show" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th width="160px">Date Time</th>
+                      <th width="125px">Type</th>
+                      <th>Activity Info</th>
+                      <th width="100px">Detection IP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2024-06-24 06:08:59</td>
+                      <td>UserLogin</td>
+                      <td>User Login</td>
+                      <td>27.131.6.10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bg-white">
+            <button type="button" class="btn btn-normal text-xs btn-light" data-mdb-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DEACTIVATE MEMBER -->
+  <div class="modal fade" id="deactiveMemberModal" tabindex="-1" aria-labelledby="deactiveMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <form class="d-flex flex-column flex-fill">
+          <div class="modal-header border-bottom-0">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Deactive Member</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm">
+            <p>Are you sure want to Deactive <strong>John Doe</strong> ?</p>
+            <div>
+              <label class="mb-1 text-xs text-muted">Reason for deactive:</label>
+              <textarea class="form-control text-sm" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0">
+            <button type="button" class="btn btn-light" data-mdb-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Submit</button>
           </div>
         </form>
       </div>
@@ -323,7 +486,8 @@
       info: false,
       columnDefs: [
         { responsivePriority: 1, targets: 0 },
-        { responsivePriority: 2, targets: -1 }
+        { responsivePriority: 0, targets: 1 },
+        { responsivePriority: 3, targets: -1 }
       ]
     });
   </script>

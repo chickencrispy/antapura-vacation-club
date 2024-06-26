@@ -43,10 +43,14 @@ h1 { font-size: $fs-3xl; }
 
 .fw-medium { font-weight: 600 !important; }
 
+.text-semidark { color:#8c8c8c; }
 .text-dark { color: $dark !important; }
 .text-darker { color: $darker; }
 
 .text-justify { text-align: justify; }
+
+.bg-silver { background-color: $silver !important; }
+.bg-light { background-color: $light !important; }
 
 .rounded-normal { border-radius: 10px !important; }
 
