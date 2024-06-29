@@ -83,7 +83,7 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3">
+    <div class="p-3 flex-fill">
       <div class="mb-3 py-3">
         <h2 class="mb-0 fw-bold">Open Request</h2>
       </div>
@@ -92,6 +92,28 @@
         <div class="col-sm-4">
           <form action="" id="open-request" class="p-4 bg-white rounded-normal border h-100">
             <div class="">
+              <div id="request-from" class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Customer Name</div>
+                <div class="col-sm-9">
+                  <input type="text" list="user-froms" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberData(this.value);">
+                  <datalist id="user-from">
+                    <option value="John Doe">+628123456789</option>
+                    <option value="Jane Doe">+628198752423</option>
+                  </datalist>
+                </div>
+              </div>
+
+              <div id="request-to" class="d-none row g-2 align-items-center mb-2">
+                <div class="col-sm-3">To</div>
+                <div class="col-sm-9">
+                  <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off">
+                  <datalist id="user-to">
+                    <option value="John Doe" class="active">+628123456789</option>
+                    <option value="Jane Doe">+628198752423</option>
+                  </datalist>
+                </div>
+              </div>
+
               <div class="row g-2 align-items-center mb-2">
                 <div class="col-sm-3">Request Type</div>
                 <div class="col-sm-9">
@@ -109,8 +131,9 @@
               <div class="row g-2 align-items-center mb-2">
                 <div class="col-sm-3">Point Type</div>
                 <div class="col-sm-9">
-                  <select class="form-select text-sm">
+                  <select id="request-point" class="form-select text-sm">
                     <option value="" hidden>Select point type</option>
+                    <option value="0" hidden>Any point</option>
                     <option value="1">Founder Point</option>
                     <option value="2">Club Point</option>
                   </select>
@@ -118,7 +141,7 @@
               </div>
 
               <div id="redeem-item" class="d-none row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Redeem Item</div>
+                <div class="col-sm-3">Item</div>
                 <div class="col-sm-9">
                   <select name="" id="request-redeem" class="form-select text-sm">
                     <option value="" hidden>What to redeem?</option>
@@ -130,29 +153,7 @@
                 </div>
               </div>
 
-              <div id="request-from" class="row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Customer</div>
-                <div class="col-sm-9">
-                  <input type="text" list="user-from" class="form-control text-sm" autocomplete="off">
-                  <datalist id="user-from">
-                    <option value="John Doe">+628123456789</option>
-                    <option value="Jane Doe">+628198752423</option>
-                  </datalist>
-                </div>
-              </div>
-
-              <div id="request-to" class="d-none row g-2 align-items-center mb-2">
-                <div class="col-sm-3">To</div>
-                <div class="col-sm-9">
-                  <input type="text" list="user-to" class="form-control text-sm" autocomplete="off">
-                  <datalist id="user-to">
-                    <option value="John Doe">+628123456789</option>
-                    <option value="Jane Doe">+628198752423</option>
-                  </datalist>
-                </div>
-              </div>
-
-              <div class="row g-2 align-items-center mb-2">
+              <div id="request-detail" class="d-none row g-2 align-items-center mb-2">
                 <div class="col-sm-3">Details</div>
                 <div class="col-sm-9"><input type="text" class="form-control text-sm"></div>
               </div>
@@ -171,6 +172,11 @@
                   </div>
                 </div>
               </div>
+
+              <div class="row g-2 align-items-center mb-2">
+                <div class="col-sm-3">Notes</div>
+                <div class="col-sm-9"><textarea rows="5" class="form-control text-sm"></textarea></div>
+              </div>
             </div>
             <div class="d-flex justify-content-end">
               <button class="btn btn-normal text-xs btn-primary mt-3">Submit</button>
@@ -178,45 +184,45 @@
           </form>
         </div>
 
-        <div id="user-profile" class="col-sm-3">
+        <div id="user-profile" class="col-sm-4">
           <div class="p-4 bg-white rounded-normal border h-100">
             <h5>User Profile</h5>
             <ul class="list-group list-group-light list-group-small list-group-33 mb-4">
               <li class="list-group-item">
                 <span>Member Type</span>
-                <span>Founder</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>Full Name</span>
-                <span>John Doe</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>WhatsApp</span>
-                <span>+6281234567890</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>Email</span>
-                <span>johndoe@mail.com</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>Place, Date of birth</span>
-                <span>Batam, 5 Jun 1980</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>Gender</span>
-                <span>Male</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>Address</span>
-                <span>Pasir Putih, Batam</span>
+                <span>&nbsp;</span>
               </li>
               <li class="list-group-item">
                 <span>Notes</span>
-                <span>-</span>
+                <span>&nbsp;</span>
               </li>
             </ul>
 
-            <table class="table table-sm table-bordered mb-0">
+            <table id="user-point" class="table table-sm table-bordered mb-0">
               <thead>
                 <tr class="table-dark text-xs">
                   <th class="ps-3">Type of Point</th>
@@ -230,24 +236,24 @@
               <tbody>
                 <tr>
                   <th class="ps-3"><div class="text-truncate">Founder Point</div></th>
-                  <td class="text-center">2.000</td>
-                  <td class="text-center">Dec 2025</td>
-                  <td class="text-center">0</td>
-                  <td class="text-center">2.000</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
                 <tr>
                   <th class="ps-3"><div class="text-truncate">Club Point</div></th>
-                  <td class="text-center">1.250</td>
-                  <td class="text-center">No Expiry</td>
-                  <td class="text-center">500</td>
-                  <td class="text-center">1.750</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div id="user-profile" class="col-sm-5">
+        <div id="recommendations" class="col-sm-4">
           <div class="p-4 bg-white rounded-normal border h-100">
             <h5>Recommendation</h5>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, magni?
@@ -263,5 +269,132 @@
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js"></script>
   <script src="/js/main.js"></script>
+  <script>
+    /* let usersData = [];
+
+    fetch('/data_dummy/user.json')
+    .then(response => response.json())
+    .then(data => {
+      usersData = data;
+    })
+    .catch(error => {
+      console.error('Error fetching JSON:', error);
+    });
+
+    // Fungsi untuk menampilkan atau menyembunyikan opsi berdasarkan input
+    function toggleActiveClass(datalistInput) {
+      const datalist = datalistInput.nextElementSibling;
+      const searchValue = datalistInput.value.toLowerCase();
+
+      const filteredUsers = usersData.filter(user => {
+        return user.fullname.toLowerCase().startsWith(searchValue);
+        return user.whatsapp.toLowerCase().includes(searchValue);
+      });
+
+      while (datalist.firstChild) {
+        datalist.removeChild(datalist.firstChild);
+      }
+
+      // Buat opsi baru berdasarkan hasil pencarian
+      filteredUsers.forEach(user => {
+        const userprofile = document.getElementById('user-profile');
+        const userPoints = document.getElementById('user-point').querySelectorAll('tbody tr');
+
+        const userDatas = userprofile.querySelectorAll('.list-group-item');
+        const option = document.createElement('option');
+        option.value = user.fullname;
+        option.textContent = user.whatsapp;
+        datalist.appendChild(option);
+
+        function formatDate(dateString) {
+          if(dateString === ""){
+            return "-";
+          }else{
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-GB', options);
+          }
+        }
+
+        option.addEventListener('click', () => {
+          datalistInput.value = option.value;
+          datalistInput.classList.remove('active');
+
+          userDatas[0].children[1].textContent = user.member_type;
+          userDatas[1].children[1].textContent = user.fullname;
+          userDatas[2].children[1].textContent = user.whatsapp;
+          userDatas[3].children[1].textContent = user.email;
+          userDatas[4].children[1].textContent = `${user.place_of_birth}, ${formatDate(user.date_of_birth)}`;
+          userDatas[5].children[1].textContent = user.gender;
+          userDatas[6].children[1].textContent = user.address;
+          userDatas[7].children[1].textContent = user.notes;
+
+          userPoints[0].children[1].textContent = user.founder_point.amount;
+          userPoints[0].children[2].textContent = formatDate(user.founder_point.validity);
+          userPoints[0].children[3].textContent = user.founder_point.hold;
+          userPoints[0].children[4].textContent = user.founder_point.total;
+
+          userPoints[1].children[1].textContent = user.club_point.amount;
+          userPoints[1].children[2].textContent = formatDate(user.club_point.validity);
+          userPoints[1].children[3].textContent = user.club_point.hold;
+          userPoints[1].children[4].textContent = user.club_point.total;
+        });
+      });
+
+      datalistInput.classList.toggle('active', datalistInput.value.length > 0 && datalistInput.nextElementSibling.children.length > 0);
+    }
+
+    // Iterasi semua input yang memiliki datalist di dalam div
+    document.querySelectorAll('div:has(> datalist) input').forEach((datalistInput) => {
+      datalistInput.addEventListener('keyup', () => toggleActiveClass(datalistInput));
+      datalistInput.addEventListener('click', () => toggleActiveClass(datalistInput));
+
+      document.addEventListener('click', function(event) {
+        const datalist = datalistInput.nextElementSibling;
+        const isClickedInsideDatalist = datalist.contains(event.target);
+        const isClickedOnDatalistInput = (event.target === datalistInput);
+
+        if (!isClickedInsideDatalist && !isClickedOnDatalistInput) {
+          datalistInput.classList.remove('active');
+        }
+      });
+    }); */
+
+    function loadMemberData(searchTerm) {
+      let data = [];
+
+      fetch('/data_dummy/user.json')
+      .then(response => response.json())
+      .then(json => {
+        data = json;
+        memberLists(searchTerm);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
+      // Function to update the displayed results based on search input
+      function memberLists(searchTerm) {
+        // Clear previous results
+        //resultsList.innerHTML = '';
+
+        // Filter data based on search input
+        /*
+        const filteredData = data.filter(item =>
+          item.fullname.toLowerCase().startWith(searchTerm.toLowerCase())
+        );
+        */
+
+        const filteredData = data.filter(user => {
+          if(searchTerm !== ""){
+            return user.fullname.toLowerCase().startsWith(searchTerm);
+            return user.whatsapp.toLowerCase().includes(searchTerm);
+          }
+        });
+
+        // Create list items and append to results list
+        filteredData.forEach(user => {
+          console.log(user)
+        });
+      }
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,602 @@
+[
+  {
+    "userid": "F001",
+    "member_type": "Founder",
+    "fullname": "Ahmad Yani",
+    "whatsapp": "+6281234567890",
+    "email": "ahmad.yani@example.com",
+    "place_of_birth": "Jakarta",
+    "date_of_birth": "1980-05-15",
+    "gender": "Male",
+    "address": "Jl. Jaya No. 1, Jakarta",
+    "emergency_contact_name": "Lisa Yani",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281987654321",
+    "emergency_contact_address": "Jl. Damai No. 2, Jakarta",
+    "notes": "",
+    "status": "active",
+    "join_date": "2021-05-15",
+    "founder_point": {
+      "amount": 700,
+      "hold": 0,
+      "total": 700,
+      "validity": "2025-05-15"
+    },
+    "club_point": {
+      "amount": 50,
+      "hold": 0,
+      "total": 50,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F002",
+    "member_type": "Founder",
+    "fullname": "Budi Santoso",
+    "whatsapp": "+6282345678901",
+    "email": "budi.santoso@example.com",
+    "place_of_birth": "Bandung",
+    "date_of_birth": "1982-08-20",
+    "gender": "Male",
+    "address": "Jl. Sejahtera No. 2, Bandung",
+    "emergency_contact_name": "Santi Santoso",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281765432109",
+    "emergency_contact_address": "Jl. Makmur No. 3, Bandung",
+    "notes": "",
+    "status": "active",
+    "join_date": "2022-08-20",
+    "founder_point": {
+      "amount": 680,
+      "hold": 0,
+      "total": 680,
+      "validity": "2026-08-20"
+    },
+    "club_point": {
+      "amount": 30,
+      "hold": 0,
+      "total": 30,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F003",
+    "member_type": "Founder",
+    "fullname": "Cindy Wijaya",
+    "whatsapp": "+6283456789012",
+    "email": "cindy.wijaya@example.com",
+    "place_of_birth": "Surabaya",
+    "date_of_birth": "1985-03-10",
+    "gender": "Female",
+    "address": "Jl. Damai No. 3, Surabaya",
+    "emergency_contact_name": "Andi Wijaya",
+    "emergency_contact_relation": "Sibling",
+    "emergency_contact_phone": "+6281543210987",
+    "emergency_contact_address": "Jl. Bahagia No. 4, Surabaya",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-03-10",
+    "founder_point": {
+      "amount": 660,
+      "hold": 0,
+      "total": 660,
+      "validity": "2025-03-10"
+    },
+    "club_point": {
+      "amount": 25,
+      "hold": 0,
+      "total": 25,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F004",
+    "member_type": "Founder",
+    "fullname": "Dewi Anggraini",
+    "whatsapp": "+6284567890123",
+    "email": "dewi.anggraini@example.com",
+    "place_of_birth": "Yogyakarta",
+    "date_of_birth": "1983-12-05",
+    "gender": "Female",
+    "address": "Jl. Bahagia No. 5, Yogyakarta",
+    "emergency_contact_name": "Eko Anggara",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281654321098",
+    "emergency_contact_address": "Jl. Jaya No. 6, Yogyakarta",
+    "notes": "",
+    "status": "active",
+    "join_date": "2021-12-05",
+    "founder_point": {
+      "amount": 720,
+      "hold": 0,
+      "total": 720,
+      "validity": "2025-12-05"
+    },
+    "club_point": {
+      "amount": 10,
+      "hold": 0,
+      "total": 10,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F005",
+    "member_type": "Founder",
+    "fullname": "Eko Prasetyo",
+    "whatsapp": "+6285678901234",
+    "email": "eko.prasetyo@example.com",
+    "place_of_birth": "Malang",
+    "date_of_birth": "1986-07-25",
+    "gender": "Male",
+    "address": "Jl. Makmur No. 6, Malang",
+    "emergency_contact_name": "Rini Prasetya",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281789065432",
+    "emergency_contact_address": "Jl. Sejahtera No. 7, Malang",
+    "notes": "",
+    "status": "active",
+    "join_date": "2022-07-25",
+    "founder_point": {
+      "amount": 690,
+      "hold": 0,
+      "total": 690,
+      "validity": "2026-07-25"
+    },
+    "club_point": {
+      "amount": 15,
+      "hold": 0,
+      "total": 15,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F006",
+    "member_type": "Founder",
+    "fullname": "Fani Indah",
+    "whatsapp": "+6286789012345",
+    "email": "fani.indah@example.com",
+    "place_of_birth": "Semarang",
+    "date_of_birth": "1987-04-18",
+    "gender": "Female",
+    "address": "Jl. Sejahtera No. 8, Semarang",
+    "emergency_contact_name": "Aldi Indarto",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281887654321",
+    "emergency_contact_address": "Jl. Bahagia No. 9, Semarang",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-04-18",
+    "founder_point": {
+      "amount": 670,
+      "hold": 0,
+      "total": 670,
+      "validity": "2025-04-18"
+    },
+    "club_point": {
+      "amount": 20,
+      "hold": 0,
+      "total": 20,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F007",
+    "member_type": "Founder",
+    "fullname": "Gita Permata",
+    "whatsapp": "+6287890123456",
+    "email": "gita.permata@example.com",
+    "place_of_birth": "Medan",
+    "date_of_birth": "1988-01-30",
+    "gender": "Female",
+    "address": "Jl. Bahagia No. 10, Medan",
+    "emergency_contact_name": "Joko Permadi",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281987654321",
+    "emergency_contact_address": "Jl. Damai No. 11, Medan",
+    "notes": "",
+    "status": "active",
+    "join_date": "2022-01-30",
+    "founder_point": {
+      "amount": 710,
+      "hold": 0,
+      "total": 710,
+      "validity": "2026-01-30"
+    },
+    "club_point": {
+      "amount": 10,
+      "hold": 0,
+      "total": 10,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F008",
+    "member_type": "Founder",
+    "fullname": "Hendra Gunawan",
+    "whatsapp": "+6288901234567",
+    "email": "hendra.gunawan@example.com",
+    "place_of_birth": "Palembang",
+    "date_of_birth": "1989-06-12",
+    "gender": "Male",
+    "address": "Jl. Makmur No. 11, Palembang",
+    "emergency_contact_name": "Lina Gunawan",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281765432109",
+    "emergency_contact_address": "Jl. Jaya No. 12, Palembang",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-06-12",
+    "founder_point": {
+      "amount": 680,
+      "hold": 0,
+      "total": 680,
+      "validity": "2025-06-12"
+    },
+    "club_point": {
+      "amount": 25,
+      "hold": 0,
+      "total": 25,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F009",
+    "member_type": "Founder",
+    "fullname": "Indra Cahyono",
+    "whatsapp": "+6289012345678",
+    "email": "indra.cahyono@example.com",
+    "place_of_birth": "Bandung",
+    "date_of_birth": "1984-09-23",
+    "gender": "Male",
+    "address": "Jl. Jaya No. 13, Bandung",
+    "emergency_contact_name": "Rina Cahyani",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281789065432",
+    "emergency_contact_address": "Jl. Damai No. 14, Bandung",
+    "notes": "",
+    "status": "active",
+    "join_date": "2021-09-23",
+    "founder_point": {
+      "amount": 700,
+      "hold": 0,
+      "total": 700,
+      "validity": "2025-09-23"
+    },
+    "club_point": {
+      "amount": 20,
+      "hold": 0,
+      "total": 20,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F010",
+    "member_type": "Founder",
+    "fullname": "Joko Susilo",
+    "whatsapp": "+6280123456789",
+    "email": "joko.susilo@example.com",
+    "place_of_birth": "Surabaya",
+    "date_of_birth": "1981-02-14",
+    "gender": "Male",
+    "address": "Jl. Damai No. 15, Surabaya",
+    "emergency_contact_name": "Lina Susanti",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281987654321",
+    "emergency_contact_address": "Jl. Bahagia No. 16, Surabaya",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-02-14",
+    "founder_point": {
+      "amount": 690,
+      "hold": 0,
+      "total": 690,
+      "validity": "2025-02-14"
+    },
+    "club_point": {
+      "amount": 15,
+      "hold": 0,
+      "total": 15,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F011",
+    "member_type": "Founder",
+    "fullname": "Kartika Dewi",
+    "whatsapp": "+6281234567890",
+    "email": "kartika.dewi@example.com",
+    "place_of_birth": "Jakarta",
+    "date_of_birth": "1983-06-28",
+    "gender": "Female",
+    "address": "Jl. Bahagia No. 17, Jakarta",
+    "emergency_contact_name": "Andi Kartono",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281765432109",
+    "emergency_contact_address": "Jl. Makmur No. 18, Jakarta",
+    "notes": "",
+    "status": "active",
+    "join_date": "2021-06-28",
+    "founder_point": {
+      "amount": 710,
+      "hold": 0,
+      "total": 710,
+      "validity": "2025-06-28"
+    },
+    "club_point": {
+      "amount": 10,
+      "hold": 0,
+      "total": 10,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F012",
+    "member_type": "Founder",
+    "fullname": "Lukman Hakim",
+    "whatsapp": "+6282345678901",
+    "email": "lukman.hakim@example.com",
+    "place_of_birth": "Bandung",
+    "date_of_birth": "1986-09-30",
+    "gender": "Male",
+    "address": "Jl. Makmur No. 19, Bandung",
+    "emergency_contact_name": "Sari Hakim",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281543210987",
+    "emergency_contact_address": "Jl. Sejahtera No. 20, Bandung",
+    "notes": "",
+    "status": "active",
+    "join_date": "2022-09-30",
+    "founder_point": {
+      "amount": 680,
+      "hold": 0,
+      "total": 680,
+      "validity": "2026-09-30"
+    },
+    "club_point": {
+      "amount": 25,
+      "hold": 0,
+      "total": 25,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F013",
+    "member_type": "Founder",
+    "fullname": "Maria Dewi",
+    "whatsapp": "+6283456789012",
+    "email": "maria.dewi@example.com",
+    "place_of_birth": "Surabaya",
+    "date_of_birth": "1989-04-12",
+    "gender": "Female",
+    "address": "Jl. Sejahtera No. 21, Surabaya",
+    "emergency_contact_name": "Budi Santoso",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281987654321",
+    "emergency_contact_address": "Jl. Damai No. 22, Surabaya",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-04-12",
+    "founder_point": {
+      "amount": 660,
+      "hold": 0,
+      "total": 660,
+      "validity": "2025-04-12"
+    },
+    "club_point": {
+      "amount": 20,
+      "hold": 0,
+      "total": 20,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F014",
+    "member_type": "Founder",
+    "fullname": "Nina Susanti",
+    "whatsapp": "+6284567890123",
+    "email": "nina.susanti@example.com",
+    "place_of_birth": "Yogyakarta",
+    "date_of_birth": "1987-11-03",
+    "gender": "Female",
+    "address": "Jl. Damai No. 23, Yogyakarta",
+    "emergency_contact_name": "Adi Susanto",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281654321098",
+    "emergency_contact_address": "Jl. Bahagia No. 24, Yogyakarta",
+    "notes": "",
+    "status": "active",
+    "join_date": "2021-11-03",
+    "founder_point": {
+      "amount": 720,
+      "hold": 0,
+      "total": 720,
+      "validity": "2025-11-03"
+    },
+    "club_point": {
+      "amount": 10,
+      "hold": 0,
+      "total": 10,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F015",
+    "member_type": "Founder",
+    "fullname": "Oscar Widodo",
+    "whatsapp": "+6285678901234",
+    "email": "oscar.widodo@example.com",
+    "place_of_birth": "Malang",
+    "date_of_birth": "1984-08-21",
+    "gender": "Male",
+    "address": "Jl. Bahagia No. 25, Malang",
+    "emergency_contact_name": "Rini Widarti",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281789065432",
+    "emergency_contact_address": "Jl. Makmur No. 26, Malang",
+    "notes": "",
+    "status": "active",
+    "join_date": "2022-08-21",
+    "founder_point": {
+      "amount": 690,
+      "hold": 0,
+      "total": 690,
+      "validity": "2026-08-21"
+    },
+    "club_point": {
+      "amount": 15,
+      "hold": 0,
+      "total": 15,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F016",
+    "member_type": "Founder",
+    "fullname": "Putri Ayu",
+    "whatsapp": "+6286789012345",
+    "email": "putri.ayu@example.com",
+    "place_of_birth": "Semarang",
+    "date_of_birth": "1985-11-09",
+    "gender": "Female",
+    "address": "Jl. Makmur No. 27, Semarang",
+    "emergency_contact_name": "Aldi Permana",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281887654321",
+    "emergency_contact_address": "Jl. Sejahtera No. 28, Semarang",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-11-09",
+    "founder_point": {
+      "amount": 670,
+      "hold": 0,
+      "total": 670,
+      "validity": "2025-11-09"
+    },
+    "club_point": {
+      "amount": 20,
+      "hold": 0,
+      "total": 20,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F017",
+    "member_type": "Founder",
+    "fullname": "Qori Indah",
+    "whatsapp": "+6287890123456",
+    "email": "qori.indah@example.com",
+    "place_of_birth": "Medan",
+    "date_of_birth": "1986-02-17",
+    "gender": "Female",
+    "address": "Jl. Sejahtera No. 29, Medan",
+    "emergency_contact_name": "Joko Indra",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281987654321",
+    "emergency_contact_address": "Jl. Damai No. 30, Medan",
+    "notes": "",
+    "status": "active",
+    "join_date": "2022-02-17",
+    "founder_point": {
+      "amount": 680,
+      "hold": 0,
+      "total": 680,
+      "validity": "2026-02-17"
+    },
+    "club_point": {
+      "amount": 25,
+      "hold": 0,
+      "total": 25,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F018",
+    "member_type": "Founder",
+    "fullname": "Rudi Hermawan",
+    "whatsapp": "+6288901234567",
+    "email": "rudi.hermawan@example.com",
+    "place_of_birth": "Palembang",
+    "date_of_birth": "1987-05-04",
+    "gender": "Male",
+    "address": "Jl. Damai No. 31, Palembang",
+    "emergency_contact_name": "Lina Hermawan",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281765432109",
+    "emergency_contact_address": "Jl. Bahagia No. 32, Palembang",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-05-04",
+    "founder_point": {
+      "amount": 700,
+      "hold": 0,
+      "total": 700,
+      "validity": "2025-05-04"
+    },
+    "club_point": {
+      "amount": 20,
+      "hold": 0,
+      "total": 20,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F019",
+    "member_type": "Founder",
+    "fullname": "Sinta Anggraeni",
+    "whatsapp": "+6289012345678",
+    "email": "sinta.anggraeni@example.com",
+    "place_of_birth": "Bandung",
+    "date_of_birth": "1988-09-19",
+    "gender": "Female",
+    "address": "Jl. Bahagia No. 33, Bandung",
+    "emergency_contact_name": "Rama Anggara",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281987654321",
+    "emergency_contact_address": "Jl. Makmur No. 34, Bandung",
+    "notes": "",
+    "status": "active",
+    "join_date": "2021-09-19",
+    "founder_point": {
+      "amount": 690,
+      "hold": 0,
+      "total": 690,
+      "validity": "2025-09-19"
+    },
+    "club_point": {
+      "amount": 15,
+      "hold": 0,
+      "total": 15,
+      "validity": ""
+    }
+  },
+  {
+    "userid": "F020",
+    "member_type": "Founder",
+    "fullname": "Tono Susanto",
+    "whatsapp": "+6280123456789",
+    "email": "tono.susanto@example.com",
+    "place_of_birth": "Surabaya",
+    "date_of_birth": "1989-04-08",
+    "gender": "Male",
+    "address": "Jl. Makmur No. 35, Surabaya",
+    "emergency_contact_name": "Lina Tono",
+    "emergency_contact_relation": "Spouse",
+    "emergency_contact_phone": "+6281789065432",
+    "emergency_contact_address": "Jl. Sejahtera No. 36, Surabaya",
+    "notes": "",
+    "status": "active",
+    "join_date": "2023-04-08",
+    "founder_point": {
+      "amount": 670,
+      "hold": 0,
+      "total": 670,
+      "validity": "2025-04-08"
+    },
+    "club_point": {
+      "amount": 10,
+      "hold": 0,
+      "total": 10,
+      "validity": ""
+    }
+  }
+]

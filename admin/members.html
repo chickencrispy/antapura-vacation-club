@@ -20,7 +20,9 @@
     </div>
 
     <div class="header-profile"> 
-      <img src="../images/memoji/Memoji-04.png" alt="">
+      <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
+      <span class="text-sm ms-2">Debi Rahmadi</span>
+      <i class="fi fi-rr-angle-small-down"></i>
     </div>
   </header>
 
@@ -38,7 +40,7 @@
             <span class="nav_name">Dashboard</span> 
           </a> 
           
-          <a href="members.html" class="nav-link"> 
+          <a href="members.html" class="nav-link active"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
@@ -83,7 +85,7 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3">
+    <div class="p-3 flex-fill">
       <div class="mb-3 py-3">
         <h2 class="mb-0 fw-bold">Member Management</h2>
       </div>
@@ -92,7 +94,7 @@
         <div class="col-sm-5">
           <div class="row g-2">
             <div class="col-md-4">
-              <select class="form-select text-sm">
+              <select class="form-select text-sm h-40">
                 <option value="">All Member</option>
                 <option value="">Active</option>
                 <option value="">Deactive</option>
@@ -103,10 +105,10 @@
             <div class="col-md-8">
               <div class="d-flex gap-2">
                 <div class="input-icon flex-fill">
-                  <input type="text" class="form-control text-sm" placeholder="Search...">
+                  <input type="text" class="form-control text-sm h-40" placeholder="Search...">
                   <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
                 </div>
-                <button class="btn btn-normal btn-primary text-xs shadow-none">Search</button>
+                <button class="btn btn-normal btn-primary text-xs shadow-none h-40">Search</button>
               </div>
             </div>
           </div>
@@ -114,7 +116,7 @@
       
         <div class="col-sm-7">
           <div class="text-end h-100">
-            <button class="btn btn-dark btn-normal text-xs" data-mdb-modal-init data-mdb-target="#newMemberModal">
+            <button class="btn btn-dark btn-normal text-xs h-40" data-mdb-modal-init data-mdb-target="#newMemberModal">
               <i class="fi fi-rr-plus me-2"></i> New Member
             </button>
           </div>
@@ -122,14 +124,13 @@
       </div>
       
       <div class="bg-white p-3 border rounded-3">
-        <table class="table table-sm data-table" style="width: 100%;">
+        <table id="table-user" class="table table-sm data-table" style="width: 100%;">
           <thead>
             <tr>
               <th rowspan="2" class="text-end" width="42px">No.</th>
               <th rowspan="2" class="text-nowrap">Member ID</th>
               <th rowspan="2" class="text-nowrap">Full Name</th>
               <th colspan="5" class="text-center">Details</th>
-              <th colspan="4" class="text-center">Emergency Contact</th>
               <th rowspan="2" class="text-center">Status</th>
               <th rowspan="2" width="3%">&nbsp;</th>
             </tr>
@@ -139,25 +140,17 @@
               <th>Place, Date of Birth</th>
               <th>Gender</th>
               <th>Address</th>
-              <th>Name</th>
-              <th>Relation</th>
-              <th>Contact No.</th>
-              <th>Address</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="d-none">
               <td class="text-end">1</td>
               <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">F0001</a></td>
               <td class="text-nowrap">John Doe</td>
               <td>+6281234567890</td>
-              <td>johndoe@mail.com</td>
+              <td>+6281234567890</td>
               <td>Batam, 5 Jun 1980</td>
               <td>Male</td>
-              <td>Pasir Putih, Batam</td>
-              <td class="text-nowrap">Jane Doe</td>
-              <td>Wife</td>
-              <td>+6281298745632</td>
               <td>Pasir Putih, Batam</td>
               <td class="text-center">Active</td>
               <td class="text-end">
@@ -173,18 +166,14 @@
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr class="d-none">
               <td class="text-end text-nowrap">2</td>
               <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">C0001</a></td>
               <td class="text-nowrap">Jane Doe</td>
               <td>+6281298745632</td>
-              <td>janeee@mail.com</td>
+              <td>+6281298745632</td>
               <td>Surabaya, 28 Oct 1986</td>
               <td>Female</td>
-              <td>Pasir Putih, Batam</td>
-              <td class="text-nowrap">John Doe</td>
-              <td>Husband</td>
-              <td>+6281234567890</td>
               <td>Pasir Putih, Batam</td>
               <td class="text-center">Active</td>
               <td class="text-end">
@@ -222,6 +211,54 @@
         </div>
       </div>
     </div>
+
+    <div class="w-350 p-3 border-start">
+      <h4 class="fw-semibold mb-3">New Joined Member</h4>
+      <ul class="list-group list-group-light list-group-contact list-group-small">
+        <li class="list-group-item">
+          <div class="item-wrapper">
+            <div class="user-avatar">
+              <img src="/images/memoji/Memoji-08.png" alt="">
+            </div>
+            <div class="user-details">
+              <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal">Anne Hathaway</a>
+              <div class="text-xs text-muted">+6281234456789</div>
+            </div>
+            <div class="dropdown ms-auto">
+              <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init="" data-mdb-ripple-init="" aria-expanded="false" data-mdb-dropdown-initialized="true">
+                <i class="fi fi-rr-menu-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="item-wrapper">
+            <div class="user-avatar">
+              <img src="/images/memoji/Memoji-05.png" alt="">
+            </div>
+            <div class="user-details">
+              <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal">Bruce Wayne</a>
+              <div class="text-xs text-muted">+6281265396351</div>
+            </div>
+            <div class="dropdown ms-auto">
+              <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init="" data-mdb-ripple-init="" aria-expanded="false" data-mdb-dropdown-initialized="true">
+                <i class="fi fi-rr-menu-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </main>
 
   <!-- MODAL NEW MEMBER -->
@@ -233,7 +270,7 @@
             <h4 class="modal-title fw-bold" id="exampleModalLabel">New Member</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-4" style="min-height: 480px;">
+          <div class="modal-body p-4" style="min-height: 500px;">
             <div class="step">
               <div class="step-items">
                 <div class="form-sm-inline-25 mb-2">
@@ -280,7 +317,7 @@
                 </div>
                 <div class="form-sm-inline-25 mb-2">
                   <label class="text-xs fw-semibold mb-1">Notes</label>
-                  <textarea class="form-control text-sm"></textarea>
+                  <textarea class="form-control text-sm" rows="3"></textarea>
                 </div>
               </div>
               
@@ -322,7 +359,7 @@
             <h4 class="modal-title fw-bold" id="exampleModalLabel">F0001</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-4 text-sm bg-white" style="min-height: 575px;">
+          <div class="modal-body p-4 text-sm bg-white" style="min-height: 600px;">
             <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
               <li class="nav-item" role="presentation">
                 <a data-mdb-tab-init class="nav-link active" id="ex1-tab-1" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Profile</a>
@@ -369,6 +406,10 @@
                   <li class="list-group-item">
                     <span>Notes</span>
                     <span>-</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Join Date</span>
+                    <span>03 June 2024</span>
                   </li>
                 </ul>
 
@@ -494,6 +535,51 @@
         { responsivePriority: 3, targets: -1 }
       ]
     });
+
+    fetch('/data_dummy/user.json')
+    .then(response => response.json())
+    .then(data => {
+      const tableUserBody = document.getElementById('table-user').querySelector('tbody');
+      let count = 1;
+
+      function formatDate(dateString) {
+        if(dateString === ""){
+          return "-";
+        }else{
+          const options = { day: '2-digit', month: 'short', year: 'numeric' };
+          return new Date(dateString).toLocaleDateString('en-GB', options);
+        }
+      }
+
+      data.forEach(member => {
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+          <td class="text-end">${count}</td>
+          <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">${member.userid}</a></td>
+          <td class="text-nowrap">${member.fullname}</td>
+          <td>${member.whatsapp}</td>
+          <td>${member.email}</td>
+          <td>${member.place_of_birth}, ${formatDate(member.date_of_birth)}</td>
+          <td>${member.gender}</td>
+          <td>${member.address}</td>
+          <td class="text-center">${member.status}</td>
+          <div class="dropdown">
+            <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+              <i class="fi fi-rr-menu-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+              <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
+              <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+            </ul>
+          </div>
+        `;
+        tableUserBody.appendChild(row);
+        count++;
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error));
   </script>
 </body>
 </html>

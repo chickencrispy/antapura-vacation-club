@@ -211,9 +211,11 @@ const openRequest = document.getElementById('open-request');
 if(openRequest) {
   const requestType = document.getElementById('request-type');
   const redeemItem = document.getElementById('redeem-item');
+  const requestPoint = document.getElementById('request-point');
   const requestRedeem = document.getElementById('request-redeem');
   const requestFrom = document.getElementById('request-from');
   const requestTo = document.getElementById('request-to');
+  const requestDetail = document.getElementById('request-detail');
   const requestPayment = document.getElementById('request-payment');
   const inputPayment = document.getElementById('input-payment');
 
@@ -221,6 +223,7 @@ if(openRequest) {
     redeemItem.classList.toggle('d-none', !e);
     requestRedeem.children[0].selected = e;
     requestRedeem.children[1].hidden = e;
+    requestDetail.classList.toggle('d-none', !e);
   }
 
   function paymentConf(e) {
@@ -229,14 +232,19 @@ if(openRequest) {
 
   function customerConf(e) {
     requestTo.classList.toggle('d-none', !e);
-    requestFrom.querySelectorAll('div')[0].textContent = e ? 'From' : 'Customer';
+    requestFrom.querySelectorAll('div')[0].textContent = e ? 'From' : 'Customer Name';
+  }
+
+  function askOfferConf(e) {
+    requestPoint.children[1].hidden = !e;
   }
   
   requestType.addEventListener('change', () => {
     redeemConf(requestType.value === 'redeem');
     paymentConf(!(requestType.value === 'transfer' || requestType.value === 'redeem'));
     inputPayment.value = (requestType.value === 'transfer' || requestType.value === 'redeem') ? "" : inputPayment.value;
-    customerConf(requestType.value !== 'topup' && requestType.value !== 'redeem');
+    customerConf(requestType.value === 'transfer');
+    askOfferConf(requestType.value === 'ask' || requestType.value === 'offer');
   });
 }
 

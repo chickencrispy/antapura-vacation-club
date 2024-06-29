@@ -4,7 +4,7 @@
 }
 
 .btn-normal {
-  padding-top: 11px;
+  padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid transparent;
   border-radius: 8px;
@@ -256,6 +256,34 @@
   }
 }
 
+.list-group {
+  .list-group-item:nth-child(5n + 1) .user-avatar {
+    color: rgba(var(--mdb-primary-rgb), 1);
+    background-color: var(--mdb-primary-bg-subtle);
+  }
+    
+  .list-group-item:nth-child(5n + 2) .user-avatar {
+    color: rgba(var(--mdb-success-rgb), 1);
+    background-color: var(--mdb-success-bg-subtle);
+  }
+
+  .list-group-item:nth-child(5n + 3) .user-avatar {
+    color: rgba(var(--mdb-warning-rgb), 1);
+    background-color: var(--mdb-warning-bg-subtle);
+  }
+
+  .list-group-item:nth-child(5n + 4) .user-avatar {
+    color: rgba(var(--mdb-info-rgb), 1);
+    background-color: var(--mdb-info-bg-subtle);
+  }
+
+  .list-group-item:nth-child(5n + 5) .user-avatar {
+    color: rgba(var(--mdb-danger-rgb), 1);
+    background-color: var(--mdb-danger-bg-subtle);
+  }
+  
+}
+
 .list-group-between {
   font-size: $fs-sm;
   border-radius: 16px;
@@ -306,7 +334,8 @@
   border-radius: 16px;
 
   .list-group-item a {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
     justify-content: space-between;
     gap: 8px;
@@ -336,6 +365,10 @@
       }
     }
 
+    .item-content:first-child {
+      grid-column: span 2 / span 2;
+    }
+
     .item-content:last-child {
       text-align: end;
     }
@@ -346,16 +379,18 @@
   font-size: $fs-sm;
   border-radius: 16px;
 
-  .list-group-item a {
+  .list-group-item :is(a, .item-wrapper) {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
 
   .user-avatar {
-    width: 48px;
-    height: 48px;
-    border: 1px solid var(--mdb-border-color);
+    display: grid;
+    place-content: center;
+    width: 38px;
+    height: 38px;
+    font-size: $fs-xs;
+    font-weight: 600;
     border-radius: 50rem;
     
     img {
@@ -771,6 +806,41 @@ datalist {
 
       .fi {
         display: inline-block;
+      }
+    }
+  }
+}
+
+div:has(> datalist) {
+  position: relative;
+
+  input.active + datalist {
+    display: block;
+    width: calc(100% - 8px);
+    max-height: 300px;
+    margin-top: 2px;
+    font-size: $fs-sm;
+    border: 1px solid var(--mdb-border-color);
+    border-radius: 8px;
+    overflow-y: auto;
+    z-index: 1;
+  
+    option {
+      display: flex;
+      justify-content: space-between;
+      font-size: $fs-sm;
+      padding-inline: 8px;
+      color: inherit;
+      font-family: "Poppins", sans-serif;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: $dark;
+        color: $white;
+      }
+
+      &::before {
+        content: attr(value);
       }
     }
   }

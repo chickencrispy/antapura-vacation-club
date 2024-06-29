@@ -20,7 +20,9 @@
     </div>
 
     <div class="header-profile"> 
-      <img src="../images/memoji/Memoji-04.png" alt="">
+      <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
+      <span class="text-sm ms-2">Debi Rahmadi</span>
+      <i class="fi fi-rr-angle-small-down"></i>
     </div>
   </header>
 
@@ -43,120 +45,109 @@
             <span class="nav_name">Members</span> 
           </a> 
 
-          <a href="report.html" class="nav-link"> 
-            <i class="fi fi-rr-chart-pie nav-icon"></i>
-            <span class="nav_name">Transaction</span> 
-          </a>
-
           <a href="transaction_request.html" class="nav-link active"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-          
-          <a href="#" class="nav-link"> 
-            <i class="fi fi-rr-comment nav-icon"></i>
-            <span class="nav_name">Messages</span> 
-          </a> 
-          
+
+          <a href="marketplace.html" class="nav-link"> 
+            <i class="fi fi-rr-shop nav-icon"></i>
+            <span class="nav_name">Marketplace</span> 
+          </a>
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Report</span> 
+          </a>
+
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Settings</span> 
+            <span class="nav_name">Administrator</span> 
           </a> 
           
           <a href="listing.html" class="nav-link"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
+          </a>
+
+          <a href="listing.html" class="nav-link"> 
+            <i class="fi fi-rr-sparkles nav-icon"></i>
+            <span class="nav_name">Promo</span> 
           </a> 
         </div>
       </div> 
       
       <a href="#" class="nav-link"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
-        <span class="nav_name">SignOut</span> 
+        <span class="nav_name">Sign Out</span> 
       </a>
     </nav>
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3">
+    <div class="p-3 flex-fill">
       <div class="mb-3 py-3">
         <h2 class="mb-0 fw-bold">Proceed Transaction</h2>
       </div>
       
-      <div class="row g-3">
+      <div class="row g-3 mb-3">
         <div class="col-sm-4">
-          <div class="p-4 bg-white rounded-normal border h-100">
-            <div class="mb-4 text-end">
-              <small class="text-muted">Transaction ID</small>
+          <div class="p-3 border rounded-normal">
+            <div class="mb-4 p-3 text-end bg-primary-subtle text-primary rounded-normal">
+              <small>Transaction ID</small>
               <h3 class="mb-0 fw-bold">ATP2406130001</h3>
-              <small class="text-muted">06/13/2024 09:37:36</small>
+              <small>06/13/2024 09:37:36</small>
             </div>
-            
-            <div class="row g-2 align-items-center">
-              <div class="col-sm-3">Request Type</div>
-              <div class="col-sm-9">
-                <select name="" id="" class="form-select text-sm">
-                  <option value="">Top-Up</option>
-                </select>
-              </div>
 
-              <div class="col-sm-3">From</div>
-              <div class="col-sm-9">
-                <div class="input-group">
-                  <input type="text" class="form-control text-sm" value="John Doe" readonly>
-                  <a href="https://wa.me/+6281275438855" target="_blank" class="btn btn-success d-flex align-items-center px-3 shadow-none"><i class="fi fi-brands-whatsapp text-md"></i></a>
-                </div>
-              </div>
-
-              <div class="col-sm-3">To</div>
-              <div class="col-sm-9">
-                <div class="input-group">
-                  <input type="text" class="form-control text-sm" value="Antapura" readonly>
-                  <a href="#" class="btn btn-success d-flex align-items-center px-3 shadow-none"><i class="fi fi-brands-whatsapp text-md"></i></a>
-                </div>
-              </div>
-
-              <div class="col-sm-3">Purchase Type</div>
-              <div class="col-sm-9">
-                <select name="" id="" class="form-select text-sm">
-                  <option value="">Point</option>
-                </select>
-              </div>
-
-              <div class="col-sm-3">Details</div>
-              <div class="col-sm-9"><input type="text" class="form-control text-sm" value="Top-Up Point" readonly></div>
-
-              <div class="col-sm-3">Amount</div>
-              <div class="col-sm-9"><input type="text" class="form-control text-sm" inputmode="numeric" value="10.000" readonly></div>
-
-              <div class="col-sm-3">Payment</div>
-              <div class="col-sm-9">
-                <div class="input-currency">
-                  <input type="text" name="" id="" class="form-control text-sm" inputmode="numeric" value="10.500.000" readonly>
-                  <span class="currency-name">IDR</span>
-                </div>
-              </div>
-
-              <div class="col-sm-3">Point Type</div>
-              <div class="col-sm-9">
-                <select class="form-select text-sm">
-                  <option value="2">Club Point</option>
-                </select>
-              </div>
-            </div>
+            <ul class="list-group list-group-light list-group-small list-group-33 mb-4">
+              <li class="list-group-item">
+                <span>Request Type</span>
+                <span>Top Up</span>
+              </li>
+              <li class="list-group-item">
+                <span>From</span>
+                <span>John Doe</span>
+              </li>
+              <li class="list-group-item">
+                <span>To</span>
+                <span>Antapura</span>
+              </li>
+              <li class="list-group-item">
+                <span>Item Type</span>
+                <span>Point</span>
+              </li>
+              <li class="list-group-item">
+                <span>Details</span>
+                <span>-</span>
+              </li>
+              <li class="list-group-item">
+                <span>Amount</span>
+                <span>10.000</span>
+              </li>
+              <li class="list-group-item">
+                <span>Payment</span>
+                <span>IDR 10.500.000</span>
+              </li>
+              <li class="list-group-item">
+                <span>Notes</span>
+                <span></span>
+              </li>
+            </ul>
           </div>
         </div>
+      
+        <div class="col-sm-4">
+          <div class="p-3 border rounded-normal">
+            <h4 class="fw-bold mb-3">Reference</h4>
 
-        <div class="col-sm-5">
-          <div class="p-4 bg-white rounded-normal border h-100">
             <form action="" class="d-flex flex-column h-100">
-              <div class="mb-2">
-                <label class="mb-1">Remarks</label>
+              <div class="mb-3">
+                <label class="mb-2">Reference or Booking Code</label>
                 <textarea class="form-control text-sm" rows="5"></textarea>
               </div>
 
-              <div class="mb-2">
-                <label class="mb-1">Attach documents</label>
+              <div class="mb-3">
+                <label class="mb-2">Attach documents</label>
                 <div class="multiple-images-upload">
                   <label class="add-image">
                     <input type="file" name="" id="" class="d-none">
@@ -165,8 +156,8 @@
                 </div>
               </div>
 
-              <div class="mb-2">
-                <label class="mb-1">Task Actions</label>
+              <div class="mb-3">
+                <label class="mb-2">Task Actions</label>
                 <ul class="list-group task-list">
                   <li class="list-group-item p-2">
                     <label class="d-flex align-items-center">
@@ -208,48 +199,54 @@
               </div>
 
               <div class="d-flex gap-2 mt-auto pt-3">
-                <button type="button" class="btn btn-normal btn-secondary">Update & Close Request</button>
-                <button type="button" class="btn btn-normal btn-primary ms-auto">Update</button>
+                <button type="button" class="btn btn-normal btn-secondary text-xs">Update & Close Request</button>
+                <button type="button" class="btn btn-normal btn-primary text-xs ms-auto">Update</button>
               </div>
             </form>
           </div>
         </div>
 
-        <div class="col-sm-3">
-          <div class="p-4 bg-white rounded-normal border">
-            <div class="mb-4">
-              <h3 class="fw-bold">Quick Actions</h3>
-            </div>
-            <div class="mb-2">
-              <label class="mb-1">Select Customer</label>
-              <select class="form-select text-sm">
-                <option value="">John Doe</option>
-                <option value="">Antapura</option>
-              </select>
-            </div>
-            <div class="mb-2">
-              <label class="mb-1">Select Actions</label>
-              <select class="form-select text-sm">
-                <option value="">Add Point</option>
-                <option value="">Reduce Point</option>
-                <option value="">Hold Point</option>
-              </select>
-            </div>
-            <div class="mb-2">
-              <label class="mb-1">Source of Point</label>
-              <select class="form-select text-sm">
-                <option value="">Founder Point</option>
-                <option value="">Club Point</option>
-              </select>
-            </div>
-            <div class="mb-2">
-              <label class="mb-1">Set amount</label>
-              <input type="text" class="form-control text-sm" inputmode="numeric">
-            </div>
-            <div class="d-flex justify-content-end">
-              <button class="btn btn-normal btn-primary">Proceed</button>
-            </div>
+        <div class="col-sm-4">
+          <div class="p-3 border rounded-normal">
+            <h4 class="fw-bold mb-0">Recommendation</h4>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-350 border-start">
+      <div class="p-3">
+        <div class="mb-4">
+          <h3 class="fw-bold">Quick Actions</h3>
+        </div>
+        <div class="mb-2">
+          <label class="mb-1">Select Customer</label>
+          <select class="form-select text-sm">
+            <option value="">John Doe</option>
+            <option value="">Antapura</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label class="mb-1">Select Actions</label>
+          <select class="form-select text-sm">
+            <option value="">Add Point</option>
+            <option value="">Reduce Point</option>
+            <option value="">Hold Point</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label class="mb-1">Source of Point</label>
+          <select class="form-select text-sm">
+            <option value="">Founder Point</option>
+            <option value="">Club Point</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label class="mb-1">Set amount</label>
+          <input type="text" class="form-control text-sm" inputmode="numeric">
+        </div>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-normal btn-primary text-xs">Proceed</button>
         </div>
       </div>
     </div>
