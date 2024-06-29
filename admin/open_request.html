@@ -374,14 +374,7 @@
       function memberLists(searchTerm) {
         // Clear previous results
         //resultsList.innerHTML = '';
-
-        // Filter data based on search input
-        /*
-        const filteredData = data.filter(item =>
-          item.fullname.toLowerCase().startWith(searchTerm.toLowerCase())
-        );
-        */
-
+        
         const filteredData = data.filter(user => {
           if(searchTerm !== ""){
             return user.fullname.toLowerCase().startsWith(searchTerm);
