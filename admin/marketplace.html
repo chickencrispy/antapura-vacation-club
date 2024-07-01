@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Member Management</title>
+  <title>Marketplace</title>
   <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
   <link rel="stylesheet" href="/css/date-picker.min.css">
@@ -40,7 +40,7 @@
             <span class="nav_name">Dashboard</span> 
           </a> 
           
-          <a href="members.html" class="nav-link active"> 
+          <a href="members.html" class="nav-link"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
@@ -50,7 +50,7 @@
             <span class="nav_name">Request</span> 
           </a>
 
-          <a href="marketplace.html" class="nav-link"> 
+          <a href="marketplace.html" class="nav-link active"> 
             <i class="fi fi-rr-shop nav-icon"></i>
             <span class="nav_name">Marketplace</span> 
           </a>
@@ -87,7 +87,7 @@
   <main id="main-content" class="content-wrapper">
     <div class="p-3 flex-fill">
       <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Member Management</h2>
+        <h2 class="mb-0 fw-bold">Marketplace</h2>
       </div>
       
       <div class="row g-2 mb-3">
@@ -95,10 +95,9 @@
           <div class="row g-2">
             <div class="col-md-4">
               <select class="form-select text-sm h-40">
-                <option value="">All Member</option>
-                <option value="">Active</option>
-                <option value="">Deactive</option>
-                <option value="">Pending</option>
+                <option value="">All Market</option>
+                <option value="">Ask</option>
+                <option value="">Offer</option>
               </select>
             </div>
       
@@ -123,141 +122,139 @@
         </div>
       </div>
       
-      <div class="bg-white p-3 border rounded-3">
-        <table id="table-user" class="table table-sm data-table" style="width: 100%;">
-          <thead>
-            <tr>
-              <th rowspan="2" class="text-end" width="42px">No.</th>
-              <th rowspan="2" class="text-nowrap" width="90px">Member ID</th>
-              <th rowspan="2" class="text-nowrap">Full Name</th>
-              <th colspan="5" class="text-center">Details</th>
-              <th rowspan="2" class="text-center" width="70px">Status</th>
-              <th rowspan="2" width="3%">&nbsp;</th>
-            </tr>
-            <tr>
-              <th width="130px">WhatsApp</th>
-              <th>Email</th>
-              <th>Place, Date of Birth</th>
-              <th width="70px">Gender</th>
-              <th>Address</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-end">1</td>
-              <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0001">F0001</a></td>
-              <td class="text-nowrap">Ahmad Yani</td>
-              <td>+6281234567890</td>
-              <td>ahmad.yani@example.com</td>
-              <td>Jakarta, 15 May 1980</td>
-              <td>Male</td>
-              <td>Jl. Jaya No. 1, Jakarta</td>
-              <td class="text-center">Active</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0001"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end text-nowrap">2</td>
-              <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0002">F0002</a></td>
-              <td class="text-nowrap">Budi Santoso</td>
-              <td>+6282345678901</td>
-              <td>budi.santoso@example.com</td>
-              <td>Bandung, 20 Aug 1982</td>
-              <td>Male</td>
-              <td>Jl. Sejahtera No. 2, Bandung</td>
-              <td class="text-center">Active</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0002"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <div class="table-footer">
-          <div class="action-area d-none d-md-inline-flex">
-            <button class="btn btn-sm btn-light"><i class="fi fi-rr-print me-1"></i> Print</button>
-            <button class="btn btn-sm bg-success-subtle text-success"><i class="fi fi-rr-file-download me-1"></i> Excel</button>
-            <button class="btn btn-sm bg-danger-subtle text-danger"><i class="fi fi-rr-file-download me-1"></i> PDF</button>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <div class="bg-white p-3 border rounded-3">
+            <h5 class="fw-bold">ASK</h5>
+
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th width="42px">No</th>
+                  <th width="100px">Market ID</th>
+                  <th>Member</th>
+                  <th class="text-end" width="100px">Ask Point</th>
+                  <th class="text-end" width="120px">Ask Price</th>
+                  <th width="42px"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td><a href="#" class="fw-semibold text-primary">AMA0025</a></td>
+                  <td>Putri Ayu <small class="d-block text-dark">+6286789012345</small></td>
+                  <td class="text-end">5.000</td>
+                  <td class="text-end">IDR 5.000.000</td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+                        <i class="fi fi-rr-menu-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 22px);" data-popper-placement="bottom-end" data-mdb-popper="null">
+                        <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#"><i class="fi fi-rr-inbox-out me-1"></i> Offer</a></li>
+                        <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                        <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-    
-          <nav class="table-pagination">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="bg-white p-3 border rounded-3">
+            <h5 class="fw-bold">OFFER</h5>
+
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th width="42px">No</th>
+                  <th width="100px">Market ID</th>
+                  <th>Member</th>
+                  <th class="text-end" width="100px">Offer Point</th>
+                  <th class="text-end" width="120px">Offer Price</th>
+                  <th width="42px"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td><a href="#" class="fw-bold text-primary">AMO0033</a></td>
+                  <td>Hendra Gunawan <small class="d-block text-dark">+6288901234567</small></td>
+                  <td class="text-end">5.000</td>
+                  <td class="text-end">IDR 5.250.000</td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+                        <i class="fi fi-rr-menu-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 22px);" data-popper-placement="bottom-end" data-mdb-popper="null">
+                        <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#"><i class="fi fi-rr-inbox-in me-1"></i> Ask</a></li>
+                        <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                        <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="w-350 p-3 border-start">
-      <h4 class="fw-semibold mb-3">New Joined Member</h4>
-      <ul class="list-group list-group-light list-group-contact list-group-small">
-        <li class="list-group-item">
-          <div class="item-wrapper">
-            <div class="user-avatar">
-              <img src="/images/memoji/Memoji-08.png" alt="">
-            </div>
-            <div class="user-details">
-              <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0016">Putri Ayu</a>
-              <div class="text-xs text-muted">+6286789012345</div>
-            </div>
-            <div class="dropdown ms-auto">
-              <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+    <div class="w-350 d-flex flex-column border-start">
+      <div class="h-50 p-3 border-bottom">
+        <h4 class="fw-semibold mb-3">Recent Point Ask</h4>
+        <ul class="list-group list-group-light list-group-between">
+          <li class="list-group-item">
+            <a href="" class="d-flex flex-fill">
+              <div>Ahmad Yani <small class="d-block text-dark">+6288901234567</small></div>
+              <div class="text-end ms-auto">
+                <strong>6.000</strong>
+                <small class="d-block text-dark">IDR 5.250.000</small>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init="" aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-142,13">
                 <i class="fi fi-rr-menu-dots-vertical"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0001"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#"><i class="fi fi-rr-inbox-in me-1"></i> Offer</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
               </ul>
             </div>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="item-wrapper">
-            <div class="user-avatar">
-              <img src="/images/memoji/Memoji-05.png" alt="">
-            </div>
-            <div class="user-details">
-              <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0008">Hendra Gunawan</a>
-              <div class="text-xs text-muted">+6288901234567</div>
-            </div>
-            <div class="dropdown ms-auto">
-              <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+          </li>
+        </ul>
+      </div>
+
+      <div class="h-50 p-3">
+        <h4 class="fw-semibold mb-3">Recent Point Offer</h4>
+        <ul class="list-group list-group-light list-group-between">
+          <li class="list-group-item">
+            <a href="#" class="d-flex flex-fill">
+              <div>Hendra Gunawan <small class="d-block text-dark">+6288901234567</small></div>
+              <div class="text-end ms-auto">
+                <strong>8.000</strong>
+                <small class="d-block text-dark">IDR 7.850.000</small>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-142,13">
                 <i class="fi fi-rr-menu-dots-vertical"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0008"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#"><i class="fi fi-rr-inbox-in me-1"></i> Ask</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
               </ul>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </main>
 
@@ -374,7 +371,7 @@
 
             <div class="tab-content" id="ex1-content">
               <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                <ul id="member-data-list" class="list-group list-group-light list-group-small list-group-25 mb-4">
+                <ul class="list-group list-group-light list-group-small list-group-25 mb-4">
                   <li class="list-group-item">
                     <span>Member Type</span>
                     <span>Founder</span>
@@ -413,7 +410,7 @@
                   </li>
                 </ul>
 
-                <table id="member-point" class="table table-sm table-bordered">
+                <table class="table table-sm table-bordered">
                   <thead>
                     <tr class="table-dark text-xs">
                       <th class="ps-3">Type of Point</th>
@@ -443,7 +440,7 @@
                 </table>
               </div>
               <div class="tab-pane fade show" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                <ul id="member-emergency-contact" class="list-group list-group-light list-group-small list-group-25">
+                <ul class="list-group list-group-light list-group-small list-group-25">
                   <li class="list-group-item">
                     <span>Emergency Contact</span>
                     <span>Jane Doe</span>
@@ -522,87 +519,5 @@
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js"></script>
   <script src="/js/main.js"></script>
-  <script>
-    new DataTable('.data-table', {
-      responsive: true,
-      searching: false,
-      paging: false,
-      ordering: false,
-      info: false,
-      columnDefs: [
-        { responsivePriority: 1, targets: 0 },
-        { responsivePriority: 0, targets: 1 },
-        { responsivePriority: 3, targets: -1 }
-      ]
-    });
-
-    async function fetchUserData(id) {
-      try {
-        const response = await fetch('/data_dummy/user.json');
-        const users = await response.json();
-        const user = users.find(user => user.userid === id);
-
-        if (user) {
-          displayMemberModal(user);
-        }
-
-      } catch (error) {
-        console.error('Error fetching or parsing data:', error);
-      }
-    }
-
-    const modalMemberData = document.getElementById('detailsMemberModal');
-    modalMemberData.addEventListener('show.mdb.modal', (e) => {
-      const memberID = e.relatedTarget.dataset.id;
-      fetchUserData(memberID);
-    });
-
-    function formatDate(dateString) {
-      if(dateString === ""){
-        return "-";
-      }else{
-        const options = { day: '2-digit', month: 'short', year: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-GB', options);
-      }
-    }
-
-    const memberData  = document.getElementById('member-data-list').querySelectorAll('.list-group-item');
-    const memberPoint = document.getElementById('member-point').querySelectorAll('tbody tr');
-    const memberEC    = document.getElementById('member-emergency-contact').querySelectorAll('.list-group-item');
-
-    function displayMemberModal(user) {
-      modalMemberData.querySelector('h4').textContent = user.userid;
-      displayMemberData(user);
-    }
-
-    function displayMemberData(user) {
-      memberData[0].children[1].textContent = user.member_type;
-      memberData[1].children[1].textContent = user.fullname;
-      memberData[2].children[1].textContent = user.whatsapp;
-      memberData[3].children[1].textContent = user.email;
-      memberData[4].children[1].textContent = `${user.place_of_birth}, ${formatDate(user.date_of_birth)}`;
-      memberData[5].children[1].textContent = user.gender;
-      memberData[6].children[1].textContent = user.address;
-      memberData[7].children[1].textContent = user.notes;
-      memberData[8].children[1].textContent = formatDate(user.join_date);
-
-      memberPoint[0].children[1].textContent = user.founder_point.amount;
-      memberPoint[0].children[2].textContent = formatDate(user.founder_point.validity);
-      memberPoint[0].children[3].textContent = user.founder_point.hold;
-      memberPoint[0].children[4].textContent = user.founder_point.total;
-
-      memberPoint[1].children[1].textContent = user.club_point.amount;
-      memberPoint[1].children[2].textContent = formatDate(user.club_point.validity);
-      memberPoint[1].children[3].textContent = user.club_point.hold;
-      memberPoint[1].children[4].textContent = user.club_point.total;
-
-      if(memberEC) {
-        memberEC[0].children[1].textContent = user.emergency_contact_name;
-        memberEC[1].children[1].textContent = user.emergency_contact_relation;
-        memberEC[2].children[1].textContent = user.emergency_contact_phone;
-        memberEC[3].children[1].textContent = user.emergency_contact_address;
-      }
-    }
-  </script>
 </body>
 </html>

@@ -43,7 +43,7 @@
             <span class="nav_name">Members</span> 
           </a> 
 
-          <a href="transaction_request.html" class="nav-link"> 
+          <a href="transaction_request.html" class="nav-link active"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
@@ -95,7 +95,7 @@
               <div id="request-from" class="row g-2 align-items-center mb-2">
                 <div class="col-sm-3">Customer Name</div>
                 <div class="col-sm-9">
-                  <input type="text" list="user-froms" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberData(this.value);">
+                  <input type="text" list="user-froms" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,true);">
                   <datalist id="user-from">
                     <option value="John Doe">+628123456789</option>
                     <option value="Jane Doe">+628198752423</option>
@@ -106,7 +106,7 @@
               <div id="request-to" class="d-none row g-2 align-items-center mb-2">
                 <div class="col-sm-3">To</div>
                 <div class="col-sm-9">
-                  <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off">
+                  <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);">
                   <datalist id="user-to">
                     <option value="John Doe" class="active">+628123456789</option>
                     <option value="Jane Doe">+628198752423</option>
@@ -220,6 +220,10 @@
                 <span>Notes</span>
                 <span>&nbsp;</span>
               </li>
+              <li class="list-group-item">
+                <span>Join Date</span>
+                <span>&nbsp;</span>
+              </li>
             </ul>
 
             <table id="user-point" class="table table-sm table-bordered mb-0">
@@ -256,7 +260,16 @@
         <div id="recommendations" class="col-sm-4">
           <div class="p-4 bg-white rounded-normal border h-100">
             <h5>Recommendation</h5>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, magni?
+            <ul class="list-group list-group-light list-recommend" style="max-height: 445px;overflow: auto;">
+              <li class="list-group-item">
+                <h6>Cash Back 10% Transfer Point</h6>
+                <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
+              </li>
+              <li class="list-group-item">
+                <h6>Free Admin Fee</h6>
+                <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -270,123 +283,88 @@
   <script src="/js/swiper.js"></script>
   <script src="/js/main.js"></script>
   <script>
-    /* let usersData = [];
+    function loadMemberDataInfo(e,b) {
+      const datalist = e.nextElementSibling;
+      const memberprofile = document.getElementById('user-profile');
+      const memberData = memberprofile.querySelectorAll('.list-group-item');
+      const memberPoint = document.getElementById('user-point').querySelectorAll('tbody tr');
 
-    fetch('/data_dummy/user.json')
-    .then(response => response.json())
-    .then(data => {
-      usersData = data;
-    })
-    .catch(error => {
-      console.error('Error fetching JSON:', error);
-    });
-
-    // Fungsi untuk menampilkan atau menyembunyikan opsi berdasarkan input
-    function toggleActiveClass(datalistInput) {
-      const datalist = datalistInput.nextElementSibling;
-      const searchValue = datalistInput.value.toLowerCase();
-
-      const filteredUsers = usersData.filter(user => {
-        return user.fullname.toLowerCase().startsWith(searchValue);
-        return user.whatsapp.toLowerCase().includes(searchValue);
-      });
-
-      while (datalist.firstChild) {
-        datalist.removeChild(datalist.firstChild);
-      }
-
-      // Buat opsi baru berdasarkan hasil pencarian
-      filteredUsers.forEach(user => {
-        const userprofile = document.getElementById('user-profile');
-        const userPoints = document.getElementById('user-point').querySelectorAll('tbody tr');
-
-        const userDatas = userprofile.querySelectorAll('.list-group-item');
-        const option = document.createElement('option');
-        option.value = user.fullname;
-        option.textContent = user.whatsapp;
-        datalist.appendChild(option);
-
-        function formatDate(dateString) {
-          if(dateString === ""){
-            return "-";
-          }else{
-            const options = { day: '2-digit', month: 'short', year: 'numeric' };
-            return new Date(dateString).toLocaleDateString('en-GB', options);
-          }
-        }
-
-        option.addEventListener('click', () => {
-          datalistInput.value = option.value;
-          datalistInput.classList.remove('active');
-
-          userDatas[0].children[1].textContent = user.member_type;
-          userDatas[1].children[1].textContent = user.fullname;
-          userDatas[2].children[1].textContent = user.whatsapp;
-          userDatas[3].children[1].textContent = user.email;
-          userDatas[4].children[1].textContent = `${user.place_of_birth}, ${formatDate(user.date_of_birth)}`;
-          userDatas[5].children[1].textContent = user.gender;
-          userDatas[6].children[1].textContent = user.address;
-          userDatas[7].children[1].textContent = user.notes;
-
-          userPoints[0].children[1].textContent = user.founder_point.amount;
-          userPoints[0].children[2].textContent = formatDate(user.founder_point.validity);
-          userPoints[0].children[3].textContent = user.founder_point.hold;
-          userPoints[0].children[4].textContent = user.founder_point.total;
-
-          userPoints[1].children[1].textContent = user.club_point.amount;
-          userPoints[1].children[2].textContent = formatDate(user.club_point.validity);
-          userPoints[1].children[3].textContent = user.club_point.hold;
-          userPoints[1].children[4].textContent = user.club_point.total;
-        });
-      });
-
-      datalistInput.classList.toggle('active', datalistInput.value.length > 0 && datalistInput.nextElementSibling.children.length > 0);
-    }
-
-    // Iterasi semua input yang memiliki datalist di dalam div
-    document.querySelectorAll('div:has(> datalist) input').forEach((datalistInput) => {
-      datalistInput.addEventListener('keyup', () => toggleActiveClass(datalistInput));
-      datalistInput.addEventListener('click', () => toggleActiveClass(datalistInput));
-
-      document.addEventListener('click', function(event) {
-        const datalist = datalistInput.nextElementSibling;
-        const isClickedInsideDatalist = datalist.contains(event.target);
-        const isClickedOnDatalistInput = (event.target === datalistInput);
-
-        if (!isClickedInsideDatalist && !isClickedOnDatalistInput) {
-          datalistInput.classList.remove('active');
-        }
-      });
-    }); */
-
-    function loadMemberData(searchTerm) {
       let data = [];
-
       fetch('/data_dummy/user.json')
       .then(response => response.json())
       .then(json => {
         data = json;
-        memberLists(searchTerm);
+        memberLists(e.value);
       })
       .catch(error => console.error('Error fetching data:', error));
 
-      // Function to update the displayed results based on search input
-      function memberLists(searchTerm) {
-        // Clear previous results
-        //resultsList.innerHTML = '';
-        
+      function memberLists(f) {
         const filteredData = data.filter(user => {
-          if(searchTerm !== ""){
-            return user.fullname.toLowerCase().startsWith(searchTerm);
-            return user.whatsapp.toLowerCase().includes(searchTerm);
+          if(f !== ""){
+            return user.fullname.toLowerCase().startsWith(f);
+            return user.whatsapp.toLowerCase().includes(f);
           }
         });
 
-        // Create list items and append to results list
         filteredData.forEach(user => {
-          console.log(user)
+          while (datalist.firstChild) {
+            datalist.removeChild(datalist.firstChild);
+          }
+
+          const option = document.createElement('option');
+          option.value = user.fullname;
+          option.textContent = user.whatsapp;
+          datalist.appendChild(option);
+
+          function formatDate(dateString) {
+            if(dateString === ""){
+              return "-";
+            }else{
+              const options = { day: '2-digit', month: 'short', year: 'numeric' };
+              return new Date(dateString).toLocaleDateString('en-GB', options);
+            }
+          }
+
+          option.addEventListener('click', () => {
+            e.value = option.value;
+            e.classList.remove('active');
+            if(b) { displayMemberData(user); }
+          });
+
+          function displayMemberData(user) {
+            memberData[0].children[1].textContent = user.member_type;
+            memberData[1].children[1].textContent = user.fullname;
+            memberData[2].children[1].textContent = user.whatsapp;
+            memberData[3].children[1].textContent = user.email;
+            memberData[4].children[1].textContent = `${user.place_of_birth}, ${formatDate(user.date_of_birth)}`;
+            memberData[5].children[1].textContent = user.gender;
+            memberData[6].children[1].textContent = user.address;
+            memberData[7].children[1].textContent = user.notes;
+            memberData[8].children[1].textContent = formatDate(user.join_date);
+
+            memberPoint[0].children[1].textContent = user.founder_point.amount;
+            memberPoint[0].children[2].textContent = formatDate(user.founder_point.validity);
+            memberPoint[0].children[3].textContent = user.founder_point.hold;
+            memberPoint[0].children[4].textContent = user.founder_point.total;
+
+            memberPoint[1].children[1].textContent = user.club_point.amount;
+            memberPoint[1].children[2].textContent = formatDate(user.club_point.validity);
+            memberPoint[1].children[3].textContent = user.club_point.hold;
+            memberPoint[1].children[4].textContent = user.club_point.total;
+          }
         });
+
+        e.classList.toggle('active', e.value.length > 0 && datalist.children.length > 0);
       }
+
+      document.addEventListener('click', function(event) {
+        const isClickedInsideDatalist = datalist.contains(event.target);
+        const isClickedOnDatalistInput = (event.target === e);
+
+        if (!isClickedInsideDatalist && !isClickedOnDatalistInput) {
+          e.classList.remove('active');
+        }
+      });
     }
   </script>
 </body>

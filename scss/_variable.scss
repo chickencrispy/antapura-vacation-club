@@ -56,7 +56,10 @@ h1 { font-size: $fs-3xl; }
 
 .shadow-xs { box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);}
 
-.w-350 { width: 350px !important; }
+.w-350 { 
+  width: 350px !important;
+  flex: 0 0 350px;
+}
 
 .h-40 { height: 40px !important; }
 
