@@ -19,6 +19,10 @@
       </button>
     </div>
 
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Proceed Transaction</h2>
+    </div>
+
     <div class="header-profile"> 
       <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
       <span class="text-sm ms-2">Debi Rahmadi</span>
@@ -85,140 +89,147 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3 flex-fill">
-      <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Proceed Transaction</h2>
-      </div>
-      
-      <div class="row g-3 mb-3">
-        <div class="col-sm-4">
-          <div class="p-3 border rounded-normal">
-            <div class="mb-4 p-3 text-end bg-primary-subtle text-primary rounded-normal">
-              <small>Transaction ID</small>
-              <h3 class="mb-0 fw-bold">ATP2406130001</h3>
-              <small>06/13/2024 09:37:36</small>
+    <div class="content-fill">
+      <div class="p-3">
+        <div class="row g-3 mb-3">
+          <div class="col-sm-4">
+            <div class="p-3 border rounded-normal">
+              <h4 class="fw-bold mb-3">Transaction Details</h4>
+        
+              <ul class="list-group list-group-light list-group-small list-group-33">
+                <li class="list-group-item">
+                  <span>Transaction ID</span>
+                  <span>ATP2406130001</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Request Type</span>
+                  <span>Top Up</span>
+                </li>
+                <li class="list-group-item">
+                  <span>From</span>
+                  <span>John Doe</span>
+                </li>
+                <li class="list-group-item">
+                  <span>To</span>
+                  <span>Antapura</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Item Type</span>
+                  <span>Point</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Details</span>
+                  <span>-</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Amount</span>
+                  <span>10.000</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Payment</span>
+                  <span>IDR 10.500.000</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Notes</span>
+                  <span></span>
+                </li>
+                <li class="list-group-item">
+                  <span>Date Time</span>
+                  <span>06-08-2024 09:37:36</span>
+                </li>
+              </ul>
             </div>
-
-            <ul class="list-group list-group-light list-group-small list-group-33 mb-4">
-              <li class="list-group-item">
-                <span>Request Type</span>
-                <span>Top Up</span>
-              </li>
-              <li class="list-group-item">
-                <span>From</span>
-                <span>John Doe</span>
-              </li>
-              <li class="list-group-item">
-                <span>To</span>
-                <span>Antapura</span>
-              </li>
-              <li class="list-group-item">
-                <span>Item Type</span>
-                <span>Point</span>
-              </li>
-              <li class="list-group-item">
-                <span>Details</span>
-                <span>-</span>
-              </li>
-              <li class="list-group-item">
-                <span>Amount</span>
-                <span>10.000</span>
-              </li>
-              <li class="list-group-item">
-                <span>Payment</span>
-                <span>IDR 10.500.000</span>
-              </li>
-              <li class="list-group-item">
-                <span>Notes</span>
-                <span></span>
-              </li>
-            </ul>
           </div>
-        </div>
-      
-        <div class="col-sm-4">
-          <div class="p-3 border rounded-normal">
-            <h4 class="fw-bold mb-3">Reference</h4>
-
-            <form action="" class="d-flex flex-column h-100">
-              <div class="mb-3">
-                <label class="mb-2">Reference or Booking Code</label>
-                <textarea class="form-control text-sm" rows="5"></textarea>
-              </div>
-
-              <div class="mb-3">
-                <label class="mb-2">Attach documents</label>
-                <div class="multiple-images-upload">
-                  <label class="add-image">
-                    <input type="file" name="" id="" class="d-none">
-                    <i class="fi fi-rr-add-image text-lg text-muted"></i>
-                  </label>
+        
+          <div class="col-sm-4">
+            <div class="p-3 border rounded-normal">
+              <h4 class="fw-bold mb-3">Reference</h4>
+        
+              <form action="" class="d-flex flex-column h-100">
+                <div class="mb-2">
+                  <label class="mb-2">Accomodation</label>
+                  <input type="text" class="form-control text-sm mb-2" placeholder="Accommodation Name">
                 </div>
-              </div>
 
-              <div class="mb-3">
-                <label class="mb-2">Task Actions</label>
-                <ul class="list-group task-list">
-                  <li class="list-group-item p-2">
-                    <label class="d-flex align-items-center">
-                      <input type="checkbox" class="form-check-input form-check-sm">
-                      <span>Confirmation to customers</span>
+                <div class="mb-3">
+                  <label class="mb-2">Reference or Booking Code</label>
+                  <input type="text" class="form-control text-sm mb-2" placeholder="Booking Code">
+                </div>
+        
+                <div class="mb-3">
+                  <label class="mb-2">Attach documents</label>
+                  <div class="multiple-images-upload">
+                    <label class="add-image">
+                      <input type="file" name="" id="" class="d-none">
+                      <i class="fi fi-rr-add-image text-lg text-muted"></i>
                     </label>
-                  </li>
-                  <li class="list-group-item p-2">
-                    <label class="d-flex align-items-center">
-                      <input type="checkbox" class="form-check-input form-check-sm">
-                      <span>Payment received</span>
-                    </label>
-                  </li>
-                  <li class="list-group-item p-2">
-                    <label class="d-flex align-items-center">
-                      <input type="checkbox" class="form-check-input form-check-sm">
-                      <span>Purchase items customer's request</span>
-                    </label>
-                  </li>
-                  <li class="list-group-item p-2">
-                    <label class="d-flex align-items-center">
-                      <input type="checkbox" class="form-check-input form-check-sm">
-                      <span>Hold customer's point</span>
-                    </label>
-                  </li>
-                  <li class="list-group-item p-2">
-                    <label class="d-flex align-items-center">
-                      <input type="checkbox" class="form-check-input form-check-sm">
-                      <span>Reduce customer's point</span>
-                    </label>
-                  </li>
-                  <li class="list-group-item p-2">
-                    <label class="d-flex align-items-center">
-                      <input type="checkbox" class="form-check-input form-check-sm">
-                      <span>Add Customer's point</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="d-flex gap-2 mt-auto pt-3">
-                <button type="button" class="btn btn-normal btn-secondary text-xs">Update & Close Request</button>
-                <button type="button" class="btn btn-normal btn-primary text-xs ms-auto">Update</button>
-              </div>
-            </form>
+                  </div>
+                </div>
+        
+                <div class="mb-3">
+                  <label class="mb-2">Task Actions</label>
+                  <ul class="list-group task-list">
+                    <li class="list-group-item p-2">
+                      <label class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input form-check-sm">
+                        <span>Confirmation to customers</span>
+                      </label>
+                    </li>
+                    <li class="list-group-item p-2">
+                      <label class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input form-check-sm">
+                        <span>Payment received</span>
+                      </label>
+                    </li>
+                    <li class="list-group-item p-2">
+                      <label class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input form-check-sm">
+                        <span>Purchase items customer's request</span>
+                      </label>
+                    </li>
+                    <li class="list-group-item p-2">
+                      <label class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input form-check-sm">
+                        <span>Hold customer's point</span>
+                      </label>
+                    </li>
+                    <li class="list-group-item p-2">
+                      <label class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input form-check-sm">
+                        <span>Reduce customer's point</span>
+                      </label>
+                    </li>
+                    <li class="list-group-item p-2">
+                      <label class="d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input form-check-sm">
+                        <span>Add Customer's point</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+        
+                <div class="d-flex gap-2 mt-auto pt-3">
+                  <button type="button" class="btn btn-normal btn-secondary text-xs">Update & Close Request</button>
+                  <button type="button" class="btn btn-normal btn-primary text-xs ms-auto">Update</button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="p-3 border rounded-normal">
-            <h4 class="fw-bold mb-0">Recommendation</h4>
-            <ul class="list-group list-group-light list-recommend" style="max-height: 445px;overflow: auto;">
-              <li class="list-group-item">
-                <h6>Cash Back 10% Transfer Point</h6>
-                <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
-              </li>
-              <li class="list-group-item">
-                <h6>Free Admin Fee</h6>
-                <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
-              </li>
-            </ul>
+        
+          <div class="col-sm-4">
+            <div class="p-3 border rounded-normal">
+              <h4 class="fw-bold mb-0">Recommendation</h4>
+              <ul class="list-group list-group-light list-recommend" style="max-height: 445px;overflow: auto;">
+                <li class="list-group-item">
+                  <h6>Cash Back 10% Transfer Point</h6>
+                  <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
+                </li>
+                <li class="list-group-item">
+                  <h6>Free Admin Fee</h6>
+                  <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

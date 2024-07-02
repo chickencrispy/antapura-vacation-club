@@ -19,6 +19,10 @@
       </button>
     </div>
 
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Member Management</h2>
+    </div>
+
     <div class="header-profile"> 
       <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
       <span class="text-sm ms-2">Debi Rahmadi</span>
@@ -85,135 +89,132 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3 flex-fill">
-      <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Member Management</h2>
-      </div>
-      
-      <div class="row g-2 mb-3">
-        <div class="col-sm-5">
-          <div class="row g-2">
-            <div class="col-md-4">
-              <select class="form-select text-sm h-40">
-                <option value="">All Member</option>
-                <option value="">Active</option>
-                <option value="">Deactive</option>
-                <option value="">Pending</option>
-              </select>
+    <div class="content-fill">
+      <div id="content-filter" class="p-3 border-bottom bg-light">
+        <div class="row g-2 justify-content-between">
+          <div class="col-sm-2">
+            <div class="h-100">
+              <button class="btn btn-success btn-normal text-xs h-40" data-mdb-modal-init data-mdb-target="#newMemberModal">
+                <i class="fi fi-rr-plus me-2"></i> New Member
+              </button>
             </div>
-      
-            <div class="col-md-8">
-              <div class="d-flex gap-2">
-                <div class="input-icon flex-fill">
-                  <input type="text" class="form-control text-sm h-40" placeholder="Search...">
-                  <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+          </div>
+        
+          <div class="col-sm-5">
+            <div class="row g-2">
+              <div class="col-md-4">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Member</option>
+                  <option value="">Active</option>
+                  <option value="">Deactive</option>
+                  <option value="">Pending</option>
+                </select>
+              </div>
+        
+              <div class="col-md-8">
+                <div class="d-flex gap-2">
+                  <div class="input-icon flex-fill">
+                    <input type="text" class="form-control text-sm h-40" placeholder="Search...">
+                    <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+                  </div>
+                  <button class="btn btn-normal btn-primary text-xs shadow-none h-40">Search</button>
                 </div>
-                <button class="btn btn-normal btn-primary text-xs shadow-none h-40">Search</button>
               </div>
             </div>
           </div>
         </div>
-      
-        <div class="col-sm-7">
-          <div class="text-end h-100">
-            <button class="btn btn-dark btn-normal text-xs h-40" data-mdb-modal-init data-mdb-target="#newMemberModal">
-              <i class="fi fi-rr-plus me-2"></i> New Member
-            </button>
-          </div>
-        </div>
       </div>
       
-      <div class="bg-white p-3 border rounded-3">
-        <table id="table-user" class="table table-sm data-table" style="width: 100%;">
-          <thead>
-            <tr>
-              <th rowspan="2" class="text-end" width="42px">No.</th>
-              <th rowspan="2" class="text-nowrap" width="90px">Member ID</th>
-              <th rowspan="2" class="text-nowrap">Full Name</th>
-              <th colspan="5" class="text-center">Details</th>
-              <th rowspan="2" class="text-center" width="70px">Status</th>
-              <th rowspan="2" width="3%">&nbsp;</th>
-            </tr>
-            <tr>
-              <th width="130px">WhatsApp</th>
-              <th>Email</th>
-              <th>Place, Date of Birth</th>
-              <th width="70px">Gender</th>
-              <th>Address</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-end">1</td>
-              <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0001">F0001</a></td>
-              <td class="text-nowrap">Ahmad Yani</td>
-              <td>+6281234567890</td>
-              <td>ahmad.yani@example.com</td>
-              <td>Jakarta, 15 May 1980</td>
-              <td>Male</td>
-              <td>Jl. Jaya No. 1, Jakarta</td>
-              <td class="text-center">Active</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0001"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end text-nowrap">2</td>
-              <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0002">F0002</a></td>
-              <td class="text-nowrap">Budi Santoso</td>
-              <td>+6282345678901</td>
-              <td>budi.santoso@example.com</td>
-              <td>Bandung, 20 Aug 1982</td>
-              <td>Male</td>
-              <td>Jl. Sejahtera No. 2, Bandung</td>
-              <td class="text-center">Active</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0002"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <div class="table-footer">
-          <div class="action-area d-none d-md-inline-flex">
-            <button class="btn btn-sm btn-light"><i class="fi fi-rr-print me-1"></i> Print</button>
-            <button class="btn btn-sm bg-success-subtle text-success"><i class="fi fi-rr-file-download me-1"></i> Excel</button>
-            <button class="btn btn-sm bg-danger-subtle text-danger"><i class="fi fi-rr-file-download me-1"></i> PDF</button>
+      <div class="p-3">
+        <div class="bg-white">
+          <table id="table-user" class="table table-sm table-sticky-head data-table" style="width: 100%;">
+            <thead class="text-xs text-uppercase bg-white">
+              <tr>
+                <th class="text-end" width="42px">No.</th>
+                <th class="text-nowrap" width="90px">Member ID</th>
+                <th class="text-nowrap">Full Name</th>
+                <th width="130px">WhatsApp</th>
+                <th>Email</th>
+                <th>Place, Date of Birth</th>
+                <th width="70px">Gender</th>
+                <th>Address</th>
+                <th class="text-center" width="70px">Status</th>
+                <th width="3%">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-end">1</td>
+                <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0001">F0001</a></td>
+                <td class="text-nowrap">Ahmad Yani</td>
+                <td>+6281234567890</td>
+                <td>ahmad.yani@example.com</td>
+                <td>Jakarta, 15 May 1980</td>
+                <td>Male</td>
+                <td>Jl. Jaya No. 1, Jakarta</td>
+                <td class="text-center">Active</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0001"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end text-nowrap">2</td>
+                <td class="text-nowrap"><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0002">F0002</a></td>
+                <td class="text-nowrap">Budi Santoso</td>
+                <td>+6282345678901</td>
+                <td>budi.santoso@example.com</td>
+                <td>Bandung, 20 Aug 1982</td>
+                <td>Male</td>
+                <td>Jl. Sejahtera No. 2, Bandung</td>
+                <td class="text-center">Active</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#detailsMemberModal" data-id="F0002"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+          <div class="table-footer">
+            <div class="action-area d-none d-md-inline-flexs">
+              <button class="btn btn-sm btn-light"><i class="fi fi-rr-print me-1"></i> Print</button>
+              <button class="btn btn-sm bg-success-subtle text-success"><i class="fi fi-rr-file-download me-1"></i> Excel</button>
+              <button class="btn btn-sm bg-danger-subtle text-danger"><i class="fi fi-rr-file-download me-1"></i> PDF</button>
+            </div>
+        
+            <nav class="table-pagination">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
           </div>
-    
-          <nav class="table-pagination">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </div>
 
     <div class="w-350 p-3 border-start">
-      <h4 class="fw-semibold mb-3">New Joined Member</h4>
+      <h3 class="fw-bold mb-3">New Joined Member</h3>
       <ul class="list-group list-group-light list-group-contact list-group-small">
         <li class="list-group-item">
           <div class="item-wrapper">
@@ -359,7 +360,7 @@
             <h4 class="modal-title fw-bold" id="exampleModalLabel">F0001</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-4 text-sm bg-white" style="min-height: 600px;">
+          <div class="modal-body p-4 text-sm bg-white" style="min-height: 602px;">
             <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
               <li class="nav-item" role="presentation">
                 <a data-mdb-tab-init class="nav-link active" id="ex1-tab-1" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Profile</a>

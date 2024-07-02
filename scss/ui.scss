@@ -144,7 +144,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
 .app-container {
   display: flex;
   flex-direction: column;
-  max-width: 680px;
+  max-width: 480px;
   min-height: 100dvh;
   margin-inline: auto;
   padding-bottom: 70px;
@@ -382,7 +382,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   z-index: 999;
 
   .container {
-    max-width: 680px;
+    max-width: 480px;
     height: 100%;
     margin-inline: auto;
     padding: 0 14px 12px;

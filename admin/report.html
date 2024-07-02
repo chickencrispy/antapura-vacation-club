@@ -19,6 +19,10 @@
       </button>
     </div>
 
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Transaction Report</h2>
+    </div>
+
     <div class="header-profile"> 
       <img src="../images/memoji/Memoji-04.png" alt="">
     </div>
@@ -53,7 +57,7 @@
             <span class="nav_name">Marketplace</span> 
           </a>
 
-          <a href="report.html" class="nav-link"> 
+          <a href="report.html" class="nav-link active"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
@@ -83,271 +87,290 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3">
-      <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Transaction Report</h2>
-      </div>
-      
-      <div class="row g-2 mb-3">
-        <div class="col-sm-9">
-          <div class="row g-2">
-            <div class="col-md-2">
-              <select class="form-select text-sm">
-                <option value="">All Transaction</option>
-                <option value="">Top Up</option>
-                <option value="">Transfer</option>
-                <option value="">Ask</option>
-                <option value="">Offer</option>
-                <option value="">Redeem</option>
-              </select>
-            </div>
-
-            <div class="col-md-2">
-              <select class="form-select text-sm">
-                <option value="">All Status</option>
-                <option value="">Open</option>
-                <option value="">Waiting Payment</option>
-                <option value="">On proccess</option>
-                <option value="">Success</option>
-                <option value="">Cancel</option>
-              </select>
-            </div>
-      
-            <div class="col-md-2">
-              <select class="form-select text-sm">
-                <option value="">All Member</option>
-                <option value="">Founders Member</option>
-                <option value="">Club Member</option>
-                <option value="">Deactive Member</option>
-              </select>
-            </div>
-      
-            <div class="col-md-3">
-              <div id="custom-period" class="w-100">
-                <div class="">
-                  <select class="form-select text-sm">
-                    <option value="">All Period</option>
-                    <option value="">Today</option>
-                    <option value="">This Week</option>
-                    <option value="">This Month</option>
-                    <option value="">Custom</option>
-                  </select>
-                </div>
+    <div class="content-fill">
+      <div id="content-filter" class="p-3 border-bottom bg-light">
+        <div class="row g-2">
+          <div class="col-sm-9">
+            <div class="row g-2">
+              <div class="col-md-2">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Transaction</option>
+                  <option value="">Top Up</option>
+                  <option value="">Transfer</option>
+                  <option value="">Ask</option>
+                  <option value="">Offer</option>
+                  <option value="">Redeem</option>
+                </select>
+              </div>
         
-                <div class="grid-2 d-none gap-2 h-100 align-items-stretch">
-                  <div class="input-date-icon">
-                    <input type="date" name="" id="" class="form-control max-today text-sm h-100">
-                    <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+              <div class="col-md-2">
+                <select class="form-select text-sm">
+                  <option value="">All Status</option>
+                  <option value="">Open</option>
+                  <option value="">Waiting Payment</option>
+                  <option value="">On proccess</option>
+                  <option value="">Success</option>
+                  <option value="">Hold</option>
+                </select>
+              </div>
+        
+              <div class="col-md-2">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Member</option>
+                  <option value="">Founders Member</option>
+                  <option value="">Club Member</option>
+                  <option value="">Deactive Member</option>
+                </select>
+              </div>
+        
+              <div class="col-md-3">
+                <div id="custom-period" class="w-100">
+                  <div class="">
+                    <select class="form-select text-sm h-40">
+                      <option value="">All Period</option>
+                      <option value="">Today</option>
+                      <option value="">This Week</option>
+                      <option value="">This Month</option>
+                      <option value="">Custom</option>
+                    </select>
                   </div>
-                  <div class="input-date-icon">
-                    <input type="date" name="" id="" class="form-control max-today text-sm h-100">
-                    <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+          
+                  <div class="grid-2 d-none gap-2 h-40 align-items-stretch">
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      
-        <div class="col-sm-3">
-          <div class="d-flex gap-2">
-            <div class="input-icon flex-fill">
-              <input type="text" class="form-control text-sm" placeholder="Search...">
-              <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+        
+          <div class="col-sm-3">
+            <div class="d-flex gap-2">
+              <div class="input-icon flex-fill">
+                <input type="text" class="form-control text-sm h-40" placeholder="Search...">
+                <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+              </div>
+              <button class="btn btn-normal btn-primary text-xs h-40">Search</button>
             </div>
-            <button class="btn btn-normal btn-primary text-xs">Search</button>
           </div>
         </div>
       </div>
-      
-      <div class="p-3 bg-white rounded-3 border">
-        <table class="table table-sm data-table bg-white" style="width: 100%;">
-          <thead>
-            <tr>
-              <th rowspan="2" class="text-end">No.</th>
-              <th rowspan="2">Transaction ID</th>
-              <th rowspan="2">Date/Time</th>
-              <th rowspan="2">Transaction Type</th>
-              <th colspan="2" class="text-center">User ID</th>
-              <th rowspan="2">Type</th>
-              <th rowspan="2">Details</th>
-              <th rowspan="2">Amount</th>
-              <th rowspan="2">Type of Point</th>
-              <th rowspan="2">Remarks</th>
-              <th rowspan="2">Status</th>
-              <th rowspan="2">Admin</th>
-              <th rowspan="2">&nbsp;</th>
-            </tr>
-            <tr>
-              <th>From</th>
-              <th>To</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-end">1</td>
-              <td>ATP2406001023</td>
-              <td>06/02/2024 10:42:36</td>
-              <td>Transfer</td>
-              <td>John Doe</td>
-              <td>Jane Doe</td>
-              <td>Point</td>
-              <td>-</td>
-              <td>12.000</td>
-              <td>Club Point</td>
-              <td>-</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end">2</td>
-              <td>ATP2405001025</td>
-              <td>06/05/2024 11:22:18</td>
-              <td>Top Up</td>
-              <td>Antapura</td>
-              <td>Jane Doe</td>
-              <td>Point</td>
-              <td>-</td>
-              <td>50.000</td>
-              <td>Club Point</td>
-              <td>-</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end">3</td>
-              <td>ATP2404003032</td>
-              <td>30/04/2024 15:48:00</td>
-              <td>Purchase</td>
-              <td>Jane Doe</td>
-              <td>Antapura</td>
-              <td>Purchase</td>
-              <td>Hotel Booking - Antapura Resort</td>
-              <td>18.000</td>
-              <td>Club Point</td>
-              <td>TRV12345678 - Antapura Villa (06 Jun 2024 - 09 Jun 2024)</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-end">4</td>
-              <td>ATP2404003068</td>
-              <td>23/04/2024 08:12:42</td>
-              <td>Purchase</td>
-              <td>John Doe</td>
-              <td>Antapura</td>
-              <td>Purchase</td>
-              <td>Ticket - Garuda Airlines</td>
-              <td>8.600</td>
-              <td>Club Point</td>
-              <td>GA12345678 - (BTH-CGK, 05 Jun 2024)</td>
-              <td>Success</td>
-              <td>Debi</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                    <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="table-footer">
-          <nav class="table-pagination">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
+        
+      <div class="p-3">
+        <div class="bg-white">
+          <table class="table table-sm table-sticky-head data-table" style="width: 100%;">
+            <thead class="text-xs text-uppercase bg-white">
+              <tr>
+                <th width="42px" class="text-end">No.</th>
+                <th width="120px">Transaction ID</th>
+                <th width="155px">Date Time</th>
+                <th width="120px">Transaction</th>
+                <th>Member</th>
+                <th width="120px">Item</th>
+                <th>Details</th>
+                <th width="105px">Type of Point</th>
+                <th width="80px" class="text-end">Amount</th>
+                <th width="120px" class="text-end">Payment</th>
+                <th width="75px">Status</th>
+                <th width="75px">CS</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-end">1</td>
+                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406001023</a></td>
+                <td>06-02-2024 00:42:36</td>
+                <td>Transfer</td>
+                <td>John Doe - Ahmad Yani</td>
+                <td>Point</td>
+                <td>-</td>
+                <td>Club Point</td>
+                <td class="text-end">12.000</td>
+                <td class="text-end">IDR 0</td>
+                <td>Success</td>
+                <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu text-sm">
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">2</td>
+                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2405001025</a></td>
+                <td>06-05-2024 08:22:18</td>
+                <td>Top Up</td>
+                <td>Jane Doe</td>
+                <td>Point</td>
+                <td>-</td>
+                <td>Club Point</td>
+                <td class="text-end">50.000</td>
+                <td class="text-end">IDR 50.500.000</td>
+                <td>Waiting</td>
+                <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu text-sm">
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">3</td>
+                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2404003032</a></td>
+                <td>30-04-2024 15:48:00</td>
+                <td>Redeem</td>
+                <td>Putri Ayu</td>
+                <td>Hotel & Resort</td>
+                <td>Planet Holiday Hotel : PHH2406003032</td>
+                <td>Club Point</td>
+                <td class="text-end">18.000</td>
+                <td class="text-end">IDR 0</td>
+                <td>Success</td>
+                <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu text-sm">
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">4</td>
+                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2404003068</a></td>
+                <td>23-04-2024 08:12:42</td>
+                <td>Redeem</td>
+                <td>Budi Santoso</td>
+                <td>Ticket</td>
+                <td>Garuda Indonesia : GA2406003068</td>
+                <td>Club Point</td>
+                <td class="text-end">8.600</td>
+                <td class="text-end">IDR 0</td>
+                <td>Success</td>
+                <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu text-sm">
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
+                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="table-footer">
+            <nav class="table-pagination">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- MODAL ASSIGN TO -->
-  <div class="modal fade" id="assignToModal" tabindex="-1" aria-labelledby="assignToModalLabel" aria-hidden="true">
+  <!-- MODAL TRANSACTION INFO -->
+  <div class="modal fade" id="transactionInfoModal" tabindex="-1" aria-labelledby="transactionInfoModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
       <div class="modal-content">
-        <form class="d-flex flex-column flex-fill">
+        <div class="d-flex flex-column flex-fill">
           <div class="modal-header">
-            <h4 class="modal-title fw-bold" id="exampleModalLabel">Assign To</h4>
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Transaction Details</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div>
-              <div class="mb-2">
-                <label class="text-xs fw-bold mb-1">Admin Name</label>
-                <input type="text" list="assign-admin" class="form-control text-sm" autocomplete="off">
-                <datalist id="assign-admin">
-                  <option>Administrator</option>
-                  <option>Customer Service</option>
-                </datalist>
-              </div>
-              <div class="mb-2">
-                <label class="text-xs fw-bold mb-1">Notes</label>
-                <textarea class="form-control text-sm" rows="3"></textarea>
-              </div>
-            </div>
+            <ul class="list-group list-group-light list-group-small text-sm list-group-33 px-3">
+              <li class="list-group-item">
+                <span>Transaction ID</span>
+                <span>ATP2406130001</span>
+              </li>
+              <li class="list-group-item">
+                <span>Transaction Type</span>
+                <span>Top Up</span>
+              </li>
+              <li class="list-group-item">
+                <span>Member Name</span>
+                <span>John Doe</span>
+              </li>
+              <li class="list-group-item">
+                <span>Item Type</span>
+                <span>Point</span>
+              </li>
+              <li class="list-group-item">
+                <span>Details</span>
+                <span>-</span>
+              </li>
+              <li class="list-group-item">
+                <span>Amount</span>
+                <span>10.000</span>
+              </li>
+              <li class="list-group-item">
+                <span>Payment</span>
+                <span>IDR 10.500.000</span>
+              </li>
+              <li class="list-group-item">
+                <span>Notes</span>
+                <span></span>
+              </li>
+              <li class="list-group-item">
+                <span>Date Time</span>
+                <span>06-08-2024 09:37:36</span>
+              </li>
+            </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-normal btn-dark">Submit</button>
+            <div class="me-auto">
+              <button type="button" class="btn btn-normal text-xs btn-danger" data-mdb-modal-init data-mdb-target="#holdTransactionModal">Hold</button>
+              <button type="button" class="btn btn-normal text-xs btn-warning" data-mdb-modal-init data-mdb-target="#assignToModal">Assign To</button>
+            </div>
+            <button type="button" class="btn btn-normal text-xs btn-primary" onclick="window.location.href='transaction_process.html'">Follow Up</button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

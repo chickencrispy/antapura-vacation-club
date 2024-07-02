@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings</title>
+  <title>Administrator Settings</title>
   <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/date-picker.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
@@ -17,6 +17,10 @@
       <button class="btn" id="header-toggle">
         <i class="fi fi-rr-menu-burger"></i>
       </button>
+    </div>
+
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Administrator</h2>
     </div>
 
     <div class="header-profile"> 
@@ -43,128 +47,137 @@
             <span class="nav_name">Members</span> 
           </a> 
 
-          <a href="report.html" class="nav-link"> 
-            <i class="fi fi-rr-chart-pie nav-icon"></i>
-            <span class="nav_name">Transaction</span> 
-          </a>
-
           <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-          
-          <a href="#" class="nav-link"> 
-            <i class="fi fi-rr-comment nav-icon"></i>
-            <span class="nav_name">Messages</span> 
-          </a> 
-          
+
+          <a href="marketplace.html" class="nav-link"> 
+            <i class="fi fi-rr-shop nav-icon"></i>
+            <span class="nav_name">Marketplace</span> 
+          </a>
+
+          <a href="report.html" class="nav-link"> 
+            <i class="fi fi-rr-chart-pie nav-icon"></i>
+            <span class="nav_name">Report</span> 
+          </a>
+
           <a href="settings.html" class="nav-link active"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Settings</span> 
+            <span class="nav_name">Administrator</span> 
           </a> 
           
           <a href="listing.html" class="nav-link"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
+          </a>
+
+          <a href="listing.html" class="nav-link"> 
+            <i class="fi fi-rr-sparkles nav-icon"></i>
+            <span class="nav_name">Promo</span> 
           </a> 
         </div>
       </div> 
       
       <a href="#" class="nav-link"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
-        <span class="nav_name">SignOut</span> 
+        <span class="nav_name">Sign Out</span> 
       </a>
     </nav>
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3">
-      <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Settings</h2>
-      </div>
-      
-      <div class="row g-2 mb-3">
-        <div class="col-sm-6">
-          <div class="row g-2">
-            <div class="col-6 col-md-3">
-              <select class="form-select text-sm">
-                <option value="">All Position</option>
-                <option value="">Super Administrator</option>
-                <option value="">Administrator</option>
-                <option value="">Customer Service</option>
-              </select>
+    <div class="content-fill">
+      <div id="content-filter" class="p-3 border-bottom bg-light">
+        <div class="row g-2 justify-content-between">
+          <div class="col-sm-2">
+            <div class="h-100">
+              <button class="btn btn-success btn-normal text-xs h-40" data-mdb-modal-init data-mdb-target="#newAdminModal">
+                <i class="fi fi-rr-plus me-2"></i> Add New
+              </button>
             </div>
-      
-            <div class="col-6 col-md-3">
-              <select class="form-select text-sm">
-                <option value="">All Status</option>
-                <option value="">Active</option>
-                <option value="">Inactive</option>
-                <option value="">Pending</option>
-              </select>
-            </div>
-      
-            <div class="col-md-6">
-              <div class="d-flex gap-2">
-                <div class="input-icon flex-fill">
-                  <input type="text" class="form-control text-sm" placeholder="Search...">
-                  <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="row g-2">
+              <div class="col-6 col-md-3">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Position</option>
+                  <option value="">Super Administrator</option>
+                  <option value="">Administrator</option>
+                  <option value="">Customer Service</option>
+                </select>
+              </div>
+        
+              <div class="col-6 col-md-3">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Status</option>
+                  <option value="">Active</option>
+                  <option value="">Inactive</option>
+                  <option value="">Pending</option>
+                </select>
+              </div>
+        
+              <div class="col-md-6">
+                <div class="d-flex gap-2">
+                  <div class="input-icon flex-fill">
+                    <input type="text" class="form-control text-sm h-40" placeholder="Search...">
+                    <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+                  </div>
+                  <button class="btn btn-normal btn-primary text-xs h-40">Search</button>
                 </div>
-                <button class="btn btn-normal btn-primary text-xs">Search</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
       
-        <div class="col-sm-6">
-          <div class="text-end h-100">
-            <button class="btn btn-dark btn-normal text-xs" data-mdb-modal-init data-mdb-target="#newAdminModal">
-              <i class="fi fi-rr-add me-2"></i> Add New
-            </button>
-          </div>
+      <div class="p-3">
+        <div class="bg-white">
+          <table class="table table-sm data-table bg-white" style="width: 100%;">
+            <thead class="text-xs text-uppercase bg-white">
+              <tr>
+                <th class="text-end" width="42px">No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th width="150px">Position</th>
+                <th width="150px">Date Created</th>
+                <th width="80px">Status</th>
+                <th width="160px">Last Login</th>
+                <th class="text-center" width="100px">Detection IP</th>
+                <th width="42px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-end">1</td>
+                <td class="text-nowrap">Velline Chen</td>
+                <td>velline@mail.com</td>
+                <td>Super Admin</td>
+                <td>05-25-2024</td>
+                <td>Active</td>
+                <td>06-06-2024 10:57:36</td>
+                <td class="text-center">206.425.2.18</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu text-sm">
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#editAdminModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-unlock me-1"></i> Reset Password</a></li>
+                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Suspend</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      
-      <div class="p-3 bg-white rounded-3 border">
-        <table class="table table-sm data-table bg-white" style="width: 100%;">
-          <thead>
-            <tr>
-              <th class="text-end" width="3%">No.</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Position</th>
-              <th>Date Created</th>
-              <th>Status</th>
-              <th>Last Login</th>
-              <th width="3%">&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-end">1</td>
-              <td class="text-nowrap">Velline Chen</td>
-              <td>velline@mail.com</td>
-              <td>Super Admin</td>
-              <td>25/05/2024</td>
-              <td>Active</td>
-              <td>06/06/2024 10:57:36</td>
-              <td class="text-end">
-                <div class="dropdown">
-                  <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu text-sm">
-                    <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#editAdminModal"><i class="fi fi-rr-edit me-1"></i> Edit</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-minus-circle me-1"></i> Suspend</a></li>
-                    <li><a href="#" class="dropdown-item"><i class="fi fi-rr-trash me-1"></i> Delete</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
+
+    <div class="w-350 border-start"></div>
   </main>
 
   <!-- MODAL NEW ADMIN -->

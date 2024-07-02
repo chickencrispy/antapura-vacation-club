@@ -19,6 +19,10 @@
       </button>
     </div>
 
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Transaction Request</h2>
+    </div>
+
     <div class="header-profile"> 
       <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
       <span class="text-sm ms-2">Debi Rahmadi</span>
@@ -85,90 +89,91 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3 flex-fill">
-      <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Transaction Request</h2>
-      </div>
-      
-      <div class="row g-2 mb-3">
-        <div class="col-sm-7">
-          <div class="row g-2">
-            <div class="col-md-3">
-              <select class="form-select text-sm h-40">
-                <option value="">All Transaction</option>
-                <option value="">Top Up</option>
-                <option value="">Transfer</option>
-                <option value="">Ask</option>
-                <option value="">Offer</option>
-                <option value="">Redeem</option>
-              </select>
-            </div>
-      
-            <div class="col-md-3">
-              <select class="form-select text-sm h-40">
-                <option value="">All Member</option>
-                <option value="">Founders</option>
-                <option value="">Club</option>
-                <option value="">Deactive</option>
-              </select>
-            </div>
-      
-            <div class="col-md-4">
-              <div id="custom-period" class="w-100">
-                <div class="">
-                  <select class="form-select text-sm h-40">
-                    <option value="">All Period</option>
-                    <option value="">Today</option>
-                    <option value="">This Week</option>
-                    <option value="">This Month</option>
-                    <option value="">Custom</option>
-                  </select>
-                </div>
+    <div class="content-fill">
+      <div id="content-filter" class="p-3 border-bottom bg-light">
+        <div class="row g-2 justify-content-between">
+          <div class="col-sm-2">
+            <button class="btn btn-success btn-normal text-xs h-40" onclick="javascript:window.location.href='open_request.html'">
+              <i class="fi fi-rr-plus me-2"></i> New Request
+            </button>
+          </div>
+          
+          <div class="col-sm-9">
+            <div class="row g-2 justify-content-end">
+              <div class="col-md-2">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Transaction</option>
+                  <option value="">Top Up</option>
+                  <option value="">Transfer</option>
+                  <option value="">Ask</option>
+                  <option value="">Offer</option>
+                  <option value="">Redeem</option>
+                </select>
+              </div>
         
-                <div class="grid-2 d-none gap-2 h-100 align-items-stretch">
-                  <div class="input-date-icon">
-                    <input type="date" name="" id="" class="form-control max-today text-sm h-40">
-                    <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+              <div class="col-md-2">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Member</option>
+                  <option value="">Founders</option>
+                  <option value="">Club</option>
+                  <option value="">Deactive</option>
+                </select>
+              </div>
+        
+              <div class="col-md-3">
+                <div id="custom-period" class="w-100">
+                  <div class="">
+                    <select class="form-select text-sm h-40">
+                      <option value="">All Period</option>
+                      <option value="">Today</option>
+                      <option value="">This Week</option>
+                      <option value="">This Month</option>
+                      <option value="">Custom</option>
+                    </select>
                   </div>
-                  <div class="input-date-icon">
-                    <input type="date" name="" id="" class="form-control max-today text-sm h-40">
-                    <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+          
+                  <div class="grid-2 d-none gap-2 h-100 align-items-stretch">
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control max-today text-sm h-40">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control max-today text-sm h-40">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
                   </div>
+                </div>
+              </div>
+        
+              <div class="col-md-4">
+                <div class="d-flex gap-2 flex-fill">
+                  <div class="input-icon flex-fill">
+                    <input type="text" class="form-control text-sm h-40" placeholder="Search...">
+                    <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+                  </div>
+                  <button class="btn btn-normal btn-primary text-xs h-40">Search</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      
-        <div class="col-sm-5">
-          <div class="d-flex gap-2">
-            <div class="d-flex gap-2 flex-fill">
-              <div class="input-icon flex-fill">
-                <input type="text" class="form-control text-sm h-40" placeholder="Search...">
-                <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
-              </div>
-              <button class="btn btn-normal btn-primary text-xs h-40">Search</button>
-            </div>
-            <a href="open_request.html" class="btn btn-normal btn-success text-xs h-40">New Request</a>
-          </div>
-        </div>
       </div>
       
-      <div class="p-3 bg-white rounded-3 border">
-        <table class="table table-sm data-table bg-white" style="width: 100%;">
-          <thead>
+      <div class="p-3">
+        <table class="table table-sm table-sticky-head data-table" style="width: 100%;">
+          <thead class="bg-white text-xs text-uppercase">
             <tr>
               <th class="text-end" width="42px">No.</th>
               <th width="120px">Transaction ID</th>
-              <th>Date Time</th>
-              <th>Transaction</th>
+              <th width="155px">Date Time</th>
+              <th width="120px">Transaction</th>
               <th>From</th>
               <th>To</th>
-              <th>Item</th>
+              <th width="120px">Item</th>
               <th>Details</th>
-              <th>Type of Point</th>
-              <th class="text-end">Amount</th>
-              <th class="text-end">Payment</th>
+              <th width="105px">Type of Point</th>
+              <th width="80px" class="text-end">Amount</th>
+              <th width="120px" class="text-end">Payment</th>
               <th class="text-center" width="60px">Status</th>
               <th width="30px">&nbsp;</th>
             </tr>
@@ -177,7 +182,7 @@
             <tr>
               <td class="text-end">1</td>
               <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406130001</a></td>
-              <td>06-08-2024 <br> 09:37:36</td>
+              <td>06-08-2024 09:37:36</td>
               <td>Top Up</td>
               <td>John Doe</td>
               <td>Antapura</td>
@@ -203,7 +208,7 @@
             <tr>
               <td class="text-end">2</td>
               <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406130002</a></td>
-              <td>06-08-2024 <br> 09:37:36</td>
+              <td>06-08-2024 09:37:36</td>
               <td>Transfer</td>
               <td>John Doe</td>
               <td>Jane Doe</td>
@@ -229,12 +234,12 @@
             <tr>
               <td class="text-end">3</td>
               <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406130003</a></td>
-              <td>06-08-2024 <br> 09:37:36</td>
+              <td>06-08-2024 09:37:36</td>
               <td>Redeem</td>
               <td>John Doe</td>
               <td>Antapura</td>
               <td>Hotel & Resort</td>
-              <td>Planet Holiday Hotel & Resort<br>(06-28-2024 - 06-30-2024)</td>
+              <td>Planet Holiday Hotel</td>
               <td>Founder Point</td>
               <td class="text-end">1.800</td>
               <td class="text-end">IDR 0</td>
@@ -255,7 +260,7 @@
             <tr>
               <td class="text-end">4</td>
               <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406130004</a></td>
-              <td>06-08-2024 <br> 09:37:36</td>
+              <td>06-08-2024 09:37:36</td>
               <td>Ask</td>
               <td>Ahmad Yani</td>
               <td>Budi Santoso</td>
@@ -281,7 +286,7 @@
             <tr>
               <td class="text-end">5</td>
               <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406130005</a></td>
-              <td>06-08-2024 <br> 09:37:36</td>
+              <td>06-08-2024 09:37:36</td>
               <td>Offer</td>
               <td>Hendra Gunawan</td>
               <td>Putri Ayu</td>
@@ -324,7 +329,7 @@
     <div class="w-350 border-start">
       <div id="assign-to-you" class="p-3 mb-3 border-bottom">
         <h3 class="fw-bold mb-3">Assign To You</h3>
-        <ul class="list-group list-group-light list-group-between-link">
+        <ul class="list-group list-group-light list-group-small list-group-between-link">
           <li class="list-group-item">
             <a href="transaction_process.html" class="align-items-stretch">
               <div class="item-content colspan-2">
@@ -348,7 +353,7 @@
 
       <div id="new-open-request" class="p-3">
         <h3 class="fw-bold mb-3">New Open Request</h3>
-        <ul class="list-group list-group-light list-group-between-link">
+        <ul class="list-group list-group-light list-group-small list-group-between-link">
           <li class="list-group-item">
             <a href="#" class="align-items-stretch" data-mdb-modal-init data-mdb-target="#transactionInfoModal">
               <div class="item-content">
@@ -406,48 +411,48 @@
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="mb-4 p-3 text-end bg-primary-subtle text-sm text-primary rounded-normal">
-              <small>Transaction ID</small>
-              <h3 class="mb-0 fw-bold">ATP2406130001</h3>
-              <small>06/13/2024 09:37:36</small>
-            </div>
-
-            <div class="px-3">
-              <ul class="list-group list-group-light list-group-small text-sm list-group-33 mb-4">
-                <li class="list-group-item">
-                  <span>Request Type</span>
-                  <span>Top Up</span>
-                </li>
-                <li class="list-group-item">
-                  <span>From</span>
-                  <span>John Doe</span>
-                </li>
-                <li class="list-group-item">
-                  <span>To</span>
-                  <span>Antapura</span>
-                </li>
-                <li class="list-group-item">
-                  <span>Item Type</span>
-                  <span>Point</span>
-                </li>
-                <li class="list-group-item">
-                  <span>Details</span>
-                  <span>-</span>
-                </li>
-                <li class="list-group-item">
-                  <span>Amount</span>
-                  <span>10.000</span>
-                </li>
-                <li class="list-group-item">
-                  <span>Payment</span>
-                  <span>IDR 10.500.000</span>
-                </li>
-                <li class="list-group-item">
-                  <span>Notes</span>
-                  <span></span>
-                </li>
-              </ul>
-            </div>
+            <ul class="list-group list-group-light list-group-small text-sm list-group-33 px-3">
+              <li class="list-group-item">
+                <span>Transaction ID</span>
+                <span>ATP2406130001</span>
+              </li>
+              <li class="list-group-item">
+                <span>Request Type</span>
+                <span>Top Up</span>
+              </li>
+              <li class="list-group-item">
+                <span>From</span>
+                <span>John Doe</span>
+              </li>
+              <li class="list-group-item">
+                <span>To</span>
+                <span>Antapura</span>
+              </li>
+              <li class="list-group-item">
+                <span>Item Type</span>
+                <span>Point</span>
+              </li>
+              <li class="list-group-item">
+                <span>Details</span>
+                <span>-</span>
+              </li>
+              <li class="list-group-item">
+                <span>Amount</span>
+                <span>10.000</span>
+              </li>
+              <li class="list-group-item">
+                <span>Payment</span>
+                <span>IDR 10.500.000</span>
+              </li>
+              <li class="list-group-item">
+                <span>Notes</span>
+                <span></span>
+              </li>
+              <li class="list-group-item">
+                <span>Date Time</span>
+                <span>06-08-2024 09:37:36</span>
+              </li>
+            </ul>
           </div>
           <div class="modal-footer">
             <div class="me-auto">

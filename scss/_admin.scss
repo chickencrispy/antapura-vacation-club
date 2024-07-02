@@ -33,6 +33,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   padding: 0 .5rem;
   background-color: $white;
   z-index: $z-fixed;
@@ -49,6 +50,10 @@ body{
       box-shadow: none;
       font-size: $fs-lg;
     }
+  }
+
+  .header-title {
+    margin-right: auto;
   }
 }
 
@@ -160,6 +165,20 @@ body{
 
   &.expand {
     margin-left: $admin-sidebar-width;
+  }
+
+  .content-fill {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+.table-sticky-head {
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 }
 

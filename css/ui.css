@@ -127,7 +127,6 @@ h1 {
   box-shadow: none;
 }
 .btn-normal:hover {
-  border: 1px solid var(--mdb-border-color);
   box-shadow: none !important;
 }
 
@@ -934,7 +933,7 @@ div:has(> datalist) input.active + datalist option::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 680px;
+  max-width: 480px;
   margin: auto;
   padding: 16px;
   background-color: #ffffff;
@@ -1222,6 +1221,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   padding: 0 0.5rem;
   background-color: #ffffff;
   z-index: 100;
@@ -1235,6 +1235,9 @@ body {
   --mdb-btn-padding-x: 0.75rem;
   box-shadow: none;
   font-size: 18px;
+}
+.header .header-title {
+  margin-right: auto;
 }
 
 .header-profile {
@@ -1336,6 +1339,17 @@ body {
 }
 .content-wrapper.expand {
   margin-left: 4.25rem;
+}
+.content-wrapper .content-fill {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.table-sticky-head thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .table-listing .news-img {
@@ -1750,7 +1764,7 @@ input[type=date]::-webkit-calendar-picker-indicator::after {
 .app-container {
   display: flex;
   flex-direction: column;
-  max-width: 680px;
+  max-width: 480px;
   min-height: 100dvh;
   margin-inline: auto;
   padding-bottom: 70px;
@@ -1977,7 +1991,7 @@ input[type=date]::-webkit-calendar-picker-indicator::after {
   z-index: 999;
 }
 .bottom-navbar .container {
-  max-width: 680px;
+  max-width: 480px;
   height: 100%;
   margin-inline: auto;
   padding: 0 14px 12px;
