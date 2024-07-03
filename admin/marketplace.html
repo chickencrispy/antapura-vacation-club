@@ -32,56 +32,76 @@
 
   <aside id="sidebar" class="sidebar">
     <nav class="nav">
-      <div>
-        <a href="#" class="nav-logo"> 
-          <i class="fi fi-rr-layers nav-logo-icon"></i>
-          <span class="nav-logo-name">Antapura Club</span> 
-        </a>
+      <a href="#" class="nav-logo"> 
+        <i class="fi fi-rr-layers nav-logo-icon"></i>
+        <span class="nav-logo-name">Antapura Club</span> 
+      </a>
 
-        <div class="nav-list"> 
+      <ul class="sidebar-menu nav-list"> 
+        <li class="nav-list-item">
           <a href="dashboard.html" class="nav-link"> 
             <i class="fi fi-rr-apps nav-icon"></i>
             <span class="nav_name">Dashboard</span> 
           </a> 
-          
+        </li>
+        <li class="nav-list-item">
           <a href="members.html" class="nav-link"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
-
+        </li>
+        <li class="nav-list-item">
           <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-
+        </li>
+        <li class="nav-list-item">
           <a href="marketplace.html" class="nav-link active"> 
             <i class="fi fi-rr-shop nav-icon"></i>
             <span class="nav_name">Marketplace</span> 
           </a>
-
-          <a href="report.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
-
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-list-item">
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Administrator</span> 
           </a> 
-          
-          <a href="listing.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
           </a>
-
-          <a href="listing.html" class="nav-link"> 
-            <i class="fi fi-rr-sparkles nav-icon"></i>
-            <span class="nav_name">Promo</span> 
-          </a> 
-        </div>
-      </div> 
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
+                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
       
-      <a href="#" class="nav-link"> 
+      <a href="#" class="nav-link mt-auto"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
         <span class="nav_name">Sign Out</span> 
       </a>
@@ -90,7 +110,7 @@
 
   <main id="main-content" class="content-wrapper">
     <div class="content-fill">
-      <div id="content-filter" class="p-3 border-bottom bg-light">
+      <div id="content-filter" class="p-3">
         <div class="row g-2 justify-content-end">
           <div class="col-sm-5">
             <div class="row g-2">
@@ -118,146 +138,150 @@
       
       <div class="flex-fill">
         <div class="row g-0 h-100">
-          <div class="col-sm-6 border-end">
+          <div class="col-sm-6">
             <div class="p-3">
-              <h5 class="fw-bold mb-3">ASK</h5>
-        
-              <table class="table table-sm">
-                <thead class="text-xs text-uppercase">
-                  <tr>
-                    <th width="42px">No</th>
-                    <th width="100px">Market ID</th>
-                    <th>Member</th>
-                    <th class="text-end" width="100px">Ask</th>
-                    <th class="text-end" width="120px">Price</th>
-                    <th class="text-center" width="50px">Status</th>
-                    <th width="42px"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#marketInfoModal">AMA0025</a></td>
-                    <td><a href="#" class="fw-semibold text-primary" data-id="F0016" data-mdb-modal-init data-mdb-target="#detailsMemberModal">Putri Ayu</a> <small class="d-block text-dark">+6286789012345</small></td>
-                    <td class="text-end">5.000</td>
-                    <td class="text-end">IDR 5.000.000</td>
-                    <td class="text-center">Open</td>
-                    <td class="text-end">
-                      <div class="dropdown">
-                        <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
-                          <i class="fi fi-rr-menu-dots-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 22px);" data-popper-placement="bottom-end" data-mdb-popper="null">
-                          <li><a href="./transaction_process.html" class="dropdown-item"><i class="fi fi-rr-inbox-out me-1"></i> Offer</a></li>
-                          <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#holdTransactionModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
-                          <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#cancelTransactionModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="p-4 bg-white rounded-5 shadow-xs">
+                <h5 class="fw-bold mb-3">ASK</h5>
+              
+                <table class="table table-sm">
+                  <thead class="text-xs text-uppercase">
+                    <tr>
+                      <th width="42px">No</th>
+                      <th width="100px">Market ID</th>
+                      <th>Member</th>
+                      <th class="text-end" width="100px">Ask</th>
+                      <th class="text-end" width="120px">Price</th>
+                      <th class="text-center" width="50px">Status</th>
+                      <th width="42px"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#marketInfoModal">AMA0025</a></td>
+                      <td><a href="#" class="fw-semibold text-primary" data-id="F0016" data-mdb-modal-init data-mdb-target="#detailsMemberModal">Putri Ayu</a> <small class="d-block text-dark">+6286789012345</small></td>
+                      <td class="text-end">5.000</td>
+                      <td class="text-end">IDR 5.000.000</td>
+                      <td class="text-center">Open</td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+                            <i class="fi fi-rr-menu-dots-vertical"></i>
+                          </button>
+                          <ul class="dropdown-menu" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 22px);" data-popper-placement="bottom-end" data-mdb-popper="null">
+                            <li><a href="./transaction_process.html" class="dropdown-item"><i class="fi fi-rr-inbox-out me-1"></i> Offer</a></li>
+                            <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#holdTransactionModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                            <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#cancelTransactionModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         
           <div class="col-sm-6">
             <div class="p-3">
-              <h5 class="fw-bold mb-3">OFFER</h5>
-        
-              <table class="table table-sm">
-                <thead class="text-xs text-uppercase">
-                  <tr>
-                    <th width="42px">No</th>
-                    <th width="100px">Market ID</th>
-                    <th>Member</th>
-                    <th class="text-end" width="100px">Offer</th>
-                    <th class="text-end" width="120px">Price</th>
-                    <th class="text-center" width="50px">Status</th>
-                    <th width="42px"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#marketInfoModal">AMO0033</a></td>
-                    <td><a href="#" class="fw-semibold text-primary" data-id="F0008" data-mdb-modal-init data-mdb-target="#detailsMemberModal">Hendra Gunawan</a> <small class="d-block text-dark">+6288901234567</small></td>
-                    <td class="text-end">5.000</td>
-                    <td class="text-end">IDR 5.250.000</td>
-                    <td class="text-center">Open</td>
-                    <td class="text-end">
-                      <div class="dropdown">
-                        <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
-                          <i class="fi fi-rr-menu-dots-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 22px);" data-popper-placement="bottom-end" data-mdb-popper="null">
-                          <li><a href="./transaction_process.html" class="dropdown-item"><i class="fi fi-rr-inbox-in me-1"></i> Ask</a></li>
-                          <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#holdTransactionModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
-                          <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#cancelTransactionModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="p-4 bg-white rounded-5 shadow-xs">
+                <h5 class="fw-bold mb-3">OFFER</h5>
+              
+                <table class="table table-sm">
+                  <thead class="text-xs text-uppercase">
+                    <tr>
+                      <th width="42px">No</th>
+                      <th width="100px">Market ID</th>
+                      <th>Member</th>
+                      <th class="text-end" width="100px">Offer</th>
+                      <th class="text-end" width="120px">Price</th>
+                      <th class="text-center" width="50px">Status</th>
+                      <th width="42px"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#marketInfoModal">AMO0033</a></td>
+                      <td><a href="#" class="fw-semibold text-primary" data-id="F0008" data-mdb-modal-init data-mdb-target="#detailsMemberModal">Hendra Gunawan</a> <small class="d-block text-dark">+6288901234567</small></td>
+                      <td class="text-end">5.000</td>
+                      <td class="text-end">IDR 5.250.000</td>
+                      <td class="text-center">Open</td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+                            <i class="fi fi-rr-menu-dots-vertical"></i>
+                          </button>
+                          <ul class="dropdown-menu" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 22px);" data-popper-placement="bottom-end" data-mdb-popper="null">
+                            <li><a href="./transaction_process.html" class="dropdown-item"><i class="fi fi-rr-inbox-in me-1"></i> Ask</a></li>
+                            <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#holdTransactionModal"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                            <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#cancelTransactionModal"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div id="content-footer" class="p-3 border-top">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis nemo iusto accusamus itaque. Nihil tempore modi esse asperiores eos saepe. Porro animi reiciendis deserunt unde placeat minus cumque earum.
-      </div>
     </div>
 
-    <div class="w-350 d-flex flex-column border-start">
-      <div class="h-50 p-3 border-bottom">
-        <h3 class="fw-bold mb-3">Recent Point Ask</h3>
-        <ul class="list-group list-group-light list-group-small list-group-between">
-          <li class="list-group-item">
-            <a href="#" class="d-flex flex-fill" data-mdb-modal-init data-mdb-target="#marketInfoModal">
-              <div>Ahmad Yani <small class="d-block text-dark">+6288901234567</small></div>
-              <div class="text-end ms-auto">
-                <strong>6.000</strong>
-                <small class="d-block text-dark">IDR 5.250.000</small>
+    <div class="w-350 d-flex flex-column">
+      <div class="h-50 p-3">
+        <div class="p-4 bg-white rounded-5 shadow-xs h-100">
+          <h3 class="fw-bold mb-3">Recent Point Ask</h3>
+          <ul class="list-group list-group-light list-group-small list-group-between">
+            <li class="list-group-item">
+              <a href="#" class="d-flex flex-fill" data-mdb-modal-init data-mdb-target="#marketInfoModal">
+                <div>Ahmad Yani <small class="d-block text-dark">+6288901234567</small></div>
+                <div class="text-end ms-auto">
+                  <strong>6.000</strong>
+                  <small class="d-block text-dark">IDR 5.250.000</small>
+                </div>
+              </a>
+              <div class="dropdown">
+                <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init="" aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-142,13">
+                  <i class="fi fi-rr-menu-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-inbox-in me-1"></i> Offer</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
+                </ul>
               </div>
-            </a>
-            <div class="dropdown">
-              <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init="" aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-142,13">
-                <i class="fi fi-rr-menu-dots-vertical"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item"><i class="fi fi-rr-inbox-in me-1"></i> Offer</a></li>
-                <li><a href="#" class="dropdown-item"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
-                <li><a href="#" class="dropdown-item"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="h-50 p-3">
-        <h3 class="fw-bold mb-3">Recent Point Offer</h3>
-        <ul class="list-group list-group-light list-group-small list-group-between">
-          <li class="list-group-item">
-            <a href="#" class="d-flex flex-fill" data-mdb-modal-init data-mdb-target="#marketInfoModal">
-              <div>Hendra Gunawan <small class="d-block text-dark">+6288901234567</small></div>
-              <div class="text-end ms-auto">
-                <strong>8.000</strong>
-                <small class="d-block text-dark">IDR 7.850.000</small>
+        <div class="p-4 bg-white rounded-5 shadow-xs h-100">
+          <h3 class="fw-bold mb-3">Recent Point Offer</h3>
+          <ul class="list-group list-group-light list-group-small list-group-between">
+            <li class="list-group-item">
+              <a href="#" class="d-flex flex-fill" data-mdb-modal-init data-mdb-target="#marketInfoModal">
+                <div>Hendra Gunawan <small class="d-block text-dark">+6288901234567</small></div>
+                <div class="text-end ms-auto">
+                  <strong>8.000</strong>
+                  <small class="d-block text-dark">IDR 7.850.000</small>
+                </div>
+              </a>
+              <div class="dropdown">
+                <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-142,13">
+                  <i class="fi fi-rr-menu-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-inbox-in me-1"></i> Ask</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
+                  <li><a href="#" class="dropdown-item"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
+                </ul>
               </div>
-            </a>
-            <div class="dropdown">
-              <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-142,13">
-                <i class="fi fi-rr-menu-dots-vertical"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item"><i class="fi fi-rr-inbox-in me-1"></i> Ask</a></li>
-                <li><a href="#" class="dropdown-item"><i class="fi fi-rr-stop me-1"></i> Hold</a></li>
-                <li><a href="#" class="dropdown-item"><i class="fi fi-rr-ban me-1"></i> Cancel</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>

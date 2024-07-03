@@ -32,56 +32,76 @@
 
   <aside id="sidebar" class="sidebar">
     <nav class="nav">
-      <div>
-        <a href="#" class="nav-logo"> 
-          <i class="fi fi-rr-layers nav-logo-icon"></i>
-          <span class="nav-logo-name">Antapura Club</span> 
-        </a>
+      <a href="#" class="nav-logo"> 
+        <i class="fi fi-rr-layers nav-logo-icon"></i>
+        <span class="nav-logo-name">Antapura Club</span> 
+      </a>
 
-        <div class="nav-list"> 
+      <ul class="sidebar-menu nav-list"> 
+        <li class="nav-list-item">
           <a href="dashboard.html" class="nav-link"> 
             <i class="fi fi-rr-apps nav-icon"></i>
             <span class="nav_name">Dashboard</span> 
           </a> 
-          
+        </li>
+        <li class="nav-list-item">
           <a href="members.html" class="nav-link"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
-
-          <a href="transaction_request.html" class="nav-link active"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-
+        </li>
+        <li class="nav-list-item">
           <a href="marketplace.html" class="nav-link"> 
             <i class="fi fi-rr-shop nav-icon"></i>
             <span class="nav_name">Marketplace</span> 
           </a>
-
-          <a href="report.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
-
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-list-item">
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Administrator</span> 
           </a> 
-          
-          <a href="listing.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
           </a>
-
-          <a href="listing.html" class="nav-link"> 
-            <i class="fi fi-rr-sparkles nav-icon"></i>
-            <span class="nav_name">Promo</span> 
-          </a> 
-        </div>
-      </div> 
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
+                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
       
-      <a href="#" class="nav-link"> 
+      <a href="#" class="nav-link mt-auto"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
         <span class="nav_name">Sign Out</span> 
       </a>

@@ -106,7 +106,7 @@
               <div id="request-to" class="d-none row g-2 align-items-center mb-2">
                 <div class="col-sm-3">To</div>
                 <div class="col-sm-9">
-                  <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);">
+                  <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);" disabled>
                   <datalist id="user-to">
                     <option value="John Doe" class="active">+628123456789</option>
                     <option value="Jane Doe">+628198752423</option>
@@ -155,7 +155,9 @@
 
               <div id="request-detail" class="d-none row g-2 align-items-center mb-2">
                 <div class="col-sm-3">Details</div>
-                <div class="col-sm-9"><input type="text" class="form-control text-sm"></div>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control text-sm" disabled>
+                </div>
               </div>
 
               <div class="row g-2 align-items-center mb-2">
@@ -167,7 +169,7 @@
                 <div class="col-sm-3">Payment</div>
                 <div class="col-sm-9">
                   <div class="input-currency">
-                    <input type="text" name="" id="input-payment" class="form-control text-sm" inputmode="numeric">
+                    <input type="text" name="" id="input-payment" class="form-control text-sm" inputmode="numeric" disabled>
                     <span class="currency-name">IDR</span>
                   </div>
                 </div>

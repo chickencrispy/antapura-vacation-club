@@ -1189,16 +1189,35 @@ div:has(> datalist) input.active + datalist option::before {
 }
 
 .admin-login-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 50% 50%;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   font-size: 13px;
+}
+.admin-login-wrapper .login-banner {
+  position: relative;
+  padding: 16px;
+}
+.admin-login-wrapper .login-banner img {
+  width: 100%;
+  height: calc(100vh - 32px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+.admin-login-wrapper .login-banner::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background-color: rgba(0, 52, 165, 0.25);
+  border-radius: 16px;
 }
 .admin-login-wrapper .card-login {
   width: 386px;
+  margin: auto;
   padding: 16px;
 }
 .admin-login-wrapper .btn {
@@ -1223,10 +1242,9 @@ body {
   justify-content: space-between;
   gap: 8px;
   padding: 0 0.5rem;
-  background-color: #ffffff;
+  background-color: #eff3f4;
   z-index: 100;
   transition: 0.5s;
-  border-bottom: 1px solid var(--mdb-border-color);
 }
 .header.expand {
   left: 4.25rem;
@@ -1238,6 +1256,11 @@ body {
 }
 .header .header-title {
   margin-right: auto;
+}
+.header .header-title h2 {
+  font-size: 24px;
+  font-weight: 500 !important;
+  margin-bottom: 0;
 }
 
 .header-profile {
@@ -1271,7 +1294,7 @@ body {
   width: 4.25rem;
   height: 100vh;
   padding: 0.5rem 1rem 0 0;
-  background-color: #111214;
+  background-color: #ffffff;
   transition: 0.5s;
   z-index: 100;
 }
@@ -1282,19 +1305,18 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
 }
 .sidebar .nav .nav-logo, .sidebar .nav .nav-link {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: max-content auto 14px;
   align-items: center;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-  padding: 0.5rem 0 0.5rem 1.5rem;
+  padding: 16px 0 16px 1.5rem;
 }
 .sidebar .nav .nav-logo.active, .sidebar .nav .nav-link.active {
-  color: #ffffff;
+  color: #3300ac;
 }
 .sidebar .nav .nav-logo.active::before, .sidebar .nav .nav-link.active::before {
   content: "";
@@ -1302,31 +1324,64 @@ body {
   left: 0;
   width: 2px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #3300ac;
 }
 .sidebar .nav .nav-logo {
   margin-bottom: 2rem;
+  grid-template-columns: max-content max-content;
 }
 .sidebar .nav .nav-logo-icon {
   font-size: 1.25rem;
-  color: #ffffff;
 }
 .sidebar .nav .nav-logo-name {
-  color: #ffffff;
   font-weight: 700;
 }
 .sidebar .nav .nav-link {
   position: relative;
-  color: #ffffff;
-  margin-bottom: 1rem;
+  color: #111214;
   transition: 0.3s;
   font-size: 13px;
-}
-.sidebar .nav .nav-link:hover {
-  color: #ffffff;
+  text-wrap: nowrap;
 }
 .sidebar .nav .nav-icon {
   font-size: 1rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-menu .sub-menu-toggle::after {
+  content: "ﭺ";
+  position: absolute;
+  right: 0;
+  font-family: uicons-regular-rounded !important;
+  transition: all 0.5s linear;
+}
+.sidebar-menu .sub-menu-toggle[aria-expanded=false]::after {
+  transform: rotate(0deg);
+}
+.sidebar-menu .sub-menu-toggle[aria-expanded=true]::after {
+  transform: rotate(180deg);
+}
+.sidebar-menu .sub-menu {
+  display: grid;
+  transition: all 0.5s ease;
+}
+.sidebar-menu .sub-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-menu .sub-menu .nav-link {
+  padding: 10px 0 10px 1.5rem;
+}
+.sidebar-menu .sub-menu[aria-expanded=false] {
+  grid-template-rows: 0fr;
+}
+.sidebar-menu .sub-menu[aria-expanded=true] {
+  grid-template-rows: 1fr;
 }
 
 .content-wrapper {
@@ -1336,6 +1391,7 @@ body {
   margin-top: 3.5rem;
   font-size: 13px;
   transition: 0.5s;
+  background-color: #eff3f4;
 }
 .content-wrapper.expand {
   margin-left: 4.25rem;
@@ -1353,12 +1409,12 @@ body {
 }
 
 .table-listing .news-img {
-  width: 36px;
+  width: 28px;
   display: none;
 }
 .table-listing .news-img img {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  aspect-ratio: 5/3;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50rem;
@@ -1562,7 +1618,7 @@ body {
     color: #50535b;
   }
   .banner-list-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   .input-file-preview {
     height: 240px;

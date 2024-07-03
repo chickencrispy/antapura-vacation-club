@@ -30,56 +30,76 @@
 
   <aside id="sidebar" class="sidebar">
     <nav class="nav">
-      <div>
-        <a href="#" class="nav-logo"> 
-          <i class="fi fi-rr-layers nav-logo-icon"></i>
-          <span class="nav-logo-name">Antapura Club</span> 
-        </a>
+      <a href="#" class="nav-logo"> 
+        <i class="fi fi-rr-layers nav-logo-icon"></i>
+        <span class="nav-logo-name">Antapura Club</span> 
+      </a>
 
-        <div class="nav-list"> 
+      <ul class="sidebar-menu nav-list"> 
+        <li class="nav-list-item">
           <a href="dashboard.html" class="nav-link"> 
             <i class="fi fi-rr-apps nav-icon"></i>
             <span class="nav_name">Dashboard</span> 
           </a> 
-          
+        </li>
+        <li class="nav-list-item">
           <a href="members.html" class="nav-link"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
-
+        </li>
+        <li class="nav-list-item">
           <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-
+        </li>
+        <li class="nav-list-item">
           <a href="marketplace.html" class="nav-link"> 
             <i class="fi fi-rr-shop nav-icon"></i>
             <span class="nav_name">Marketplace</span> 
           </a>
-
-          <a href="report.html" class="nav-link active"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="true"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
-
+          <div class="sub-menu" aria-expanded="true">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="report.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-list-item">
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Administrator</span> 
           </a> 
-          
-          <a href="listing.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
           </a>
-
-          <a href="listing.html" class="nav-link"> 
-            <i class="fi fi-rr-sparkles nav-icon"></i>
-            <span class="nav_name">Promo</span> 
-          </a> 
-        </div>
-      </div> 
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
+                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
       
-      <a href="#" class="nav-link"> 
+      <a href="#" class="nav-link mt-auto"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
         <span class="nav_name">Sign Out</span> 
       </a>
@@ -88,7 +108,7 @@
 
   <main id="main-content" class="content-wrapper">
     <div class="content-fill">
-      <div id="content-filter" class="p-3 border-bottom bg-light">
+      <div id="content-filter" class="p-3">
         <div class="row g-2">
           <div class="col-sm-9">
             <div class="row g-2">
@@ -163,7 +183,7 @@
       </div>
         
       <div class="p-3">
-        <div class="bg-white">
+        <div class="p-4 bg-white rounded-5 shadow-xs">
           <table class="table table-sm table-sticky-head data-table" style="width: 100%;">
             <thead class="text-xs text-uppercase bg-white">
               <tr>
@@ -179,7 +199,6 @@
                 <th width="120px" class="text-end">Payment</th>
                 <th width="75px">Status</th>
                 <th width="75px">CS</th>
-                <th>&nbsp;</th>
               </tr>
             </thead>
             <tbody>
@@ -196,20 +215,6 @@
                 <td class="text-end">IDR 0</td>
                 <td>Success</td>
                 <td>Debi</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                      <i class="fi fi-rr-menu-dots-vertical"></i>
-                    </button>
-                    <ul class="dropdown-menu text-sm">
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                    </ul>
-                  </div>
-                </td>
               </tr>
               <tr>
                 <td class="text-end">2</td>
@@ -224,20 +229,6 @@
                 <td class="text-end">IDR 50.500.000</td>
                 <td>Waiting</td>
                 <td>Debi</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                      <i class="fi fi-rr-menu-dots-vertical"></i>
-                    </button>
-                    <ul class="dropdown-menu text-sm">
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                    </ul>
-                  </div>
-                </td>
               </tr>
               <tr>
                 <td class="text-end">3</td>
@@ -252,20 +243,6 @@
                 <td class="text-end">IDR 0</td>
                 <td>Success</td>
                 <td>Debi</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                      <i class="fi fi-rr-menu-dots-vertical"></i>
-                    </button>
-                    <ul class="dropdown-menu text-sm">
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                    </ul>
-                  </div>
-                </td>
               </tr>
               <tr>
                 <td class="text-end">4</td>
@@ -280,20 +257,6 @@
                 <td class="text-end">IDR 0</td>
                 <td>Success</td>
                 <td>Debi</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                    <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
-                      <i class="fi fi-rr-menu-dots-vertical"></i>
-                    </button>
-                    <ul class="dropdown-menu text-sm">
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-overview me-1"></i> Details</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-print me-1"></i> Print</a></li>
-                      <li><a href="transaction_process.html" class="dropdown-item"><i class="fi fi-rr-edit me-1"></i> Follow Up</a></li>
-                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#assignToModal"><i class="fi fi-rr-paper-plane me-1"></i> Assign To</a></li>
-                      <li><a href="#" class="dropdown-item"><i class="fi fi-rr-circle-xmark me-1"></i> Close</a></li>
-                    </ul>
-                  </div>
-                </td>
               </tr>
             </tbody>
           </table>
@@ -327,15 +290,15 @@
             <ul class="list-group list-group-light list-group-small text-sm list-group-33 px-3">
               <li class="list-group-item">
                 <span>Transaction ID</span>
-                <span>ATP2406130001</span>
+                <span>ATP2406001023</span>
               </li>
               <li class="list-group-item">
                 <span>Transaction Type</span>
-                <span>Top Up</span>
+                <span>Transfer</span>
               </li>
               <li class="list-group-item">
                 <span>Member Name</span>
-                <span>John Doe</span>
+                <span>John Doe - Ahmad Yani</span>
               </li>
               <li class="list-group-item">
                 <span>Item Type</span>
@@ -344,6 +307,10 @@
               <li class="list-group-item">
                 <span>Details</span>
                 <span>-</span>
+              </li>
+              <li class="list-group-item">
+                <span>Type of Point</span>
+                <span>Club Point</span>
               </li>
               <li class="list-group-item">
                 <span>Amount</span>
@@ -358,17 +325,21 @@
                 <span></span>
               </li>
               <li class="list-group-item">
+                <span>Status</span>
+                <span></span>
+              </li>
+              <li class="list-group-item">
+                <span>Follow Up By</span>
+                <span></span>
+              </li>
+              <li class="list-group-item">
                 <span>Date Time</span>
                 <span>06-08-2024 09:37:36</span>
               </li>
             </ul>
           </div>
           <div class="modal-footer">
-            <div class="me-auto">
-              <button type="button" class="btn btn-normal text-xs btn-danger" data-mdb-modal-init data-mdb-target="#holdTransactionModal">Hold</button>
-              <button type="button" class="btn btn-normal text-xs btn-warning" data-mdb-modal-init data-mdb-target="#assignToModal">Assign To</button>
-            </div>
-            <button type="button" class="btn btn-normal text-xs btn-primary" onclick="window.location.href='transaction_process.html'">Follow Up</button>
+            <button type="button" class="btn btn-normal text-xs btn-dark" data-mdb-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

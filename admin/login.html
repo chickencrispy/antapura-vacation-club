@@ -13,26 +13,35 @@
 </head>
 <body>
   <div class="admin-login-wrapper">
-    <div class="card-login">
-      <h2 class="text-end text-primary fw-bold mb-1">Administrator</h2>
-      <h6 class="text-end mb-4 fw-light text-dark">Sign-in to your Administrator Account</h6>
+    <div class="login-banner">
+      <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+    <div class="flex-fill d-flex flex-column">
+      <div id="login-logo"></div>
 
-      <div class="input-group column mb-2">
-        <input type="email" class="form-control text-sm" inputmode="email" placeholder="Email address">
-        <input type="password" class="form-control text-sm" placeholder="Password">
-      </div>
-
-      <div class="d-flex align-items-center justify-content-between text-xs mb-3">
-        <label class="d-flex align-items-center">
-          <input class="form-check-input form-check-sm" type="checkbox" value="" id="flexCheckDefault">
-          <span>Remember me</span>
-        </label>
-        <a href="#">Forgot password?</a>
-      </div>
+      <form action="dashboard.html" class="card-login">
+        <h2 class="text-end text-primary fw-bold mb-1">Administrator</h2>
+        <h6 class="text-end mb-4 fw-light text-dark">Sign-in to your Administrator Account</h6>
       
-      <div class="d-grid">
-        <button class="btn btn-dark" onclick="javascript:location.href='dashboard.html'">Sign In</button>
-      </div>
+        <div class="input-group column mb-3">
+          <input type="email" class="form-control text-sm" inputmode="email" placeholder="Email address">
+          <input type="password" class="form-control text-sm" placeholder="Password">
+        </div>
+      
+        <div class="d-flex align-items-center justify-content-between text-xs mb-3">
+          <label class="d-flex align-items-center">
+            <input class="form-check-input form-check-sm" type="checkbox" value="" id="flexCheckDefault">
+            <span>Keep me logged in</span>
+          </label>
+          <a href="#" class="text-decoration-underline">Forgot password?</a>
+        </div>
+        
+        <div class="d-grid">
+          <button class="btn btn-normal btn-primary">Sign In</button>
+        </div>
+      </form>
+
+      <div id="login-footer"></div>
     </div>
   </div>
 

@@ -91,6 +91,17 @@ const showNavbar = (toggleId, navId, mainId, headerId) => {
 }
 showNavbar('header-toggle','sidebar','main-content','header');
 
+// SIDE MENU SUB-MENU FUNCTION
+const subMenuToggle = document.querySelectorAll(".sub-menu-toggle");
+subMenuToggle.forEach(toggle => {
+  toggle.addEventListener("click", (i) => {
+    const expanded = toggle.getAttribute("aria-expanded");
+    toggle.setAttribute("aria-expanded", expanded === "true" ? "false" : "true");
+    toggle.nextElementSibling.setAttribute("aria-expanded", expanded === "true" ? "false" : "true");
+    i.preventDefault();
+  });
+});
+
 // FORM STEPS
 const step = document.querySelector(".step");
 if(step) {
@@ -224,15 +235,19 @@ if(openRequest) {
     requestRedeem.children[0].selected = e;
     requestRedeem.children[1].hidden = e;
     requestDetail.classList.toggle('d-none', !e);
+    requestDetail.querySelector('input').disabled = !e;
   }
 
   function paymentConf(e) {
     requestPayment.classList.toggle('d-none', !e);
+    requestPayment.querySelector('input').disabled = !e;
   }
 
   function customerConf(e) {
-    requestTo.classList.toggle('d-none', !e);
     requestFrom.querySelectorAll('div')[0].textContent = e ? 'From' : 'Customer Name';
+    requestTo.classList.toggle('d-none', !e);
+    requestTo.querySelector('input').disabled = !e;
+    requestTo.querySelector('input').focus();
   }
 
   function askOfferConf(e) {

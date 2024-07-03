@@ -20,68 +20,88 @@
     </div>
 
     <div class="header-title">
-      <h2 class="mb-0 fw-bold">Member Management</h2>
+      <h2>Member Management</h2>
     </div>
 
     <div class="header-profile"> 
       <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
-      <span class="text-sm ms-2">Debi Rahmadi</span>
+      <span class="text-sm fw-semibold ms-2">Debi Rahmadi</span>
       <i class="fi fi-rr-angle-small-down"></i>
     </div>
   </header>
 
   <aside id="sidebar" class="sidebar">
     <nav class="nav">
-      <div>
-        <a href="#" class="nav-logo"> 
-          <i class="fi fi-rr-layers nav-logo-icon"></i>
-          <span class="nav-logo-name">Antapura Club</span> 
-        </a>
+      <a href="#" class="nav-logo"> 
+        <i class="fi fi-rr-layers nav-logo-icon"></i>
+        <span class="nav-logo-name">Antapura Club</span> 
+      </a>
 
-        <div class="nav-list"> 
+      <ul class="sidebar-menu nav-list"> 
+        <li class="nav-list-item">
           <a href="dashboard.html" class="nav-link"> 
             <i class="fi fi-rr-apps nav-icon"></i>
             <span class="nav_name">Dashboard</span> 
           </a> 
-          
+        </li>
+        <li class="nav-list-item">
           <a href="members.html" class="nav-link active"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
-
+        </li>
+        <li class="nav-list-item">
           <a href="transaction_request.html" class="nav-link"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-
+        </li>
+        <li class="nav-list-item">
           <a href="marketplace.html" class="nav-link"> 
             <i class="fi fi-rr-shop nav-icon"></i>
             <span class="nav_name">Marketplace</span> 
           </a>
-
-          <a href="report.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
-
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-list-item">
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Administrator</span> 
           </a> 
-          
-          <a href="listing.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
           </a>
-
-          <a href="listing.html" class="nav-link"> 
-            <i class="fi fi-rr-sparkles nav-icon"></i>
-            <span class="nav_name">Promo</span> 
-          </a> 
-        </div>
-      </div> 
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
+                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
       
-      <a href="#" class="nav-link"> 
+      <a href="#" class="nav-link mt-auto"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
         <span class="nav_name">Sign Out</span> 
       </a>
@@ -90,7 +110,7 @@
 
   <main id="main-content" class="content-wrapper">
     <div class="content-fill">
-      <div id="content-filter" class="p-3 border-bottom bg-light">
+      <div id="content-filter" class="p-3">
         <div class="row g-2 justify-content-between">
           <div class="col-sm-2">
             <div class="h-100">
@@ -126,7 +146,7 @@
       </div>
       
       <div class="p-3">
-        <div class="bg-white">
+        <div class="p-4 bg-white rounded-5 shadow-xs">
           <table id="table-user" class="table table-sm table-sticky-head data-table" style="width: 100%;">
             <thead class="text-xs text-uppercase bg-white">
               <tr>
@@ -213,52 +233,54 @@
       </div>
     </div>
 
-    <div class="w-350 p-3 border-start">
-      <h3 class="fw-bold mb-3">New Joined Member</h3>
-      <ul class="list-group list-group-light list-group-contact list-group-small">
-        <li class="list-group-item">
-          <div class="item-wrapper">
-            <div class="user-avatar">
-              <img src="/images/memoji/Memoji-08.png" alt="">
+    <div class="w-350 p-3">
+      <div class="p-4 bg-white rounded-5 shadow-xs">
+        <h3 class="fw-bold mb-3">New Joined Member</h3>
+        <ul class="list-group list-group-light list-group-contact list-group-small">
+          <li class="list-group-item">
+            <div class="item-wrapper">
+              <div class="user-avatar">
+                <img src="/images/memoji/Memoji-08.png" alt="">
+              </div>
+              <div class="user-details">
+                <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0016">Putri Ayu</a>
+                <div class="text-xs text-muted">+6286789012345</div>
+              </div>
+              <div class="dropdown ms-auto">
+                <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+                  <i class="fi fi-rr-menu-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0001"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="user-details">
-              <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0016">Putri Ayu</a>
-              <div class="text-xs text-muted">+6286789012345</div>
+          </li>
+          <li class="list-group-item">
+            <div class="item-wrapper">
+              <div class="user-avatar">
+                <img src="/images/memoji/Memoji-05.png" alt="">
+              </div>
+              <div class="user-details">
+                <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0008">Hendra Gunawan</a>
+                <div class="text-xs text-muted">+6288901234567</div>
+              </div>
+              <div class="dropdown ms-auto">
+                <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
+                  <i class="fi fi-rr-menu-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0008"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
+                  <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="dropdown ms-auto">
-              <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
-                <i class="fi fi-rr-menu-dots-vertical"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0001"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="item-wrapper">
-            <div class="user-avatar">
-              <img src="/images/memoji/Memoji-05.png" alt="">
-            </div>
-            <div class="user-details">
-              <a href="#" class="fw-semibold text-primary" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0008">Hendra Gunawan</a>
-              <div class="text-xs text-muted">+6288901234567</div>
-            </div>
-            <div class="dropdown ms-auto">
-              <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-dropdown-initialized="true" data-mdb-offset="-132,13">
-                <i class="fi fi-rr-menu-dots-vertical"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#detailsMemberModal" data-id="F0008"><i class="fi fi-rr-eye me-1"></i> Overview</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#newMemberModal"><i class="fi fi-rr-edit me-1"></i> Edit data</a></li>
-                <li><a href="#" class="dropdown-item" data-mdb-modal-init="" data-mdb-target="#deactiveMemberModal"><i class="fi fi-rr-ban me-1"></i> Deactive</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </main>
 
