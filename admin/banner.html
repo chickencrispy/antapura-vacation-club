@@ -94,7 +94,7 @@
                 <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
                 <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
                 <li class="nav-list-item"><a href="banner.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> Banners</a></li>
-                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+                <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
               </ul>
             </div>
           </div>
@@ -114,7 +114,7 @@
         <div class="row g-2 justify-content-between">
           <div class="col-sm-2">
             <div class="h-100">
-              <button class="btn btn-success btn-normal text-xs h-40" data-mdb-modal-init data-mdb-target="#newAdminModal">
+              <button class="btn btn-success btn-normal text-xs h-40" data-mdb-modal-init data-mdb-target="#addBannerModal">
                 <i class="fi fi-rr-plus me-2"></i> Add New
               </button>
             </div>
@@ -162,7 +162,7 @@
             <div class="banner-items-content bg-white shadow-xs">
               <h6 class="mb-0">Title</h6>
               <div class="dropdown">
-                <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
+                <button class="btn btn-tertiary btn-sm text-dark p-0" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false" data-mdb-offset="-142,13">
                   <i class="fi fi-rr-menu-dots-vertical"></i>
                 </button>
                 <ul class="dropdown-menu text-sm">
@@ -181,238 +181,6 @@
     <div class="w-350"></div>
   </main>
 
-  <!-- MODAL ADD NEWS -->
-  <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
-      <form class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title fw-bold" id="exampleModalLabel">News</h4>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-sm">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <label class="input-file-preview border">
-                <div class="d-flex gap-2 align-items-center text-muted">
-                  <i class="fi fi-rr-add-image text-xl"></i>
-                  Add Image
-                </div>
-                <img src="">
-                <input type="file" name="" id="" class="d-none">
-              </label>
-            </div>
-
-            <div class="col-md-8">
-              <div class="row g-2 mb-2">
-                <div class="col-md-12">
-                  <input type="text" class="form-control text-sm" placeholder="News Title">
-                </div>
-                <div class="col-md-6">
-                  <select class="form-select text-sm">
-                    <option value="" hidden>Select Category</option>
-                    <option value="">News</option>
-                    <option value="">Hotel</option>
-                    <option value="">Tour Package</option>
-                  </select>
-                </div>
-                <div class="col-md-12">
-                  <textarea rows="5" class="form-control text-sm"></textarea>
-                </div>
-              </div>
-
-              <div class="multiple-images-upload">
-                <label class="add-image">
-                  <input type="file" name="" id="" class="d-none">
-                  <i class="fi fi-rr-add-image"></i>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-normal btn-secondary me-auto" data-mdb-dismiss="modal"><span class="d-none d-md-inline">Save as </span>Draft</button>
-          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-normal btn-primary">Publish</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- MODAL OVERVIEW NEWS -->
-  <div class="modal fade" id="viewNewsModal" tabindex="-1" aria-labelledby="viewNewsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title fw-bold" id="exampleModalLabel">News</h4>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-sm">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <img src="https://www.launch-marketing.com/wp-content/uploads/2018/07/GettyImages-1134023751.jpg" class="img-fluid">
-            </div>
-            <div class="col-md-8">
-              <h3 class="fw-bold">Lorem ipsum dolor sit amet.</h3>
-              <div class="d-flex gap-5 text-muted text-xs my-2">
-                <div class="d-flex flex-column">
-                  <span>Category: News</span>
-                  <span>Status: Published</span>
-                </div>
-                <div class="d-flex flex-column">
-                  <span>Created: 28/05/2024</span>
-                  <span>Last Update: 28/05/2024</span>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis obcaecati, nobis provident culpa ea cum accusamus 
-                  fugit quae temporibus labore in quidem neque at! Nesciunt dolor, vel animi praesentium totam, beatae assumenda voluptatem 
-                  magnam amet excepturi, corporis perferendis minima culpa tempora in ipsum repellendus officia velit possimus cupiditate. Voluptate, commodi.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque suscipit deserunt ab quidem officia optio expedita. 
-                  Asperiores quam nesciunt numquam nemo dolore. Delectus eveniet iste aliquam magnam vitae libero dolorem ratione, laudantium eum, 
-                  doloremque tenetur modi animi eligendi a iure id, vel hic reiciendis voluptatum saepe! Magnam, iure. Totam?
-                </p>
-              </div>
-              <div class="swiper-container news-gallery overflow-hidden">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img01-768x414.jpg" alt="" class="img-fluid"></div>
-                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img04-768x414.jpg" alt="" class="img-fluid"></div>
-                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img06-768x414.jpg" alt="" class="img-fluid"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL ADD RECOMMENDATION -->
-  <div class="modal fade" id="addRecommModal" tabindex="-1" aria-labelledby="addRecommModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
-      <form class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title fw-bold" id="exampleModalLabel">Recommendation</h4>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-sm">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <label class="input-file-preview border">
-                <div class="d-flex gap-2 align-items-center text-muted">
-                  <i class="fi fi-rr-add-image text-xl"></i>
-                  Add Image
-                </div>
-                <img src="">
-                <input type="file" name="" id="" class="d-none">
-              </label>
-            </div>
-
-            <div class="col-md-8">
-              <div class="row g-2 mb-2">
-                <div class="col-md-12">
-                  <input type="text" class="form-control text-sm" placeholder="News Title">
-                </div>
-                <div class="col-md-6">
-                  <select class="form-select text-sm h-100">
-                    <option value="" hidden>Select Category</option>
-                    <option value="">Hotel</option>
-                    <option value="">Resort</option>
-                    <option value="">Apartment</option>
-                    <option value="">Tour Package</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="" id="" class="form-control" inputmode="numeric" placeholder="Set cost">
-                </div>
-                <div class="col-md-12">
-                  <textarea rows="5" class="form-control text-sm"></textarea>
-                </div>
-              </div>
-
-              <div class="multiple-images-upload">
-                <label class="add-image">
-                  <input type="file" name="" id="" class="d-none">
-                  <i class="fi fi-rr-add-image"></i>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-normal btn-secondary me-auto" data-mdb-dismiss="modal"><span class="d-none d-md-inline">Save as </span>Draft</button>
-          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-normal btn-primary">Publish</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- MODAL OVERVIEW RECOMMENDATION -->
-  <div class="modal fade" id="viewRecommModal" tabindex="-1" aria-labelledby="viewRecommModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title fw-bold" id="exampleModalLabel">Recommendation</h4>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-sm">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <img src="https://velindotravel.com/wp-content/uploads/2023/03/treasure-bay-bintan.jpg" class="img-fluid">
-            </div>
-            <div class="col-md-8">
-              <div class="d-flex justify-content-between gap-3">
-                <h3 class="fw-bold">Paket Tour ke Bintan</h3>
-                <div class="d-flex align-items-baseline gap-1">
-                  <h3 class="text-danger">2.800</h3>
-                  <span>Point</span>
-                </div>
-              </div>
-              <div class="d-flex gap-5 text-muted text-xs my-2">
-                <div class="d-flex flex-column">
-                  <span>Category: Tour Package</span>
-                  <span>Status: Published</span>
-                </div>
-                <div class="d-flex flex-column">
-                  <span>Created: 28/05/2024</span>
-                  <span>Last Update: 28/05/2024</span>
-                </div>
-              </div>
-              <div>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis obcaecati, nobis provident culpa ea cum accusamus 
-                  fugit quae temporibus labore in quidem neque at! Nesciunt dolor, vel animi praesentium totam, beatae assumenda voluptatem 
-                  magnam amet excepturi, corporis perferendis minima culpa tempora in ipsum repellendus officia velit possimus cupiditate. Voluptate, commodi.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque suscipit deserunt ab quidem officia optio expedita. 
-                  Asperiores quam nesciunt numquam nemo dolore. Delectus eveniet iste aliquam magnam vitae libero dolorem ratione, laudantium eum, 
-                  doloremque tenetur modi animi eligendi a iure id, vel hic reiciendis voluptatum saepe! Magnam, iure. Totam?
-                </p>
-              </div>
-              <div class="swiper-container news-gallery overflow-hidden">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img01-768x414.jpg" alt="" class="img-fluid"></div>
-                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img04-768x414.jpg" alt="" class="img-fluid"></div>
-                  <div class="swiper-slide"><img src="https://bestatdigital.com/wp-content/uploads/2022/10/launch-img06-768x414.jpg" alt="" class="img-fluid"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-normal" data-mdb-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- MODAL ADD BANNER -->
   <div class="modal fade" id="addBannerModal" tabindex="-1" aria-labelledby="addBannerLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
@@ -421,9 +189,9 @@
           <h4 class="modal-title fw-bold" id="exampleModalLabel">Banner</h4>
           <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body text-sm">
+        <div class="modal-body p-4 text-sm">
           <div class="row g-3">
-            <div class="col-md-6">
+            <div class="col-md-5">
               <label class="input-file-preview banner border">
                 <div class="d-flex gap-2 align-items-center text-muted">
                   <i class="fi fi-rr-add-image text-xl"></i>
@@ -433,13 +201,16 @@
                 <input type="file" name="" id="" class="d-none">
               </label>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="row g-2 mb-2">
-                <div class="col-md-12">
-                  <input type="text" class="form-control text-sm" placeholder="Banner Title">
+                <div class="col-md-12 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Banner Title</label>
+                  <input type="text" class="form-control text-sm">
                 </div>
-                <div class="col-md-6">
-                  <select class="form-select text-sm h-100">
+
+                <div class="col-md-6 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Category</label>
+                  <select class="form-select text-sm">
                     <option value="" hidden>Select Category</option>
                     <option value="">Hotel</option>
                     <option value="">Resort</option>
@@ -447,10 +218,28 @@
                     <option value="">Tour Package</option>
                   </select>
                 </div>
-                <div class="col-md-12">
-                  <input type="text" name="" id="" class="form-control text-sm" inputmode="url" placeholder="Banner Link">
+
+                <div class="col-md-6 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Period</label>
+                  <div class="grid-2 gap-2 h-40 align-items-stretch">
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control text-sm h-100">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control text-sm h-100">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-12">
+
+                <div class="col-md-12 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Link</label>
+                  <input type="text" name="" id="" class="form-control text-sm" inputmode="url">
+                </div>
+
+                <div class="col-md-12 mb-2">
+                  <label class="text-xs fw-semibold mb-1">Description</label>
                   <textarea rows="3" class="form-control text-sm"></textarea>
                 </div>
               </div>
@@ -474,7 +263,7 @@
           <h4 class="modal-title fw-bold" id="exampleModalLabel">Banner</h4>
           <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body text-sm">
+        <div class="modal-body p-4 text-sm">
           <div class="row g-3">
             <div class="col-md-6">
               <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/07/11/1689048667894-f6bffef091041e83cddf0abb4c38665e.png" class="img-fluid">

@@ -113,8 +113,8 @@ body{
   width: $admin-sidebar-width;
   height: 100vh;
   padding: .5rem 1rem 0 0;
-  //background: linear-gradient(160deg, rgba(87,0,162,1) 0%, rgba(0,81,193,1) 100%);
-  background-color: $white;
+  background: linear-gradient(160deg, rgba(87,0,162,1) 0%, rgba(0,81,193,1) 100%);
+  //background-color: $white;
   transition: .5s;
   z-index: $z-fixed;
 
@@ -136,7 +136,8 @@ body{
       padding: 16px 0 16px 1.5rem;
 
       &.active{
-        color: #3300ac;
+        //color: #3300ac;
+        color: #cdf463;
       }
       
       &.active::before{
@@ -145,7 +146,8 @@ body{
         left: 0;
         width: 2px;
         height: 32px;
-        background-color: #3300ac;
+        //background-color: #3300ac;
+        background-color: #cdf463;
       }
     }
     
@@ -156,18 +158,18 @@ body{
     
     .nav-logo-icon{
       font-size: 1.25rem;
-      //color: $white;
+      color: $white;
     }
     
     .nav-logo-name{
-      //color: $white;
+      color: $white;
       font-weight: 700;
     }
     
     .nav-link{
       position: relative;
-      //color: $white;
       color: $black;
+      color: $white;
       //margin-bottom: 1rem;
       transition: .3s;
       font-size: $fs-sm;
@@ -175,7 +177,7 @@ body{
     }
     
     .nav-link:hover{
-      //color: $white;
+      color: $white;
     }
     
     .nav-icon{
@@ -246,6 +248,18 @@ body{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+  }
+}
+
+.table {
+  td {
+    .badge {
+      --mdb-badge-padding-x: 11px;
+      --mdb-badge-padding-y: 6px;
+      --mdb-badge-font-size: 11px;
+      --mdb-badge-font-weight: 500;
+      border-radius: 16px;
+    }
   }
 }
 
