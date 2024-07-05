@@ -254,11 +254,7 @@ body{
 .table {
   td {
     .badge {
-      --mdb-badge-padding-x: 11px;
-      --mdb-badge-padding-y: 6px;
-      --mdb-badge-font-size: 11px;
-      --mdb-badge-font-weight: 500;
-      border-radius: 16px;
+      width: 100%;
     }
   }
 }
@@ -512,6 +508,7 @@ body{
         text-wrap: wrap;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 4;
+        line-clamp: 4;
         color: $darker;
       }
     }

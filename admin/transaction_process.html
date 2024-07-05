@@ -51,7 +51,7 @@
           </a> 
         </li>
         <li class="nav-list-item">
-          <a href="transaction_request.html" class="nav-link"> 
+          <a href="transaction_request.html" class="nav-link active"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
@@ -71,8 +71,10 @@
             <div class="overflow-hidden">
               <ul>
                 <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
-                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
-                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+                <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
+                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
               </ul>
             </div>
           </div>
@@ -94,7 +96,7 @@
                 <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
                 <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
                 <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
-                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+                <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
               </ul>
             </div>
           </div>
@@ -113,7 +115,7 @@
       <div class="p-3">
         <div class="row g-3 mb-3">
           <div class="col-sm-4">
-            <div class="p-3 border rounded-normal">
+            <div class="p-4 bg-white rounded-normal shadow-xs">
               <h4 class="fw-bold mb-3">Transaction Details</h4>
         
               <ul class="list-group list-group-light list-group-small list-group-33">
@@ -162,7 +164,7 @@
           </div>
         
           <div class="col-sm-4">
-            <div class="p-3 border rounded-normal">
+            <div class="p-4 bg-white rounded-normal shadow-xs">
               <h4 class="fw-bold mb-3">Reference</h4>
         
               <form action="" class="d-flex flex-column h-100">
@@ -237,7 +239,7 @@
           </div>
         
           <div class="col-sm-4">
-            <div class="p-3 border rounded-normal">
+            <div class="p-3 bg-white rounded-normal shadow-xs">
               <h4 class="fw-bold mb-0">Recommendation</h4>
               <ul class="list-group list-group-light list-recommend" style="max-height: 445px;overflow: auto;">
                 <li class="list-group-item">
@@ -255,39 +257,41 @@
       </div>
     </div>
 
-    <div class="w-350 border-start">
+    <div class="w-350">
       <div class="p-3">
-        <div class="mb-4">
-          <h3 class="fw-bold">Quick Actions</h3>
-        </div>
-        <div class="mb-2">
-          <label class="mb-1">Select Customer</label>
-          <select class="form-select text-sm">
-            <option value="">John Doe</option>
-            <option value="">Antapura</option>
-          </select>
-        </div>
-        <div class="mb-2">
-          <label class="mb-1">Select Actions</label>
-          <select class="form-select text-sm">
-            <option value="">Add Point</option>
-            <option value="">Reduce Point</option>
-            <option value="">Hold Point</option>
-          </select>
-        </div>
-        <div class="mb-2">
-          <label class="mb-1">Source of Point</label>
-          <select class="form-select text-sm">
-            <option value="">Founder Point</option>
-            <option value="">Club Point</option>
-          </select>
-        </div>
-        <div class="mb-2">
-          <label class="mb-1">Set amount</label>
-          <input type="text" class="form-control text-sm" inputmode="numeric">
-        </div>
-        <div class="d-flex justify-content-end">
-          <button class="btn btn-normal btn-primary text-xs">Proceed</button>
+        <div class="p-4 bg-white rounded-normal shadow-xs">
+          <div class="mb-4">
+            <h3 class="fw-bold">Quick Actions</h3>
+          </div>
+          <div class="mb-2">
+            <label class="mb-1">Select Customer</label>
+            <select class="form-select text-sm">
+              <option value="">John Doe</option>
+              <option value="">Antapura</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label class="mb-1">Select Actions</label>
+            <select class="form-select text-sm">
+              <option value="">Add Point</option>
+              <option value="">Reduce Point</option>
+              <option value="">Hold Point</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label class="mb-1">Source of Point</label>
+            <select class="form-select text-sm">
+              <option value="">Founder Point</option>
+              <option value="">Club Point</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label class="mb-1">Set amount</label>
+            <input type="text" class="form-control text-sm" inputmode="numeric">
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-normal btn-primary text-xs">Proceed</button>
+          </div>
         </div>
       </div>
     </div>

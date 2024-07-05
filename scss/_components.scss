@@ -34,6 +34,18 @@
   gap: 8px;
 }
 
+.btn-candy-black {
+  background-color: $c-candy-black;
+  border-color: $c-candy-black;
+  color: $white;
+
+  &:hover {
+    background-color: $c-candy-black;
+    border-color: $c-candy-black;
+    color: $white;
+  }
+}
+
 .btn-floating {
   display: inline-flex;
   align-items: center;
@@ -78,6 +90,14 @@
 
 .btn-dropdown:hover {
   border-color: var(--mdb-border-color);
+}
+
+.badge {
+  --mdb-badge-padding-x: 11px;
+  --mdb-badge-padding-y: 6px;
+  --mdb-badge-font-size: 11px;
+  --mdb-badge-font-weight: 500;
+  border-radius: 16px;
 }
 
 .form-check-sm[type=checkbox] {
@@ -333,6 +353,52 @@
   border-radius: 16px;
 
   .list-group-item a {
+    display: flex;
+    //grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    .item-content {
+      display: flex;
+      flex-direction: column;
+      font-size: $fs-xs;
+
+      h5 {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      h6 {
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      strong {
+        font-size: $fs-sm;
+      }
+
+      small {
+        font-size: $fs-xs;
+        color: var(--mdb-secondary-color);
+      }
+    }
+
+    .item-content:first-child {
+      grid-column: span 2 / span 2;
+    }
+
+    .item-content:last-child {
+      text-align: end;
+    }
+  }
+}
+
+.list-group-grid-link {
+  font-size: $fs-sm;
+  border-radius: 16px;
+
+  .list-group-item a {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
@@ -452,6 +518,7 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
+        line-clamp: 2;
         color: $dark;
         font-size: 12px;
         line-height: 1.35;

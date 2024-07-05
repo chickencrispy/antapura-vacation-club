@@ -34,7 +34,7 @@ a:hover, a:focus {
   transition: all 0.3s ease-in-out;
 }
 
-:is(a,div,span):has(> .fi) {
+:is(div,span,.flex):has(> .fi) {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -206,6 +206,21 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   font-size: $fs-lg;
 }
 
+.point-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: rgb(241, 202, 72);
+  border: 1px solid rgb(150, 123, 4);
+  color: rgb(99, 81, 0);
+  border-radius: 8px;
+  transform: translateY(-1px);
+}
+
 .btn-icon-pill {
   display: flex;
   align-items: center;
@@ -284,10 +299,10 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   .list-items {
     position: relative;
     display: block;
-    padding: 8px;
-    border: 1px solid #dee2e6;
+    padding: 10px;
     border-radius: 12px;
-    background-color: #fff;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
     img {
       width: 100%;
@@ -322,6 +337,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
+        line-clamp: 1;
         overflow: hidden;
       }
     }

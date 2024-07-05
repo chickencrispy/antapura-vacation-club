@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transaction Report</title>
+  <title>Top Up Report</title>
   <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/date-picker.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="header-title">
-      <h2 class="mb-0 fw-bold">Transaction Report</h2>
+      <h2 class="mb-0 fw-bold">Top Up Report</h2>
     </div>
 
     <div class="header-profile"> 
@@ -68,8 +68,8 @@
           <div class="sub-menu" aria-expanded="true">
             <div class="overflow-hidden">
               <ul>
-                <li class="nav-list-item"><a href="report.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> All Report</a></li>
-                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report_topup.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
                 <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
                 <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
                 <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
@@ -114,17 +114,6 @@
         <div class="row g-2">
           <div class="col-sm-9">
             <div class="row g-2">
-              <div class="col-md-2">
-                <select class="form-select text-sm h-40">
-                  <option value="">All Transaction</option>
-                  <option value="">Top Up</option>
-                  <option value="">Transfer</option>
-                  <option value="">Ask</option>
-                  <option value="">Offer</option>
-                  <option value="">Redeem</option>
-                </select>
-              </div>
-        
               <div class="col-md-2">
                 <select class="form-select text-sm">
                   <option value="">All Status</option>
@@ -191,10 +180,9 @@
               <tr>
                 <th width="42px" class="text-end">No.</th>
                 <th width="120px">Transaction ID</th>
-                <th width="155px">Date Time</th>
+                <th width="155px">Request Time</th>
                 <th width="120px">Transaction</th>
                 <th>Member</th>
-                <th width="120px">Item</th>
                 <th>Details</th>
                 <th width="105px">Type of Point</th>
                 <th width="80px" class="text-end">Amount</th>
@@ -208,13 +196,12 @@
                 <td class="text-end">1</td>
                 <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406001023</a></td>
                 <td>06-02-2024 00:42:36</td>
-                <td>Transfer</td>
-                <td>John Doe - Ahmad Yani</td>
-                <td>Point</td>
+                <td>Top Up</td>
+                <td>Ahmad Yani</td>
                 <td>-</td>
                 <td>Club Point</td>
-                <td class="text-end">12.000</td>
-                <td class="text-end">IDR 0</td>
+                <td class="text-end">10.000</td>
+                <td class="text-end">IDR 10.100.000</td>
                 <td class="text-center"><div class="badge badge-success">Success</div></td>
                 <td>Debi</td>
               </tr>
@@ -224,7 +211,6 @@
                 <td>06-05-2024 08:22:18</td>
                 <td>Top Up</td>
                 <td>Jane Doe</td>
-                <td>Point</td>
                 <td>-</td>
                 <td>Club Point</td>
                 <td class="text-end">50.000</td>
@@ -236,28 +222,13 @@
                 <td class="text-end">3</td>
                 <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2404003032</a></td>
                 <td>30-04-2024 15:48:00</td>
-                <td>Redeem</td>
+                <td>Top Up</td>
                 <td>Putri Ayu</td>
-                <td>Hotel & Resort</td>
-                <td>Planet Holiday Hotel : PHH2406003032</td>
+                <td>-</td>
                 <td>Club Point</td>
-                <td class="text-end">18.000</td>
-                <td class="text-end">IDR 0</td>
-                <td><div class="badge badge-success">Success</div></td>
-                <td>Debi</td>
-              </tr>
-              <tr>
-                <td class="text-end">4</td>
-                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2404003068</a></td>
-                <td>23-04-2024 08:12:42</td>
-                <td>Redeem</td>
-                <td>Budi Santoso</td>
-                <td>Ticket</td>
-                <td>Garuda Indonesia : GA2406003068</td>
-                <td>Club Point</td>
-                <td class="text-end">8.600</td>
-                <td class="text-end">IDR 0</td>
-                <td><div class="badge badge-success">Success</div></td>
+                <td class="text-end">5.000</td>
+                <td class="text-end">IDR 5.050.000</td>
+                <td class="text-center"><div class="badge badge-danger">Hold</div></td>
                 <td>Debi</td>
               </tr>
             </tbody>
@@ -296,11 +267,11 @@
               </li>
               <li class="list-group-item">
                 <span>Transaction Type</span>
-                <span>Transfer</span>
+                <span>Top Up</span>
               </li>
               <li class="list-group-item">
                 <span>Member Name</span>
-                <span>John Doe - Ahmad Yani</span>
+                <span>Ahmad Yani</span>
               </li>
               <li class="list-group-item">
                 <span>Item Type</span>
@@ -320,7 +291,7 @@
               </li>
               <li class="list-group-item">
                 <span>Payment</span>
-                <span>IDR 10.500.000</span>
+                <span>IDR 10.100.000</span>
               </li>
               <li class="list-group-item">
                 <span>Notes</span>
@@ -328,11 +299,11 @@
               </li>
               <li class="list-group-item">
                 <span>Status</span>
-                <span></span>
+                <span><div class="badge badge-success">Success</div></span>
               </li>
               <li class="list-group-item">
                 <span>Follow Up By</span>
-                <span></span>
+                <span>Debi</span>
               </li>
               <li class="list-group-item">
                 <span>Date Time</span>

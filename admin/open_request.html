@@ -19,6 +19,10 @@
       </button>
     </div>
 
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Open Request</h2>
+    </div>
+
     <div class="header-profile"> 
       <img src="../images/memoji/Memoji-04.png" alt="">
     </div>
@@ -26,56 +30,78 @@
 
   <aside id="sidebar" class="sidebar">
     <nav class="nav">
-      <div>
-        <a href="#" class="nav-logo"> 
-          <i class="fi fi-rr-layers nav-logo-icon"></i>
-          <span class="nav-logo-name">Antapura Club</span> 
-        </a>
+      <a href="#" class="nav-logo"> 
+        <i class="fi fi-rr-layers nav-logo-icon"></i>
+        <span class="nav-logo-name">Antapura Club</span> 
+      </a>
 
-        <div class="nav-list"> 
+      <ul class="sidebar-menu nav-list"> 
+        <li class="nav-list-item">
           <a href="dashboard.html" class="nav-link"> 
             <i class="fi fi-rr-apps nav-icon"></i>
             <span class="nav_name">Dashboard</span> 
           </a> 
-          
+        </li>
+        <li class="nav-list-item">
           <a href="members.html" class="nav-link"> 
             <i class="fi fi-rr-user nav-icon"></i>
             <span class="nav_name">Members</span> 
           </a> 
-
+        </li>
+        <li class="nav-list-item">
           <a href="transaction_request.html" class="nav-link active"> 
             <i class="fi fi-rr-concierge-bell nav-icon"></i>
             <span class="nav_name">Request</span> 
           </a>
-
+        </li>
+        <li class="nav-list-item">
           <a href="marketplace.html" class="nav-link"> 
             <i class="fi fi-rr-shop nav-icon"></i>
             <span class="nav_name">Marketplace</span> 
           </a>
-
-          <a href="report.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
-
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+                <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
+                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-list-item">
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Administrator</span> 
           </a> 
-          
-          <a href="listing.html" class="nav-link"> 
+        </li>
+        <li class="nav-list-item">
+          <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
             <span class="nav_name">Listing</span> 
           </a>
-
-          <a href="listing.html" class="nav-link"> 
-            <i class="fi fi-rr-sparkles nav-icon"></i>
-            <span class="nav_name">Promo</span> 
-          </a> 
-        </div>
-      </div> 
+          <div class="sub-menu" aria-expanded="false">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
+                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
+                <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
       
-      <a href="#" class="nav-link"> 
+      <a href="#" class="nav-link mt-auto"> 
         <i class="fi fi-rr-sign-out-alt nav-icon"></i>
         <span class="nav_name">Sign Out</span> 
       </a>
@@ -83,195 +109,193 @@
   </aside>
 
   <main id="main-content" class="content-wrapper">
-    <div class="p-3 flex-fill">
-      <div class="mb-3 py-3">
-        <h2 class="mb-0 fw-bold">Open Request</h2>
-      </div>
-      
-      <div class="row g-3">
-        <div class="col-sm-4">
-          <form action="" id="open-request" class="p-4 bg-white rounded-normal border h-100">
-            <div class="">
-              <div id="request-from" class="row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Customer Name</div>
-                <div class="col-sm-9">
-                  <input type="text" list="user-froms" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,true);">
-                  <datalist id="user-from">
-                    <option value="John Doe">+628123456789</option>
-                    <option value="Jane Doe">+628198752423</option>
-                  </datalist>
-                </div>
-              </div>
-
-              <div id="request-to" class="d-none row g-2 align-items-center mb-2">
-                <div class="col-sm-3">To</div>
-                <div class="col-sm-9">
-                  <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);" disabled>
-                  <datalist id="user-to">
-                    <option value="John Doe" class="active">+628123456789</option>
-                    <option value="Jane Doe">+628198752423</option>
-                  </datalist>
-                </div>
-              </div>
-
-              <div class="row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Request Type</div>
-                <div class="col-sm-9">
-                  <select id="request-type" class="form-select text-sm">
-                    <option value="" hidden>Select request type</option>
-                    <option value="topup">Top-Up</option>
-                    <option value="transfer">Transfer</option>
-                    <option value="ask">Ask</option>
-                    <option value="offer">Offer</option>
-                    <option value="redeem">Redeem</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Point Type</div>
-                <div class="col-sm-9">
-                  <select id="request-point" class="form-select text-sm">
-                    <option value="" hidden>Select point type</option>
-                    <option value="0" hidden>Any point</option>
-                    <option value="1">Founder Point</option>
-                    <option value="2">Club Point</option>
-                  </select>
-                </div>
-              </div>
-
-              <div id="redeem-item" class="d-none row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Item</div>
-                <div class="col-sm-9">
-                  <select name="" id="request-redeem" class="form-select text-sm">
-                    <option value="" hidden>What to redeem?</option>
-                    <option value="point">Point</option>
-                    <option value="hotel">Hotel & Resort</option>
-                    <option value="ticket">Ticket</option>
-                    <option value="tour">Tour Package</option>
-                  </select>
-                </div>
-              </div>
-
-              <div id="request-detail" class="d-none row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Details</div>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control text-sm" disabled>
-                </div>
-              </div>
-
-              <div class="row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Amount</div>
-                <div class="col-sm-9"><input type="text" class="form-control text-sm" inputmode="numeric"></div>
-              </div>
-
-              <div id="request-payment" class="d-none row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Payment</div>
-                <div class="col-sm-9">
-                  <div class="input-currency">
-                    <input type="text" name="" id="input-payment" class="form-control text-sm" inputmode="numeric" disabled>
-                    <span class="currency-name">IDR</span>
+    <div class="content-fill">
+      <div class="p-3">
+        <div class="row g-3">
+          <div class="col-sm-4">
+            <form action="" id="open-request" class="p-4 bg-white rounded-normal shadow-xs h-100">
+              <div class="">
+                <div id="request-from" class="row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Customer Name</div>
+                  <div class="col-sm-9">
+                    <input type="text" list="user-froms" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,true);">
+                    <datalist id="user-from">
+                      <option value="John Doe">+628123456789</option>
+                      <option value="Jane Doe">+628198752423</option>
+                    </datalist>
                   </div>
                 </div>
+        
+                <div id="request-to" class="d-none row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">To</div>
+                  <div class="col-sm-9">
+                    <input type="text" list="user-tos" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);" disabled>
+                    <datalist id="user-to">
+                      <option value="John Doe" class="active">+628123456789</option>
+                      <option value="Jane Doe">+628198752423</option>
+                    </datalist>
+                  </div>
+                </div>
+        
+                <div class="row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Request Type</div>
+                  <div class="col-sm-9">
+                    <select id="request-type" class="form-select text-sm">
+                      <option value="" hidden>Select request type</option>
+                      <option value="topup">Top-Up</option>
+                      <option value="transfer">Transfer</option>
+                      <option value="ask">Ask</option>
+                      <option value="offer">Offer</option>
+                      <option value="redeem">Redeem</option>
+                    </select>
+                  </div>
+                </div>
+        
+                <div class="row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Point Type</div>
+                  <div class="col-sm-9">
+                    <select id="request-point" class="form-select text-sm">
+                      <option value="" hidden>Select point type</option>
+                      <option value="0" hidden>Any point</option>
+                      <option value="1">Founder Point</option>
+                      <option value="2">Club Point</option>
+                    </select>
+                  </div>
+                </div>
+        
+                <div id="redeem-item" class="d-none row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Item</div>
+                  <div class="col-sm-9">
+                    <select name="" id="request-redeem" class="form-select text-sm">
+                      <option value="" hidden>What to redeem?</option>
+                      <option value="point">Point</option>
+                      <option value="hotel">Hotel & Resort</option>
+                      <option value="ticket">Ticket</option>
+                      <option value="tour">Tour Package</option>
+                    </select>
+                  </div>
+                </div>
+        
+                <div id="request-detail" class="d-none row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Details</div>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control text-sm" disabled>
+                  </div>
+                </div>
+        
+                <div class="row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Amount</div>
+                  <div class="col-sm-9"><input type="text" class="form-control text-sm" inputmode="numeric"></div>
+                </div>
+        
+                <div id="request-payment" class="d-none row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Payment</div>
+                  <div class="col-sm-9">
+                    <div class="input-currency">
+                      <input type="text" name="" id="input-payment" class="form-control text-sm" inputmode="numeric" disabled>
+                      <span class="currency-name">IDR</span>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="row g-2 align-items-center mb-2">
+                  <div class="col-sm-3">Notes</div>
+                  <div class="col-sm-9"><textarea rows="5" class="form-control text-sm"></textarea></div>
+                </div>
               </div>
-
-              <div class="row g-2 align-items-center mb-2">
-                <div class="col-sm-3">Notes</div>
-                <div class="col-sm-9"><textarea rows="5" class="form-control text-sm"></textarea></div>
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-normal text-xs btn-primary mt-3">Submit</button>
               </div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <button class="btn btn-normal text-xs btn-primary mt-3">Submit</button>
-            </div>
-          </form>
-        </div>
-
-        <div id="user-profile" class="col-sm-4">
-          <div class="p-4 bg-white rounded-normal border h-100">
-            <h5>User Profile</h5>
-            <ul class="list-group list-group-light list-group-small list-group-33 mb-4">
-              <li class="list-group-item">
-                <span>Member Type</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Full Name</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>WhatsApp</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Email</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Place, Date of birth</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Gender</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Address</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Notes</span>
-                <span>&nbsp;</span>
-              </li>
-              <li class="list-group-item">
-                <span>Join Date</span>
-                <span>&nbsp;</span>
-              </li>
-            </ul>
-
-            <table id="user-point" class="table table-sm table-bordered mb-0">
-              <thead>
-                <tr class="table-dark text-xs">
-                  <th class="ps-3">Type of Point</th>
-                  <th class="text-center">Amount</th>
-                  <th class="text-center">Valid Thru</th>
-                  <th class="text-center">Hold</th>
-                  <th class="text-center">Total</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <th class="ps-3"><div class="text-truncate">Founder Point</div></th>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
-                </tr>
-                <tr>
-                  <th class="ps-3"><div class="text-truncate">Club Point</div></th>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
-                </tr>
-              </tbody>
-            </table>
+            </form>
           </div>
-        </div>
-
-        <div id="recommendations" class="col-sm-4">
-          <div class="p-4 bg-white rounded-normal border h-100">
-            <h5>Recommendation</h5>
-            <ul class="list-group list-group-light list-recommend" style="max-height: 445px;overflow: auto;">
-              <li class="list-group-item">
-                <h6>Cash Back 10% Transfer Point</h6>
-                <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
-              </li>
-              <li class="list-group-item">
-                <h6>Free Admin Fee</h6>
-                <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
-              </li>
-            </ul>
+        
+          <div id="user-profile" class="col-sm-4">
+            <div class="p-4 bg-white rounded-normal shadow-xs h-100">
+              <h5>User Profile</h5>
+              <ul class="list-group list-group-light list-group-small list-group-33 mb-4">
+                <li class="list-group-item">
+                  <span>Member Type</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Full Name</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>WhatsApp</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Email</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Place, Date of birth</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Gender</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Address</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Notes</span>
+                  <span>&nbsp;</span>
+                </li>
+                <li class="list-group-item">
+                  <span>Join Date</span>
+                  <span>&nbsp;</span>
+                </li>
+              </ul>
+        
+              <table id="user-point" class="table table-sm table-bordered mb-0">
+                <thead>
+                  <tr class="table-dark text-xs">
+                    <th class="ps-3">Type of Point</th>
+                    <th class="text-center">Amount</th>
+                    <th class="text-center">Valid Thru</th>
+                    <th class="text-center">Hold</th>
+                    <th class="text-center">Total</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>
+                    <th class="ps-3"><div class="text-truncate">Founder Point</div></th>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                  </tr>
+                  <tr>
+                    <th class="ps-3"><div class="text-truncate">Club Point</div></th>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div id="recommendations" class="col-sm-4">
+            <div class="p-4 bg-white rounded-normal shadow-xs h-100">
+              <h5>Recommendation</h5>
+              <ul class="list-group list-group-light list-recommend" style="max-height: 445px;overflow: auto;">
+                <li class="list-group-item">
+                  <h6>Cash Back 10% Transfer Point</h6>
+                  <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
+                </li>
+                <li class="list-group-item">
+                  <h6>Free Admin Fee</h6>
+                  <p class="mb-0 text-xs text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ipsa quo harum aperiam voluptatum doloremque. Explicabo!</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

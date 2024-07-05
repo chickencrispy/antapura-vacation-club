@@ -86,10 +86,20 @@ const showNavbar = (toggleId, navId, mainId, headerId) => {
       sidebar.classList.toggle('show');
       main.classList.toggle('expand');
       topHeader.classList.toggle('expand');
+
+      let show = sidebar.classList.contains('show');
+      localStorage.setItem("sidebar", show);
     });
   }
 }
 showNavbar('header-toggle','sidebar','main-content','header');
+
+const sidebar_show = localStorage.getItem("sidebar");
+if(sidebar_show === 'true') {
+  document.getElementById('sidebar').classList.add('show');
+  document.getElementById('main-content').classList.add('expand');
+  document.getElementById('header').classList.add('expand');
+}
 
 // SIDE MENU SUB-MENU FUNCTION
 const subMenuToggle = document.querySelectorAll(".sub-menu-toggle");

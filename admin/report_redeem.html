@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transaction Report</title>
+  <title>Redeem Report</title>
   <link rel="stylesheet" href="/css/mdb.min.css">
   <link rel="stylesheet" href="/css/date-picker.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="header-title">
-      <h2 class="mb-0 fw-bold">Transaction Report</h2>
+      <h2 class="mb-0 fw-bold">Redeem Report</h2>
     </div>
 
     <div class="header-profile"> 
@@ -68,11 +68,11 @@
           <div class="sub-menu" aria-expanded="true">
             <div class="overflow-hidden">
               <ul>
-                <li class="nav-list-item"><a href="report.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> All Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
                 <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
                 <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
                 <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
-                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
+                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
               </ul>
             </div>
           </div>
@@ -113,18 +113,7 @@
       <div id="content-filter" class="p-3">
         <div class="row g-2">
           <div class="col-sm-9">
-            <div class="row g-2">
-              <div class="col-md-2">
-                <select class="form-select text-sm h-40">
-                  <option value="">All Transaction</option>
-                  <option value="">Top Up</option>
-                  <option value="">Transfer</option>
-                  <option value="">Ask</option>
-                  <option value="">Offer</option>
-                  <option value="">Redeem</option>
-                </select>
-              </div>
-        
+            <div class="row g-2">        
               <div class="col-md-2">
                 <select class="form-select text-sm">
                   <option value="">All Status</option>
@@ -206,34 +195,6 @@
             <tbody>
               <tr>
                 <td class="text-end">1</td>
-                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2406001023</a></td>
-                <td>06-02-2024 00:42:36</td>
-                <td>Transfer</td>
-                <td>John Doe - Ahmad Yani</td>
-                <td>Point</td>
-                <td>-</td>
-                <td>Club Point</td>
-                <td class="text-end">12.000</td>
-                <td class="text-end">IDR 0</td>
-                <td class="text-center"><div class="badge badge-success">Success</div></td>
-                <td>Debi</td>
-              </tr>
-              <tr>
-                <td class="text-end">2</td>
-                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2405001025</a></td>
-                <td>06-05-2024 08:22:18</td>
-                <td>Top Up</td>
-                <td>Jane Doe</td>
-                <td>Point</td>
-                <td>-</td>
-                <td>Club Point</td>
-                <td class="text-end">50.000</td>
-                <td class="text-end">IDR 50.500.000</td>
-                <td class="text-center"><div class="badge badge-warning">Waiting</div></td>
-                <td>Debi</td>
-              </tr>
-              <tr>
-                <td class="text-end">3</td>
                 <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2404003032</a></td>
                 <td>30-04-2024 15:48:00</td>
                 <td>Redeem</td>
@@ -247,7 +208,7 @@
                 <td>Debi</td>
               </tr>
               <tr>
-                <td class="text-end">4</td>
+                <td class="text-end">2</td>
                 <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#transactionInfoModal">ATP2404003068</a></td>
                 <td>23-04-2024 08:12:42</td>
                 <td>Redeem</td>
@@ -296,19 +257,19 @@
               </li>
               <li class="list-group-item">
                 <span>Transaction Type</span>
-                <span>Transfer</span>
+                <span>Redeem</span>
               </li>
               <li class="list-group-item">
                 <span>Member Name</span>
-                <span>John Doe - Ahmad Yani</span>
+                <span>Putri Ayu</span>
               </li>
               <li class="list-group-item">
                 <span>Item Type</span>
-                <span>Point</span>
+                <span>Hotel & Resort</span>
               </li>
               <li class="list-group-item">
                 <span>Details</span>
-                <span>-</span>
+                <span>Planet Holiday Hotel : PHH2406003032</span>
               </li>
               <li class="list-group-item">
                 <span>Type of Point</span>
@@ -316,11 +277,11 @@
               </li>
               <li class="list-group-item">
                 <span>Amount</span>
-                <span>10.000</span>
+                <span>18.000</span>
               </li>
               <li class="list-group-item">
                 <span>Payment</span>
-                <span>IDR 10.500.000</span>
+                <span>IDR 0</span>
               </li>
               <li class="list-group-item">
                 <span>Notes</span>

@@ -18,10 +18,22 @@ $silver: #d7d8d9;
 $light: #f5f7f9;
 $lighter: #fafafb;
 $white: #ffffff;
-$warning: rgb(255,193,7);
+$purple: #b14fff;
+$body-light: #f2f4f7;
 
 $admin-header-height : 3.5rem;
 $admin-sidebar-width: 4.25rem;
+
+$c-candy-blue: #9cd4ff;
+$c-candy-pink: #ffb2e1;
+$c-candy-purple: #b2a5ff;
+$c-candy-red: #fbb6ad;
+$c-candy-black: #2e223c;
+
+$primary-new: #17519d;
+$success-new: #00b389;
+$warning-new: #f9b314;
+$danger-new: #ee397f;
 
 $z-fixed: 100;
 
@@ -51,10 +63,25 @@ h1 { font-size: $fs-3xl; }
 
 .bg-silver { background-color: $silver !important; }
 .bg-light  { background-color: $light !important; }
+.bg-purple { background-color: $purple !important; }
+.bg-body-light  { background-color: $body-light !important; }
+
+.bg-candy-blue  { background-color: $c-candy-blue !important; }
+.bg-candy-pink  { background-color: $c-candy-pink !important; }
+.bg-candy-purple  { background-color: $c-candy-purple !important; }
+.bg-candy-red  { background-color: $c-candy-red !important; }
+.bg-candy-black  { background-color: $c-candy-black !important; }
+
+.bg-primary-new  { background-color: $primary-new !important; }
+.bg-success-new  { background-color: $success-new !important; }
+.bg-warning-new  { background-color: $warning-new !important; }
+.bg-danger-new  { background-color: $danger-new !important; }
+
+.border-top-dashed { border-top: 1px dashed var(--mdb-border-color); }
 
 .rounded-normal { border-radius: 10px !important; }
 
-.shadow-xs { box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);}
+.shadow-xs { box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); }
 
 .w-350 { 
   width: 350px !important;

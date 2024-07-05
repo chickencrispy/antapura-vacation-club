@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/date-picker.min.css">
   <link rel="stylesheet" href="/css/datatables.min.css">
   <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/quill.snow.css">
   <link rel="stylesheet" href="/css/uicons-rounded.css">
   <link rel="stylesheet" href="/css/ui.css">
 </head>
@@ -71,8 +72,10 @@
             <div class="overflow-hidden">
               <ul>
                 <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
-                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
-                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
+                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+                <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
+                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
               </ul>
             </div>
           </div>
@@ -223,6 +226,7 @@
         <div class="modal-body p-4 text-sm">
           <div class="row g-3">
             <div class="col-md-4">
+              <label class="text-xs fw-semibold mb-1">News Featured Images</label>
               <label class="input-file-preview border">
                 <div class="d-flex gap-2 align-items-center text-muted">
                   <i class="fi fi-rr-add-image text-xl"></i>
@@ -264,8 +268,9 @@
                 </div>
 
                 <div class="col-md-12 mb-2">
-                  <label class="text-xs fw-semibold mb-1">Content</label>
-                  <textarea rows="5" class="form-control text-sm"></textarea>
+                  <label class="text-xs fw-semibold mb-1">Description</label>
+                  <div class="quill-editor" name="description"></div>
+                  <textarea class="d-none form-control text-sm"></textarea>
                 </div>
               </div>
 
@@ -346,6 +351,7 @@
   <script src="/js/mdb.umd.min.js"></script>
   <script src="/js/datatables.min.js"></script>
   <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/quill.js"></script>
   <script src="/js/swiper.js"></script>
   <script src="/js/main.js"></script>
   <script>
@@ -353,6 +359,23 @@
       el.addEventListener('shown.bs.tab', () => {
         DataTable.tables({ visible: true, api: true }).columns.adjust();
       });
+    });
+
+    const toolbarOptions = [
+      [{ 'font': [] }],
+      [{ 'size': ['small', false, 'large'] }],
+      ['bold', 'italic', 'underline'],
+      ['blockquote'],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+      [{ 'color': [] }, { 'background': [] }],
+      [{ 'align': [] }],
+    ];
+
+    const quill = new Quill('.quill-editor', {
+      theme: 'snow',
+      modules: {
+        toolbar: toolbarOptions
+      },
     });
 
     new DataTable('.data-table', {
