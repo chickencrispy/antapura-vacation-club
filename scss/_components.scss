@@ -354,10 +354,9 @@
 
   .list-group-item a {
     display: flex;
-    //grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 4px;
 
     .item-content {
       display: flex;
@@ -487,6 +486,13 @@
     &:nth-last-of-type() {
       text-align: end;
     }
+  }
+}
+
+.list-group-borderless {
+  .list-group-item {
+    border-width: 0 !important;
+    padding-top: 0;
   }
 }
 

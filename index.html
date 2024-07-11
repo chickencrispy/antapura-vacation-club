@@ -80,17 +80,17 @@
                 <tr class="border-top">
                   <td><span class="point-icon">C</span> 3.000</td>
                   <td class="text-end">2.500.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#askPointModal">Offer</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#offerPointModal">Offer</a></td>
                 </tr>
                 <tr class="border-top">
                   <td><span class="point-icon">F</span> 3.800</td>
                   <td class="text-end">3.850.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#askPointModal">Offer</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#offerPointModal">Offer</a></td>
                 </tr>
                 <tr class="border-top">
                   <td><span class="point-icon">F</span> 6.000</td>
                   <td class="text-end">6.800.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#askPointModal">Offer</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#offerPointModal">Offer</a></td>
                 </tr>
               </tbody>
             </table>
@@ -109,17 +109,17 @@
                 <tr class="border-top">
                   <td><span class="point-icon">F</span> 5.000</td>
                   <td class="text-end">5.800.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#offerPointModal">Ask</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#askPointModal">Ask</a></td>
                 </tr>
                 <tr class="border-top">
                   <td><span class="point-icon">F</span> 6.000</td>
                   <td class="text-end">7.000.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#offerPointModal">Ask</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#askPointModal">Ask</a></td>
                 </tr>
                 <tr class="border-top">
                   <td><span class="point-icon">F</span> 6.000</td>
                   <td class="text-end">6.200.000</td>
-                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#offerPointModal">Ask</a></td>
+                  <td class="text-end text-primary text-uppercase fw-bold"><a href="#" data-mdb-modal-init data-mdb-target="#askPointModal">Ask</a></td>
                 </tr>
               </tbody>
             </table>
@@ -278,7 +278,7 @@
         <div id="transfer-source" class="mb-3">
           <label for="fth-period" class="text-xs mb-2">Source of Point</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
+            <button class="btn btn-dropdown btn-toggle justify-content-start" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
             <ul class="dropdown-menu w-100 border shadow-none">
               <li>
                 <label>
@@ -313,13 +313,13 @@
   <!-- Offcanvas Ask -->
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_ask" aria-labelledby="offcanvasBuy">
     <div class="offcanvas-header">
-      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Buy Point</h4>
+      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Ask Point</h4>
       <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
         <div id="buy-amount" class="input-amount mb-2">
-          <label for="select-type" class="text-xs mb-2">Amount of point to buy</label>
+          <label for="select-type" class="text-xs mb-2">Amount of point to ask</label>
           <input type="text" class="form-control text-center bg-light" inputmode="numeric">
         </div>
 
@@ -332,7 +332,7 @@
         </div>
 
         <div class="offcanvas-footer d-grid mt-auto">
-          <button type="button" class="btn btn-dark">Buy Point</button>
+          <button type="button" class="btn btn-dark">Ask Point</button>
         </div>
       </form>
     </div>
@@ -341,13 +341,13 @@
   <!-- Offcanvas Offer -->
   <div class="offcanvas offcanvas-bottom offcanvas-full" tabindex="-1" id="off_offer" aria-labelledby="offcanvasSell">
     <div class="offcanvas-header">
-      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Sell Point</h4>
+      <h4 class="offcanvas-title fw-bold" id="offcanvasBottomLabel">Offer Point</h4>
       <button type="button" class="btn-close" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
       <form action="" class="flex-high">
         <div id="sell-amount" class="input-amount mb-3">
-          <label for="select-type" class="text-xs mb-2">Amount of point to sell</label>
+          <label for="select-type" class="text-xs mb-2">Amount of point to offer</label>
           <input type="text" class="form-control text-center bg-light" inputmode="numeric">
         </div>
 
@@ -362,7 +362,7 @@
         <div id="sell-source" class="mb-3">
           <label class="text-xs mb-2">Source of point</label>
           <div class="dropdown d-grid">
-            <button class="btn btn-dropdown btn-toggle" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
+            <button class="btn btn-dropdown btn-toggle justify-content-start" type="button" data-mdb-dropdown-init aria-expanded="false">Select source</button>
             <ul class="dropdown-menu w-100 border shadow-none">
               <li>
                 <label>
@@ -383,7 +383,7 @@
         </div>
 
         <div class="offcanvas-footer d-grid mt-auto">
-          <button type="button" class="btn btn-dark">Sell Point</button>
+          <button type="button" class="btn btn-dark">Offer Point</button>
         </div>
       </form>
     </div>
@@ -395,11 +395,11 @@
       <div class="modal-content">
         <form class="d-flex flex-column flex-fill">
           <div class="modal-header">
-            <h4 class="modal-title fw-bold" id="exampleModalLabel">Buy Point</h4>
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Ask Point</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4 text-sm">
-            Are you sure want to buy <b>3.000</b> points for <b>IDR 2.500.000</b>?
+            Are you sure want to ask <b>3.000</b> points for <b>IDR 2.500.000</b>?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>
@@ -416,11 +416,11 @@
       <div class="modal-content">
         <form class="d-flex flex-column flex-fill">
           <div class="modal-header">
-            <h4 class="modal-title fw-bold" id="exampleModalLabel">Sell Point</h4>
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Offer Point</h4>
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4 text-sm">
-            Are you sure want to sell <b>5.000</b> points for <b>IDR 5.800.000</b>?
+            Are you sure want to offer <b>5.000</b> points for <b>IDR 5.800.000</b>?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-step btn-normal btn-primary">Yes</button>

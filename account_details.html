@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antapura Vacation Club</title>
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/uicons-rounded.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body class="bg-body-light">
+  <div class="app-container">
+    <div class="app-page-header shadow-xs">
+      <div class="top-bar gap-2">
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-angle-left"></i></button>
+        <h4>Profile Details</h4>
+        <div class="btn-icon"></div>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <div class="card-profile-header flex-row shadow-xs mb-3">
+        <label class="user-avatar">
+          <img src="./images/memoji/Memoji-05.png" alt="">
+          <input type="file" name="" id="" class="d-none">
+        </label>
+
+        <div class="user-info">
+          <h5>John Doe</h5>
+          <div class="text-xs text-muted">+6281234456789</div>
+        </div>
+        <div class="d-none user-menu mt-2 grid-2 gap-2 w-100">
+          <button class="btn btn-normal btn-secondary">Send</button>
+          <button class="btn btn-normal btn-secondary">Request</button>
+          <button type="button" class="d-none btn btn-tertiary px-2 text-dark" data-mdb-dropdown-init="" aria-expanded="false" data-mdb-dropdown-initialized="true">
+            <i class="fi fi-rr-menu-dots-vertical"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-3 p-3 bg-white rounded-normal shadow-xs">
+        <h6 class="text-dark">Profile Details</h6>
+        <ul class="list-group list-group-light list-group-borderless list-group-small">
+          <li class="list-group-item">
+            <label class="text-xs">Full Name</label>
+            <input type="text" name="" id="" class="form-control text-sm">
+          </li>
+          <li class="list-group-item">
+            <label class="text-xs">WhatsApp</label>
+            <input type="text" name="" id="" class="form-control text-sm">
+          </li>
+          <li class="list-group-item">
+            <label class="text-xs">Email</label>
+            <input type="text" name="" id="" class="form-control text-sm">
+          </li>
+          <li class="list-group-item">
+            <label class="text-xs">Place, Date of Birth</label>
+            <div class="d-flex">
+              <input type="text" name="" id="" class="form-control text-sm me-2">
+              <input type="date" name="" id="" class="form-control text-sm input-date">
+            </div>
+          </li>
+          <li class="list-group-item">
+            <label class="text-xs">Gender</label>
+            <select name="" id="" class="form-select text-sm">
+              <option value="">Male</option>
+              <option value="">Female</option>
+            </select>
+          </li>
+          <li class="list-group-item">
+            <label class="text-xs">Address</label>
+            <textarea name="" id="" rows="2" class="form-control text-sm"></textarea>
+          </li>
+        </ul>
+        <div>
+          <button class="btn btn-normal btn-primary text-xs w-100 mt-3">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-navbar">
+    <div class="container grid-5">
+      <a href="index.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="transaction_history.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-time-past"></i></h3>History</a>
+      <a href="market.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
+      <a href="contact.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-book-user"></i></h3>Contact</a>
+      <a href="account.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/mdb.umd.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

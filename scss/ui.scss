@@ -210,13 +210,14 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   font-size: 10px;
   font-weight: 600;
-  background-color: rgb(241, 202, 72);
-  border: 1px solid rgb(150, 123, 4);
-  color: rgb(99, 81, 0);
+  margin-right: 2px;
+  background-color: #eaa208;
+  border: 1px solid #ffc843;
+  color: #ffc843;
   border-radius: 8px;
   transform: translateY(-1px);
 }
@@ -390,9 +391,12 @@ input[type="date"]::-webkit-calendar-picker-indicator::after {
 
 .bottom-navbar {
   position: fixed;
+  left: 50%;
   bottom: 0;
   width: 100%;
+  max-width: 480px;
   height: 70px;
+  transform: translateX(-50%);
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   z-index: 999;
