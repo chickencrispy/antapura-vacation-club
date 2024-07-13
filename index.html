@@ -268,7 +268,7 @@
 
         <div id="transfer-target" class="mb-3">
           <label for="select-type" class="text-xs mb-2">Transfer To</label>
-          <input type="text" list="user-to" name="" id="" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);">
+          <input type="text" list="user-tos" name="" id="" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);">
           <datalist id="user-to">
             <option value="John Doe">+628123456789</option>
             <option value="Jane Doe">+628321572015</option>
@@ -440,9 +440,9 @@
   <script>
     function loadMemberDataInfo(e,b) {
       const datalist = e.nextElementSibling;
-      const memberprofile = document.getElementById('user-profile');
-      const memberData = memberprofile.querySelectorAll('.list-group-item');
-      const memberPoint = document.getElementById('user-point').querySelectorAll('tbody tr');
+      //const memberprofile = document.getElementById('user-profile');
+      //const memberData = memberprofile.querySelectorAll('.list-group-item');
+      //const memberPoint = document.getElementById('user-point').querySelectorAll('tbody tr');
 
       let data = [];
       fetch('/data_dummy/user.json')
