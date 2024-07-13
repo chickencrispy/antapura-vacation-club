@@ -268,7 +268,7 @@
 
         <div id="transfer-target" class="mb-3">
           <label for="select-type" class="text-xs mb-2">Transfer To</label>
-          <input type="text" list="user-to" name="" id="" class="form-control text-sm">
+          <input type="text" list="user-to" name="" id="" class="form-control text-sm" autocomplete="off" onkeyup="loadMemberDataInfo(this,false);">
           <datalist id="user-to">
             <option value="John Doe">+628123456789</option>
             <option value="Jane Doe">+628321572015</option>
@@ -437,5 +437,90 @@
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js"></script>
   <script src="/js/main.js"></script>
+  <script>
+    function loadMemberDataInfo(e,b) {
+      const datalist = e.nextElementSibling;
+      const memberprofile = document.getElementById('user-profile');
+      const memberData = memberprofile.querySelectorAll('.list-group-item');
+      const memberPoint = document.getElementById('user-point').querySelectorAll('tbody tr');
+
+      let data = [];
+      fetch('/data_dummy/user.json')
+      .then(response => response.json())
+      .then(json => {
+        data = json;
+        memberLists(e.value);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
+      function memberLists(f) {
+        const filteredData = data.filter(user => {
+          if(f !== ""){
+            return user.fullname.toLowerCase().startsWith(f);
+            return user.whatsapp.toLowerCase().includes(f);
+          }
+        });
+
+        filteredData.forEach(user => {
+          while (datalist.firstChild) {
+            datalist.removeChild(datalist.firstChild);
+          }
+
+          const option = document.createElement('option');
+          option.value = user.fullname;
+          option.textContent = user.whatsapp;
+          datalist.appendChild(option);
+
+          function formatDate(dateString) {
+            if(dateString === ""){
+              return "-";
+            }else{
+              const options = { day: '2-digit', month: 'short', year: 'numeric' };
+              return new Date(dateString).toLocaleDateString('en-GB', options);
+            }
+          }
+
+          option.addEventListener('click', () => {
+            e.value = option.value;
+            e.classList.remove('active');
+            if(b) { displayMemberData(user); }
+          });
+
+          function displayMemberData(user) {
+            memberData[0].children[1].textContent = user.member_type;
+            memberData[1].children[1].textContent = user.fullname;
+            memberData[2].children[1].textContent = user.whatsapp;
+            memberData[3].children[1].textContent = user.email;
+            memberData[4].children[1].textContent = `${user.place_of_birth}, ${formatDate(user.date_of_birth)}`;
+            memberData[5].children[1].textContent = user.gender;
+            memberData[6].children[1].textContent = user.address;
+            memberData[7].children[1].textContent = user.notes;
+            memberData[8].children[1].textContent = formatDate(user.join_date);
+
+            memberPoint[0].children[1].textContent = user.founder_point.amount;
+            memberPoint[0].children[2].textContent = formatDate(user.founder_point.validity);
+            memberPoint[0].children[3].textContent = user.founder_point.hold;
+            memberPoint[0].children[4].textContent = user.founder_point.total;
+
+            memberPoint[1].children[1].textContent = user.club_point.amount;
+            memberPoint[1].children[2].textContent = formatDate(user.club_point.validity);
+            memberPoint[1].children[3].textContent = user.club_point.hold;
+            memberPoint[1].children[4].textContent = user.club_point.total;
+          }
+        });
+
+        e.classList.toggle('active', e.value.length > 0 && datalist.children.length > 0);
+      }
+
+      document.addEventListener('click', function(event) {
+        const isClickedInsideDatalist = datalist.contains(event.target);
+        const isClickedOnDatalistInput = (event.target === e);
+
+        if (!isClickedInsideDatalist && !isClickedOnDatalistInput) {
+          e.classList.remove('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
