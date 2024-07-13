@@ -1247,6 +1247,8 @@ div:has(> datalist) input.active + datalist option::before {
   background-size: cover;
 }
 .app-page-fullbanner .top-bar {
+  display: flex;
+  justify-content: space-between;
   padding: 16px;
 }
 .app-page-fullbanner .btn-icon {
