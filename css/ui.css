@@ -166,6 +166,16 @@ h1 {
   grid-column: span 3/span 3;
 }
 
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.alert-card {
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
 .btn-accent {
   background-color: #ff8036;
   border-color: #ff8036;
@@ -435,6 +445,11 @@ h1 {
 .list-group .list-group-item:nth-child(5n+5) .user-avatar {
   color: rgba(var(--mdb-danger-rgb), 1);
   background-color: var(--mdb-danger-bg-subtle);
+}
+
+.list-group-light .list-group-item {
+  border-width: 0 0 1px;
+  border-color: rgba(98, 98, 98, 0.25);
 }
 
 .list-group-between {

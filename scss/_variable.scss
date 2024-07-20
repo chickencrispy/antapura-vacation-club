@@ -93,3 +93,5 @@ h1 { font-size: $fs-3xl; }
 
 .colspan-2 { grid-column: span 2 / span 2; }
 .colspan-3 { grid-column: span 3 / span 3; }
+
+.rotate-180 { transform: rotate(180deg); }

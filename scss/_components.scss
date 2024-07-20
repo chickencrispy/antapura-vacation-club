@@ -1,3 +1,9 @@
+.alert-card {
+  padding: 16px;
+  border-radius: 10px;
+  font-size: $fs-xs;
+}
+
 .btn-accent {
   background-color: $accent;
   border-color: $accent;
@@ -301,6 +307,13 @@
     background-color: var(--mdb-danger-bg-subtle);
   }
   
+}
+
+.list-group-light {
+  .list-group-item {
+    border-width: 0 0 1px;
+    border-color: rgba(98, 98, 98, 0.25);
+  }
 }
 
 .list-group-between {
