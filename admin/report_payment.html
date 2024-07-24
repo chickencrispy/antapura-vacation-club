@@ -61,16 +61,16 @@
           </a>
         </li>
         <li class="nav-list-item">
-          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="true"> 
+          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
           </a>
-          <div class="sub-menu" aria-expanded="true">
+          <div class="sub-menu" aria-expanded="false">
             <div class="overflow-hidden">
               <ul>
                 <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
                 <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
-                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
+                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
                 <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
                 <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
               </ul>
@@ -81,6 +81,12 @@
           <a href="settings.html" class="nav-link"> 
             <i class="fi fi-rr-user-gear nav-icon"></i>
             <span class="nav_name">Administrator</span> 
+          </a> 
+        </li>
+        <li class="nav-list-item">
+          <a href="settings.html" class="nav-link"> 
+            <i class="fi fi-rr-usd-circle nav-icon"></i>
+            <span class="nav_name">Finance</span> 
           </a> 
         </li>
         <li class="nav-list-item">
@@ -180,17 +186,17 @@
               <tr>
                 <th width="42px" class="text-end">No.</th>
                 <th width="120px">Transaction ID</th>
-                <th width="155px">Date Time</th>
-                <th width="120px">Transaction</th>
-                <th>From Member</th>
-                <th>To Member</th>
-                <th width="120px">Item</th>
-                <th>Details</th>
-                <th width="105px">Type of Point</th>
-                <th width="80px" class="text-end">Amount</th>
+                <th width="175px">Transaction Date</th>
+                <th width="150px">Transaction Type</th>
+                <th>Member Name</th>
+                <th>Notes</th>
+                <th width="100px">Point Type</th>
+                <th width="120px" class="text-end">Point Amount</th>
                 <th width="120px" class="text-end">Payment</th>
-                <th width="75px">Status</th>
-                <th width="75px">CS</th>
+                <th width="150px" class="text-end">Payment Received</th>
+                <th width="75px" class="text-center">Status</th>
+                <th width="75px">Operator</th>
+                <th width="30px">&nbsp;</th>
               </tr>
             </thead>
             <tbody>
@@ -200,14 +206,23 @@
                 <td>06-02-2024 00:42:36</td>
                 <td>Top Up</td>
                 <td>Ahmad Yani</td>
-                <td>Budi Santoso</td>
-                <td>Point</td>
                 <td>-</td>
                 <td>Club Point</td>
                 <td class="text-end">10.000</td>
-                <td class="text-end">IDR 0</td>
-                <td class="text-center"><div class="badge badge-success">Success</div></td>
+                <td class="text-end">IDR 10.250.000</td>
+                <td class="text-end">IDR 10.250.000</td>
+                <td class="text-center"><div class="badge badge-success">Paid</div></td>
                 <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-offset="-142,13">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#updatePaymentModal" data-id="F0001"><i class="fi fi-rr-calculator-money me-1"></i> Update Payment</a></li>
+                    </ul>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td class="text-end">2</td>
@@ -215,14 +230,23 @@
                 <td>06-05-2024 08:22:18</td>
                 <td>Top Up</td>
                 <td>Sinta Anggraeni</td>
-                <td>Tono Susanto</td>
-                <td>Point</td>
                 <td>-</td>
                 <td>Club Point</td>
                 <td class="text-end">50.000</td>
-                <td class="text-end">IDR 0</td>
+                <td class="text-end">IDR 50.500.000</td>
+                <td class="text-end">IDR 50.500.000</td>
                 <td class="text-center"><div class="badge badge-warning">Waiting</div></td>
                 <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-offset="-142,13">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#updatePaymentModal" data-id="F0001"><i class="fi fi-rr-calculator-money me-1"></i> Update Payment</a></li>
+                    </ul>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td class="text-end">3</td>
@@ -230,14 +254,23 @@
                 <td>30-04-2024 15:48:00</td>
                 <td>Top Up</td>
                 <td>Putri Ayu</td>
-                <td>Nina Susanti</td>
-                <td>Point</td>
                 <td>-</td>
                 <td>Club Point</td>
                 <td class="text-end">5.000</td>
-                <td class="text-end">IDR 0</td>
-                <td class="text-center"><div class="badge badge-danger">Hold</div></td>
+                <td class="text-end">IDR 5.050.000</td>
+                <td class="text-end">IDR 5.050.000</td>
+                <td class="text-center"><div class="badge badge-danger">Cancel</div></td>
                 <td>Debi</td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-tertiary btn-sm text-dark p-0 pe-2" data-mdb-dropdown-init aria-expanded="false" data-mdb-offset="-142,13">
+                      <i class="fi fi-rr-menu-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="dropdown-item" data-mdb-modal-init data-mdb-target="#updatePaymentModal" data-id="F0001"><i class="fi fi-rr-calculator-money me-1"></i> Update Payment</a></li>
+                    </ul>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -275,23 +308,11 @@
               </li>
               <li class="list-group-item">
                 <span>Transaction Type</span>
-                <span>Transfer</span>
+                <span>Top Up</span>
               </li>
               <li class="list-group-item">
-                <span>From Member</span>
+                <span>Member Name</span>
                 <span>Ahmad Yani</span>
-              </li>
-              <li class="list-group-item">
-                <span>To Member</span>
-                <span>Budi Santoso</span>
-              </li>
-              <li class="list-group-item">
-                <span>Item Type</span>
-                <span>Point</span>
-              </li>
-              <li class="list-group-item">
-                <span>Details</span>
-                <span>-</span>
               </li>
               <li class="list-group-item">
                 <span>Type of Point</span>
@@ -303,28 +324,75 @@
               </li>
               <li class="list-group-item">
                 <span>Payment</span>
-                <span>IDR 0</span>
+                <span>IDR 10.250.000</span>
               </li>
               <li class="list-group-item">
                 <span>Notes</span>
-                <span></span>
+                <span>-</span>
+              </li>
+              <li class="list-group-item">
+                <span>Operator</span>
+                <span>Debi</span>
+              </li>
+              <li class="list-group-item">
+                <span>Date Time</span>
+                <span>06-02-2024 00:42:36</span>
               </li>
               <li class="list-group-item">
                 <span>Status</span>
                 <span><div class="badge badge-success">Success</div></span>
               </li>
-              <li class="list-group-item">
-                <span>Follow Up By</span>
-                <span>Debi</span>
-              </li>
-              <li class="list-group-item">
-                <span>Date Time</span>
-                <span>06-08-2024 09:37:36</span>
-              </li>
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-normal text-xs btn-dark" data-mdb-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-normal text-xs btn-primary me-auto" data-mdb-modal-init data-mdb-target="#updatePaymentModal" data-mdb-dismiss="modal">Update Payment</button>
+            <button type="button" class="btn btn-normal text-xs btn-light" data-mdb-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL UPDATE PAYMENT -->
+  <div class="modal fade" id="updatePaymentModal" tabindex="-1" aria-labelledby="updatePaymentModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">Update Payment</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-sm px-3">
+              <div class="mb-2">
+                <label class="mb-2">Payment Required</label>
+                <input type="text" class="form-control text-sm mb-2" value="10.250.000">
+              </div>
+              
+              <div class="mb-3">
+                <label class="mb-2">Payment Received</label>
+                <input type="text" class="form-control text-sm mb-2">
+
+                <label class="d-flex align-items-center">
+                  <input type="checkbox" name="" id="" class="form-check-input form-check-sm">
+                  <span>Set payment status to paid</span>
+                </label>
+              </div>
+              
+              <div class="mb-3">
+                <label class="mb-2">Attach documents (Payment Receipt)</label>
+                <div class="multiple-images-upload">
+                  <label class="add-image">
+                    <input type="file" name="" id="" class="d-none">
+                    <i class="fi fi-rr-add-image text-lg text-muted"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-normal text-xs btn-primary" data-mdb-dismiss="modal">Save Changes</button>
+            <button type="button" class="btn btn-normal text-xs btn-light" data-mdb-dismiss="modal">Cancel</button>
           </div>
         </div>
       </div>

@@ -884,6 +884,74 @@ datalist {
   transition: all 500ms ease;
 }
 
+// Adjustments for SweetAlert2 
+.swal2-popup {
+  width: 30em;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.swal2-icon {
+  zoom: .65;
+  margin-top: 1em;
+}
+
+.swal2-image {
+  margin: 1em auto;
+}
+
+.swal2-title {
+  padding: .5em 1em !important;
+  font-size: $fs-md;
+}
+
+.swal2-input-label,
+.swal2-html-container {
+  margin-top: 0.5em;
+  padding: 0 1.6em .5em !important;
+  font-size: $fs-sm !important;
+}
+
+.swal2-input {
+  height: 40px !important;
+  padding: 12px !important;
+  font-size: $fs-sm !important;
+  border-radius: 8px;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #50535b;
+  }
+}
+
+.swal2-actions {
+  margin-top: .5em !important;
+  margin-bottom: .5em !important;
+}
+
+.swal2-styled {
+  padding: 10px 16px;
+  min-width: 100px;
+  font-size: $fs-xs;
+  font-weight: 400;
+  border-radius: 8px;
+
+  &:focus-visible {
+    box-shadow: none;
+  }
+}
+
+.swal2-confirm {
+  background-color: $primary-new;
+}
+
+.swal2-footer {
+  margin-top: .5em !important;
+  padding-top: 1em !important;
+  font-size: $fs-sm !important;
+}
+
 @media (min-width: 576px) {
   .nav-tabs {
     .nav-link {
