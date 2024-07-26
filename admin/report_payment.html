@@ -20,7 +20,7 @@
     </div>
 
     <div class="header-title">
-      <h2 class="mb-0 fw-bold">Finance Report</h2>
+      <h2 class="mb-0 fw-bold">Payment Report</h2>
     </div>
 
     <div class="header-profile"> 
@@ -61,6 +61,12 @@
           </a>
         </li>
         <li class="nav-list-item">
+          <a href="settings.html" class="nav-link"> 
+            <i class="fi fi-rr-user-gear nav-icon"></i>
+            <span class="nav_name">Administrator</span> 
+          </a> 
+        </li>
+        <li class="nav-list-item">
           <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-chart-pie nav-icon"></i>
             <span class="nav_name">Report</span> 
@@ -68,27 +74,33 @@
           <div class="sub-menu" aria-expanded="false">
             <div class="overflow-hidden">
               <ul>
-                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet"></i> All Report</a></li>
-                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
-                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
-                <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
-                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
+                <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="A"></i> <span>All Report</span></a></li>
+                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="T"></i> <span>Top Up Report</span></a></li>
+                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="T"></i> <span>Transfer Report</span></a></li>
+                <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="M"></i> <span>Market Report</span></a></li>
+                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="R"></i> <span>Redeem Report</span></a></li>
               </ul>
             </div>
           </div>
         </li>
         <li class="nav-list-item">
-          <a href="settings.html" class="nav-link"> 
-            <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Administrator</span> 
-          </a> 
-        </li>
-        <li class="nav-list-item">
-          <a href="settings.html" class="nav-link"> 
+          <a href="settings.html" class="nav-link sub-menu-toggle" aria-expanded="true"> 
             <i class="fi fi-rr-usd-circle nav-icon"></i>
             <span class="nav_name">Finance</span> 
           </a> 
+          <div class="sub-menu" aria-expanded="true">
+            <div class="overflow-hidden">
+              <ul>
+                <li class="nav-list-item active">
+                  <a href="report_payment.html" class="nav-link active"><i class="fi fi-sr-bullet" data-init="P"></i> <span>Payment Report</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
+        
+        
         <li class="nav-list-item">
           <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
             <i class="fi fi-rr-bookmark nav-icon"></i>
@@ -97,10 +109,10 @@
           <div class="sub-menu" aria-expanded="false">
             <div class="overflow-hidden">
               <ul>
-                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
-                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
-                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
-                <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
+                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="N"></i> <span>News</span></a></li>
+                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="P"></i> <span>Promotions</span></a></li>
+                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="B"></i> <span>Banners</span></a></li>
+                <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="R"></i> <span>Recommend</span></a></li>
               </ul>
             </div>
           </div>
@@ -192,10 +204,10 @@
                 <th>Notes</th>
                 <th width="100px">Point Type</th>
                 <th width="120px" class="text-end">Point Amount</th>
-                <th width="120px" class="text-end">Payment</th>
+                <th width="150px" class="text-end">Payment</th>
                 <th width="150px" class="text-end">Payment Received</th>
                 <th width="75px" class="text-center">Status</th>
-                <th width="75px">Operator</th>
+                <th width="75px">CS</th>
                 <th width="30px">&nbsp;</th>
               </tr>
             </thead>

@@ -1,19 +1,41 @@
 // SET INPUT MAX DAY TODAY FOR HISTORY
 // Input date set default value today, and max date set today & show picker on focus
 const dateToday = new Date().toISOString().split("T")[0];
-document.querySelectorAll(".max-today").forEach(input => {
-  input.value = dateToday;
-  input.max = dateToday;
-  input.addEventListener("focus", () => {
-    input.showPicker();
+
+const initializeDateInput = (selector, dateAttr) => {
+  document.querySelectorAll(selector).forEach(input => {
+    //input.value = dateToday;
+    input[dateAttr] = dateToday;
+
+    input.addEventListener("focus", () => {
+      input.showPicker();
+    });
+
+    input.addEventListener("change", function() {
+      if(input.value != ""){
+        this.setAttribute("data-date", moment(this.value).format("DD MMM YYYY"));
+      }
+    });
+
+    const event = new Event('change');
+    input.dispatchEvent(event);
   });
-});
+};
+
+initializeDateInput(".input-date-icon .max-today", "max");
+initializeDateInput(".input-date-icon .min-today", "min");
 
 // AUTO SHOW PICKER ON INPUT DATE
 document.querySelectorAll("input[type='date']").forEach(input => {
-  input.addEventListener("focus", () => {
+  input.addEventListener("click", () => {
     input.showPicker();
-  })
+  });
+
+  input.addEventListener("change", function() {
+    this.setAttribute("data-date", moment(this.value).format("DD MMM YYYY"));
+  });
+
+  const event = new Event('change');
 });
 
 // DROPDOWN MENU FUNCTION
@@ -75,40 +97,90 @@ if(customPeriod){
 }
 
 // ADMIN PAGE MENU
-const showNavbar = (toggleId, navId, mainId, headerId) => {
-  const toggle = document.getElementById(toggleId);
-  const sidebar = document.getElementById(navId);
-  const main = document.getElementById(mainId);
-  const topHeader = document.getElementById(headerId);
-  
-  if(toggle && sidebar && main && topHeader){
-    toggle.addEventListener('click', () => {
-      sidebar.classList.toggle('show');
-      main.classList.toggle('expand');
-      topHeader.classList.toggle('expand');
+const toggleElementClass = (elementId, className) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.classList.toggle(className);
+  }
+  return element && element.classList.contains(className);
+};
 
-      let show = sidebar.classList.contains('show');
-      localStorage.setItem("sidebar", show);
+const showNavbar = (toggleIds, navId) => {
+  const sidebar = document.getElementById(navId);
+  
+  if (sidebar) {
+    toggleIds.forEach(toggleId => {
+      const toggle = document.getElementById(toggleId);
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const sidebarShow = sidebar.classList.contains('show');
+
+          if(event.target.closest('.nav-list-item')){ return; }
+
+          if(!sidebarShow){
+            toggleElementClass(navId, 'show');
+            setTimeout(() => {
+              sidebar.style.transition = "100ms ease-in-out";
+              sidebar.style.left = "-1.5rem";
+            }, 250);
+          }else{
+            sidebar.style.left = "0";
+            setTimeout(() => {
+              sidebar.style.transition = "250ms ease-in-out";
+              toggleElementClass(navId, 'show');
+            }, 100);
+          }
+        });
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      // Check if the click is outside the sidebar and the toggle buttons
+      const sidebarShow = sidebar.classList.contains('show');
+      if (!sidebar.contains(event.target) && !toggleIds.some(id => document.getElementById(id).contains(event.target)) && sidebarShow) {
+        if(sidebarShow){
+          sidebar.style.left = "0";
+          setTimeout(() => {
+            sidebar.style.transition = "250ms ease-in-out";
+            toggleElementClass(navId, 'show');
+          }, 100);
+        }
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      const sidebarShow = sidebar.classList.contains('show');
+      if (event.key === 'Escape' && sidebarShow) {
+        if (sidebarShow) {
+          sidebar.style.left = "0";
+          setTimeout(() => {
+            sidebar.style.transition = "250ms ease-in-out";
+            toggleElementClass(navId, 'show');
+          }, 100);
+        }
+      }
     });
   }
-}
-showNavbar('header-toggle','sidebar','main-content','header');
-
-const sidebar_show = localStorage.getItem("sidebar");
-if(sidebar_show === 'true') {
-  document.getElementById('sidebar').classList.add('show');
-  document.getElementById('main-content').classList.add('expand');
-  document.getElementById('header').classList.add('expand');
-}
+};
+showNavbar(['header-toggle', 'sidebar'], 'sidebar');
 
 // SIDE MENU SUB-MENU FUNCTION
 const subMenuToggle = document.querySelectorAll(".sub-menu-toggle");
 subMenuToggle.forEach(toggle => {
-  toggle.addEventListener("click", (i) => {
-    const expanded = toggle.getAttribute("aria-expanded");
-    toggle.setAttribute("aria-expanded", expanded === "true" ? "false" : "true");
-    toggle.nextElementSibling.setAttribute("aria-expanded", expanded === "true" ? "false" : "true");
-    i.preventDefault();
+  toggle.addEventListener("click", (event) => {
+    // Set aria-expanded to false for all toggles
+    subMenuToggle.forEach(otherToggle => {
+      if (otherToggle !== toggle) {
+        otherToggle.setAttribute("aria-expanded", "false");
+        otherToggle.nextElementSibling.setAttribute("aria-expanded", "false");
+      }
+    });
+    // Toggle aria-expanded for the clicked toggle
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+    toggle.nextElementSibling.setAttribute("aria-expanded", expanded ? "false" : "true");
+
+    event.preventDefault();
   });
 });
 

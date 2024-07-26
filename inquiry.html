@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antapura Vacation Club</title>
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/uicons-rounded.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body class="bg-body-light">
+  <div class="app-container">
+    <div class="app-page-header shadow-xs">
+      <div class="top-bar gap-2">
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-angle-left"></i></button>
+        <h4>Inquiry</h4>
+        <div class="btn-icon"></div>
+      </div>
+    </div>
+
+    <div class="app-page-content bg-white">
+      <form action="confirm_action_message.html" class="flex-high flex-fill">
+        <div class="mb-3">
+          <label for="select-type" class="text-xs mb-2">Item</label>
+          <select name="" id="" class="form-select text-sm">
+            <option value="">Hotel & Resort</option>
+            <option value="">Ticket</option>
+            <option value="">Tour Package</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <div class="row g-3">
+            <div class="col-6">
+              <label for="select-type" class="text-xs mb-2">From</label>
+              <div class="input-date-icon">
+                <input type="date" name="" id="" class="form-control min-today text-sm">
+                <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+              </div>
+            </div>
+            <div class="col-6">
+              <label for="select-type" class="text-xs mb-2">To</label>
+              <div class="input-date-icon">
+                <input type="date" name="" id="" class="form-control min-today text-sm">
+                <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="select-type" class="text-xs mb-2">Message</label>
+          <textarea type="text" name="" id="" class="form-control text-sm" rows="8"></textarea>
+        </div>
+
+        <div class="offcanvas-footer d-grid mt-auto">
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="bottom-navbar">
+    <div class="container grid-5">
+      <a href="index.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-house-blank"></i></h3>Home</a>
+      <a href="transaction_history.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-time-past"></i></h3>History</a>
+      <a href="inquiry.html" class="navbar-menu active"><h3 class="mb-1"><i class="fi fi-rr-comment-alt"></i></h3>Inquiry</a>
+      <a href="market.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-shop"></i></h3>Market</a>
+      <a href="account.html" class="navbar-menu"><h3 class="mb-1"><i class="fi fi-rr-circle-user"></i></h3>Account</a>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/mdb.umd.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

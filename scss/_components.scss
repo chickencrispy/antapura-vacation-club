@@ -661,8 +661,22 @@
   position: relative;
 
   .form-control {
+    position: relative;
     padding-left: 42px;
     text-align: left;
+
+    &::before {
+      position: absolute;
+      content: attr(data-date);
+      display: inline-block;
+      color: var(--mdb-surface-color);
+    }
+
+    &::-webkit-datetime-edit, 
+    &::-webkit-inner-spin-button, 
+    &::-webkit-clear-button {
+      opacity: 0;
+    }
   }
 
   .form-control::-webkit-calendar-picker-indicator {
