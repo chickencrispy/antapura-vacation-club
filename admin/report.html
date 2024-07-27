@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/css/ui.css">
 </head>
 <body>
-  <header id="header" class="header">
+  <header id="header" class="header border-bottom">
     <div class="header-toggle">
       <button class="btn" id="header-toggle">
         <i class="fi fi-rr-menu-burger"></i>
@@ -24,7 +24,9 @@
     </div>
 
     <div class="header-profile"> 
-      <img src="../images/memoji/Memoji-04.png" alt="">
+      <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
+      <span class="text-sm ms-2">Debi Rahmadi</span>
+      <i class="fi fi-rr-angle-small-down"></i>
     </div>
   </header>
 
@@ -35,76 +37,109 @@
         <span class="nav-logo-name">Antapura Club</span> 
       </a>
 
-      <ul class="sidebar-menu nav-list"> 
-        <li class="nav-list-item">
-          <a href="dashboard.html" class="nav-link"> 
-            <i class="fi fi-rr-apps nav-icon"></i>
-            <span class="nav_name">Dashboard</span> 
-          </a> 
-        </li>
-        <li class="nav-list-item">
-          <a href="members.html" class="nav-link"> 
-            <i class="fi fi-rr-user nav-icon"></i>
-            <span class="nav_name">Members</span> 
-          </a> 
-        </li>
-        <li class="nav-list-item">
-          <a href="transaction_request.html" class="nav-link"> 
-            <i class="fi fi-rr-concierge-bell nav-icon"></i>
-            <span class="nav_name">Request</span> 
-          </a>
-        </li>
-        <li class="nav-list-item">
-          <a href="marketplace.html" class="nav-link"> 
-            <i class="fi fi-rr-shop nav-icon"></i>
-            <span class="nav_name">Marketplace</span> 
-          </a>
-        </li>
-        <li class="nav-list-item">
-          <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="true"> 
-            <i class="fi fi-rr-chart-pie nav-icon"></i>
-            <span class="nav_name">Report</span> 
-          </a>
-          <div class="sub-menu" aria-expanded="true">
-            <div class="overflow-hidden">
-              <ul>
-                <li class="nav-list-item"><a href="report.html" class="nav-link active"><i class="fi fi-sr-bullet"></i> All Report</a></li>
-                <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Top Up Report</a></li>
-                <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Transfer Report</a></li>
-                <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Market Report</a></li>
-                <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Redeem Report</a></li>
-              </ul>
+      <div class="mb-3">
+        <div class="nav-list-title"><small>General</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="dashboard.html" class="nav-link"> 
+              <i class="fi fi-rr-apps nav-icon"></i>
+              <span class="nav_name">Dashboard</span> 
+            </a> 
+          </li>
+          <li class="nav-list-item">
+            <a href="marketplace.html" class="nav-link"> 
+              <i class="fi fi-rr-shop nav-icon"></i>
+              <span class="nav_name">Marketplace</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>Account Management</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="members.html" class="nav-link"> 
+              <i class="fi fi-rr-user nav-icon"></i>
+              <span class="nav_name">Members</span> 
+            </a> 
+          </li>
+          <li class="nav-list-item">
+            <a href="settings.html" class="nav-link"> 
+              <i class="fi fi-rr-user-gear nav-icon"></i>
+              <span class="nav_name">Administrator</span> 
+            </a> 
+          </li>
+          <li class="nav-list-item">
+            <a href="transaction_request.html" class="nav-link"> 
+              <i class="fi fi-rr-concierge-bell nav-icon"></i>
+              <span class="nav_name">Request</span> 
+            </a>
+          </li>
+          <li class="nav-list-item">
+            <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="true"> 
+              <i class="fi fi-rr-chart-pie nav-icon"></i>
+              <span class="nav_name">Report</span> 
+            </a>
+            <div class="sub-menu" aria-expanded="true">
+              <div class="overflow-hidden">
+                <ul>
+                  <li class="nav-list-item"><a href="report.html" class="nav-link active"><i class="fi fi-sr-bullet" data-init="A"></i> <span>All Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="T"></i> <span>Top Up Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="T"></i> <span>Transfer Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="M"></i> <span>Market Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="R"></i> <span>Redeem Report</span></a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="nav-list-item">
-          <a href="settings.html" class="nav-link"> 
-            <i class="fi fi-rr-user-gear nav-icon"></i>
-            <span class="nav_name">Administrator</span> 
-          </a> 
-        </li>
-        <li class="nav-list-item">
-          <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
-            <i class="fi fi-rr-bookmark nav-icon"></i>
-            <span class="nav_name">Listing</span> 
-          </a>
-          <div class="sub-menu" aria-expanded="false">
-            <div class="overflow-hidden">
-              <ul>
-                <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet"></i> News</a></li>
-                <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Promotions</a></li>
-                <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Banners</a></li>
-                <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet"></i> Recommend</a></li>
-              </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>Content Management</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
+              <i class="fi fi-rr-bookmark nav-icon"></i>
+              <span class="nav_name">Listing</span> 
+            </a>
+            <div class="sub-menu" aria-expanded="false">
+              <div class="overflow-hidden">
+                <ul>
+                  <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="N"></i> <span>News</span></a></li>
+                  <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="P"></i> <span>Promotions</span></a></li>
+                  <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="B"></i> <span>Banners</span></a></li>
+                  <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="R"></i> <span>Recommend</span></a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>Finance</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="report_payment.html" class="nav-link"> 
+              <i class="fi fi-rr-user nav-icon"></i>
+              <span class="nav_name">Payment Report</span> 
+            </a> 
+          </li>
+        </ul>
+      </div>
       
-      <a href="#" class="nav-link mt-auto"> 
-        <i class="fi fi-rr-sign-out-alt nav-icon"></i>
-        <span class="nav_name">Sign Out</span> 
-      </a>
+      <div class="mt-auto">
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="#" class="nav-link"> 
+              <i class="fi fi-rr-sign-out-alt nav-icon"></i>
+              <span class="nav_name">Sign Out</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </aside>
 
