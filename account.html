@@ -11,15 +11,16 @@
 </head>
 <body class="bg-body-light">
   <div class="app-container">
-    <div class="account-header shadow-xs">
-      <div class="account-image">
-        <img src="./images/memoji/Memoji-05.png">
+    <div class="app-page-header shadow-xs">
+      <div class="top-bar gap-2">
+        <button class="btn-icon" onclick="javascript:history.go(-1)"><i class="fi fi-rr-angle-left"></i></button>
+        <h4>My Account</h4>
+        <div class="btn-icon"></div>
       </div>
+    </div>
 
-      <div class="account-info">
-        <h3 class="fw-bold mb-0">John Doe</h3>
-        <div class="text-sm text-dark">Founder Member</div>
-      </div>
+    <div class="p-3">
+      <img src="./images/cards/emerald.png" class="img-fluid rounded-normal">
     </div>
 
     <div class="p-3">
@@ -29,7 +30,7 @@
           <li class="list-group-item">
             <a href="account_details.html">
               <i class="fi fi-rr-user icon-circle-36 bg-secondary-subtle"></i>
-              <div class="d-flex flex-column flex-fill lh-sm">
+              <div class="d-flex flex-column flex-fill lh-sm ms-2">
                 <div class="fw-medium">Profile Details</div>
                 <div class="text-xxs text-dark">Change profile picture, phone number and email</div>
               </div>
@@ -39,7 +40,7 @@
           <li class="list-group-item">
             <a href="change_password.html">
               <i class="fi fi-rr-lock icon-circle-36 bg-secondary-subtle"></i>
-              <div class="d-flex flex-column flex-fill lh-sm">
+              <div class="d-flex flex-column flex-fill lh-sm ms-2">
                 <div class="fw-medium">Change Password</div>
                 <div class="text-xxs text-dark">Update and strengthen account security</div>
               </div>
@@ -49,7 +50,7 @@
           <li class="list-group-item">
             <a href="article.html">
               <i class="fi fi-rr-shield icon-circle-36 bg-secondary-subtle"></i>
-              <div class="d-flex flex-column flex-fill lh-sm">
+              <div class="d-flex flex-column flex-fill lh-sm ms-2">
                 <div class="fw-medium">Terms of Use</div>
                 <div class="text-xxs text-dark">Protect your account</div>
               </div>
@@ -65,7 +66,7 @@
           <li class="list-group-item">
             <a href="#">
               <i class="fi fi-rr-interrogation icon-circle-36 bg-secondary-subtle"></i>
-              <div class="d-flex flex-column flex-fill lh-sm">
+              <div class="d-flex flex-column flex-fill lh-sm ms-2">
                 <div class="fw-medium">FAQ</div>
                 <div class="text-xxs text-dark">Frequently asked questions</div>
               </div>
@@ -75,7 +76,7 @@
           <li class="list-group-item">
             <a href="#">
               <i class="fi fi-rr-exit icon-circle-36 bg-danger-subtle text-danger"></i>
-              <div class="d-flex flex-column flex-fill lh-sm text-danger">
+              <div class="d-flex flex-column flex-fill lh-sm ms-2 text-danger">
                 <div class="fw-medium">Log Out</div>
                 <div class="text-xxs text-dark">Securely log out of account</div>
               </div>
