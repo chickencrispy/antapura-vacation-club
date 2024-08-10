@@ -898,6 +898,19 @@ datalist {
   transition: all 500ms ease;
 }
 
+.member-card {
+  position: relative;
+
+  h4 {
+    position: absolute;
+    top: 54%;
+    left: 31%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+  }
+}
+
 // Adjustments for SweetAlert2 
 .swal2-popup {
   width: 30em;

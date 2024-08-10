@@ -952,6 +952,18 @@ datalist option {
   transition: all 500ms ease;
 }
 
+.member-card {
+  position: relative;
+}
+.member-card h4 {
+  position: absolute;
+  top: 54%;
+  left: 31%;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+}
+
 .swal2-popup {
   width: 30em;
   padding: 16px;
