@@ -281,6 +281,25 @@
   }
 }
 
+.app-listings-items {
+  display: flex;
+  .images {
+    width: 30%;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .descriptions {
+    width: 70%;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .page-body {
   position: relative;
   padding: 16px;

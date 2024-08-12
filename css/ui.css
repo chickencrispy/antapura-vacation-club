@@ -1385,6 +1385,23 @@ div:has(> datalist) input.active + datalist option::before {
   font-size: 13px;
 }
 
+.app-listings-items {
+  display: flex;
+}
+.app-listings-items .images {
+  width: 30%;
+}
+.app-listings-items .images img {
+  width: 100%;
+  border-radius: 8px;
+}
+.app-listings-items .descriptions {
+  width: 70%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-body {
   position: relative;
   padding: 16px;
