@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue New Founder Club Point</title>
+  <link rel="stylesheet" href="/css/mdb.min.css">
+  <link rel="stylesheet" href="/css/date-picker.min.css">
+  <link rel="stylesheet" href="/css/datatables.min.css">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/uicons-rounded.css">
+  <link rel="stylesheet" href="/css/ui.css">
+</head>
+<body>
+  <header id="header" class="header border-bottom">
+    <div class="header-toggle">
+      <button class="btn" id="header-toggle">
+        <i class="fi fi-rr-menu-burger"></i>
+      </button>
+    </div>
+
+    <div class="header-title">
+      <h2 class="mb-0 fw-bold">Issue New Founder Club Point</h2>
+    </div>
+
+    <div class="header-profile"> 
+      <img src="../images/memoji/Memoji-04.png" class="bg-primary-subtle">
+      <span class="text-sm ms-2">Debi Rahmadi</span>
+      <i class="fi fi-rr-angle-small-down"></i>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <nav class="nav">
+      <a href="#" class="nav-logo"> 
+        <i class="fi fi-rr-layers nav-logo-icon"></i>
+        <span class="nav-logo-name">Antapura Club</span> 
+      </a>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>General</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="dashboard.html" class="nav-link"> 
+              <i class="fi fi-rr-apps nav-icon"></i>
+              <span class="nav_name">Dashboard</span> 
+            </a> 
+          </li>
+          <li class="nav-list-item">
+            <a href="marketplace.html" class="nav-link"> 
+              <i class="fi fi-rr-shop nav-icon"></i>
+              <span class="nav_name">Marketplace</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>Account Management</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="members.html" class="nav-link"> 
+              <i class="fi fi-rr-user nav-icon"></i>
+              <span class="nav_name">Members</span> 
+            </a> 
+          </li>
+          <li class="nav-list-item">
+            <a href="settings.html" class="nav-link"> 
+              <i class="fi fi-rr-user-gear nav-icon"></i>
+              <span class="nav_name">Administrator</span> 
+            </a> 
+          </li>
+          <li class="nav-list-item">
+            <a href="transaction_request.html" class="nav-link"> 
+              <i class="fi fi-rr-concierge-bell nav-icon"></i>
+              <span class="nav_name">Request</span> 
+            </a>
+          </li>
+          <li class="nav-list-item">
+            <a href="report.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
+              <i class="fi fi-rr-chart-pie nav-icon"></i>
+              <span class="nav_name">Report</span> 
+            </a>
+            <div class="sub-menu" aria-expanded="false">
+              <div class="overflow-hidden">
+                <ul>
+                  <li class="nav-list-item"><a href="report.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="A"></i> <span>All Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_topup.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="T"></i> <span>Top Up Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_transfer.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="T"></i> <span>Transfer Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_market.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="M"></i> <span>Market Report</span></a></li>
+                  <li class="nav-list-item"><a href="report_redeem.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="R"></i> <span>Redeem Report</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>Content Management</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="listing.html" class="nav-link sub-menu-toggle" aria-expanded="false"> 
+              <i class="fi fi-rr-bookmark nav-icon"></i>
+              <span class="nav_name">Listing</span> 
+            </a>
+            <div class="sub-menu" aria-expanded="false">
+              <div class="overflow-hidden">
+                <ul>
+                  <li class="nav-list-item"><a href="news.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="N"></i> <span>News</span></a></li>
+                  <li class="nav-list-item"><a href="promo.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="P"></i> <span>Promotions</span></a></li>
+                  <li class="nav-list-item"><a href="banner.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="B"></i> <span>Banners</span></a></li>
+                  <li class="nav-list-item"><a href="recommendation.html" class="nav-link"><i class="fi fi-sr-bullet" data-init="R"></i> <span>Recommend</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <div class="nav-list-title"><small>Finance</small></div>
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="report_payment.html" class="nav-link active"> 
+              <i class="fi fi-rr-user nav-icon"></i>
+              <span class="nav_name">Payment Report</span> 
+            </a> 
+          </li>
+        </ul>
+      </div>
+      
+      <div class="mt-auto">
+        <ul class="sidebar-menu nav-list"> 
+          <li class="nav-list-item">
+            <a href="#" class="nav-link"> 
+              <i class="fi fi-rr-sign-out-alt nav-icon"></i>
+              <span class="nav_name">Sign Out</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <main id="main-content" class="content-wrapper">
+    <div class="content-fill">
+      <div id="content-filter" class="d-none p-3">
+        <div class="row g-2">
+          <div class="col-sm-9">
+            <div class="row g-2">
+              <div class="col-md-2">
+                <select class="form-select text-sm">
+                  <option value="">All Status</option>
+                  <option value="">Open</option>
+                  <option value="">Waiting Payment</option>
+                  <option value="">On proccess</option>
+                  <option value="">Success</option>
+                  <option value="">Hold</option>
+                </select>
+              </div>
+        
+              <div class="col-md-2">
+                <select class="form-select text-sm h-40">
+                  <option value="">All Member</option>
+                  <option value="">Founders Member</option>
+                  <option value="">Club Member</option>
+                  <option value="">Deactive Member</option>
+                </select>
+              </div>
+        
+              <div class="col-md-3">
+                <div id="custom-period" class="w-100">
+                  <div class="">
+                    <select class="form-select text-sm h-40">
+                      <option value="">All Period</option>
+                      <option value="">Today</option>
+                      <option value="">This Week</option>
+                      <option value="">This Month</option>
+                      <option value="">Custom</option>
+                    </select>
+                  </div>
+          
+                  <div class="grid-2 d-none gap-2 h-40 align-items-stretch">
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
+                    <div class="input-date-icon">
+                      <input type="date" name="" id="" class="form-control max-today text-sm h-100">
+                      <div class="input-group-icon"><i class="fi fi-rr-calendar"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-sm-3">
+            <div class="d-flex gap-2">
+              <div class="input-icon flex-fill">
+                <input type="text" class="form-control text-sm h-40" placeholder="Search...">
+                <div class="input-group-icon"><i class="fi fi-rr-search"></i></div>
+              </div>
+              <button class="btn btn-normal btn-primary text-xs h-40">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="p-3">
+        <div class="p-4 bg-white rounded-5 shadow-xs">
+          <table class="table table-sm table-sticky-head data-table" style="width: 100%;">
+            <thead class="text-xs text-uppercase bg-white">
+              <tr>
+                <th width="42px" class="text-end"><input type="checkbox" name="" id="" class="form-check-input form-check-sm"></th>
+                <th class="text-nowrap" width="100px">Member ID</th>
+                <th class="text-nowrap">Full Name</th>
+                <th width="150px">WhatsApp</th>
+                <th width="300px">Email</th>
+                <th width="100px">Unit Number</th>
+                <th width="120px" class="text-end">Point Amount</th>
+                <th width="150px" class="text-end">Issue Date</th>
+                <th width="30px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-end"><input type="checkbox" name="" id="" class="form-check-input form-check-sm"></td>
+                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">F0001</a></td>
+                <td>Ahmad Yani</td>
+                <td>+6281234567890</td>
+                <td>ahmad.yani@example.com</td>
+                <td class="text-end">A23</td>
+                <td class="text-end">30.000</td>
+                <td class="text-end">03 Sep 2024</td>
+                <td class="text-end">
+                  <button class="btn badge btn-success shadow-none">Approve</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end"><input type="checkbox" name="" id="" class="form-check-input form-check-sm"></td>
+                <td><a href="#" class="fw-semibold text-primary" data-mdb-modal-init data-mdb-target="#detailsMemberModal">F0002</a></td>
+                <td>Budi Santoso</td>
+                <td>+6282345678901</td>
+                <td>budi.santoso@example.com</td>
+                <td class="text-end">A01</td>
+                <td class="text-end">50.000</td>
+                <td class="text-end">03 Sep 2024</td>
+                <td class="text-end">
+                  <button class="btn badge btn-success shadow-none">Approve</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="table-footer">
+            <nav class="table-pagination">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL MEMBER DETAILS -->
+  <div class="modal fade" id="detailsMemberModal" tabindex="-1" aria-labelledby="detailsMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="d-flex flex-column flex-fill">
+          <div class="modal-header">
+            <h4 class="modal-title fw-bold" id="exampleModalLabel">F0001</h4>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 text-sm bg-white" style="min-height: 602px;">
+            <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a data-mdb-tab-init class="nav-link active" id="ex1-tab-1" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Profile</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a data-mdb-tab-init class="nav-link" id="ex1-tab-2" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Emergency Contact</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a data-mdb-tab-init class="nav-link" id="ex1-tab-3" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">User Activity</a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="ex1-content">
+              <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                <ul id="member-data-list" class="list-group list-group-light list-group-small list-group-25 mb-4">
+                  <li class="list-group-item">
+                    <span>Member Type</span>
+                    <span>Founder</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Full Name</span>
+                    <span>John Doe</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>WhatsApp</span>
+                    <span>+6281234567890</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Email</span>
+                    <span>johndoe@mail.com</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Place, Date of birth</span>
+                    <span>Batam, 5 Jun 1980</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Gender</span>
+                    <span>Male</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Address</span>
+                    <span>Pasir Putih, Batam</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Notes</span>
+                    <span>-</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Join Date</span>
+                    <span>03 June 2024</span>
+                  </li>
+                </ul>
+
+                <table id="member-point" class="table table-sm table-bordered">
+                  <thead>
+                    <tr class="table-dark text-xs">
+                      <th class="ps-3">Type of Point</th>
+                      <th class="text-center">Amount</th>
+                      <th class="text-center">Valid Thru</th>
+                      <th class="text-center">Hold</th>
+                      <th class="text-center">Total</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th class="ps-3"><div class="text-truncate">Founder Point</div></th>
+                      <td class="text-center">2.000</td>
+                      <td class="text-center">Dec 2025</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">2.000</td>
+                    </tr>
+                    <tr>
+                      <th class="ps-3"><div class="text-truncate">Club Point</div></th>
+                      <td class="text-center">1.250</td>
+                      <td class="text-center">No Expiry</td>
+                      <td class="text-center">500</td>
+                      <td class="text-center">1.750</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                <ul id="member-emergency-contact" class="list-group list-group-light list-group-small list-group-25">
+                  <li class="list-group-item">
+                    <span>Emergency Contact</span>
+                    <span>Jane Doe</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Relationship</span>
+                    <span>Wife</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Phone Number</span>
+                    <span>+6281298745632</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span>Address</span>
+                    <span>Pasir Putih, Batam</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane fade show" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th width="160px">Date Time</th>
+                      <th width="125px">Type</th>
+                      <th>Activity Info</th>
+                      <th width="100px" class="text-end">Detection IP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2024-06-24 06:08:59</td>
+                      <td>UserLogin</td>
+                      <td>User Login</td>
+                      <td class="text-end">27.131.6.10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bg-white">
+            <button type="button" class="btn btn-normal text-xs btn-light" data-mdb-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mdb.umd.min.js"></script>
+  <script src="/js/moment.js"></script>
+  <script src="/js/datatables.min.js"></script>
+  <script src="/js/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    new DataTable('.data-table', {
+      responsive: true,
+      searching: false,
+      paging: false,
+      ordering: false,
+      info: false,
+      columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+      ]
+    });
+  </script>
+</body>
+</html>
